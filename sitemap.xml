@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+<url> <loc>https://softwareontheroad.com/docker-nodejs/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://softwareontheroad.com/css-flexbox-illustre/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://softwareontheroad.com/node-sequelize-intro/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://softwareontheroad.com/node-sequelize-pagination/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://softwareontheroad.com/dockerSwarm-vs-kubernetes/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://softwareontheroad.com/kindle/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://softwareontheroad.com/git-husky/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://softwareontheroad.com/deploy/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://softwareontheroad.com/js-map-filter-reduce/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://softwareontheroad.com/sql/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://softwareontheroad.com/openvpn-google/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://softwareontheroad.com/js-console-log/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://softwareontheroad.com/js-conditions/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://softwareontheroad.com/node-architecture/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://softwareontheroad.com/tags/dev-ops/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://softwareontheroad.com/tags/docker/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://softwareontheroad.com/tags/node/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://softwareontheroad.com/tags/javascript/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://softwareontheroad.com/tags/best/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://softwareontheroad.com/tags/css/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://softwareontheroad.com/tags/flexbox/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://softwareontheroad.com/tags/style/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://softwareontheroad.com/tags/sequelize/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://softwareontheroad.com/tags/kubernetes/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://softwareontheroad.com/tags/kindle/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://softwareontheroad.com/tags/ebook/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://softwareontheroad.com/tags/git/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://softwareontheroad.com/tags/cicd/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://softwareontheroad.com/tags/deploy/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://softwareontheroad.com/tags/sql/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://softwareontheroad.com/tags/postgre-sql/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://softwareontheroad.com/tags/vpn/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://softwareontheroad.com/tags/open-vpn/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://softwareontheroad.com/tags/google-cloud/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://softwareontheroad.com/tags/architecture/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://softwareontheroad.com/author/ludo/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://softwareontheroad.com/about/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://softwareontheroad.com/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://softwareontheroad.com/privacy/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://softwareontheroad.com/terms/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+</urlset>
