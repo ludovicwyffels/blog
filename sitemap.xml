@@ -9,8 +9,8 @@
 <url> <loc>https://softwareontheroad.com/git-husky/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://softwareontheroad.com/deploy/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://softwareontheroad.com/js-map-filter-reduce/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://softwareontheroad.com/openvpn-google/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://softwareontheroad.com/sql/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://softwareontheroad.com/openvpn-google/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://softwareontheroad.com/js-console-log/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://softwareontheroad.com/js-conditions/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://softwareontheroad.com/node-architecture/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -29,11 +29,11 @@
 <url> <loc>https://softwareontheroad.com/tags/git/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://softwareontheroad.com/tags/cicd/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://softwareontheroad.com/tags/deploy/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://softwareontheroad.com/tags/sql/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://softwareontheroad.com/tags/postgre-sql/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://softwareontheroad.com/tags/vpn/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://softwareontheroad.com/tags/open-vpn/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://softwareontheroad.com/tags/google-cloud/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://softwareontheroad.com/tags/sql/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://softwareontheroad.com/tags/postgre-sql/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://softwareontheroad.com/tags/architecture/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://softwareontheroad.com/author/ludo/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://softwareontheroad.com/about/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
