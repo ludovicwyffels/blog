@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Software on the road]]></title><description><![CDATA[Here you will find my adventures with AWS, AWS S3, AWS CloudFront, high availability, continuous integration, continuous delivery, CircleCi, node.js and javascript in general, typescript, react, ionic app, react native, and maybe some experiments with machine learning]]></description><link>https://softwareontheroad.com</link><generator>RSS for Node</generator><lastBuildDate>Sun, 21 Apr 2019 19:19:09 GMT</lastBuildDate><item><title><![CDATA[Architecture d'un projet node.js Bulletproof]]></title><description><![CDATA[Architecture d’un projet node.js Bulletproof Introduction Express.js est un excellent framework pour la création d’une API REST en node.js…]]></description><link>https://softwareontheroad.com/node-architecture/</link><guid isPermaLink="false">https://softwareontheroad.com/node-architecture/</guid><pubDate>Sat, 20 Apr 2019 08:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;Architecture d’un projet node.js Bulletproof&lt;/h1&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Software on the road]]></title><description><![CDATA[Here you will find my adventures with AWS, AWS S3, AWS CloudFront, high availability, continuous integration, continuous delivery, CircleCi, node.js and javascript in general, typescript, react, ionic app, react native, and maybe some experiments with machine learning]]></description><link>https://softwareontheroad.com</link><generator>RSS for Node</generator><lastBuildDate>Mon, 22 Apr 2019 14:45:26 GMT</lastBuildDate><item><title><![CDATA[Architecture d'un projet node.js Bulletproof]]></title><description><![CDATA[Architecture d’un projet node.js Bulletproof Introduction Express.js est un excellent framework pour la création d’une API REST en node.js…]]></description><link>https://softwareontheroad.com/node-architecture/</link><guid isPermaLink="false">https://softwareontheroad.com/node-architecture/</guid><pubDate>Sat, 20 Apr 2019 08:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;Architecture d’un projet node.js Bulletproof&lt;/h1&gt;
 &lt;h2&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;Express.js est un excellent framework pour la création d’une API REST en node.js, mais il ne vous donne aucune indication sur la manière d’organiser votre projet node.js.&lt;/p&gt;
 &lt;p&gt;Bien que cela puisse paraître stupide, c’est un problème réel.&lt;/p&gt;
@@ -886,7 +886,377 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
 console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;timeEnd&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;For loop&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;&lt;img src=&quot;&quot; alt=&quot;Sortie console.time() pour les boucles&quot;&gt;&lt;/p&gt;
-&lt;p&gt;Espérons que l’article fournisse des informations sur les différentes manières d’utiliser la console.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Principales commandes SQL/PostgreSQL que vous avez besoin de connaître]]></title><description><![CDATA[Principales commandes SQL/PostgreSQL que vous avez besoin de connaître. Ici, nous allons passer en revue les commandes les plus importantes…]]></description><link>https://softwareontheroad.com/sql/</link><guid isPermaLink="false">https://softwareontheroad.com/sql/</guid><pubDate>Sun, 14 Apr 2019 08:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;Principales commandes SQL/PostgreSQL que vous avez besoin de connaître.&lt;/h1&gt;
+&lt;p&gt;Espérons que l’article fournisse des informations sur les différentes manières d’utiliser la console.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Configuration d'un serveur OpenVPN sur Google Compute Engine]]></title><description><![CDATA[Configuration d’un serveur OpenVPN sur Google Compute Engine J’ai récemment commmencé à utiliser OpenVPN et à profiter des différentes…]]></description><link>https://softwareontheroad.com/openvpn-google/</link><guid isPermaLink="false">https://softwareontheroad.com/openvpn-google/</guid><pubDate>Sun, 14 Apr 2019 08:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;Configuration d’un serveur OpenVPN sur Google Compute Engine&lt;/h1&gt;
+&lt;p&gt;J’ai récemment commmencé à utiliser OpenVPN et à profiter des différentes options qu’il propose, notamment le masquage du trafic VPN sous TCP:443 (autrement appelé HTTPS). Personnellement, j’aime utiliser GCE pour héberger mes VPN, car je profite de la puissance et de la personnalisation que cela procure.&lt;/p&gt;
+&lt;p&gt;Cependant, il n’y avait absolument aucun tutoriel sur la configuration d’OpenVPN sur GCE. Il existe 10 étapes dans ce didacticiel, mais chaque étape peut exécuter plusieurs lignes de code.&lt;/p&gt;
+&lt;p&gt;Si vous essayez simplement d’ajouter plus de clients, passer aux étapes 4, 9 et 10.&lt;/p&gt;
+&lt;h2&gt;Table des matières&lt;/h2&gt;
+&lt;p&gt;[[toc]]&lt;/p&gt;
+&lt;h2&gt;1. Création de l’instance&lt;/h2&gt;
+&lt;p&gt;Nous voulons utiliser une instance &lt;code class=&quot;language-text&quot;&gt;n1-standard-1&lt;/code&gt; pour sa durabilité et son coût. Dirigez-vous vers le moteur de calcul et cliquez sur “CREATE INSTANCE”.&lt;/p&gt;
+&lt;p&gt;&lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/bc1d8c0fe43fbdbd290421761c57cb77/13283/1.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 450px;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 139.33333333333334%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAcCAIAAADuuAg3AAAACXBIWXMAAAsSAAALEgHS3X78AAACjUlEQVQ4y41Uh3KjMBDV///cZeZcEhfsuFJtBAihyj1JPkJsp7zBO2vBtrfaJZvNZrVaLZdLSqkxRkqplJIeXdfhxHr0Iwx/SFmWRVFcPWBfegS9rms4cl+P4G3dA7/EWkPpNUliKDhCVK01DCDhIs/z8/kMdyGU0jajMr7IhruPiZDqQtvi2jStbLmsG8F5JzoHRG6apvYQwp25orQVyoZqiBA6p/pS60ulKXOSMY7EK49gDwUShTDGhspD2vbGgjXWaGu1J+k/N4CP4iP1/t8NqIugqsPhAK+h1A9KRyQPPN3RTtq2RZ92u12SJO/v76Bnv9+fPKDjHLKoVFYqyP4zCOfcFcaYUhqNQfwgAeQWdCSu/XNvjIAIQssCBfdfY9zqoWwCr43s16mlTB2Pe/gCBTsPKHuPNE0f3TljpJVVZpPqkpkiz1DBECdkHm7oc2N8AOOisZ00uOJRtAmRERCvH23AAnjdbre4M8QNg3KWSn80cCDsETgPMwMvBJ1AaSgVShzHaDv4v2PoKxBcD6QBs+PxCBdo+zCGd9w+AndbRFG0WCxms9l6vQ71oGz4ClclZHgHZAdDIoWoKoyum54QNtwTQHh8F7lu+GQevb29TqdTbJUsyzBAoRNPO3TXZ3M4pS8vf2bz+WQy+euBzNEqEPGDMX5tyy4e2BiQ2EoD4T8Yj+fulyR/zDPiIL1xh4Zqx46e9xmrb7t1PGHdIe2wfahHUCDxCr0IuzXQeRtJ1naRW91rbO/X+WsgKWzvW88g9SeMjLnK0iTPEriO4xMGq/810Cpb1Lao7LU2VdtD5tRtnItbPRLbp2w0ZF6pJ5sER22nWae5MJ0wvDNOkXgsF3hlhDTcP+ahc/8AbrFWxxhIqn8AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    &gt;&lt;/span&gt;
+    &lt;picture&gt;
+        &lt;source
+          srcset=&quot;/static/bc1d8c0fe43fbdbd290421761c57cb77/8ffb1/1.webp 293w,
+/static/bc1d8c0fe43fbdbd290421761c57cb77/2809e/1.webp 450w&quot;
+          sizes=&quot;(max-width: 450px) 100vw, 450px&quot;
+          type=&quot;image/webp&quot;
+        /&gt;
+        &lt;source
+          srcset=&quot;/static/bc1d8c0fe43fbdbd290421761c57cb77/f93ee/1.png 293w,
+/static/bc1d8c0fe43fbdbd290421761c57cb77/13283/1.png 450w&quot;
+          sizes=&quot;(max-width: 450px) 100vw, 450px&quot;
+          type=&quot;image/png&quot;
+        /&gt;
+        &lt;img
+          class=&quot;gatsby-resp-image-image&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px white;&quot;
+          src=&quot;/static/bc1d8c0fe43fbdbd290421761c57cb77/13283/1.png&quot;
+          alt=&quot;1&quot;
+          title=&quot;&quot;
+        /&gt;
+      &lt;/picture&gt;
+  &lt;/span&gt;
+  &lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Configuez-le avec les options affichées, mais n’appuyez pas encore sur “Créer”&lt;/p&gt;
+&lt;p&gt;Si vous ne voyez pas l’image, nous utilisons une instance &lt;code class=&quot;language-text&quot;&gt;n1-standard-1&lt;/code&gt; (1 vCPU, 3,75 Go de mémoire) avec Ubuntu 16.04 LTS installé (vous pouvez choisir un espace de stockage, mais 10 Go suffisent). Puisque notre VPN utilisera TCP: 443, nous devons autoriser le trafic HTTPS maintenant ou plus tard. Vous pouvez donc également le faire immédiatement.&lt;/p&gt;
+&lt;p&gt;Appuyez sur le bouton “Gestion, sécurité, disques, réseau, …” pour ouvrir les options avancées. Cliquez sur l’onglet Réseau et cliquez sur le bouton d’édition en regard de l’interface réseau sélectionnée.&lt;/p&gt;
+&lt;p&gt;Cliquez sur le menu déroulant “Adresse IP externe” et sélectionnez “Créer une adresse IP”. Entrez un nom, puis appuyez sur “Réserver”. Cette opération associera une adresse IP statique à votre instance, ce qui est probablement ce que vous voulez, sauf si vous souhaitez régénérer les fichiers de configuration de quelque temps. En ce qui concerne les frais, Google ne facture pas les adresses IP statiques pendant leur utilisation. La machine &lt;code class=&quot;language-text&quot;&gt;n1-standard-1&lt;/code&gt; ne devrait pas vous coûter plus de 30 $ par mois. Certes, cela coûte un peu plus cher que la plupart des services VPN, mais la plupart des services VPN ne vous donnent pas un contrôle total :)&lt;/p&gt;
+&lt;p&gt;&lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/73eb40d4f0bb7c23d2790b3c426d1575/70a92/2.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 467px;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 121.84154175588866%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAYCAIAAAB1KUohAAAACXBIWXMAAAsSAAALEgHS3X78AAAB1UlEQVQ4y5VUy47TMBT1zwE7FgiEWIOQALFkPWyQGDTLEa8VX8DHdAWVyqR5x06TJnEcv+JyOq7YMXGPnKsq9fU9957jkMufzYvr6vXX6s03+uoLfX5dhayXn+nb74y8+8GefCqfXpXProrHl/mD9+n9i4V17yJ9+CF79DEnwziVrN3teT8qIa3Uc8iatBsnTeQ0rX//urn5o7U6uNmFLWu0NYZYa7uua9vWOWeM0SYI0zQppYiUklLKGNvv9zjoEAxsJlrrKIrW63VxizRNd7vdPM94v1wZm/q+B/NhGBA55+Bil+CPIOM4RtttFG03m00cx03TGmPdEkDtmIzKtCqLIisRijxLk7ZtjpO7E0KII21wEOowCDeIuR9txyGjCx0YivBRNp3ouJLKcTFrEzxtEIjjbZomjFEYRisJt4T2jIfVdVGUjNWwSl3XFaX/5vk/nHrGGRAtyzJYpaoqiAy1kHx35RNtJOMY+ASZkM3r7P9e7hlbkZYkSZ7n0OA8e4K6rwkgGUQWG8aGkz3x4EqgPpLhU0S8CbEnKnmp4tVqhVjeAvnnmIRzXCZEbz3PPKQ48T140UEYcQ7D6WJgYGgbCuMH3p73MUDbGBgGiG49ixAg8S/mDk08LO0x+gAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    &gt;&lt;/span&gt;
+    &lt;picture&gt;
+        &lt;source
+          srcset=&quot;/static/73eb40d4f0bb7c23d2790b3c426d1575/8ffb1/2.webp 293w,
+/static/73eb40d4f0bb7c23d2790b3c426d1575/d57f5/2.webp 467w&quot;
+          sizes=&quot;(max-width: 467px) 100vw, 467px&quot;
+          type=&quot;image/webp&quot;
+        /&gt;
+        &lt;source
+          srcset=&quot;/static/73eb40d4f0bb7c23d2790b3c426d1575/f93ee/2.png 293w,
+/static/73eb40d4f0bb7c23d2790b3c426d1575/70a92/2.png 467w&quot;
+          sizes=&quot;(max-width: 467px) 100vw, 467px&quot;
+          type=&quot;image/png&quot;
+        /&gt;
+        &lt;img
+          class=&quot;gatsby-resp-image-image&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px white;&quot;
+          src=&quot;/static/73eb40d4f0bb7c23d2790b3c426d1575/70a92/2.png&quot;
+          alt=&quot;2&quot;
+          title=&quot;&quot;
+        /&gt;
+      &lt;/picture&gt;
+  &lt;/span&gt;
+  &lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Vos interfaces réseau doivent ressembler à l’image. &lt;strong&gt;Veillez à activer le transfert IP&lt;/strong&gt;, car cela ne peut plus être modifié après la création de l’instance.&lt;/p&gt;
+&lt;p&gt;En règle générale, vous souhaiterez probablement garder votre adresse IP externe secrète. Cela ne me dérange pas de rendre celui-ci public, car cette instance n’existera pas lorsque vous lirez ce tutoriel, et l’adresse IP appartiendra probablement à quelqu’un d’autre.&lt;/p&gt;
+&lt;p&gt;Appuyez sur “Terminé” et “Créer”. Une fois l’instance prête (un bouton “SSH” noir apparaîtra), cliquez ou double-cliquez sur le bonton “SSH” pour ouvrir une fenêtre SSH. Le reste de la configuration se fera sur cette machine, que nous appellerons le “server”.&lt;/p&gt;
+&lt;h2&gt;2. Installation OpenVPN et EasyRSA&lt;/h2&gt;
+&lt;p&gt;OpenVPN est (évidemment) le serveur VPN que nous utilisons, et EasyRSA est un paquet qui nous permettra de configurer une autorité de certification interne à utiliser.&lt;/p&gt;
+&lt;p&gt;Bien que ce ne soit généralement pas le cas, pour cette configuration, il est souvent nécessaire de lancer une mise à jour d’apt pour pouvoir installer un ou les deux packages. Les deux d’entre eux sont dans les dépôts par défaut d’Ubuntu.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;apt-get&lt;/span&gt; update
+&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;apt-get&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; openvpn easy-rsa&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Temps de configurer.&lt;/p&gt;
+&lt;h2&gt;3. Mise enplace du CA&lt;/h2&gt;
+&lt;p&gt;Comme OpenVPN utilise TLS/SSL, il a besoin de certificats pour chiffrer le trafic. Pour cela, nous devrons émettre nos propres certificats de confiance, ce que nous pouvons faire à l’aide de la CA que nous sommes sur le point de configurer.&lt;/p&gt;
+&lt;p&gt;Commençons par copier le &lt;code class=&quot;language-text&quot;&gt;easy-rsa&lt;/code&gt; de modèles du paquet &lt;code class=&quot;language-text&quot;&gt;easy-rsa&lt;/code&gt;.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;make-cadir ~/openvpn-ca
+&lt;span class=&quot;token function&quot;&gt;cd&lt;/span&gt; ~/openvpn-ca&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Il y a des valeurs que nous pouvons vouloir éditer, alors allons-y et &lt;code class=&quot;language-text&quot;&gt;nano vars&lt;/code&gt;. Si vous voulez utiliser vim, continuez, mais puisque j’essaie de garder mes tutoriels aussi simples que possible, j’utilise nano.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;À partir de ce moment, s’il y a une partie d’une commande qui dépend d’une valeur que vous choisissez, elle sera en gras. Tout le code qui n’est pas généré par un utilisateur sera en italique.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Faites défiler vers le bas du fichier (ce n’est pas trop long) et vous devriez trouver ce qui suit:&lt;/p&gt;
+&lt;div class=&quot;language-text extra-class&quot;&gt;
+&lt;pre class=&quot;language-text code&quot;&gt;
+export KEY_COUNTRY=&quot;&lt;b&gt;US&lt;/b&gt;&quot;
+export KEY_PROVINCE=&quot;&lt;b&gt;CA&lt;/b&gt;&quot;
+export KEY_CITY=&quot;&lt;b&gt;SanFrancisco&lt;/b&gt;&quot;
+export KEY_ORG=&quot;&lt;b&gt;Fort-Funston&lt;/b&gt;&quot;
+export KEY_EMAIL=&quot;&lt;b&gt;me@myhost.mydomain&lt;/b&gt;&quot;
+export KEY_OU=&quot;&lt;b&gt;MyOrganizationalUnit&lt;/b&gt;&quot;
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Éditez autant d’entre eux (ou aucun d’eux) que vous le souhaitez. Juste en dessous de ces valeurs devrait être &lt;code class=&quot;language-text&quot;&gt;export KEY_NAME=&amp;quot;EasyRSA&amp;quot;&lt;/code&gt;. Pour simplifier notre configuration, nous allons modifier cette ligne comme suit:&lt;/p&gt;
+&lt;div class=&quot;language-text extra-class&quot;&gt;
+&lt;pre class=&quot;language-text code&quot;&gt;
+export KEY_NAME=&quot;&lt;b&gt;server&lt;/b&gt;&quot;
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Enregistrez et fermez le fichier (ctrl + x, y, entrez). Les variables que nous venons de modifier seront utilisées pour le processus de signature de notre autorité de certification. Toujours dans le &lt;code class=&quot;language-text&quot;&gt;openvpn-ca&lt;/code&gt;, exécutez la commande suivante:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;source&lt;/span&gt; vars&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Si vous avez bien fait, le re &lt;code&gt;NOTE: If you run ./clean-all, I will be doing a rm -rf on /home/&lt;b&gt;username&lt;/b&gt;/openvpn-ca/keys&lt;/code&gt;. C’est ce que nous voulons. Pour assurer un environnement de travail propre, nous allons lancer &lt;code class=&quot;language-text&quot;&gt;./clean-all&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Maintenant, construisons le CA&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;./build-ca&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Toutes les variables que nous avons déjà définies doivent se renseigner elles-mêmes. Il suffit donc d’y accéder en appuyant plusieurs fois sur Entrée. À la fin, vous aurez une autorité de certification prête à commencer à signer.&lt;/p&gt;
+&lt;p&gt;Nous avons également besoin d’un certificat de serveur et d’une clé de cryptage pour garantir la sécurité de notre trafic.&lt;/p&gt;
+&lt;p&gt;Créons notre certificat de serveur et notre clé.&lt;/p&gt;
+&lt;div class=&quot;language-bash extra-class&quot;&gt;
+&lt;pre class=&quot;language-bash code&quot;&gt;
+./build-key-server &lt;b&gt;server&lt;/b&gt;
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Passer à nouveau les invites de commande. Nous n’entrerons pas un mot de passe, cette fois. Les deux dernières invites vous obligent à entrer &lt;code class=&quot;language-text&quot;&gt;y&lt;/code&gt; pour signer le certificat. Assurez-vous de ne pas les ignorer!&lt;/p&gt;
+&lt;p&gt;Comme indiqué précédemment, nous avons également besoin d’une clé de chiffrement. Pour les besoins de ce didacticiel, nous allons générer une clé Diffie-Hellman, qui a tendance à être plutôt forte. Bien sûr, une grande [force] entraîne une grande [inefficacité]. Par conséquent, quelle que soit votre système, la commande suivante prendra probablement quelques minutes.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;./build-dh&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Nous renforcerons cela avec une signature HMAC, afin de nous assurer que la vérification de l’intégrité TLS est plus sûre.&lt;/p&gt;
+&lt;div class=&quot;language-bash extra-class&quot;&gt;
+&lt;pre class=&quot;language-bash code&quot;&gt;
+openvpn --genkey --secret keys/&lt;b&gt;tiv&lt;/b&gt;.key
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h2&gt;4. Générer un certificat client&lt;/h2&gt;
+&lt;p&gt;Naturellement, si vous allez utiliser une autorité de certification, votre client doit également disposer d’un certificat. Bien que vous puissiez le faire sur votre ordinateur client et que le serveur le signe, nous essayons de garder les choses simples et hébergées sur un seul ordinateur.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Si vous avez plusieurs clients, vous pouvez suivre cette étape plusieurs fois. Assurez-vous simplement de rendre vos noms de client uniques.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Assurez-vous que vous êtes dans le &lt;code class=&quot;language-text&quot;&gt;openvpn-ca&lt;/code&gt; et que votre fichier vars est synchronisé.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;cd&lt;/span&gt; ~/openvpn-ca
+&lt;span class=&quot;token function&quot;&gt;source&lt;/span&gt; vars&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Maintenant, nous allons construire une clé client en tant que telle:&lt;/p&gt;
+&lt;div class=&quot;language-bash extra-class&quot;&gt;
+&lt;pre class=&quot;language-bash code&quot;&gt;
+./build-key &lt;b&gt;client&lt;/b&gt;
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Une fois de plus, tout doit être pré-rempli. Passez donc tous les éléments, sauf les deux dernières invites, qui vous demanderont de signer en entrant &lt;code class=&quot;language-text&quot;&gt;y&lt;/code&gt;.&lt;/p&gt;
+&lt;h2&gt;5. Configurer le serveur OpenVPN&lt;/h2&gt;
+&lt;p&gt;OpenVPN s’installe sous le répertoire &lt;code class=&quot;language-text&quot;&gt;/etc/openvpn&lt;/code&gt;. Pour que tout fonctionne, nous devons déplacer certains fichiers dans ce dossier.&lt;/p&gt;
+&lt;div class=&quot;language-bash extra-class&quot;&gt;
+&lt;pre class=&quot;language-bash code&quot;&gt;
+cd ~/openvpn-ca/keys
+sudo cp ca.crt server.crt server.key &lt;b&gt;tiv&lt;/b&gt;.key dh2048.pem /etc/openvpn
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Par défaut, OpenVPN est fourni avec un exemple de configuration. Par souci de simplicité, nous simplifierons la décompression dans notre dossier de configuration.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;gunzip -c /usr/share/doc/openvpn/examples/sample-config-files/server.conf.gz | sudo tee /etc/openvpn/server.conf&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Ensuite, nous allons éditer le fichier de configuration:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;nano&lt;/span&gt; /etc/openvpn/server.conf&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;La première étape consiste à trouver la directive &lt;code class=&quot;language-text&quot;&gt;tls-auth&lt;/code&gt;. Il y aura un point-virgule (&lt;code class=&quot;language-text&quot;&gt;;&lt;/code&gt;) à côté de la directive, que nous supprimerons. En dessous, nous ajouterons une ligne.&lt;/p&gt;
+&lt;div class=&quot;language-text extra-class&quot;&gt;
+&lt;pre class=&quot;language-text code&quot;&gt;
+tls-auth &lt;b&gt;tiv&lt;/b&gt;.key 0 # This file is secret
+key-direction 0
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Nous devons également chiffrer notre serveur, éditons donc les directives de chiffrement juste en dessous de cette section. Plus précisément, nous décommentons la ligne AES-128-CBC et ajouterons une directive &lt;code class=&quot;language-text&quot;&gt;auth&lt;/code&gt;.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;cipher AES-128-CBC
+auth SHA256&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Ensuite, les paramètres d’utilisateur et de groupe:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;user nobody
+group nogroup&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Facultativement, nous pourrions opter pour l’envoi de tout le trafic via le VPN. Pour cela, recherchez la directive &lt;code class=&quot;language-text&quot;&gt;redirect-gateway&lt;/code&gt; et décommentez-la.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;push &amp;quot;redirect-gateway def1 bypass-dhcp&amp;quot;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Juste en dessous, il devrait y avoir quelques lignes d’&lt;code class=&quot;language-text&quot;&gt;dhcp-option&lt;/code&gt;. Décommentez ceux-là aussi.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;push &amp;quot;dhcp-option DNS 208.67.222.222&amp;quot;
+push &amp;quot;dhcp-option DNS 208.67.220.220&amp;quot;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Optionnellement, nous pouvons vouloir changer le port et le protocole sur lesquels OpenVPN fonctionne. La valeur par défaut est UDP: 1194, mais si votre réseau bloque les connexions VPN, ce sera probablement l’une des victimes. Le déguisement serait d’utiliser TCP: 443, qui est le port HTTPS.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;port 443
+
+proto tcp
+;proto udp&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Si vous n’avez pas utilisé «serveur» comme nom de serveur, vos fichiers &lt;code class=&quot;language-text&quot;&gt;crt&lt;/code&gt; ont un nom différent. Mettez-les à jour en conséquence.&lt;/p&gt;
+&lt;div class=&quot;language-text extra-class&quot;&gt;
+&lt;pre class=&quot;language-text code&quot;&gt;
+cert &lt;b&gt;server&lt;/b&gt;.crt
+key &lt;b&gt;server&lt;/b&gt;.key
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Enregistrez et fermez le fichier.&lt;/p&gt;
+&lt;h2&gt;6. Préparer Ubuntu&lt;/h2&gt;
+&lt;p&gt;Bien que nous ayons déjà configuré le transfert IP, etc., nous devons apporter quelques modifications pour activer ces options.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;nano&lt;/span&gt; /etc/sysctl.conf&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Recherchez la ligne suivante et supprimez le # (caractère de commentaire).&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;net.ipv4.ip_forward=1&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Sauver et fermer. Pour mettre à jour les paramètres de session, exécutez:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; sysctl -p&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Ensuite, nous devons trouver et mettre à jour nos règles de pare-feu (UFW) pour masquer les clients. La première étape consiste à trouver l’interface sur laquelle nous fonctionnons:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;ip route | grep default&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;L’interface que nous voulons est celle qui contient le mot “dev”. Dans notre cas, cela ressemble à ceci:&lt;/p&gt;
+&lt;div class=&quot;language-text extra-class&quot;&gt;
+&lt;pre class=&quot;language-text code&quot;&gt;
+default via 10.138.0.1 dev &lt;b&gt;ens4&lt;/b&gt;
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Donc, notre interface est &lt;code class=&quot;language-text&quot;&gt;ens4&lt;/code&gt;. Avec cela, nous mettrons à jour nos règles de pare-feu:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;nano&lt;/span&gt; /etc/ufw/before.rules&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Au-dessus, là où il est indiqué &lt;code class=&quot;language-text&quot;&gt;Don&amp;#39;t delete these required lines...&lt;/code&gt; ajoutez le code suivant:&lt;/p&gt;
+&lt;div class=&quot;language-text extra-class&quot;&gt;
+&lt;pre class=&quot;language-text code&quot;&gt;
+# OPENVPN
+# NAT Table
+*nat
+:POSTROUTING ACCEPT [0:0] 
+# OpenVPN client traffic
+-A POSTROUTING -s 10.8.0.0/8 -o &lt;b&gt;ens4&lt;/b&gt; -j MASQUERADE
+COMMIT
+# OPENVPN
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Sauver et fermer. Ensuite, nous devons transférer les paquets.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;nano&lt;/span&gt; /etc/default/ufw&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Recherchez la directive &lt;code class=&quot;language-text&quot;&gt;DEFAULT_FORWARD_POLICY&lt;/code&gt; et remplacez-la de &lt;code class=&quot;language-text&quot;&gt;&amp;quot;DROP&amp;quot;&lt;/code&gt; par &lt;code class=&quot;language-text&quot;&gt;&amp;quot;ACCEPT&amp;quot;&lt;/code&gt;.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;DEFAULT_FORWARD_POLICY=&amp;quot;ACCEPT&amp;quot;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Sauver et fermer.&lt;/p&gt;
+&lt;h2&gt;7. Lancer OpenVPN&lt;/h2&gt;
+&lt;p&gt;Pour démarrer le serveur, exécutez ce qui suit:&lt;/p&gt;
+&lt;div class=&quot;language-bash extra-class&quot;&gt;
+&lt;pre class=&quot;language-bash code&quot;&gt;
+sudo systemctl start openvpn@&lt;b&gt;server&lt;/b&gt;
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Pour vérifier qu’il a bien démarré, lancez:&lt;/p&gt;
+&lt;div class=&quot;language-bash extra-class&quot;&gt;
+&lt;pre class=&quot;language-bash code&quot;&gt;
+sudo systemctl status openvpn@&lt;b&gt;server&lt;/b&gt;
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Si tout se passe bien, vous devriez voir une sortie incluant &lt;code class=&quot;language-text&quot;&gt;Active: active (running)&lt;/code&gt;. Vous devrez peut-être &lt;code class=&quot;language-text&quot;&gt;q&lt;/code&gt; sur &lt;code class=&quot;language-text&quot;&gt;q&lt;/code&gt; pour quitter le panneau d’informations. Si cela vous convient, liez le service à la séquence de démarrage.&lt;/p&gt;
+&lt;div class=&quot;language-bash extra-class&quot;&gt;
+&lt;pre class=&quot;language-bash code&quot;&gt;
+sudo systemctl enable openvpn@&lt;b&gt;server&lt;/b&gt;
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h2&gt;8. Configuration d’une structure de configuration client&lt;/h2&gt;
+&lt;p&gt;Pour faciliter la configuration des configurations client, nous allons d’abord créer une structure. Pour commencer, créez un dossier de configuration pour stocker les fichiers de configuration du client.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;mkdir&lt;/span&gt; -p ~/clients/files&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Les clés du client seront dans ces configurations, alors verrouillons les permissions sur le répertoire &lt;code class=&quot;language-text&quot;&gt;files&lt;/code&gt;.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;chmod&lt;/span&gt; 700 ~/clients/files&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Copiez l’exemple de configuration.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;cp&lt;/span&gt; /usr/share/doc/openvpn/examples/sample-config-files/client.conf ~/clients/base.conf&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Éditons le fichier:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;nano&lt;/span&gt; ~/clients/base.conf&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Trouvez la directive &lt;code class=&quot;language-text&quot;&gt;remote&lt;/code&gt;. Remplacez &lt;code class=&quot;language-text&quot;&gt;my-server-1&lt;/code&gt; par l’adresse IP externe publique attribuée à votre instance GCE. Si vous avez choisi un port autre que 1194, mettez-le à jour en conséquence.&lt;/p&gt;
+&lt;div class=&quot;language-text extra-class&quot;&gt;
+&lt;pre class=&quot;language-text code&quot;&gt;
+remote &lt;b&gt;35.197.111.236 443&lt;/b&gt;
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Mettez également à jour votre protocole.&lt;/p&gt;
+&lt;div class=&quot;language-text extra-class&quot;&gt;
+&lt;pre class=&quot;language-text code&quot;&gt;
+proto &lt;b&gt;tcp&lt;/b&gt;
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Décommentez l’utilisateur et le groupe:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;user nobody
+group nogroup&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Trouvez les directives &lt;code class=&quot;language-text&quot;&gt;ca&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;cert&lt;/code&gt; et &lt;code class=&quot;language-text&quot;&gt;key&lt;/code&gt;, commentez-les, car nos configurations les incluront automatiquement.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;# ca ca.crt
+# cert client.crt
+# key client.key&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Utilisez les mêmes paramètres de chiffrement et d’authentification que précédemment:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;cipher AES-128-CBC
+auth SHA256&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Quelque part, nous devrons ajouter la &lt;code class=&quot;language-text&quot;&gt;key-direction&lt;/code&gt;. Assurez-vous d’utiliser 1, comme c’est le cas pour le client. 0 était pour le serveur.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;key-direction 1&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Si votre configuration client actuelle est (ou sera) utilisée sur un périphérique Linux, ajoutez les éléments suivants:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;script-security 2
+up /etc/openvpn/update-resolv-conf
+down /etc/openvpn/update-resolv-conf&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Notez que si vous les incluez dans un environnement non-Linux (Android et macOS inclus dans un non-Linux), vos clients peuvent se comporter de manière étrange.&lt;/p&gt;
+&lt;p&gt;Sauver et fermer. Ensuite, nous devons écrire un script pour générer nos configs client rapidement et facilement.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;nano&lt;/span&gt; ~/clients/gen_config.sh&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;A l’intérieur, collez ce code:&lt;/p&gt;
+&lt;pre class=&quot;language-text code&quot;&gt;
+#!/bin/bash
+
+# First argument: Client identifier
+
+KEY_DIR=~/openvpn-ca/keys
+OUTPUT_DIR=~/clients/files
+BASE_CONFIG=~/clients/base.conf
+
+cat ${BASE_CONFIG} \
+    &lt;(echo -e &apos;&amp;lt;ca&amp;gt;&apos;) \
+    ${KEY_DIR}/ca.crt \
+    &lt;(echo -e &apos;&amp;lt;/ca&amp;gt;\n&amp;lt;cert&amp;gt;&apos;) \
+    ${KEY_DIR}/${1}.crt \
+    &lt;(echo -e &apos;&amp;lt;/cert&amp;gt;\n&amp;lt;key&amp;gt;&apos;) \
+    ${KEY_DIR}/${1}.key \
+    &lt;(echo -e &apos;&amp;lt;/key&amp;gt;\n&amp;lt;tls-auth&amp;gt;&apos;) \
+    ${KEY_DIR}/&lt;b&gt;tiv&lt;/b&gt;.key \
+    &lt;(echo -e &apos;&amp;lt;/tls-auth&amp;gt;&apos;) \
+    &gt; ${OUTPUT_DIR}/${1}.ovpn
+&lt;/pre&gt;
+&lt;p&gt;&lt;a href=&quot;./02/gen_config.sh&quot; download&gt;gen_config.sh&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Le &lt;code class=&quot;language-text&quot;&gt;{1}&lt;/code&gt; fait ici référence au premier argument, qui sera notre nom de client. Assurez-vous de mettre à jour &lt;strong&gt;tiv&lt;/strong&gt;.key fonction du nom de votre clé HMAC.&lt;/p&gt;
+&lt;p&gt;Autoriser l’exécution de ce script:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;chmod&lt;/span&gt; 700 ~/clients/gen_config.sh&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;9. Générer des configurations client&lt;/h2&gt;
+&lt;p&gt;Le pas que vous attendiez tous est enfin arrivé. Nous allons générer nos configurations client.&lt;/p&gt;
+&lt;div class=&quot;language-bash extra-class&quot;&gt;
+&lt;pre class=&quot;language-bash code&quot;&gt;
+cd ~/clients
+./gen_config.sh &lt;b&gt;client&lt;/b&gt;
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Vérifiez que cela a fonctionné en exécutant:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;ls&lt;/span&gt; ~/clients/files&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Si tel est le cas, il devrait maintenant y avoir un fichier &lt;code&gt;&lt;b&gt;client&lt;/b&gt;.ovpn&lt;/code&gt; dans ce répertoire. Nous devons télécharger ce fichier et le transférer sur nos appareils. Pour ce faire, cliquez sur l’icône représentant une roue en haut à droite de la session SSH, puis sélectionnez «Télécharger le fichier».&lt;/p&gt;
+&lt;p&gt;Le chemin pleinement qualifié devrait ressembler à ceci:&lt;/p&gt;
+&lt;div class=&quot;language-text extra-class&quot;&gt;
+&lt;pre class=&quot;language-text code&quot;&gt;
+/home/&lt;b&gt;username&lt;/b&gt;/clients/files/&lt;b&gt;client&lt;/b&gt;.ovpn
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h2&gt;10. Installation sur les clients&lt;/h2&gt;
+&lt;p&gt;Pour Windows, téléchargez l’application client &lt;a href=&quot;https://openvpn.net/index.php/open-source/downloads.html&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;OpenVPN&lt;/a&gt;. Une fois installé, déplacez votre fichier &lt;code&gt;&lt;b&gt;client&lt;/b&gt;.ovpn&lt;/code&gt; vers &lt;code class=&quot;language-text&quot;&gt;C:\Program Files\OpenVPN\config&lt;/code&gt;. Pour ouvrir OpenVPN, vous devez exécuter l’application en tant qu’administrateur. Une fois à l’intérieur, vous devriez voir et pouvoir vous connecter à votre VPN.&lt;/p&gt;
+&lt;p&gt;Pour macOS, la plupart des gens suggèrent d’utiliser &lt;a href=&quot;https://tunnelblick.net/&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;Tunnelblick&lt;/a&gt; bien que tout autre client OpenVPN (même s’il soit sans danger) soit probablement bon aussi. Une fois installé, vous devriez pouvoir faire glisser n’importe .ovpn fichier &lt;code class=&quot;language-text&quot;&gt;.ovpn&lt;/code&gt; sur l’icône Tunnelblick de la barre de menus pour installer la configuration. Utilisez la barre de menus pour vous connecter ensuite au VPN. Si vous êtes interrogé sur le plugin &lt;code class=&quot;language-text&quot;&gt;down-root.so&lt;/code&gt;, prenez une décision! Je l’ai sauté parce que je suis capable de reconnecter ma connexion, mais c’est à vous de décider.&lt;/p&gt;
+&lt;p&gt;Sous Linux, installez le paquet &lt;code class=&quot;language-text&quot;&gt;openvpn&lt;/code&gt; en utilisant votre gestionnaire de paquets. Les utilisateurs de CentOS devront d’abord installer &lt;code class=&quot;language-text&quot;&gt;epel-release&lt;/code&gt; utilisant &lt;code class=&quot;language-text&quot;&gt;yum&lt;/code&gt;. Une fois installé, lancez &lt;code class=&quot;language-text&quot;&gt;ls /etc/openvpn&lt;/code&gt;. Si la sortie &lt;strong&gt;ne&lt;/strong&gt; présente &lt;strong&gt;pas&lt;/strong&gt; de fichier &lt;code class=&quot;language-text&quot;&gt;update-resolve-conf&lt;/code&gt;, vous devez modifier votre fichier &lt;code class=&quot;language-text&quot;&gt;.ovpn&lt;/code&gt; et supprimer les lignes suivantes (si vous les avez ajoutées):&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;script-security 2
+up /etc/openvpn/update-resolv-conf
+down /etc/openvpn/update-resolv-conf&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Si vous n’avez jamais ajouté ces lignes mais trouvé un fichier &lt;code class=&quot;language-text&quot;&gt;update-resolv-conf&lt;/code&gt;, ajoutez-les! Les utilisateurs de CentOS devront modifier le &lt;code class=&quot;language-text&quot;&gt;group&lt;/code&gt; dans le fichier &lt;code class=&quot;language-text&quot;&gt;.ovpn&lt;/code&gt; de &lt;code class=&quot;language-text&quot;&gt;nogroup&lt;/code&gt; à &lt;code class=&quot;language-text&quot;&gt;nobody&lt;/code&gt; pour se conformer aux normes du système d’exploitation.&lt;/p&gt;
+&lt;p&gt;Pour vous connecter, lancez &lt;code class=&quot;language-text&quot;&gt;sudo openvpn — config client .ovpn&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Pour iOS, installez l’application &lt;a href=&quot;https://itunes.apple.com/us/app/id590379981&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;OpenVPN Connect&lt;/a&gt;. Ensuite, ouvrez iTunes sur votre ordinateur et accédez à iPhone&gt; Applications. Faites défiler jusqu’à la section «Partage de fichiers» et sélectionnez “OpenVPN”. Faites glisser votre fichier &lt;code class=&quot;language-text&quot;&gt;.ovpn&lt;/code&gt; dans le panneau “OpenVPN Documents”. Ouvrir l’application sur votre téléphone devrait maintenant afficher un message indiquant qu’un nouveau profil est prêt à être importé. Une fois importé, vous devriez pouvoir vous connecter au VPN.&lt;/p&gt;
+&lt;p&gt;Pour Android, installez l’application &lt;a href=&quot;https://play.google.com/store/apps/details?id=net.openvpn.openvpn&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;OpenVPN Connect&lt;/a&gt;. Ensuite, transférez votre fichier &lt;code class=&quot;language-text&quot;&gt;.ovpn&lt;/code&gt; n’importe où / de toute façon sur votre appareil (je viens d’utiliser Google Drive, mais cela peut ne pas être recommandé). Dans l’application, ouvrez le menu et cliquez sur “Importer”. Accédez à votre fichier &lt;code class=&quot;language-text&quot;&gt;.ovpn&lt;/code&gt; , cliquez dessus, puis appuyez sur “IMPORT” en haut à droite. Une fois terminé, vous devriez pouvoir vous connecter au VPN.&lt;/p&gt;
+&lt;h2&gt;Test du VPN&lt;/h2&gt;
+&lt;p&gt;Le moyen le plus simple de tester votre VPN serait de Google “quelle est mon adresse IP” avant et après la connexion. Votre adresse IP doit passer à l’adresse IP publique externe de votre instance GCE une fois que vous êtes connecté au VPN, puis à l’adresse IP de votre réseau une fois déconnectée du VPN.&lt;/p&gt;
+&lt;p&gt;Si tout s’est bien passé, c’est tout! Votre nouveau VPN est prêt à être utilisé.&lt;/p&gt;
+&lt;h2&gt;Crédits&lt;/h2&gt;
+&lt;p&gt;Cet article est basé en grande partie sur &lt;a href=&quot;https://www.digitalocean.com/community/tutorials/how-to-set-up-an-openvpn-server-on-ubuntu-16-04&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;ce didacticiel de la communauté DigitalOcean&lt;/a&gt;. Bien que la configuration elle-même soit assez similaire, j’ai pensé écrire un article séparé car il existe quelques éléments clés différents dans GCE et il est assez facile de se tromper si vous le faites pour la première fois (je parle par expérience).&lt;/p&gt;
+&lt;style lang=&quot;scss&quot;&gt;
+.content pre.code, 
+.content pre[class*=&quot;language-&quot;].code {
+  /* font-size: 10pt; */
+  font-size: 0.85em;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, &quot;Courier New&quot;, monospace;
+  color: #fff;
+
+  b {
+    color: yellow;
+    /* text-decoration:underline; */
+    /* background-color: green; */
+  }
+}
+&lt;/style&gt;</content:encoded></item><item><title><![CDATA[Principales commandes SQL/PostgreSQL que vous avez besoin de connaître]]></title><description><![CDATA[Principales commandes SQL/PostgreSQL que vous avez besoin de connaître. Ici, nous allons passer en revue les commandes les plus importantes…]]></description><link>https://softwareontheroad.com/sql/</link><guid isPermaLink="false">https://softwareontheroad.com/sql/</guid><pubDate>Sun, 14 Apr 2019 08:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;Principales commandes SQL/PostgreSQL que vous avez besoin de connaître.&lt;/h1&gt;
 &lt;p&gt;Ici, nous allons passer en revue les commandes les plus importantes et les plus élémentaires que vous devez connaître pour créer, gérer et supprimer vos données sur votre base de données. Outre les commandes ici, j’utilise la syntaxe PostgreSQL. La plupart des bases de données relationnelles partagent les mêmes concepts.&lt;/p&gt;
 &lt;p&gt;En apprenant cela, vous pourrez créer et gérer votre base de données.&lt;/p&gt;
 &lt;p&gt;Ce sont les commandes que vous pouvez vous attendre à apprendre ici:&lt;/p&gt;
@@ -1744,377 +2114,7 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;sql&quot;&gt;&lt;pre class=&quot;language-sql&quot;&gt;&lt;code class=&quot;language-sql&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;DROP&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;TABLE&lt;/span&gt; customer&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;C’est simple comme ça, mais vous devez être encore plus prudent que la commande delete . Ici, vous allez laisser tomber la table des trous et il n’y a aucun moyen de récupérer.&lt;/p&gt;
 &lt;p&gt;Une autre différence majeure est que cela ne devrait pas être utilisé dans votre “programme”. Cette commande ne devrait être utilisée que par la commande de terminal lorsque vous savez ce qui doit être fait ou supprimé.&lt;/p&gt;
-&lt;hr&gt;</content:encoded></item><item><title><![CDATA[Configuration d'un serveur OpenVPN sur Google Compute Engine]]></title><description><![CDATA[Configuration d’un serveur OpenVPN sur Google Compute Engine J’ai récemment commmencé à utiliser OpenVPN et à profiter des différentes…]]></description><link>https://softwareontheroad.com/openvpn-google/</link><guid isPermaLink="false">https://softwareontheroad.com/openvpn-google/</guid><pubDate>Sun, 14 Apr 2019 08:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;Configuration d’un serveur OpenVPN sur Google Compute Engine&lt;/h1&gt;
-&lt;p&gt;J’ai récemment commmencé à utiliser OpenVPN et à profiter des différentes options qu’il propose, notamment le masquage du trafic VPN sous TCP:443 (autrement appelé HTTPS). Personnellement, j’aime utiliser GCE pour héberger mes VPN, car je profite de la puissance et de la personnalisation que cela procure.&lt;/p&gt;
-&lt;p&gt;Cependant, il n’y avait absolument aucun tutoriel sur la configuration d’OpenVPN sur GCE. Il existe 10 étapes dans ce didacticiel, mais chaque étape peut exécuter plusieurs lignes de code.&lt;/p&gt;
-&lt;p&gt;Si vous essayez simplement d’ajouter plus de clients, passer aux étapes 4, 9 et 10.&lt;/p&gt;
-&lt;h2&gt;Table des matières&lt;/h2&gt;
-&lt;p&gt;[[toc]]&lt;/p&gt;
-&lt;h2&gt;1. Création de l’instance&lt;/h2&gt;
-&lt;p&gt;Nous voulons utiliser une instance &lt;code class=&quot;language-text&quot;&gt;n1-standard-1&lt;/code&gt; pour sa durabilité et son coût. Dirigez-vous vers le moteur de calcul et cliquez sur “CREATE INSTANCE”.&lt;/p&gt;
-&lt;p&gt;&lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/bc1d8c0fe43fbdbd290421761c57cb77/13283/1.png&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-wrapper&quot;
-    style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 450px;&quot;
-  &gt;
-    &lt;span
-      class=&quot;gatsby-resp-image-background-image&quot;
-      style=&quot;padding-bottom: 139.33333333333334%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAcCAIAAADuuAg3AAAACXBIWXMAAAsSAAALEgHS3X78AAACjUlEQVQ4y41Uh3KjMBDV///cZeZcEhfsuFJtBAihyj1JPkJsp7zBO2vBtrfaJZvNZrVaLZdLSqkxRkqplJIeXdfhxHr0Iwx/SFmWRVFcPWBfegS9rms4cl+P4G3dA7/EWkPpNUliKDhCVK01DCDhIs/z8/kMdyGU0jajMr7IhruPiZDqQtvi2jStbLmsG8F5JzoHRG6apvYQwp25orQVyoZqiBA6p/pS60ulKXOSMY7EK49gDwUShTDGhspD2vbGgjXWaGu1J+k/N4CP4iP1/t8NqIugqsPhAK+h1A9KRyQPPN3RTtq2RZ92u12SJO/v76Bnv9+fPKDjHLKoVFYqyP4zCOfcFcaYUhqNQfwgAeQWdCSu/XNvjIAIQssCBfdfY9zqoWwCr43s16mlTB2Pe/gCBTsPKHuPNE0f3TljpJVVZpPqkpkiz1DBECdkHm7oc2N8AOOisZ00uOJRtAmRERCvH23AAnjdbre4M8QNg3KWSn80cCDsETgPMwMvBJ1AaSgVShzHaDv4v2PoKxBcD6QBs+PxCBdo+zCGd9w+AndbRFG0WCxms9l6vQ71oGz4ClclZHgHZAdDIoWoKoyum54QNtwTQHh8F7lu+GQevb29TqdTbJUsyzBAoRNPO3TXZ3M4pS8vf2bz+WQy+euBzNEqEPGDMX5tyy4e2BiQ2EoD4T8Yj+fulyR/zDPiIL1xh4Zqx46e9xmrb7t1PGHdIe2wfahHUCDxCr0IuzXQeRtJ1naRW91rbO/X+WsgKWzvW88g9SeMjLnK0iTPEriO4xMGq/810Cpb1Lao7LU2VdtD5tRtnItbPRLbp2w0ZF6pJ5sER22nWae5MJ0wvDNOkXgsF3hlhDTcP+ahc/8AbrFWxxhIqn8AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
-    &gt;&lt;/span&gt;
-    &lt;picture&gt;
-        &lt;source
-          srcset=&quot;/static/bc1d8c0fe43fbdbd290421761c57cb77/8ffb1/1.webp 293w,
-/static/bc1d8c0fe43fbdbd290421761c57cb77/2809e/1.webp 450w&quot;
-          sizes=&quot;(max-width: 450px) 100vw, 450px&quot;
-          type=&quot;image/webp&quot;
-        /&gt;
-        &lt;source
-          srcset=&quot;/static/bc1d8c0fe43fbdbd290421761c57cb77/f93ee/1.png 293w,
-/static/bc1d8c0fe43fbdbd290421761c57cb77/13283/1.png 450w&quot;
-          sizes=&quot;(max-width: 450px) 100vw, 450px&quot;
-          type=&quot;image/png&quot;
-        /&gt;
-        &lt;img
-          class=&quot;gatsby-resp-image-image&quot;
-          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px white;&quot;
-          src=&quot;/static/bc1d8c0fe43fbdbd290421761c57cb77/13283/1.png&quot;
-          alt=&quot;1&quot;
-          title=&quot;&quot;
-        /&gt;
-      &lt;/picture&gt;
-  &lt;/span&gt;
-  &lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Configuez-le avec les options affichées, mais n’appuyez pas encore sur “Créer”&lt;/p&gt;
-&lt;p&gt;Si vous ne voyez pas l’image, nous utilisons une instance &lt;code class=&quot;language-text&quot;&gt;n1-standard-1&lt;/code&gt; (1 vCPU, 3,75 Go de mémoire) avec Ubuntu 16.04 LTS installé (vous pouvez choisir un espace de stockage, mais 10 Go suffisent). Puisque notre VPN utilisera TCP: 443, nous devons autoriser le trafic HTTPS maintenant ou plus tard. Vous pouvez donc également le faire immédiatement.&lt;/p&gt;
-&lt;p&gt;Appuyez sur le bouton “Gestion, sécurité, disques, réseau, …” pour ouvrir les options avancées. Cliquez sur l’onglet Réseau et cliquez sur le bouton d’édition en regard de l’interface réseau sélectionnée.&lt;/p&gt;
-&lt;p&gt;Cliquez sur le menu déroulant “Adresse IP externe” et sélectionnez “Créer une adresse IP”. Entrez un nom, puis appuyez sur “Réserver”. Cette opération associera une adresse IP statique à votre instance, ce qui est probablement ce que vous voulez, sauf si vous souhaitez régénérer les fichiers de configuration de quelque temps. En ce qui concerne les frais, Google ne facture pas les adresses IP statiques pendant leur utilisation. La machine &lt;code class=&quot;language-text&quot;&gt;n1-standard-1&lt;/code&gt; ne devrait pas vous coûter plus de 30 $ par mois. Certes, cela coûte un peu plus cher que la plupart des services VPN, mais la plupart des services VPN ne vous donnent pas un contrôle total :)&lt;/p&gt;
-&lt;p&gt;&lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/73eb40d4f0bb7c23d2790b3c426d1575/70a92/2.png&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-wrapper&quot;
-    style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 467px;&quot;
-  &gt;
-    &lt;span
-      class=&quot;gatsby-resp-image-background-image&quot;
-      style=&quot;padding-bottom: 121.84154175588866%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAYCAIAAAB1KUohAAAACXBIWXMAAAsSAAALEgHS3X78AAAB1UlEQVQ4y5VUy47TMBT1zwE7FgiEWIOQALFkPWyQGDTLEa8VX8DHdAWVyqR5x06TJnEcv+JyOq7YMXGPnKsq9fU9957jkMufzYvr6vXX6s03+uoLfX5dhayXn+nb74y8+8GefCqfXpXProrHl/mD9+n9i4V17yJ9+CF79DEnwziVrN3teT8qIa3Uc8iatBsnTeQ0rX//urn5o7U6uNmFLWu0NYZYa7uua9vWOWeM0SYI0zQppYiUklLKGNvv9zjoEAxsJlrrKIrW63VxizRNd7vdPM94v1wZm/q+B/NhGBA55+Bil+CPIOM4RtttFG03m00cx03TGmPdEkDtmIzKtCqLIisRijxLk7ZtjpO7E0KII21wEOowCDeIuR9txyGjCx0YivBRNp3ouJLKcTFrEzxtEIjjbZomjFEYRisJt4T2jIfVdVGUjNWwSl3XFaX/5vk/nHrGGRAtyzJYpaoqiAy1kHx35RNtJOMY+ASZkM3r7P9e7hlbkZYkSZ7n0OA8e4K6rwkgGUQWG8aGkz3x4EqgPpLhU0S8CbEnKnmp4tVqhVjeAvnnmIRzXCZEbz3PPKQ48T140UEYcQ7D6WJgYGgbCuMH3p73MUDbGBgGiG49ixAg8S/mDk08LO0x+gAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
-    &gt;&lt;/span&gt;
-    &lt;picture&gt;
-        &lt;source
-          srcset=&quot;/static/73eb40d4f0bb7c23d2790b3c426d1575/8ffb1/2.webp 293w,
-/static/73eb40d4f0bb7c23d2790b3c426d1575/d57f5/2.webp 467w&quot;
-          sizes=&quot;(max-width: 467px) 100vw, 467px&quot;
-          type=&quot;image/webp&quot;
-        /&gt;
-        &lt;source
-          srcset=&quot;/static/73eb40d4f0bb7c23d2790b3c426d1575/f93ee/2.png 293w,
-/static/73eb40d4f0bb7c23d2790b3c426d1575/70a92/2.png 467w&quot;
-          sizes=&quot;(max-width: 467px) 100vw, 467px&quot;
-          type=&quot;image/png&quot;
-        /&gt;
-        &lt;img
-          class=&quot;gatsby-resp-image-image&quot;
-          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px white;&quot;
-          src=&quot;/static/73eb40d4f0bb7c23d2790b3c426d1575/70a92/2.png&quot;
-          alt=&quot;2&quot;
-          title=&quot;&quot;
-        /&gt;
-      &lt;/picture&gt;
-  &lt;/span&gt;
-  &lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Vos interfaces réseau doivent ressembler à l’image. &lt;strong&gt;Veillez à activer le transfert IP&lt;/strong&gt;, car cela ne peut plus être modifié après la création de l’instance.&lt;/p&gt;
-&lt;p&gt;En règle générale, vous souhaiterez probablement garder votre adresse IP externe secrète. Cela ne me dérange pas de rendre celui-ci public, car cette instance n’existera pas lorsque vous lirez ce tutoriel, et l’adresse IP appartiendra probablement à quelqu’un d’autre.&lt;/p&gt;
-&lt;p&gt;Appuyez sur “Terminé” et “Créer”. Une fois l’instance prête (un bouton “SSH” noir apparaîtra), cliquez ou double-cliquez sur le bonton “SSH” pour ouvrir une fenêtre SSH. Le reste de la configuration se fera sur cette machine, que nous appellerons le “server”.&lt;/p&gt;
-&lt;h2&gt;2. Installation OpenVPN et EasyRSA&lt;/h2&gt;
-&lt;p&gt;OpenVPN est (évidemment) le serveur VPN que nous utilisons, et EasyRSA est un paquet qui nous permettra de configurer une autorité de certification interne à utiliser.&lt;/p&gt;
-&lt;p&gt;Bien que ce ne soit généralement pas le cas, pour cette configuration, il est souvent nécessaire de lancer une mise à jour d’apt pour pouvoir installer un ou les deux packages. Les deux d’entre eux sont dans les dépôts par défaut d’Ubuntu.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;apt-get&lt;/span&gt; update
-&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;apt-get&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; openvpn easy-rsa&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Temps de configurer.&lt;/p&gt;
-&lt;h2&gt;3. Mise enplace du CA&lt;/h2&gt;
-&lt;p&gt;Comme OpenVPN utilise TLS/SSL, il a besoin de certificats pour chiffrer le trafic. Pour cela, nous devrons émettre nos propres certificats de confiance, ce que nous pouvons faire à l’aide de la CA que nous sommes sur le point de configurer.&lt;/p&gt;
-&lt;p&gt;Commençons par copier le &lt;code class=&quot;language-text&quot;&gt;easy-rsa&lt;/code&gt; de modèles du paquet &lt;code class=&quot;language-text&quot;&gt;easy-rsa&lt;/code&gt;.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;make-cadir ~/openvpn-ca
-&lt;span class=&quot;token function&quot;&gt;cd&lt;/span&gt; ~/openvpn-ca&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Il y a des valeurs que nous pouvons vouloir éditer, alors allons-y et &lt;code class=&quot;language-text&quot;&gt;nano vars&lt;/code&gt;. Si vous voulez utiliser vim, continuez, mais puisque j’essaie de garder mes tutoriels aussi simples que possible, j’utilise nano.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;À partir de ce moment, s’il y a une partie d’une commande qui dépend d’une valeur que vous choisissez, elle sera en gras. Tout le code qui n’est pas généré par un utilisateur sera en italique.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Faites défiler vers le bas du fichier (ce n’est pas trop long) et vous devriez trouver ce qui suit:&lt;/p&gt;
-&lt;div class=&quot;language-text extra-class&quot;&gt;
-&lt;pre class=&quot;language-text code&quot;&gt;
-export KEY_COUNTRY=&quot;&lt;b&gt;US&lt;/b&gt;&quot;
-export KEY_PROVINCE=&quot;&lt;b&gt;CA&lt;/b&gt;&quot;
-export KEY_CITY=&quot;&lt;b&gt;SanFrancisco&lt;/b&gt;&quot;
-export KEY_ORG=&quot;&lt;b&gt;Fort-Funston&lt;/b&gt;&quot;
-export KEY_EMAIL=&quot;&lt;b&gt;me@myhost.mydomain&lt;/b&gt;&quot;
-export KEY_OU=&quot;&lt;b&gt;MyOrganizationalUnit&lt;/b&gt;&quot;
-&lt;/pre&gt;
-&lt;/div&gt;
-&lt;p&gt;Éditez autant d’entre eux (ou aucun d’eux) que vous le souhaitez. Juste en dessous de ces valeurs devrait être &lt;code class=&quot;language-text&quot;&gt;export KEY_NAME=&amp;quot;EasyRSA&amp;quot;&lt;/code&gt;. Pour simplifier notre configuration, nous allons modifier cette ligne comme suit:&lt;/p&gt;
-&lt;div class=&quot;language-text extra-class&quot;&gt;
-&lt;pre class=&quot;language-text code&quot;&gt;
-export KEY_NAME=&quot;&lt;b&gt;server&lt;/b&gt;&quot;
-&lt;/pre&gt;
-&lt;/div&gt;
-&lt;p&gt;Enregistrez et fermez le fichier (ctrl + x, y, entrez). Les variables que nous venons de modifier seront utilisées pour le processus de signature de notre autorité de certification. Toujours dans le &lt;code class=&quot;language-text&quot;&gt;openvpn-ca&lt;/code&gt;, exécutez la commande suivante:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;source&lt;/span&gt; vars&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Si vous avez bien fait, le re &lt;code&gt;NOTE: If you run ./clean-all, I will be doing a rm -rf on /home/&lt;b&gt;username&lt;/b&gt;/openvpn-ca/keys&lt;/code&gt;. C’est ce que nous voulons. Pour assurer un environnement de travail propre, nous allons lancer &lt;code class=&quot;language-text&quot;&gt;./clean-all&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;Maintenant, construisons le CA&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;./build-ca&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Toutes les variables que nous avons déjà définies doivent se renseigner elles-mêmes. Il suffit donc d’y accéder en appuyant plusieurs fois sur Entrée. À la fin, vous aurez une autorité de certification prête à commencer à signer.&lt;/p&gt;
-&lt;p&gt;Nous avons également besoin d’un certificat de serveur et d’une clé de cryptage pour garantir la sécurité de notre trafic.&lt;/p&gt;
-&lt;p&gt;Créons notre certificat de serveur et notre clé.&lt;/p&gt;
-&lt;div class=&quot;language-bash extra-class&quot;&gt;
-&lt;pre class=&quot;language-bash code&quot;&gt;
-./build-key-server &lt;b&gt;server&lt;/b&gt;
-&lt;/pre&gt;
-&lt;/div&gt;
-&lt;p&gt;Passer à nouveau les invites de commande. Nous n’entrerons pas un mot de passe, cette fois. Les deux dernières invites vous obligent à entrer &lt;code class=&quot;language-text&quot;&gt;y&lt;/code&gt; pour signer le certificat. Assurez-vous de ne pas les ignorer!&lt;/p&gt;
-&lt;p&gt;Comme indiqué précédemment, nous avons également besoin d’une clé de chiffrement. Pour les besoins de ce didacticiel, nous allons générer une clé Diffie-Hellman, qui a tendance à être plutôt forte. Bien sûr, une grande [force] entraîne une grande [inefficacité]. Par conséquent, quelle que soit votre système, la commande suivante prendra probablement quelques minutes.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;./build-dh&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Nous renforcerons cela avec une signature HMAC, afin de nous assurer que la vérification de l’intégrité TLS est plus sûre.&lt;/p&gt;
-&lt;div class=&quot;language-bash extra-class&quot;&gt;
-&lt;pre class=&quot;language-bash code&quot;&gt;
-openvpn --genkey --secret keys/&lt;b&gt;tiv&lt;/b&gt;.key
-&lt;/pre&gt;
-&lt;/div&gt;
-&lt;h2&gt;4. Générer un certificat client&lt;/h2&gt;
-&lt;p&gt;Naturellement, si vous allez utiliser une autorité de certification, votre client doit également disposer d’un certificat. Bien que vous puissiez le faire sur votre ordinateur client et que le serveur le signe, nous essayons de garder les choses simples et hébergées sur un seul ordinateur.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Si vous avez plusieurs clients, vous pouvez suivre cette étape plusieurs fois. Assurez-vous simplement de rendre vos noms de client uniques.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Assurez-vous que vous êtes dans le &lt;code class=&quot;language-text&quot;&gt;openvpn-ca&lt;/code&gt; et que votre fichier vars est synchronisé.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;cd&lt;/span&gt; ~/openvpn-ca
-&lt;span class=&quot;token function&quot;&gt;source&lt;/span&gt; vars&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Maintenant, nous allons construire une clé client en tant que telle:&lt;/p&gt;
-&lt;div class=&quot;language-bash extra-class&quot;&gt;
-&lt;pre class=&quot;language-bash code&quot;&gt;
-./build-key &lt;b&gt;client&lt;/b&gt;
-&lt;/pre&gt;
-&lt;/div&gt;
-&lt;p&gt;Une fois de plus, tout doit être pré-rempli. Passez donc tous les éléments, sauf les deux dernières invites, qui vous demanderont de signer en entrant &lt;code class=&quot;language-text&quot;&gt;y&lt;/code&gt;.&lt;/p&gt;
-&lt;h2&gt;5. Configurer le serveur OpenVPN&lt;/h2&gt;
-&lt;p&gt;OpenVPN s’installe sous le répertoire &lt;code class=&quot;language-text&quot;&gt;/etc/openvpn&lt;/code&gt;. Pour que tout fonctionne, nous devons déplacer certains fichiers dans ce dossier.&lt;/p&gt;
-&lt;div class=&quot;language-bash extra-class&quot;&gt;
-&lt;pre class=&quot;language-bash code&quot;&gt;
-cd ~/openvpn-ca/keys
-sudo cp ca.crt server.crt server.key &lt;b&gt;tiv&lt;/b&gt;.key dh2048.pem /etc/openvpn
-&lt;/pre&gt;
-&lt;/div&gt;
-&lt;p&gt;Par défaut, OpenVPN est fourni avec un exemple de configuration. Par souci de simplicité, nous simplifierons la décompression dans notre dossier de configuration.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;gunzip -c /usr/share/doc/openvpn/examples/sample-config-files/server.conf.gz | sudo tee /etc/openvpn/server.conf&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Ensuite, nous allons éditer le fichier de configuration:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;nano&lt;/span&gt; /etc/openvpn/server.conf&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;La première étape consiste à trouver la directive &lt;code class=&quot;language-text&quot;&gt;tls-auth&lt;/code&gt;. Il y aura un point-virgule (&lt;code class=&quot;language-text&quot;&gt;;&lt;/code&gt;) à côté de la directive, que nous supprimerons. En dessous, nous ajouterons une ligne.&lt;/p&gt;
-&lt;div class=&quot;language-text extra-class&quot;&gt;
-&lt;pre class=&quot;language-text code&quot;&gt;
-tls-auth &lt;b&gt;tiv&lt;/b&gt;.key 0 # This file is secret
-key-direction 0
-&lt;/pre&gt;
-&lt;/div&gt;
-&lt;p&gt;Nous devons également chiffrer notre serveur, éditons donc les directives de chiffrement juste en dessous de cette section. Plus précisément, nous décommentons la ligne AES-128-CBC et ajouterons une directive &lt;code class=&quot;language-text&quot;&gt;auth&lt;/code&gt;.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;cipher AES-128-CBC
-auth SHA256&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Ensuite, les paramètres d’utilisateur et de groupe:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;user nobody
-group nogroup&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Facultativement, nous pourrions opter pour l’envoi de tout le trafic via le VPN. Pour cela, recherchez la directive &lt;code class=&quot;language-text&quot;&gt;redirect-gateway&lt;/code&gt; et décommentez-la.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;push &amp;quot;redirect-gateway def1 bypass-dhcp&amp;quot;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Juste en dessous, il devrait y avoir quelques lignes d’&lt;code class=&quot;language-text&quot;&gt;dhcp-option&lt;/code&gt;. Décommentez ceux-là aussi.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;push &amp;quot;dhcp-option DNS 208.67.222.222&amp;quot;
-push &amp;quot;dhcp-option DNS 208.67.220.220&amp;quot;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Optionnellement, nous pouvons vouloir changer le port et le protocole sur lesquels OpenVPN fonctionne. La valeur par défaut est UDP: 1194, mais si votre réseau bloque les connexions VPN, ce sera probablement l’une des victimes. Le déguisement serait d’utiliser TCP: 443, qui est le port HTTPS.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;port 443
-
-proto tcp
-;proto udp&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Si vous n’avez pas utilisé «serveur» comme nom de serveur, vos fichiers &lt;code class=&quot;language-text&quot;&gt;crt&lt;/code&gt; ont un nom différent. Mettez-les à jour en conséquence.&lt;/p&gt;
-&lt;div class=&quot;language-text extra-class&quot;&gt;
-&lt;pre class=&quot;language-text code&quot;&gt;
-cert &lt;b&gt;server&lt;/b&gt;.crt
-key &lt;b&gt;server&lt;/b&gt;.key
-&lt;/pre&gt;
-&lt;/div&gt;
-&lt;p&gt;Enregistrez et fermez le fichier.&lt;/p&gt;
-&lt;h2&gt;6. Préparer Ubuntu&lt;/h2&gt;
-&lt;p&gt;Bien que nous ayons déjà configuré le transfert IP, etc., nous devons apporter quelques modifications pour activer ces options.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;nano&lt;/span&gt; /etc/sysctl.conf&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Recherchez la ligne suivante et supprimez le # (caractère de commentaire).&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;net.ipv4.ip_forward=1&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Sauver et fermer. Pour mettre à jour les paramètres de session, exécutez:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; sysctl -p&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Ensuite, nous devons trouver et mettre à jour nos règles de pare-feu (UFW) pour masquer les clients. La première étape consiste à trouver l’interface sur laquelle nous fonctionnons:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;ip route | grep default&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;L’interface que nous voulons est celle qui contient le mot “dev”. Dans notre cas, cela ressemble à ceci:&lt;/p&gt;
-&lt;div class=&quot;language-text extra-class&quot;&gt;
-&lt;pre class=&quot;language-text code&quot;&gt;
-default via 10.138.0.1 dev &lt;b&gt;ens4&lt;/b&gt;
-&lt;/pre&gt;
-&lt;/div&gt;
-&lt;p&gt;Donc, notre interface est &lt;code class=&quot;language-text&quot;&gt;ens4&lt;/code&gt;. Avec cela, nous mettrons à jour nos règles de pare-feu:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;nano&lt;/span&gt; /etc/ufw/before.rules&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Au-dessus, là où il est indiqué &lt;code class=&quot;language-text&quot;&gt;Don&amp;#39;t delete these required lines...&lt;/code&gt; ajoutez le code suivant:&lt;/p&gt;
-&lt;div class=&quot;language-text extra-class&quot;&gt;
-&lt;pre class=&quot;language-text code&quot;&gt;
-# OPENVPN
-# NAT Table
-*nat
-:POSTROUTING ACCEPT [0:0] 
-# OpenVPN client traffic
--A POSTROUTING -s 10.8.0.0/8 -o &lt;b&gt;ens4&lt;/b&gt; -j MASQUERADE
-COMMIT
-# OPENVPN
-&lt;/pre&gt;
-&lt;/div&gt;
-&lt;p&gt;Sauver et fermer. Ensuite, nous devons transférer les paquets.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;nano&lt;/span&gt; /etc/default/ufw&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Recherchez la directive &lt;code class=&quot;language-text&quot;&gt;DEFAULT_FORWARD_POLICY&lt;/code&gt; et remplacez-la de &lt;code class=&quot;language-text&quot;&gt;&amp;quot;DROP&amp;quot;&lt;/code&gt; par &lt;code class=&quot;language-text&quot;&gt;&amp;quot;ACCEPT&amp;quot;&lt;/code&gt;.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;DEFAULT_FORWARD_POLICY=&amp;quot;ACCEPT&amp;quot;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Sauver et fermer.&lt;/p&gt;
-&lt;h2&gt;7. Lancer OpenVPN&lt;/h2&gt;
-&lt;p&gt;Pour démarrer le serveur, exécutez ce qui suit:&lt;/p&gt;
-&lt;div class=&quot;language-bash extra-class&quot;&gt;
-&lt;pre class=&quot;language-bash code&quot;&gt;
-sudo systemctl start openvpn@&lt;b&gt;server&lt;/b&gt;
-&lt;/pre&gt;
-&lt;/div&gt;
-&lt;p&gt;Pour vérifier qu’il a bien démarré, lancez:&lt;/p&gt;
-&lt;div class=&quot;language-bash extra-class&quot;&gt;
-&lt;pre class=&quot;language-bash code&quot;&gt;
-sudo systemctl status openvpn@&lt;b&gt;server&lt;/b&gt;
-&lt;/pre&gt;
-&lt;/div&gt;
-&lt;p&gt;Si tout se passe bien, vous devriez voir une sortie incluant &lt;code class=&quot;language-text&quot;&gt;Active: active (running)&lt;/code&gt;. Vous devrez peut-être &lt;code class=&quot;language-text&quot;&gt;q&lt;/code&gt; sur &lt;code class=&quot;language-text&quot;&gt;q&lt;/code&gt; pour quitter le panneau d’informations. Si cela vous convient, liez le service à la séquence de démarrage.&lt;/p&gt;
-&lt;div class=&quot;language-bash extra-class&quot;&gt;
-&lt;pre class=&quot;language-bash code&quot;&gt;
-sudo systemctl enable openvpn@&lt;b&gt;server&lt;/b&gt;
-&lt;/pre&gt;
-&lt;/div&gt;
-&lt;h2&gt;8. Configuration d’une structure de configuration client&lt;/h2&gt;
-&lt;p&gt;Pour faciliter la configuration des configurations client, nous allons d’abord créer une structure. Pour commencer, créez un dossier de configuration pour stocker les fichiers de configuration du client.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;mkdir&lt;/span&gt; -p ~/clients/files&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Les clés du client seront dans ces configurations, alors verrouillons les permissions sur le répertoire &lt;code class=&quot;language-text&quot;&gt;files&lt;/code&gt;.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;chmod&lt;/span&gt; 700 ~/clients/files&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Copiez l’exemple de configuration.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;cp&lt;/span&gt; /usr/share/doc/openvpn/examples/sample-config-files/client.conf ~/clients/base.conf&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Éditons le fichier:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;nano&lt;/span&gt; ~/clients/base.conf&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Trouvez la directive &lt;code class=&quot;language-text&quot;&gt;remote&lt;/code&gt;. Remplacez &lt;code class=&quot;language-text&quot;&gt;my-server-1&lt;/code&gt; par l’adresse IP externe publique attribuée à votre instance GCE. Si vous avez choisi un port autre que 1194, mettez-le à jour en conséquence.&lt;/p&gt;
-&lt;div class=&quot;language-text extra-class&quot;&gt;
-&lt;pre class=&quot;language-text code&quot;&gt;
-remote &lt;b&gt;35.197.111.236 443&lt;/b&gt;
-&lt;/pre&gt;
-&lt;/div&gt;
-&lt;p&gt;Mettez également à jour votre protocole.&lt;/p&gt;
-&lt;div class=&quot;language-text extra-class&quot;&gt;
-&lt;pre class=&quot;language-text code&quot;&gt;
-proto &lt;b&gt;tcp&lt;/b&gt;
-&lt;/pre&gt;
-&lt;/div&gt;
-&lt;p&gt;Décommentez l’utilisateur et le groupe:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;user nobody
-group nogroup&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Trouvez les directives &lt;code class=&quot;language-text&quot;&gt;ca&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;cert&lt;/code&gt; et &lt;code class=&quot;language-text&quot;&gt;key&lt;/code&gt;, commentez-les, car nos configurations les incluront automatiquement.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;# ca ca.crt
-# cert client.crt
-# key client.key&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Utilisez les mêmes paramètres de chiffrement et d’authentification que précédemment:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;cipher AES-128-CBC
-auth SHA256&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Quelque part, nous devrons ajouter la &lt;code class=&quot;language-text&quot;&gt;key-direction&lt;/code&gt;. Assurez-vous d’utiliser 1, comme c’est le cas pour le client. 0 était pour le serveur.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;key-direction 1&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Si votre configuration client actuelle est (ou sera) utilisée sur un périphérique Linux, ajoutez les éléments suivants:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;script-security 2
-up /etc/openvpn/update-resolv-conf
-down /etc/openvpn/update-resolv-conf&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Notez que si vous les incluez dans un environnement non-Linux (Android et macOS inclus dans un non-Linux), vos clients peuvent se comporter de manière étrange.&lt;/p&gt;
-&lt;p&gt;Sauver et fermer. Ensuite, nous devons écrire un script pour générer nos configs client rapidement et facilement.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;nano&lt;/span&gt; ~/clients/gen_config.sh&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;A l’intérieur, collez ce code:&lt;/p&gt;
-&lt;pre class=&quot;language-text code&quot;&gt;
-#!/bin/bash
-
-# First argument: Client identifier
-
-KEY_DIR=~/openvpn-ca/keys
-OUTPUT_DIR=~/clients/files
-BASE_CONFIG=~/clients/base.conf
-
-cat ${BASE_CONFIG} \
-    &lt;(echo -e &apos;&amp;lt;ca&amp;gt;&apos;) \
-    ${KEY_DIR}/ca.crt \
-    &lt;(echo -e &apos;&amp;lt;/ca&amp;gt;\n&amp;lt;cert&amp;gt;&apos;) \
-    ${KEY_DIR}/${1}.crt \
-    &lt;(echo -e &apos;&amp;lt;/cert&amp;gt;\n&amp;lt;key&amp;gt;&apos;) \
-    ${KEY_DIR}/${1}.key \
-    &lt;(echo -e &apos;&amp;lt;/key&amp;gt;\n&amp;lt;tls-auth&amp;gt;&apos;) \
-    ${KEY_DIR}/&lt;b&gt;tiv&lt;/b&gt;.key \
-    &lt;(echo -e &apos;&amp;lt;/tls-auth&amp;gt;&apos;) \
-    &gt; ${OUTPUT_DIR}/${1}.ovpn
-&lt;/pre&gt;
-&lt;p&gt;&lt;a href=&quot;./02/gen_config.sh&quot; download&gt;gen_config.sh&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Le &lt;code class=&quot;language-text&quot;&gt;{1}&lt;/code&gt; fait ici référence au premier argument, qui sera notre nom de client. Assurez-vous de mettre à jour &lt;strong&gt;tiv&lt;/strong&gt;.key fonction du nom de votre clé HMAC.&lt;/p&gt;
-&lt;p&gt;Autoriser l’exécution de ce script:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;chmod&lt;/span&gt; 700 ~/clients/gen_config.sh&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2&gt;9. Générer des configurations client&lt;/h2&gt;
-&lt;p&gt;Le pas que vous attendiez tous est enfin arrivé. Nous allons générer nos configurations client.&lt;/p&gt;
-&lt;div class=&quot;language-bash extra-class&quot;&gt;
-&lt;pre class=&quot;language-bash code&quot;&gt;
-cd ~/clients
-./gen_config.sh &lt;b&gt;client&lt;/b&gt;
-&lt;/pre&gt;
-&lt;/div&gt;
-&lt;p&gt;Vérifiez que cela a fonctionné en exécutant:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;ls&lt;/span&gt; ~/clients/files&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Si tel est le cas, il devrait maintenant y avoir un fichier &lt;code&gt;&lt;b&gt;client&lt;/b&gt;.ovpn&lt;/code&gt; dans ce répertoire. Nous devons télécharger ce fichier et le transférer sur nos appareils. Pour ce faire, cliquez sur l’icône représentant une roue en haut à droite de la session SSH, puis sélectionnez «Télécharger le fichier».&lt;/p&gt;
-&lt;p&gt;Le chemin pleinement qualifié devrait ressembler à ceci:&lt;/p&gt;
-&lt;div class=&quot;language-text extra-class&quot;&gt;
-&lt;pre class=&quot;language-text code&quot;&gt;
-/home/&lt;b&gt;username&lt;/b&gt;/clients/files/&lt;b&gt;client&lt;/b&gt;.ovpn
-&lt;/pre&gt;
-&lt;/div&gt;
-&lt;h2&gt;10. Installation sur les clients&lt;/h2&gt;
-&lt;p&gt;Pour Windows, téléchargez l’application client &lt;a href=&quot;https://openvpn.net/index.php/open-source/downloads.html&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;OpenVPN&lt;/a&gt;. Une fois installé, déplacez votre fichier &lt;code&gt;&lt;b&gt;client&lt;/b&gt;.ovpn&lt;/code&gt; vers &lt;code class=&quot;language-text&quot;&gt;C:\Program Files\OpenVPN\config&lt;/code&gt;. Pour ouvrir OpenVPN, vous devez exécuter l’application en tant qu’administrateur. Une fois à l’intérieur, vous devriez voir et pouvoir vous connecter à votre VPN.&lt;/p&gt;
-&lt;p&gt;Pour macOS, la plupart des gens suggèrent d’utiliser &lt;a href=&quot;https://tunnelblick.net/&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;Tunnelblick&lt;/a&gt; bien que tout autre client OpenVPN (même s’il soit sans danger) soit probablement bon aussi. Une fois installé, vous devriez pouvoir faire glisser n’importe .ovpn fichier &lt;code class=&quot;language-text&quot;&gt;.ovpn&lt;/code&gt; sur l’icône Tunnelblick de la barre de menus pour installer la configuration. Utilisez la barre de menus pour vous connecter ensuite au VPN. Si vous êtes interrogé sur le plugin &lt;code class=&quot;language-text&quot;&gt;down-root.so&lt;/code&gt;, prenez une décision! Je l’ai sauté parce que je suis capable de reconnecter ma connexion, mais c’est à vous de décider.&lt;/p&gt;
-&lt;p&gt;Sous Linux, installez le paquet &lt;code class=&quot;language-text&quot;&gt;openvpn&lt;/code&gt; en utilisant votre gestionnaire de paquets. Les utilisateurs de CentOS devront d’abord installer &lt;code class=&quot;language-text&quot;&gt;epel-release&lt;/code&gt; utilisant &lt;code class=&quot;language-text&quot;&gt;yum&lt;/code&gt;. Une fois installé, lancez &lt;code class=&quot;language-text&quot;&gt;ls /etc/openvpn&lt;/code&gt;. Si la sortie &lt;strong&gt;ne&lt;/strong&gt; présente &lt;strong&gt;pas&lt;/strong&gt; de fichier &lt;code class=&quot;language-text&quot;&gt;update-resolve-conf&lt;/code&gt;, vous devez modifier votre fichier &lt;code class=&quot;language-text&quot;&gt;.ovpn&lt;/code&gt; et supprimer les lignes suivantes (si vous les avez ajoutées):&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;script-security 2
-up /etc/openvpn/update-resolv-conf
-down /etc/openvpn/update-resolv-conf&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Si vous n’avez jamais ajouté ces lignes mais trouvé un fichier &lt;code class=&quot;language-text&quot;&gt;update-resolv-conf&lt;/code&gt;, ajoutez-les! Les utilisateurs de CentOS devront modifier le &lt;code class=&quot;language-text&quot;&gt;group&lt;/code&gt; dans le fichier &lt;code class=&quot;language-text&quot;&gt;.ovpn&lt;/code&gt; de &lt;code class=&quot;language-text&quot;&gt;nogroup&lt;/code&gt; à &lt;code class=&quot;language-text&quot;&gt;nobody&lt;/code&gt; pour se conformer aux normes du système d’exploitation.&lt;/p&gt;
-&lt;p&gt;Pour vous connecter, lancez &lt;code class=&quot;language-text&quot;&gt;sudo openvpn — config client .ovpn&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;Pour iOS, installez l’application &lt;a href=&quot;https://itunes.apple.com/us/app/id590379981&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;OpenVPN Connect&lt;/a&gt;. Ensuite, ouvrez iTunes sur votre ordinateur et accédez à iPhone&gt; Applications. Faites défiler jusqu’à la section «Partage de fichiers» et sélectionnez “OpenVPN”. Faites glisser votre fichier &lt;code class=&quot;language-text&quot;&gt;.ovpn&lt;/code&gt; dans le panneau “OpenVPN Documents”. Ouvrir l’application sur votre téléphone devrait maintenant afficher un message indiquant qu’un nouveau profil est prêt à être importé. Une fois importé, vous devriez pouvoir vous connecter au VPN.&lt;/p&gt;
-&lt;p&gt;Pour Android, installez l’application &lt;a href=&quot;https://play.google.com/store/apps/details?id=net.openvpn.openvpn&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;OpenVPN Connect&lt;/a&gt;. Ensuite, transférez votre fichier &lt;code class=&quot;language-text&quot;&gt;.ovpn&lt;/code&gt; n’importe où / de toute façon sur votre appareil (je viens d’utiliser Google Drive, mais cela peut ne pas être recommandé). Dans l’application, ouvrez le menu et cliquez sur “Importer”. Accédez à votre fichier &lt;code class=&quot;language-text&quot;&gt;.ovpn&lt;/code&gt; , cliquez dessus, puis appuyez sur “IMPORT” en haut à droite. Une fois terminé, vous devriez pouvoir vous connecter au VPN.&lt;/p&gt;
-&lt;h2&gt;Test du VPN&lt;/h2&gt;
-&lt;p&gt;Le moyen le plus simple de tester votre VPN serait de Google “quelle est mon adresse IP” avant et après la connexion. Votre adresse IP doit passer à l’adresse IP publique externe de votre instance GCE une fois que vous êtes connecté au VPN, puis à l’adresse IP de votre réseau une fois déconnectée du VPN.&lt;/p&gt;
-&lt;p&gt;Si tout s’est bien passé, c’est tout! Votre nouveau VPN est prêt à être utilisé.&lt;/p&gt;
-&lt;h2&gt;Crédits&lt;/h2&gt;
-&lt;p&gt;Cet article est basé en grande partie sur &lt;a href=&quot;https://www.digitalocean.com/community/tutorials/how-to-set-up-an-openvpn-server-on-ubuntu-16-04&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;ce didacticiel de la communauté DigitalOcean&lt;/a&gt;. Bien que la configuration elle-même soit assez similaire, j’ai pensé écrire un article séparé car il existe quelques éléments clés différents dans GCE et il est assez facile de se tromper si vous le faites pour la première fois (je parle par expérience).&lt;/p&gt;
-&lt;style lang=&quot;scss&quot;&gt;
-.content pre.code, 
-.content pre[class*=&quot;language-&quot;].code {
-  /* font-size: 10pt; */
-  font-size: 0.85em;
-  font-family: source-code-pro, Menlo, Monaco, Consolas, &quot;Courier New&quot;, monospace;
-  color: #fff;
-
-  b {
-    color: yellow;
-    /* text-decoration:underline; */
-    /* background-color: green; */
-  }
-}
-&lt;/style&gt;</content:encoded></item><item><title><![CDATA[Map, filter, reduce]]></title><description><![CDATA[Map, filter, reduce Ces trois fonctions sont utiles pour parcourir une liste (ou un tableau) et effectuer une sorte de transformation ou de…]]></description><link>https://softwareontheroad.com/js-map-filter-reduce/</link><guid isPermaLink="false">https://softwareontheroad.com/js-map-filter-reduce/</guid><pubDate>Sun, 03 Mar 2019 08:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;Map, filter, reduce&lt;/h1&gt;
+&lt;hr&gt;</content:encoded></item><item><title><![CDATA[Map, filter, reduce]]></title><description><![CDATA[Map, filter, reduce Ces trois fonctions sont utiles pour parcourir une liste (ou un tableau) et effectuer une sorte de transformation ou de…]]></description><link>https://softwareontheroad.com/js-map-filter-reduce/</link><guid isPermaLink="false">https://softwareontheroad.com/js-map-filter-reduce/</guid><pubDate>Sun, 03 Mar 2019 08:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;Map, filter, reduce&lt;/h1&gt;
 &lt;p&gt;Ces trois fonctions sont utiles pour parcourir une liste (ou un tableau) et effectuer une sorte de transformation ou de calcul. Cela produira alors une nouvelle liste ou le résultat du calcul effectué sur la liste précédente.&lt;/p&gt;
 &lt;h2&gt;Les types&lt;/h2&gt;
 &lt;p&gt;Avant de plonger dans map, filter et reduce, configurons la liste.&lt;/p&gt;
