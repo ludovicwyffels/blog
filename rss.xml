@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Software on the road]]></title><description><![CDATA[Here you will find my adventures with AWS, AWS S3, AWS CloudFront, high availability, continuous integration, continuous delivery, CircleCi, node.js and javascript in general, typescript, react, ionic app, react native, and maybe some experiments with machine learning]]></description><link>https://softwareontheroad.com</link><generator>RSS for Node</generator><lastBuildDate>Mon, 22 Apr 2019 14:54:03 GMT</lastBuildDate><item><title><![CDATA[Architecture d'un projet node.js Bulletproof]]></title><description><![CDATA[Architecture d’un projet node.js Bulletproof Introduction Express.js est un excellent framework pour la création d’une API REST en node.js…]]></description><link>https://softwareontheroad.com/node-architecture/</link><guid isPermaLink="false">https://softwareontheroad.com/node-architecture/</guid><pubDate>Sat, 20 Apr 2019 08:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;Architecture d’un projet node.js Bulletproof&lt;/h1&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Software on the road]]></title><description><![CDATA[Here you will find my adventures with AWS, AWS S3, AWS CloudFront, high availability, continuous integration, continuous delivery, CircleCi, node.js and javascript in general, typescript, react, ionic app, react native, and maybe some experiments with machine learning]]></description><link>https://softwareontheroad.com</link><generator>RSS for Node</generator><lastBuildDate>Tue, 23 Apr 2019 07:24:49 GMT</lastBuildDate><item><title><![CDATA[Architecture d'un projet node.js Bulletproof]]></title><description><![CDATA[Architecture d’un projet node.js Bulletproof Introduction Express.js est un excellent framework pour la création d’une API REST en node.js…]]></description><link>https://softwareontheroad.com/node-architecture/</link><guid isPermaLink="false">https://softwareontheroad.com/node-architecture/</guid><pubDate>Sat, 20 Apr 2019 08:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;Architecture d’un projet node.js Bulletproof&lt;/h1&gt;
 &lt;h2&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;Express.js est un excellent framework pour la création d’une API REST en node.js, mais il ne vous donne aucune indication sur la manière d’organiser votre projet node.js.&lt;/p&gt;
 &lt;p&gt;Bien que cela puisse paraître stupide, c’est un problème réel.&lt;/p&gt;
@@ -10,7 +10,7 @@
 &lt;li&gt;&lt;a href=&quot;#architecture&quot;&gt;Architecture à 3 couches 🥪&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;#service&quot;&gt;Couche service 💼&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;#pubsub&quot;&gt;Couche Pub/Sub ️️️️🎙️️&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#di&quot;&gt;Injection de dépendence 💉&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#di&quot;&gt;Injection de dépendances 💉&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;#test&quot;&gt;Test unitaire 🕵🏻&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;#cron&quot;&gt;Cron Jobs et tâches récurrentes ⚡&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;#configs&quot;&gt;Configurations et secrets 🤫&lt;/a&gt;&lt;/li&gt;
@@ -279,9 +279,9 @@
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Vous pouvez mettre les instruction en attente dans un bloc &lt;code class=&quot;language-text&quot;&gt;try-catch&lt;/code&gt; ou vous pouvez simplement le laisser échouer et gérer le  ‘unhandledPromise’ &lt;code class=&quot;language-text&quot;&gt;process.on(&amp;#39;unhandledRejection&amp;#39;,cb)&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a name=&quot;di&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h2&gt;Injection de dépendence 💉&lt;/h2&gt;
+&lt;h2&gt;Injection de dépendances 💉&lt;/h2&gt;
 &lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;Dependency Injection&lt;/code&gt; (D.I.) ou &lt;code class=&quot;language-text&quot;&gt;inversion of control&lt;/code&gt; (IoC) est un modèle commun qui aidera l’organisation de votre code, en “injectant” ou en passant par le constructeur les dépendances de votre classe ou fonction.&lt;/p&gt;
-&lt;p&gt;De cette façon, vous aurez la possibilité d’injecter une “dépendance compatible” lorsque, par example, vous écrirez les tests unitaires pour le service, ou lorsque le service sera utilisé dans un autre contexte.&lt;/p&gt;
+&lt;p&gt;De cette façon, vous aurez la possibilité d’injecter une “dépendance compatible” lorsque, par exemple, vous écrirez les tests unitaires pour le service, ou lorsque le service sera utilisé dans un autre contexte.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Code sans D.I.&lt;/em&gt;&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; UserModel &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;../models/user&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; CompanyModel &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;../models/company&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
@@ -365,7 +365,7 @@ C’est tellement organisé que j’ai envie de coder quelque chose en ce moment
 &lt;h2&gt;Un exemple de test unitaire 🕵🏻&lt;/h2&gt;
 &lt;p&gt;En utilisant l’injection de dépendance et ces modèles d’organisation, le test unitaire devient vraiment simple.&lt;/p&gt;
 &lt;p&gt;Vous n’avez pas besoin de simuler des objets req/res ou de require(…)&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Example: Test unitaire pour la méthode d’inscription de l’utilisateur&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;exemple: Test unitaire pour la méthode d’inscription de l’utilisateur&lt;/strong&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;tests/unit/services/user.js&lt;/p&gt;
 &lt;/blockquote&gt;
