@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Software on the road]]></title><description><![CDATA[Here you will find my adventures with AWS, AWS S3, AWS CloudFront, high availability, continuous integration, continuous delivery, CircleCi, node.js and javascript in general, typescript, react, ionic app, react native, and maybe some experiments with machine learning]]></description><link>https://softwareontheroad.com</link><generator>RSS for Node</generator><lastBuildDate>Tue, 23 Apr 2019 07:24:49 GMT</lastBuildDate><item><title><![CDATA[Architecture d'un projet node.js Bulletproof]]></title><description><![CDATA[Architecture d’un projet node.js Bulletproof Introduction Express.js est un excellent framework pour la création d’une API REST en node.js…]]></description><link>https://softwareontheroad.com/node-architecture/</link><guid isPermaLink="false">https://softwareontheroad.com/node-architecture/</guid><pubDate>Sat, 20 Apr 2019 08:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;Architecture d’un projet node.js Bulletproof&lt;/h1&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Software on the road]]></title><description><![CDATA[Software on the road]]></description><link>https://ludovicwyffels.dev</link><generator>RSS for Node</generator><lastBuildDate>Sat, 27 Apr 2019 13:22:06 GMT</lastBuildDate><item><title><![CDATA[Architecture d'un projet node.js Bulletproof]]></title><description><![CDATA[Architecture d’un projet node.js Bulletproof Introduction Express.js est un excellent framework pour la création d’une API REST en node.js…]]></description><link>https://ludovicwyffels.dev/node-architecture/</link><guid isPermaLink="false">https://ludovicwyffels.dev/node-architecture/</guid><pubDate>Sat, 20 Apr 2019 08:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;Architecture d’un projet node.js Bulletproof&lt;/h1&gt;
 &lt;h2&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;Express.js est un excellent framework pour la création d’une API REST en node.js, mais il ne vous donne aucune indication sur la manière d’organiser votre projet node.js.&lt;/p&gt;
 &lt;p&gt;Bien que cela puisse paraître stupide, c’est un problème réel.&lt;/p&gt;
@@ -584,7 +584,7 @@ app&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=
 &lt;li&gt;Ayez l’injection de dépendance pour votre tranquillité d’esprit.&lt;/li&gt;
 &lt;li&gt;Ne divulguez jamais vos mots de passe, secrets et clés API, utilisez un gestionnaire de configuration.&lt;/li&gt;
 &lt;li&gt;Divisez vos configurations de serveur node.js en petits modules qui peuvent être chargés indépendamment.&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Comment écrire de meilleures conditions en JavaScript]]></title><description><![CDATA[Comment écrire de meilleures conditions en JavaScript 1. Utilisez Array.includes pour plusieurs critères Jetons un coup d’oeil à l’example…]]></description><link>https://softwareontheroad.com/js-conditions/</link><guid isPermaLink="false">https://softwareontheroad.com/js-conditions/</guid><pubDate>Fri, 19 Apr 2019 08:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;Comment écrire de meilleures conditions en JavaScript&lt;/h1&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Comment écrire de meilleures conditions en JavaScript]]></title><description><![CDATA[Comment écrire de meilleures conditions en JavaScript 1. Utilisez Array.includes pour plusieurs critères Jetons un coup d’oeil à l’example…]]></description><link>https://ludovicwyffels.dev/js-conditions/</link><guid isPermaLink="false">https://ludovicwyffels.dev/js-conditions/</guid><pubDate>Fri, 19 Apr 2019 08:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;Comment écrire de meilleures conditions en JavaScript&lt;/h1&gt;
 &lt;h2&gt;1. Utilisez Array.includes pour plusieurs critères&lt;/h2&gt;
 &lt;p&gt;Jetons un coup d’oeil à l’example ci-dessous:&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// condition&lt;/span&gt;
@@ -826,7 +826,7 @@ app&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h2&gt;Résumé&lt;/h2&gt;
 &lt;p&gt;Produisons ensemble un code plus lisible. J’espère que vous avez appris quelque chose de nouveau dans cet article.&lt;/p&gt;
-&lt;p&gt;Happy coding!&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Comment utiliser la console JavaScript aller au-delà de console.log()]]></title><description><![CDATA[Comment utiliser la console JavaScript aller au-delà de console.log() L’un des moyens les plus simples de déboguer quoi que ce soit en…]]></description><link>https://softwareontheroad.com/js-console-log/</link><guid isPermaLink="false">https://softwareontheroad.com/js-console-log/</guid><pubDate>Thu, 18 Apr 2019 08:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;Comment utiliser la console JavaScript aller au-delà de console.log()&lt;/h1&gt;
+&lt;p&gt;Happy coding!&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Comment utiliser la console JavaScript aller au-delà de console.log()]]></title><description><![CDATA[Comment utiliser la console JavaScript aller au-delà de console.log() L’un des moyens les plus simples de déboguer quoi que ce soit en…]]></description><link>https://ludovicwyffels.dev/js-console-log/</link><guid isPermaLink="false">https://ludovicwyffels.dev/js-console-log/</guid><pubDate>Thu, 18 Apr 2019 08:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;Comment utiliser la console JavaScript aller au-delà de console.log()&lt;/h1&gt;
 &lt;p&gt;L’un des moyens les plus simples de déboguer quoi que ce soit en JavaScript consiste à &lt;code class=&quot;language-text&quot;&gt;console.log&lt;/code&gt; des éléments à l’aide de &lt;code class=&quot;language-text&quot;&gt;console.log&lt;/code&gt;. Mais il y a beaucoup d’autres méthodes fournies par la console qui peuvent vous aider à mieux déboguer.&lt;/p&gt;
 &lt;p&gt;Le cas d’utilisation très simple consiste à enregistrer une chaîne ou un groupe d’objets JavaScript. Tout simplement,&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;Is this working?&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
@@ -886,7 +886,377 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
 console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;timeEnd&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;For loop&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;&lt;img src=&quot;&quot; alt=&quot;Sortie console.time() pour les boucles&quot;&gt;&lt;/p&gt;
-&lt;p&gt;Espérons que l’article fournisse des informations sur les différentes manières d’utiliser la console.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Principales commandes SQL/PostgreSQL que vous avez besoin de connaître]]></title><description><![CDATA[Principales commandes SQL/PostgreSQL que vous avez besoin de connaître. Ici, nous allons passer en revue les commandes les plus importantes…]]></description><link>https://softwareontheroad.com/sql/</link><guid isPermaLink="false">https://softwareontheroad.com/sql/</guid><pubDate>Sun, 14 Apr 2019 08:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;Principales commandes SQL/PostgreSQL que vous avez besoin de connaître.&lt;/h1&gt;
+&lt;p&gt;Espérons que l’article fournisse des informations sur les différentes manières d’utiliser la console.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Configuration d'un serveur OpenVPN sur Google Compute Engine]]></title><description><![CDATA[Configuration d’un serveur OpenVPN sur Google Compute Engine J’ai récemment commmencé à utiliser OpenVPN et à profiter des différentes…]]></description><link>https://ludovicwyffels.dev/openvpn-google/</link><guid isPermaLink="false">https://ludovicwyffels.dev/openvpn-google/</guid><pubDate>Sun, 14 Apr 2019 08:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;Configuration d’un serveur OpenVPN sur Google Compute Engine&lt;/h1&gt;
+&lt;p&gt;J’ai récemment commmencé à utiliser OpenVPN et à profiter des différentes options qu’il propose, notamment le masquage du trafic VPN sous TCP:443 (autrement appelé HTTPS). Personnellement, j’aime utiliser GCE pour héberger mes VPN, car je profite de la puissance et de la personnalisation que cela procure.&lt;/p&gt;
+&lt;p&gt;Cependant, il n’y avait absolument aucun tutoriel sur la configuration d’OpenVPN sur GCE. Il existe 10 étapes dans ce didacticiel, mais chaque étape peut exécuter plusieurs lignes de code.&lt;/p&gt;
+&lt;p&gt;Si vous essayez simplement d’ajouter plus de clients, passer aux étapes 4, 9 et 10.&lt;/p&gt;
+&lt;h2&gt;Table des matières&lt;/h2&gt;
+&lt;p&gt;[[toc]]&lt;/p&gt;
+&lt;h2&gt;1. Création de l’instance&lt;/h2&gt;
+&lt;p&gt;Nous voulons utiliser une instance &lt;code class=&quot;language-text&quot;&gt;n1-standard-1&lt;/code&gt; pour sa durabilité et son coût. Dirigez-vous vers le moteur de calcul et cliquez sur “CREATE INSTANCE”.&lt;/p&gt;
+&lt;p&gt;&lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/bc1d8c0fe43fbdbd290421761c57cb77/13283/1.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 450px;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 139.33333333333334%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAcCAIAAADuuAg3AAAACXBIWXMAAAsSAAALEgHS3X78AAACjUlEQVQ4y41Uh3KjMBDV///cZeZcEhfsuFJtBAihyj1JPkJsp7zBO2vBtrfaJZvNZrVaLZdLSqkxRkqplJIeXdfhxHr0Iwx/SFmWRVFcPWBfegS9rms4cl+P4G3dA7/EWkPpNUliKDhCVK01DCDhIs/z8/kMdyGU0jajMr7IhruPiZDqQtvi2jStbLmsG8F5JzoHRG6apvYQwp25orQVyoZqiBA6p/pS60ulKXOSMY7EK49gDwUShTDGhspD2vbGgjXWaGu1J+k/N4CP4iP1/t8NqIugqsPhAK+h1A9KRyQPPN3RTtq2RZ92u12SJO/v76Bnv9+fPKDjHLKoVFYqyP4zCOfcFcaYUhqNQfwgAeQWdCSu/XNvjIAIQssCBfdfY9zqoWwCr43s16mlTB2Pe/gCBTsPKHuPNE0f3TljpJVVZpPqkpkiz1DBECdkHm7oc2N8AOOisZ00uOJRtAmRERCvH23AAnjdbre4M8QNg3KWSn80cCDsETgPMwMvBJ1AaSgVShzHaDv4v2PoKxBcD6QBs+PxCBdo+zCGd9w+AndbRFG0WCxms9l6vQ71oGz4ClclZHgHZAdDIoWoKoyum54QNtwTQHh8F7lu+GQevb29TqdTbJUsyzBAoRNPO3TXZ3M4pS8vf2bz+WQy+euBzNEqEPGDMX5tyy4e2BiQ2EoD4T8Yj+fulyR/zDPiIL1xh4Zqx46e9xmrb7t1PGHdIe2wfahHUCDxCr0IuzXQeRtJ1naRW91rbO/X+WsgKWzvW88g9SeMjLnK0iTPEriO4xMGq/810Cpb1Lao7LU2VdtD5tRtnItbPRLbp2w0ZF6pJ5sER22nWae5MJ0wvDNOkXgsF3hlhDTcP+ahc/8AbrFWxxhIqn8AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    &gt;&lt;/span&gt;
+    &lt;picture&gt;
+        &lt;source
+          srcset=&quot;/static/bc1d8c0fe43fbdbd290421761c57cb77/8ffb1/1.webp 293w,
+/static/bc1d8c0fe43fbdbd290421761c57cb77/2809e/1.webp 450w&quot;
+          sizes=&quot;(max-width: 450px) 100vw, 450px&quot;
+          type=&quot;image/webp&quot;
+        /&gt;
+        &lt;source
+          srcset=&quot;/static/bc1d8c0fe43fbdbd290421761c57cb77/f93ee/1.png 293w,
+/static/bc1d8c0fe43fbdbd290421761c57cb77/13283/1.png 450w&quot;
+          sizes=&quot;(max-width: 450px) 100vw, 450px&quot;
+          type=&quot;image/png&quot;
+        /&gt;
+        &lt;img
+          class=&quot;gatsby-resp-image-image&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px white;&quot;
+          src=&quot;/static/bc1d8c0fe43fbdbd290421761c57cb77/13283/1.png&quot;
+          alt=&quot;1&quot;
+          title=&quot;&quot;
+        /&gt;
+      &lt;/picture&gt;
+  &lt;/span&gt;
+  &lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Configuez-le avec les options affichées, mais n’appuyez pas encore sur “Créer”&lt;/p&gt;
+&lt;p&gt;Si vous ne voyez pas l’image, nous utilisons une instance &lt;code class=&quot;language-text&quot;&gt;n1-standard-1&lt;/code&gt; (1 vCPU, 3,75 Go de mémoire) avec Ubuntu 16.04 LTS installé (vous pouvez choisir un espace de stockage, mais 10 Go suffisent). Puisque notre VPN utilisera TCP: 443, nous devons autoriser le trafic HTTPS maintenant ou plus tard. Vous pouvez donc également le faire immédiatement.&lt;/p&gt;
+&lt;p&gt;Appuyez sur le bouton “Gestion, sécurité, disques, réseau, …” pour ouvrir les options avancées. Cliquez sur l’onglet Réseau et cliquez sur le bouton d’édition en regard de l’interface réseau sélectionnée.&lt;/p&gt;
+&lt;p&gt;Cliquez sur le menu déroulant “Adresse IP externe” et sélectionnez “Créer une adresse IP”. Entrez un nom, puis appuyez sur “Réserver”. Cette opération associera une adresse IP statique à votre instance, ce qui est probablement ce que vous voulez, sauf si vous souhaitez régénérer les fichiers de configuration de quelque temps. En ce qui concerne les frais, Google ne facture pas les adresses IP statiques pendant leur utilisation. La machine &lt;code class=&quot;language-text&quot;&gt;n1-standard-1&lt;/code&gt; ne devrait pas vous coûter plus de 30 $ par mois. Certes, cela coûte un peu plus cher que la plupart des services VPN, mais la plupart des services VPN ne vous donnent pas un contrôle total :)&lt;/p&gt;
+&lt;p&gt;&lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/73eb40d4f0bb7c23d2790b3c426d1575/70a92/2.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 467px;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 121.84154175588866%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAYCAIAAAB1KUohAAAACXBIWXMAAAsSAAALEgHS3X78AAAB1UlEQVQ4y5VUy47TMBT1zwE7FgiEWIOQALFkPWyQGDTLEa8VX8DHdAWVyqR5x06TJnEcv+JyOq7YMXGPnKsq9fU9957jkMufzYvr6vXX6s03+uoLfX5dhayXn+nb74y8+8GefCqfXpXProrHl/mD9+n9i4V17yJ9+CF79DEnwziVrN3teT8qIa3Uc8iatBsnTeQ0rX//urn5o7U6uNmFLWu0NYZYa7uua9vWOWeM0SYI0zQppYiUklLKGNvv9zjoEAxsJlrrKIrW63VxizRNd7vdPM94v1wZm/q+B/NhGBA55+Bil+CPIOM4RtttFG03m00cx03TGmPdEkDtmIzKtCqLIisRijxLk7ZtjpO7E0KII21wEOowCDeIuR9txyGjCx0YivBRNp3ouJLKcTFrEzxtEIjjbZomjFEYRisJt4T2jIfVdVGUjNWwSl3XFaX/5vk/nHrGGRAtyzJYpaoqiAy1kHx35RNtJOMY+ASZkM3r7P9e7hlbkZYkSZ7n0OA8e4K6rwkgGUQWG8aGkz3x4EqgPpLhU0S8CbEnKnmp4tVqhVjeAvnnmIRzXCZEbz3PPKQ48T140UEYcQ7D6WJgYGgbCuMH3p73MUDbGBgGiG49ixAg8S/mDk08LO0x+gAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    &gt;&lt;/span&gt;
+    &lt;picture&gt;
+        &lt;source
+          srcset=&quot;/static/73eb40d4f0bb7c23d2790b3c426d1575/8ffb1/2.webp 293w,
+/static/73eb40d4f0bb7c23d2790b3c426d1575/d57f5/2.webp 467w&quot;
+          sizes=&quot;(max-width: 467px) 100vw, 467px&quot;
+          type=&quot;image/webp&quot;
+        /&gt;
+        &lt;source
+          srcset=&quot;/static/73eb40d4f0bb7c23d2790b3c426d1575/f93ee/2.png 293w,
+/static/73eb40d4f0bb7c23d2790b3c426d1575/70a92/2.png 467w&quot;
+          sizes=&quot;(max-width: 467px) 100vw, 467px&quot;
+          type=&quot;image/png&quot;
+        /&gt;
+        &lt;img
+          class=&quot;gatsby-resp-image-image&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px white;&quot;
+          src=&quot;/static/73eb40d4f0bb7c23d2790b3c426d1575/70a92/2.png&quot;
+          alt=&quot;2&quot;
+          title=&quot;&quot;
+        /&gt;
+      &lt;/picture&gt;
+  &lt;/span&gt;
+  &lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Vos interfaces réseau doivent ressembler à l’image. &lt;strong&gt;Veillez à activer le transfert IP&lt;/strong&gt;, car cela ne peut plus être modifié après la création de l’instance.&lt;/p&gt;
+&lt;p&gt;En règle générale, vous souhaiterez probablement garder votre adresse IP externe secrète. Cela ne me dérange pas de rendre celui-ci public, car cette instance n’existera pas lorsque vous lirez ce tutoriel, et l’adresse IP appartiendra probablement à quelqu’un d’autre.&lt;/p&gt;
+&lt;p&gt;Appuyez sur “Terminé” et “Créer”. Une fois l’instance prête (un bouton “SSH” noir apparaîtra), cliquez ou double-cliquez sur le bonton “SSH” pour ouvrir une fenêtre SSH. Le reste de la configuration se fera sur cette machine, que nous appellerons le “server”.&lt;/p&gt;
+&lt;h2&gt;2. Installation OpenVPN et EasyRSA&lt;/h2&gt;
+&lt;p&gt;OpenVPN est (évidemment) le serveur VPN que nous utilisons, et EasyRSA est un paquet qui nous permettra de configurer une autorité de certification interne à utiliser.&lt;/p&gt;
+&lt;p&gt;Bien que ce ne soit généralement pas le cas, pour cette configuration, il est souvent nécessaire de lancer une mise à jour d’apt pour pouvoir installer un ou les deux packages. Les deux d’entre eux sont dans les dépôts par défaut d’Ubuntu.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;apt-get&lt;/span&gt; update
+&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;apt-get&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; openvpn easy-rsa&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Temps de configurer.&lt;/p&gt;
+&lt;h2&gt;3. Mise enplace du CA&lt;/h2&gt;
+&lt;p&gt;Comme OpenVPN utilise TLS/SSL, il a besoin de certificats pour chiffrer le trafic. Pour cela, nous devrons émettre nos propres certificats de confiance, ce que nous pouvons faire à l’aide de la CA que nous sommes sur le point de configurer.&lt;/p&gt;
+&lt;p&gt;Commençons par copier le &lt;code class=&quot;language-text&quot;&gt;easy-rsa&lt;/code&gt; de modèles du paquet &lt;code class=&quot;language-text&quot;&gt;easy-rsa&lt;/code&gt;.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;make-cadir ~/openvpn-ca
+&lt;span class=&quot;token function&quot;&gt;cd&lt;/span&gt; ~/openvpn-ca&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Il y a des valeurs que nous pouvons vouloir éditer, alors allons-y et &lt;code class=&quot;language-text&quot;&gt;nano vars&lt;/code&gt;. Si vous voulez utiliser vim, continuez, mais puisque j’essaie de garder mes tutoriels aussi simples que possible, j’utilise nano.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;À partir de ce moment, s’il y a une partie d’une commande qui dépend d’une valeur que vous choisissez, elle sera en gras. Tout le code qui n’est pas généré par un utilisateur sera en italique.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Faites défiler vers le bas du fichier (ce n’est pas trop long) et vous devriez trouver ce qui suit:&lt;/p&gt;
+&lt;div class=&quot;language-text extra-class&quot;&gt;
+&lt;pre class=&quot;language-text code&quot;&gt;
+export KEY_COUNTRY=&quot;&lt;b&gt;US&lt;/b&gt;&quot;
+export KEY_PROVINCE=&quot;&lt;b&gt;CA&lt;/b&gt;&quot;
+export KEY_CITY=&quot;&lt;b&gt;SanFrancisco&lt;/b&gt;&quot;
+export KEY_ORG=&quot;&lt;b&gt;Fort-Funston&lt;/b&gt;&quot;
+export KEY_EMAIL=&quot;&lt;b&gt;me@myhost.mydomain&lt;/b&gt;&quot;
+export KEY_OU=&quot;&lt;b&gt;MyOrganizationalUnit&lt;/b&gt;&quot;
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Éditez autant d’entre eux (ou aucun d’eux) que vous le souhaitez. Juste en dessous de ces valeurs devrait être &lt;code class=&quot;language-text&quot;&gt;export KEY_NAME=&amp;quot;EasyRSA&amp;quot;&lt;/code&gt;. Pour simplifier notre configuration, nous allons modifier cette ligne comme suit:&lt;/p&gt;
+&lt;div class=&quot;language-text extra-class&quot;&gt;
+&lt;pre class=&quot;language-text code&quot;&gt;
+export KEY_NAME=&quot;&lt;b&gt;server&lt;/b&gt;&quot;
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Enregistrez et fermez le fichier (ctrl + x, y, entrez). Les variables que nous venons de modifier seront utilisées pour le processus de signature de notre autorité de certification. Toujours dans le &lt;code class=&quot;language-text&quot;&gt;openvpn-ca&lt;/code&gt;, exécutez la commande suivante:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;source&lt;/span&gt; vars&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Si vous avez bien fait, le re &lt;code&gt;NOTE: If you run ./clean-all, I will be doing a rm -rf on /home/&lt;b&gt;username&lt;/b&gt;/openvpn-ca/keys&lt;/code&gt;. C’est ce que nous voulons. Pour assurer un environnement de travail propre, nous allons lancer &lt;code class=&quot;language-text&quot;&gt;./clean-all&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Maintenant, construisons le CA&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;./build-ca&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Toutes les variables que nous avons déjà définies doivent se renseigner elles-mêmes. Il suffit donc d’y accéder en appuyant plusieurs fois sur Entrée. À la fin, vous aurez une autorité de certification prête à commencer à signer.&lt;/p&gt;
+&lt;p&gt;Nous avons également besoin d’un certificat de serveur et d’une clé de cryptage pour garantir la sécurité de notre trafic.&lt;/p&gt;
+&lt;p&gt;Créons notre certificat de serveur et notre clé.&lt;/p&gt;
+&lt;div class=&quot;language-bash extra-class&quot;&gt;
+&lt;pre class=&quot;language-bash code&quot;&gt;
+./build-key-server &lt;b&gt;server&lt;/b&gt;
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Passer à nouveau les invites de commande. Nous n’entrerons pas un mot de passe, cette fois. Les deux dernières invites vous obligent à entrer &lt;code class=&quot;language-text&quot;&gt;y&lt;/code&gt; pour signer le certificat. Assurez-vous de ne pas les ignorer!&lt;/p&gt;
+&lt;p&gt;Comme indiqué précédemment, nous avons également besoin d’une clé de chiffrement. Pour les besoins de ce didacticiel, nous allons générer une clé Diffie-Hellman, qui a tendance à être plutôt forte. Bien sûr, une grande [force] entraîne une grande [inefficacité]. Par conséquent, quelle que soit votre système, la commande suivante prendra probablement quelques minutes.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;./build-dh&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Nous renforcerons cela avec une signature HMAC, afin de nous assurer que la vérification de l’intégrité TLS est plus sûre.&lt;/p&gt;
+&lt;div class=&quot;language-bash extra-class&quot;&gt;
+&lt;pre class=&quot;language-bash code&quot;&gt;
+openvpn --genkey --secret keys/&lt;b&gt;tiv&lt;/b&gt;.key
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h2&gt;4. Générer un certificat client&lt;/h2&gt;
+&lt;p&gt;Naturellement, si vous allez utiliser une autorité de certification, votre client doit également disposer d’un certificat. Bien que vous puissiez le faire sur votre ordinateur client et que le serveur le signe, nous essayons de garder les choses simples et hébergées sur un seul ordinateur.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Si vous avez plusieurs clients, vous pouvez suivre cette étape plusieurs fois. Assurez-vous simplement de rendre vos noms de client uniques.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Assurez-vous que vous êtes dans le &lt;code class=&quot;language-text&quot;&gt;openvpn-ca&lt;/code&gt; et que votre fichier vars est synchronisé.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;cd&lt;/span&gt; ~/openvpn-ca
+&lt;span class=&quot;token function&quot;&gt;source&lt;/span&gt; vars&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Maintenant, nous allons construire une clé client en tant que telle:&lt;/p&gt;
+&lt;div class=&quot;language-bash extra-class&quot;&gt;
+&lt;pre class=&quot;language-bash code&quot;&gt;
+./build-key &lt;b&gt;client&lt;/b&gt;
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Une fois de plus, tout doit être pré-rempli. Passez donc tous les éléments, sauf les deux dernières invites, qui vous demanderont de signer en entrant &lt;code class=&quot;language-text&quot;&gt;y&lt;/code&gt;.&lt;/p&gt;
+&lt;h2&gt;5. Configurer le serveur OpenVPN&lt;/h2&gt;
+&lt;p&gt;OpenVPN s’installe sous le répertoire &lt;code class=&quot;language-text&quot;&gt;/etc/openvpn&lt;/code&gt;. Pour que tout fonctionne, nous devons déplacer certains fichiers dans ce dossier.&lt;/p&gt;
+&lt;div class=&quot;language-bash extra-class&quot;&gt;
+&lt;pre class=&quot;language-bash code&quot;&gt;
+cd ~/openvpn-ca/keys
+sudo cp ca.crt server.crt server.key &lt;b&gt;tiv&lt;/b&gt;.key dh2048.pem /etc/openvpn
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Par défaut, OpenVPN est fourni avec un exemple de configuration. Par souci de simplicité, nous simplifierons la décompression dans notre dossier de configuration.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;gunzip -c /usr/share/doc/openvpn/examples/sample-config-files/server.conf.gz | sudo tee /etc/openvpn/server.conf&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Ensuite, nous allons éditer le fichier de configuration:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;nano&lt;/span&gt; /etc/openvpn/server.conf&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;La première étape consiste à trouver la directive &lt;code class=&quot;language-text&quot;&gt;tls-auth&lt;/code&gt;. Il y aura un point-virgule (&lt;code class=&quot;language-text&quot;&gt;;&lt;/code&gt;) à côté de la directive, que nous supprimerons. En dessous, nous ajouterons une ligne.&lt;/p&gt;
+&lt;div class=&quot;language-text extra-class&quot;&gt;
+&lt;pre class=&quot;language-text code&quot;&gt;
+tls-auth &lt;b&gt;tiv&lt;/b&gt;.key 0 # This file is secret
+key-direction 0
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Nous devons également chiffrer notre serveur, éditons donc les directives de chiffrement juste en dessous de cette section. Plus précisément, nous décommentons la ligne AES-128-CBC et ajouterons une directive &lt;code class=&quot;language-text&quot;&gt;auth&lt;/code&gt;.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;cipher AES-128-CBC
+auth SHA256&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Ensuite, les paramètres d’utilisateur et de groupe:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;user nobody
+group nogroup&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Facultativement, nous pourrions opter pour l’envoi de tout le trafic via le VPN. Pour cela, recherchez la directive &lt;code class=&quot;language-text&quot;&gt;redirect-gateway&lt;/code&gt; et décommentez-la.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;push &amp;quot;redirect-gateway def1 bypass-dhcp&amp;quot;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Juste en dessous, il devrait y avoir quelques lignes d’&lt;code class=&quot;language-text&quot;&gt;dhcp-option&lt;/code&gt;. Décommentez ceux-là aussi.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;push &amp;quot;dhcp-option DNS 208.67.222.222&amp;quot;
+push &amp;quot;dhcp-option DNS 208.67.220.220&amp;quot;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Optionnellement, nous pouvons vouloir changer le port et le protocole sur lesquels OpenVPN fonctionne. La valeur par défaut est UDP: 1194, mais si votre réseau bloque les connexions VPN, ce sera probablement l’une des victimes. Le déguisement serait d’utiliser TCP: 443, qui est le port HTTPS.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;port 443
+
+proto tcp
+;proto udp&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Si vous n’avez pas utilisé «serveur» comme nom de serveur, vos fichiers &lt;code class=&quot;language-text&quot;&gt;crt&lt;/code&gt; ont un nom différent. Mettez-les à jour en conséquence.&lt;/p&gt;
+&lt;div class=&quot;language-text extra-class&quot;&gt;
+&lt;pre class=&quot;language-text code&quot;&gt;
+cert &lt;b&gt;server&lt;/b&gt;.crt
+key &lt;b&gt;server&lt;/b&gt;.key
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Enregistrez et fermez le fichier.&lt;/p&gt;
+&lt;h2&gt;6. Préparer Ubuntu&lt;/h2&gt;
+&lt;p&gt;Bien que nous ayons déjà configuré le transfert IP, etc., nous devons apporter quelques modifications pour activer ces options.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;nano&lt;/span&gt; /etc/sysctl.conf&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Recherchez la ligne suivante et supprimez le # (caractère de commentaire).&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;net.ipv4.ip_forward=1&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Sauver et fermer. Pour mettre à jour les paramètres de session, exécutez:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; sysctl -p&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Ensuite, nous devons trouver et mettre à jour nos règles de pare-feu (UFW) pour masquer les clients. La première étape consiste à trouver l’interface sur laquelle nous fonctionnons:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;ip route | grep default&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;L’interface que nous voulons est celle qui contient le mot “dev”. Dans notre cas, cela ressemble à ceci:&lt;/p&gt;
+&lt;div class=&quot;language-text extra-class&quot;&gt;
+&lt;pre class=&quot;language-text code&quot;&gt;
+default via 10.138.0.1 dev &lt;b&gt;ens4&lt;/b&gt;
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Donc, notre interface est &lt;code class=&quot;language-text&quot;&gt;ens4&lt;/code&gt;. Avec cela, nous mettrons à jour nos règles de pare-feu:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;nano&lt;/span&gt; /etc/ufw/before.rules&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Au-dessus, là où il est indiqué &lt;code class=&quot;language-text&quot;&gt;Don&amp;#39;t delete these required lines...&lt;/code&gt; ajoutez le code suivant:&lt;/p&gt;
+&lt;div class=&quot;language-text extra-class&quot;&gt;
+&lt;pre class=&quot;language-text code&quot;&gt;
+# OPENVPN
+# NAT Table
+*nat
+:POSTROUTING ACCEPT [0:0] 
+# OpenVPN client traffic
+-A POSTROUTING -s 10.8.0.0/8 -o &lt;b&gt;ens4&lt;/b&gt; -j MASQUERADE
+COMMIT
+# OPENVPN
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Sauver et fermer. Ensuite, nous devons transférer les paquets.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;nano&lt;/span&gt; /etc/default/ufw&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Recherchez la directive &lt;code class=&quot;language-text&quot;&gt;DEFAULT_FORWARD_POLICY&lt;/code&gt; et remplacez-la de &lt;code class=&quot;language-text&quot;&gt;&amp;quot;DROP&amp;quot;&lt;/code&gt; par &lt;code class=&quot;language-text&quot;&gt;&amp;quot;ACCEPT&amp;quot;&lt;/code&gt;.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;DEFAULT_FORWARD_POLICY=&amp;quot;ACCEPT&amp;quot;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Sauver et fermer.&lt;/p&gt;
+&lt;h2&gt;7. Lancer OpenVPN&lt;/h2&gt;
+&lt;p&gt;Pour démarrer le serveur, exécutez ce qui suit:&lt;/p&gt;
+&lt;div class=&quot;language-bash extra-class&quot;&gt;
+&lt;pre class=&quot;language-bash code&quot;&gt;
+sudo systemctl start openvpn@&lt;b&gt;server&lt;/b&gt;
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Pour vérifier qu’il a bien démarré, lancez:&lt;/p&gt;
+&lt;div class=&quot;language-bash extra-class&quot;&gt;
+&lt;pre class=&quot;language-bash code&quot;&gt;
+sudo systemctl status openvpn@&lt;b&gt;server&lt;/b&gt;
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Si tout se passe bien, vous devriez voir une sortie incluant &lt;code class=&quot;language-text&quot;&gt;Active: active (running)&lt;/code&gt;. Vous devrez peut-être &lt;code class=&quot;language-text&quot;&gt;q&lt;/code&gt; sur &lt;code class=&quot;language-text&quot;&gt;q&lt;/code&gt; pour quitter le panneau d’informations. Si cela vous convient, liez le service à la séquence de démarrage.&lt;/p&gt;
+&lt;div class=&quot;language-bash extra-class&quot;&gt;
+&lt;pre class=&quot;language-bash code&quot;&gt;
+sudo systemctl enable openvpn@&lt;b&gt;server&lt;/b&gt;
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h2&gt;8. Configuration d’une structure de configuration client&lt;/h2&gt;
+&lt;p&gt;Pour faciliter la configuration des configurations client, nous allons d’abord créer une structure. Pour commencer, créez un dossier de configuration pour stocker les fichiers de configuration du client.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;mkdir&lt;/span&gt; -p ~/clients/files&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Les clés du client seront dans ces configurations, alors verrouillons les permissions sur le répertoire &lt;code class=&quot;language-text&quot;&gt;files&lt;/code&gt;.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;chmod&lt;/span&gt; 700 ~/clients/files&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Copiez l’exemple de configuration.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;cp&lt;/span&gt; /usr/share/doc/openvpn/examples/sample-config-files/client.conf ~/clients/base.conf&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Éditons le fichier:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;nano&lt;/span&gt; ~/clients/base.conf&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Trouvez la directive &lt;code class=&quot;language-text&quot;&gt;remote&lt;/code&gt;. Remplacez &lt;code class=&quot;language-text&quot;&gt;my-server-1&lt;/code&gt; par l’adresse IP externe publique attribuée à votre instance GCE. Si vous avez choisi un port autre que 1194, mettez-le à jour en conséquence.&lt;/p&gt;
+&lt;div class=&quot;language-text extra-class&quot;&gt;
+&lt;pre class=&quot;language-text code&quot;&gt;
+remote &lt;b&gt;35.197.111.236 443&lt;/b&gt;
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Mettez également à jour votre protocole.&lt;/p&gt;
+&lt;div class=&quot;language-text extra-class&quot;&gt;
+&lt;pre class=&quot;language-text code&quot;&gt;
+proto &lt;b&gt;tcp&lt;/b&gt;
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Décommentez l’utilisateur et le groupe:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;user nobody
+group nogroup&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Trouvez les directives &lt;code class=&quot;language-text&quot;&gt;ca&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;cert&lt;/code&gt; et &lt;code class=&quot;language-text&quot;&gt;key&lt;/code&gt;, commentez-les, car nos configurations les incluront automatiquement.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;# ca ca.crt
+# cert client.crt
+# key client.key&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Utilisez les mêmes paramètres de chiffrement et d’authentification que précédemment:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;cipher AES-128-CBC
+auth SHA256&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Quelque part, nous devrons ajouter la &lt;code class=&quot;language-text&quot;&gt;key-direction&lt;/code&gt;. Assurez-vous d’utiliser 1, comme c’est le cas pour le client. 0 était pour le serveur.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;key-direction 1&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Si votre configuration client actuelle est (ou sera) utilisée sur un périphérique Linux, ajoutez les éléments suivants:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;script-security 2
+up /etc/openvpn/update-resolv-conf
+down /etc/openvpn/update-resolv-conf&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Notez que si vous les incluez dans un environnement non-Linux (Android et macOS inclus dans un non-Linux), vos clients peuvent se comporter de manière étrange.&lt;/p&gt;
+&lt;p&gt;Sauver et fermer. Ensuite, nous devons écrire un script pour générer nos configs client rapidement et facilement.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;nano&lt;/span&gt; ~/clients/gen_config.sh&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;A l’intérieur, collez ce code:&lt;/p&gt;
+&lt;pre class=&quot;language-text code&quot;&gt;
+#!/bin/bash
+
+# First argument: Client identifier
+
+KEY_DIR=~/openvpn-ca/keys
+OUTPUT_DIR=~/clients/files
+BASE_CONFIG=~/clients/base.conf
+
+cat ${BASE_CONFIG} \
+    &lt;(echo -e &apos;&amp;lt;ca&amp;gt;&apos;) \
+    ${KEY_DIR}/ca.crt \
+    &lt;(echo -e &apos;&amp;lt;/ca&amp;gt;\n&amp;lt;cert&amp;gt;&apos;) \
+    ${KEY_DIR}/${1}.crt \
+    &lt;(echo -e &apos;&amp;lt;/cert&amp;gt;\n&amp;lt;key&amp;gt;&apos;) \
+    ${KEY_DIR}/${1}.key \
+    &lt;(echo -e &apos;&amp;lt;/key&amp;gt;\n&amp;lt;tls-auth&amp;gt;&apos;) \
+    ${KEY_DIR}/&lt;b&gt;tiv&lt;/b&gt;.key \
+    &lt;(echo -e &apos;&amp;lt;/tls-auth&amp;gt;&apos;) \
+    &gt; ${OUTPUT_DIR}/${1}.ovpn
+&lt;/pre&gt;
+&lt;p&gt;&lt;a href=&quot;./02/gen_config.sh&quot; download&gt;gen_config.sh&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Le &lt;code class=&quot;language-text&quot;&gt;{1}&lt;/code&gt; fait ici référence au premier argument, qui sera notre nom de client. Assurez-vous de mettre à jour &lt;strong&gt;tiv&lt;/strong&gt;.key fonction du nom de votre clé HMAC.&lt;/p&gt;
+&lt;p&gt;Autoriser l’exécution de ce script:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;chmod&lt;/span&gt; 700 ~/clients/gen_config.sh&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;9. Générer des configurations client&lt;/h2&gt;
+&lt;p&gt;Le pas que vous attendiez tous est enfin arrivé. Nous allons générer nos configurations client.&lt;/p&gt;
+&lt;div class=&quot;language-bash extra-class&quot;&gt;
+&lt;pre class=&quot;language-bash code&quot;&gt;
+cd ~/clients
+./gen_config.sh &lt;b&gt;client&lt;/b&gt;
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Vérifiez que cela a fonctionné en exécutant:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;ls&lt;/span&gt; ~/clients/files&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Si tel est le cas, il devrait maintenant y avoir un fichier &lt;code&gt;&lt;b&gt;client&lt;/b&gt;.ovpn&lt;/code&gt; dans ce répertoire. Nous devons télécharger ce fichier et le transférer sur nos appareils. Pour ce faire, cliquez sur l’icône représentant une roue en haut à droite de la session SSH, puis sélectionnez «Télécharger le fichier».&lt;/p&gt;
+&lt;p&gt;Le chemin pleinement qualifié devrait ressembler à ceci:&lt;/p&gt;
+&lt;div class=&quot;language-text extra-class&quot;&gt;
+&lt;pre class=&quot;language-text code&quot;&gt;
+/home/&lt;b&gt;username&lt;/b&gt;/clients/files/&lt;b&gt;client&lt;/b&gt;.ovpn
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h2&gt;10. Installation sur les clients&lt;/h2&gt;
+&lt;p&gt;Pour Windows, téléchargez l’application client &lt;a href=&quot;https://openvpn.net/index.php/open-source/downloads.html&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;OpenVPN&lt;/a&gt;. Une fois installé, déplacez votre fichier &lt;code&gt;&lt;b&gt;client&lt;/b&gt;.ovpn&lt;/code&gt; vers &lt;code class=&quot;language-text&quot;&gt;C:\Program Files\OpenVPN\config&lt;/code&gt;. Pour ouvrir OpenVPN, vous devez exécuter l’application en tant qu’administrateur. Une fois à l’intérieur, vous devriez voir et pouvoir vous connecter à votre VPN.&lt;/p&gt;
+&lt;p&gt;Pour macOS, la plupart des gens suggèrent d’utiliser &lt;a href=&quot;https://tunnelblick.net/&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;Tunnelblick&lt;/a&gt; bien que tout autre client OpenVPN (même s’il soit sans danger) soit probablement bon aussi. Une fois installé, vous devriez pouvoir faire glisser n’importe .ovpn fichier &lt;code class=&quot;language-text&quot;&gt;.ovpn&lt;/code&gt; sur l’icône Tunnelblick de la barre de menus pour installer la configuration. Utilisez la barre de menus pour vous connecter ensuite au VPN. Si vous êtes interrogé sur le plugin &lt;code class=&quot;language-text&quot;&gt;down-root.so&lt;/code&gt;, prenez une décision! Je l’ai sauté parce que je suis capable de reconnecter ma connexion, mais c’est à vous de décider.&lt;/p&gt;
+&lt;p&gt;Sous Linux, installez le paquet &lt;code class=&quot;language-text&quot;&gt;openvpn&lt;/code&gt; en utilisant votre gestionnaire de paquets. Les utilisateurs de CentOS devront d’abord installer &lt;code class=&quot;language-text&quot;&gt;epel-release&lt;/code&gt; utilisant &lt;code class=&quot;language-text&quot;&gt;yum&lt;/code&gt;. Une fois installé, lancez &lt;code class=&quot;language-text&quot;&gt;ls /etc/openvpn&lt;/code&gt;. Si la sortie &lt;strong&gt;ne&lt;/strong&gt; présente &lt;strong&gt;pas&lt;/strong&gt; de fichier &lt;code class=&quot;language-text&quot;&gt;update-resolve-conf&lt;/code&gt;, vous devez modifier votre fichier &lt;code class=&quot;language-text&quot;&gt;.ovpn&lt;/code&gt; et supprimer les lignes suivantes (si vous les avez ajoutées):&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;script-security 2
+up /etc/openvpn/update-resolv-conf
+down /etc/openvpn/update-resolv-conf&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Si vous n’avez jamais ajouté ces lignes mais trouvé un fichier &lt;code class=&quot;language-text&quot;&gt;update-resolv-conf&lt;/code&gt;, ajoutez-les! Les utilisateurs de CentOS devront modifier le &lt;code class=&quot;language-text&quot;&gt;group&lt;/code&gt; dans le fichier &lt;code class=&quot;language-text&quot;&gt;.ovpn&lt;/code&gt; de &lt;code class=&quot;language-text&quot;&gt;nogroup&lt;/code&gt; à &lt;code class=&quot;language-text&quot;&gt;nobody&lt;/code&gt; pour se conformer aux normes du système d’exploitation.&lt;/p&gt;
+&lt;p&gt;Pour vous connecter, lancez &lt;code class=&quot;language-text&quot;&gt;sudo openvpn — config client .ovpn&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Pour iOS, installez l’application &lt;a href=&quot;https://itunes.apple.com/us/app/id590379981&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;OpenVPN Connect&lt;/a&gt;. Ensuite, ouvrez iTunes sur votre ordinateur et accédez à iPhone&gt; Applications. Faites défiler jusqu’à la section «Partage de fichiers» et sélectionnez “OpenVPN”. Faites glisser votre fichier &lt;code class=&quot;language-text&quot;&gt;.ovpn&lt;/code&gt; dans le panneau “OpenVPN Documents”. Ouvrir l’application sur votre téléphone devrait maintenant afficher un message indiquant qu’un nouveau profil est prêt à être importé. Une fois importé, vous devriez pouvoir vous connecter au VPN.&lt;/p&gt;
+&lt;p&gt;Pour Android, installez l’application &lt;a href=&quot;https://play.google.com/store/apps/details?id=net.openvpn.openvpn&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;OpenVPN Connect&lt;/a&gt;. Ensuite, transférez votre fichier &lt;code class=&quot;language-text&quot;&gt;.ovpn&lt;/code&gt; n’importe où / de toute façon sur votre appareil (je viens d’utiliser Google Drive, mais cela peut ne pas être recommandé). Dans l’application, ouvrez le menu et cliquez sur “Importer”. Accédez à votre fichier &lt;code class=&quot;language-text&quot;&gt;.ovpn&lt;/code&gt; , cliquez dessus, puis appuyez sur “IMPORT” en haut à droite. Une fois terminé, vous devriez pouvoir vous connecter au VPN.&lt;/p&gt;
+&lt;h2&gt;Test du VPN&lt;/h2&gt;
+&lt;p&gt;Le moyen le plus simple de tester votre VPN serait de Google “quelle est mon adresse IP” avant et après la connexion. Votre adresse IP doit passer à l’adresse IP publique externe de votre instance GCE une fois que vous êtes connecté au VPN, puis à l’adresse IP de votre réseau une fois déconnectée du VPN.&lt;/p&gt;
+&lt;p&gt;Si tout s’est bien passé, c’est tout! Votre nouveau VPN est prêt à être utilisé.&lt;/p&gt;
+&lt;h2&gt;Crédits&lt;/h2&gt;
+&lt;p&gt;Cet article est basé en grande partie sur &lt;a href=&quot;https://www.digitalocean.com/community/tutorials/how-to-set-up-an-openvpn-server-on-ubuntu-16-04&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;ce didacticiel de la communauté DigitalOcean&lt;/a&gt;. Bien que la configuration elle-même soit assez similaire, j’ai pensé écrire un article séparé car il existe quelques éléments clés différents dans GCE et il est assez facile de se tromper si vous le faites pour la première fois (je parle par expérience).&lt;/p&gt;
+&lt;style lang=&quot;scss&quot;&gt;
+.content pre.code, 
+.content pre[class*=&quot;language-&quot;].code {
+  /* font-size: 10pt; */
+  font-size: 0.85em;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, &quot;Courier New&quot;, monospace;
+  color: #fff;
+
+  b {
+    color: yellow;
+    /* text-decoration:underline; */
+    /* background-color: green; */
+  }
+}
+&lt;/style&gt;</content:encoded></item><item><title><![CDATA[Principales commandes SQL/PostgreSQL que vous avez besoin de connaître]]></title><description><![CDATA[Principales commandes SQL/PostgreSQL que vous avez besoin de connaître. Ici, nous allons passer en revue les commandes les plus importantes…]]></description><link>https://ludovicwyffels.dev/sql/</link><guid isPermaLink="false">https://ludovicwyffels.dev/sql/</guid><pubDate>Sun, 14 Apr 2019 08:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;Principales commandes SQL/PostgreSQL que vous avez besoin de connaître.&lt;/h1&gt;
 &lt;p&gt;Ici, nous allons passer en revue les commandes les plus importantes et les plus élémentaires que vous devez connaître pour créer, gérer et supprimer vos données sur votre base de données. Outre les commandes ici, j’utilise la syntaxe PostgreSQL. La plupart des bases de données relationnelles partagent les mêmes concepts.&lt;/p&gt;
 &lt;p&gt;En apprenant cela, vous pourrez créer et gérer votre base de données.&lt;/p&gt;
 &lt;p&gt;Ce sont les commandes que vous pouvez vous attendre à apprendre ici:&lt;/p&gt;
@@ -1744,377 +2114,7 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;sql&quot;&gt;&lt;pre class=&quot;language-sql&quot;&gt;&lt;code class=&quot;language-sql&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;DROP&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;TABLE&lt;/span&gt; customer&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;C’est simple comme ça, mais vous devez être encore plus prudent que la commande delete . Ici, vous allez laisser tomber la table des trous et il n’y a aucun moyen de récupérer.&lt;/p&gt;
 &lt;p&gt;Une autre différence majeure est que cela ne devrait pas être utilisé dans votre “programme”. Cette commande ne devrait être utilisée que par la commande de terminal lorsque vous savez ce qui doit être fait ou supprimé.&lt;/p&gt;
-&lt;hr&gt;</content:encoded></item><item><title><![CDATA[Configuration d'un serveur OpenVPN sur Google Compute Engine]]></title><description><![CDATA[Configuration d’un serveur OpenVPN sur Google Compute Engine J’ai récemment commmencé à utiliser OpenVPN et à profiter des différentes…]]></description><link>https://softwareontheroad.com/openvpn-google/</link><guid isPermaLink="false">https://softwareontheroad.com/openvpn-google/</guid><pubDate>Sun, 14 Apr 2019 08:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;Configuration d’un serveur OpenVPN sur Google Compute Engine&lt;/h1&gt;
-&lt;p&gt;J’ai récemment commmencé à utiliser OpenVPN et à profiter des différentes options qu’il propose, notamment le masquage du trafic VPN sous TCP:443 (autrement appelé HTTPS). Personnellement, j’aime utiliser GCE pour héberger mes VPN, car je profite de la puissance et de la personnalisation que cela procure.&lt;/p&gt;
-&lt;p&gt;Cependant, il n’y avait absolument aucun tutoriel sur la configuration d’OpenVPN sur GCE. Il existe 10 étapes dans ce didacticiel, mais chaque étape peut exécuter plusieurs lignes de code.&lt;/p&gt;
-&lt;p&gt;Si vous essayez simplement d’ajouter plus de clients, passer aux étapes 4, 9 et 10.&lt;/p&gt;
-&lt;h2&gt;Table des matières&lt;/h2&gt;
-&lt;p&gt;[[toc]]&lt;/p&gt;
-&lt;h2&gt;1. Création de l’instance&lt;/h2&gt;
-&lt;p&gt;Nous voulons utiliser une instance &lt;code class=&quot;language-text&quot;&gt;n1-standard-1&lt;/code&gt; pour sa durabilité et son coût. Dirigez-vous vers le moteur de calcul et cliquez sur “CREATE INSTANCE”.&lt;/p&gt;
-&lt;p&gt;&lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/bc1d8c0fe43fbdbd290421761c57cb77/13283/1.png&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-wrapper&quot;
-    style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 450px;&quot;
-  &gt;
-    &lt;span
-      class=&quot;gatsby-resp-image-background-image&quot;
-      style=&quot;padding-bottom: 139.33333333333334%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAcCAIAAADuuAg3AAAACXBIWXMAAAsSAAALEgHS3X78AAACjUlEQVQ4y41Uh3KjMBDV///cZeZcEhfsuFJtBAihyj1JPkJsp7zBO2vBtrfaJZvNZrVaLZdLSqkxRkqplJIeXdfhxHr0Iwx/SFmWRVFcPWBfegS9rms4cl+P4G3dA7/EWkPpNUliKDhCVK01DCDhIs/z8/kMdyGU0jajMr7IhruPiZDqQtvi2jStbLmsG8F5JzoHRG6apvYQwp25orQVyoZqiBA6p/pS60ulKXOSMY7EK49gDwUShTDGhspD2vbGgjXWaGu1J+k/N4CP4iP1/t8NqIugqsPhAK+h1A9KRyQPPN3RTtq2RZ92u12SJO/v76Bnv9+fPKDjHLKoVFYqyP4zCOfcFcaYUhqNQfwgAeQWdCSu/XNvjIAIQssCBfdfY9zqoWwCr43s16mlTB2Pe/gCBTsPKHuPNE0f3TljpJVVZpPqkpkiz1DBECdkHm7oc2N8AOOisZ00uOJRtAmRERCvH23AAnjdbre4M8QNg3KWSn80cCDsETgPMwMvBJ1AaSgVShzHaDv4v2PoKxBcD6QBs+PxCBdo+zCGd9w+AndbRFG0WCxms9l6vQ71oGz4ClclZHgHZAdDIoWoKoyum54QNtwTQHh8F7lu+GQevb29TqdTbJUsyzBAoRNPO3TXZ3M4pS8vf2bz+WQy+euBzNEqEPGDMX5tyy4e2BiQ2EoD4T8Yj+fulyR/zDPiIL1xh4Zqx46e9xmrb7t1PGHdIe2wfahHUCDxCr0IuzXQeRtJ1naRW91rbO/X+WsgKWzvW88g9SeMjLnK0iTPEriO4xMGq/810Cpb1Lao7LU2VdtD5tRtnItbPRLbp2w0ZF6pJ5sER22nWae5MJ0wvDNOkXgsF3hlhDTcP+ahc/8AbrFWxxhIqn8AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
-    &gt;&lt;/span&gt;
-    &lt;picture&gt;
-        &lt;source
-          srcset=&quot;/static/bc1d8c0fe43fbdbd290421761c57cb77/8ffb1/1.webp 293w,
-/static/bc1d8c0fe43fbdbd290421761c57cb77/2809e/1.webp 450w&quot;
-          sizes=&quot;(max-width: 450px) 100vw, 450px&quot;
-          type=&quot;image/webp&quot;
-        /&gt;
-        &lt;source
-          srcset=&quot;/static/bc1d8c0fe43fbdbd290421761c57cb77/f93ee/1.png 293w,
-/static/bc1d8c0fe43fbdbd290421761c57cb77/13283/1.png 450w&quot;
-          sizes=&quot;(max-width: 450px) 100vw, 450px&quot;
-          type=&quot;image/png&quot;
-        /&gt;
-        &lt;img
-          class=&quot;gatsby-resp-image-image&quot;
-          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px white;&quot;
-          src=&quot;/static/bc1d8c0fe43fbdbd290421761c57cb77/13283/1.png&quot;
-          alt=&quot;1&quot;
-          title=&quot;&quot;
-        /&gt;
-      &lt;/picture&gt;
-  &lt;/span&gt;
-  &lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Configuez-le avec les options affichées, mais n’appuyez pas encore sur “Créer”&lt;/p&gt;
-&lt;p&gt;Si vous ne voyez pas l’image, nous utilisons une instance &lt;code class=&quot;language-text&quot;&gt;n1-standard-1&lt;/code&gt; (1 vCPU, 3,75 Go de mémoire) avec Ubuntu 16.04 LTS installé (vous pouvez choisir un espace de stockage, mais 10 Go suffisent). Puisque notre VPN utilisera TCP: 443, nous devons autoriser le trafic HTTPS maintenant ou plus tard. Vous pouvez donc également le faire immédiatement.&lt;/p&gt;
-&lt;p&gt;Appuyez sur le bouton “Gestion, sécurité, disques, réseau, …” pour ouvrir les options avancées. Cliquez sur l’onglet Réseau et cliquez sur le bouton d’édition en regard de l’interface réseau sélectionnée.&lt;/p&gt;
-&lt;p&gt;Cliquez sur le menu déroulant “Adresse IP externe” et sélectionnez “Créer une adresse IP”. Entrez un nom, puis appuyez sur “Réserver”. Cette opération associera une adresse IP statique à votre instance, ce qui est probablement ce que vous voulez, sauf si vous souhaitez régénérer les fichiers de configuration de quelque temps. En ce qui concerne les frais, Google ne facture pas les adresses IP statiques pendant leur utilisation. La machine &lt;code class=&quot;language-text&quot;&gt;n1-standard-1&lt;/code&gt; ne devrait pas vous coûter plus de 30 $ par mois. Certes, cela coûte un peu plus cher que la plupart des services VPN, mais la plupart des services VPN ne vous donnent pas un contrôle total :)&lt;/p&gt;
-&lt;p&gt;&lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/73eb40d4f0bb7c23d2790b3c426d1575/70a92/2.png&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-wrapper&quot;
-    style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 467px;&quot;
-  &gt;
-    &lt;span
-      class=&quot;gatsby-resp-image-background-image&quot;
-      style=&quot;padding-bottom: 121.84154175588866%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAYCAIAAAB1KUohAAAACXBIWXMAAAsSAAALEgHS3X78AAAB1UlEQVQ4y5VUy47TMBT1zwE7FgiEWIOQALFkPWyQGDTLEa8VX8DHdAWVyqR5x06TJnEcv+JyOq7YMXGPnKsq9fU9957jkMufzYvr6vXX6s03+uoLfX5dhayXn+nb74y8+8GefCqfXpXProrHl/mD9+n9i4V17yJ9+CF79DEnwziVrN3teT8qIa3Uc8iatBsnTeQ0rX//urn5o7U6uNmFLWu0NYZYa7uua9vWOWeM0SYI0zQppYiUklLKGNvv9zjoEAxsJlrrKIrW63VxizRNd7vdPM94v1wZm/q+B/NhGBA55+Bil+CPIOM4RtttFG03m00cx03TGmPdEkDtmIzKtCqLIisRijxLk7ZtjpO7E0KII21wEOowCDeIuR9txyGjCx0YivBRNp3ouJLKcTFrEzxtEIjjbZomjFEYRisJt4T2jIfVdVGUjNWwSl3XFaX/5vk/nHrGGRAtyzJYpaoqiAy1kHx35RNtJOMY+ASZkM3r7P9e7hlbkZYkSZ7n0OA8e4K6rwkgGUQWG8aGkz3x4EqgPpLhU0S8CbEnKnmp4tVqhVjeAvnnmIRzXCZEbz3PPKQ48T140UEYcQ7D6WJgYGgbCuMH3p73MUDbGBgGiG49ixAg8S/mDk08LO0x+gAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
-    &gt;&lt;/span&gt;
-    &lt;picture&gt;
-        &lt;source
-          srcset=&quot;/static/73eb40d4f0bb7c23d2790b3c426d1575/8ffb1/2.webp 293w,
-/static/73eb40d4f0bb7c23d2790b3c426d1575/d57f5/2.webp 467w&quot;
-          sizes=&quot;(max-width: 467px) 100vw, 467px&quot;
-          type=&quot;image/webp&quot;
-        /&gt;
-        &lt;source
-          srcset=&quot;/static/73eb40d4f0bb7c23d2790b3c426d1575/f93ee/2.png 293w,
-/static/73eb40d4f0bb7c23d2790b3c426d1575/70a92/2.png 467w&quot;
-          sizes=&quot;(max-width: 467px) 100vw, 467px&quot;
-          type=&quot;image/png&quot;
-        /&gt;
-        &lt;img
-          class=&quot;gatsby-resp-image-image&quot;
-          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px white;&quot;
-          src=&quot;/static/73eb40d4f0bb7c23d2790b3c426d1575/70a92/2.png&quot;
-          alt=&quot;2&quot;
-          title=&quot;&quot;
-        /&gt;
-      &lt;/picture&gt;
-  &lt;/span&gt;
-  &lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Vos interfaces réseau doivent ressembler à l’image. &lt;strong&gt;Veillez à activer le transfert IP&lt;/strong&gt;, car cela ne peut plus être modifié après la création de l’instance.&lt;/p&gt;
-&lt;p&gt;En règle générale, vous souhaiterez probablement garder votre adresse IP externe secrète. Cela ne me dérange pas de rendre celui-ci public, car cette instance n’existera pas lorsque vous lirez ce tutoriel, et l’adresse IP appartiendra probablement à quelqu’un d’autre.&lt;/p&gt;
-&lt;p&gt;Appuyez sur “Terminé” et “Créer”. Une fois l’instance prête (un bouton “SSH” noir apparaîtra), cliquez ou double-cliquez sur le bonton “SSH” pour ouvrir une fenêtre SSH. Le reste de la configuration se fera sur cette machine, que nous appellerons le “server”.&lt;/p&gt;
-&lt;h2&gt;2. Installation OpenVPN et EasyRSA&lt;/h2&gt;
-&lt;p&gt;OpenVPN est (évidemment) le serveur VPN que nous utilisons, et EasyRSA est un paquet qui nous permettra de configurer une autorité de certification interne à utiliser.&lt;/p&gt;
-&lt;p&gt;Bien que ce ne soit généralement pas le cas, pour cette configuration, il est souvent nécessaire de lancer une mise à jour d’apt pour pouvoir installer un ou les deux packages. Les deux d’entre eux sont dans les dépôts par défaut d’Ubuntu.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;apt-get&lt;/span&gt; update
-&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;apt-get&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; openvpn easy-rsa&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Temps de configurer.&lt;/p&gt;
-&lt;h2&gt;3. Mise enplace du CA&lt;/h2&gt;
-&lt;p&gt;Comme OpenVPN utilise TLS/SSL, il a besoin de certificats pour chiffrer le trafic. Pour cela, nous devrons émettre nos propres certificats de confiance, ce que nous pouvons faire à l’aide de la CA que nous sommes sur le point de configurer.&lt;/p&gt;
-&lt;p&gt;Commençons par copier le &lt;code class=&quot;language-text&quot;&gt;easy-rsa&lt;/code&gt; de modèles du paquet &lt;code class=&quot;language-text&quot;&gt;easy-rsa&lt;/code&gt;.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;make-cadir ~/openvpn-ca
-&lt;span class=&quot;token function&quot;&gt;cd&lt;/span&gt; ~/openvpn-ca&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Il y a des valeurs que nous pouvons vouloir éditer, alors allons-y et &lt;code class=&quot;language-text&quot;&gt;nano vars&lt;/code&gt;. Si vous voulez utiliser vim, continuez, mais puisque j’essaie de garder mes tutoriels aussi simples que possible, j’utilise nano.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;À partir de ce moment, s’il y a une partie d’une commande qui dépend d’une valeur que vous choisissez, elle sera en gras. Tout le code qui n’est pas généré par un utilisateur sera en italique.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Faites défiler vers le bas du fichier (ce n’est pas trop long) et vous devriez trouver ce qui suit:&lt;/p&gt;
-&lt;div class=&quot;language-text extra-class&quot;&gt;
-&lt;pre class=&quot;language-text code&quot;&gt;
-export KEY_COUNTRY=&quot;&lt;b&gt;US&lt;/b&gt;&quot;
-export KEY_PROVINCE=&quot;&lt;b&gt;CA&lt;/b&gt;&quot;
-export KEY_CITY=&quot;&lt;b&gt;SanFrancisco&lt;/b&gt;&quot;
-export KEY_ORG=&quot;&lt;b&gt;Fort-Funston&lt;/b&gt;&quot;
-export KEY_EMAIL=&quot;&lt;b&gt;me@myhost.mydomain&lt;/b&gt;&quot;
-export KEY_OU=&quot;&lt;b&gt;MyOrganizationalUnit&lt;/b&gt;&quot;
-&lt;/pre&gt;
-&lt;/div&gt;
-&lt;p&gt;Éditez autant d’entre eux (ou aucun d’eux) que vous le souhaitez. Juste en dessous de ces valeurs devrait être &lt;code class=&quot;language-text&quot;&gt;export KEY_NAME=&amp;quot;EasyRSA&amp;quot;&lt;/code&gt;. Pour simplifier notre configuration, nous allons modifier cette ligne comme suit:&lt;/p&gt;
-&lt;div class=&quot;language-text extra-class&quot;&gt;
-&lt;pre class=&quot;language-text code&quot;&gt;
-export KEY_NAME=&quot;&lt;b&gt;server&lt;/b&gt;&quot;
-&lt;/pre&gt;
-&lt;/div&gt;
-&lt;p&gt;Enregistrez et fermez le fichier (ctrl + x, y, entrez). Les variables que nous venons de modifier seront utilisées pour le processus de signature de notre autorité de certification. Toujours dans le &lt;code class=&quot;language-text&quot;&gt;openvpn-ca&lt;/code&gt;, exécutez la commande suivante:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;source&lt;/span&gt; vars&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Si vous avez bien fait, le re &lt;code&gt;NOTE: If you run ./clean-all, I will be doing a rm -rf on /home/&lt;b&gt;username&lt;/b&gt;/openvpn-ca/keys&lt;/code&gt;. C’est ce que nous voulons. Pour assurer un environnement de travail propre, nous allons lancer &lt;code class=&quot;language-text&quot;&gt;./clean-all&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;Maintenant, construisons le CA&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;./build-ca&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Toutes les variables que nous avons déjà définies doivent se renseigner elles-mêmes. Il suffit donc d’y accéder en appuyant plusieurs fois sur Entrée. À la fin, vous aurez une autorité de certification prête à commencer à signer.&lt;/p&gt;
-&lt;p&gt;Nous avons également besoin d’un certificat de serveur et d’une clé de cryptage pour garantir la sécurité de notre trafic.&lt;/p&gt;
-&lt;p&gt;Créons notre certificat de serveur et notre clé.&lt;/p&gt;
-&lt;div class=&quot;language-bash extra-class&quot;&gt;
-&lt;pre class=&quot;language-bash code&quot;&gt;
-./build-key-server &lt;b&gt;server&lt;/b&gt;
-&lt;/pre&gt;
-&lt;/div&gt;
-&lt;p&gt;Passer à nouveau les invites de commande. Nous n’entrerons pas un mot de passe, cette fois. Les deux dernières invites vous obligent à entrer &lt;code class=&quot;language-text&quot;&gt;y&lt;/code&gt; pour signer le certificat. Assurez-vous de ne pas les ignorer!&lt;/p&gt;
-&lt;p&gt;Comme indiqué précédemment, nous avons également besoin d’une clé de chiffrement. Pour les besoins de ce didacticiel, nous allons générer une clé Diffie-Hellman, qui a tendance à être plutôt forte. Bien sûr, une grande [force] entraîne une grande [inefficacité]. Par conséquent, quelle que soit votre système, la commande suivante prendra probablement quelques minutes.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;./build-dh&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Nous renforcerons cela avec une signature HMAC, afin de nous assurer que la vérification de l’intégrité TLS est plus sûre.&lt;/p&gt;
-&lt;div class=&quot;language-bash extra-class&quot;&gt;
-&lt;pre class=&quot;language-bash code&quot;&gt;
-openvpn --genkey --secret keys/&lt;b&gt;tiv&lt;/b&gt;.key
-&lt;/pre&gt;
-&lt;/div&gt;
-&lt;h2&gt;4. Générer un certificat client&lt;/h2&gt;
-&lt;p&gt;Naturellement, si vous allez utiliser une autorité de certification, votre client doit également disposer d’un certificat. Bien que vous puissiez le faire sur votre ordinateur client et que le serveur le signe, nous essayons de garder les choses simples et hébergées sur un seul ordinateur.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Si vous avez plusieurs clients, vous pouvez suivre cette étape plusieurs fois. Assurez-vous simplement de rendre vos noms de client uniques.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Assurez-vous que vous êtes dans le &lt;code class=&quot;language-text&quot;&gt;openvpn-ca&lt;/code&gt; et que votre fichier vars est synchronisé.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;cd&lt;/span&gt; ~/openvpn-ca
-&lt;span class=&quot;token function&quot;&gt;source&lt;/span&gt; vars&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Maintenant, nous allons construire une clé client en tant que telle:&lt;/p&gt;
-&lt;div class=&quot;language-bash extra-class&quot;&gt;
-&lt;pre class=&quot;language-bash code&quot;&gt;
-./build-key &lt;b&gt;client&lt;/b&gt;
-&lt;/pre&gt;
-&lt;/div&gt;
-&lt;p&gt;Une fois de plus, tout doit être pré-rempli. Passez donc tous les éléments, sauf les deux dernières invites, qui vous demanderont de signer en entrant &lt;code class=&quot;language-text&quot;&gt;y&lt;/code&gt;.&lt;/p&gt;
-&lt;h2&gt;5. Configurer le serveur OpenVPN&lt;/h2&gt;
-&lt;p&gt;OpenVPN s’installe sous le répertoire &lt;code class=&quot;language-text&quot;&gt;/etc/openvpn&lt;/code&gt;. Pour que tout fonctionne, nous devons déplacer certains fichiers dans ce dossier.&lt;/p&gt;
-&lt;div class=&quot;language-bash extra-class&quot;&gt;
-&lt;pre class=&quot;language-bash code&quot;&gt;
-cd ~/openvpn-ca/keys
-sudo cp ca.crt server.crt server.key &lt;b&gt;tiv&lt;/b&gt;.key dh2048.pem /etc/openvpn
-&lt;/pre&gt;
-&lt;/div&gt;
-&lt;p&gt;Par défaut, OpenVPN est fourni avec un exemple de configuration. Par souci de simplicité, nous simplifierons la décompression dans notre dossier de configuration.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;gunzip -c /usr/share/doc/openvpn/examples/sample-config-files/server.conf.gz | sudo tee /etc/openvpn/server.conf&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Ensuite, nous allons éditer le fichier de configuration:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;nano&lt;/span&gt; /etc/openvpn/server.conf&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;La première étape consiste à trouver la directive &lt;code class=&quot;language-text&quot;&gt;tls-auth&lt;/code&gt;. Il y aura un point-virgule (&lt;code class=&quot;language-text&quot;&gt;;&lt;/code&gt;) à côté de la directive, que nous supprimerons. En dessous, nous ajouterons une ligne.&lt;/p&gt;
-&lt;div class=&quot;language-text extra-class&quot;&gt;
-&lt;pre class=&quot;language-text code&quot;&gt;
-tls-auth &lt;b&gt;tiv&lt;/b&gt;.key 0 # This file is secret
-key-direction 0
-&lt;/pre&gt;
-&lt;/div&gt;
-&lt;p&gt;Nous devons également chiffrer notre serveur, éditons donc les directives de chiffrement juste en dessous de cette section. Plus précisément, nous décommentons la ligne AES-128-CBC et ajouterons une directive &lt;code class=&quot;language-text&quot;&gt;auth&lt;/code&gt;.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;cipher AES-128-CBC
-auth SHA256&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Ensuite, les paramètres d’utilisateur et de groupe:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;user nobody
-group nogroup&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Facultativement, nous pourrions opter pour l’envoi de tout le trafic via le VPN. Pour cela, recherchez la directive &lt;code class=&quot;language-text&quot;&gt;redirect-gateway&lt;/code&gt; et décommentez-la.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;push &amp;quot;redirect-gateway def1 bypass-dhcp&amp;quot;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Juste en dessous, il devrait y avoir quelques lignes d’&lt;code class=&quot;language-text&quot;&gt;dhcp-option&lt;/code&gt;. Décommentez ceux-là aussi.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;push &amp;quot;dhcp-option DNS 208.67.222.222&amp;quot;
-push &amp;quot;dhcp-option DNS 208.67.220.220&amp;quot;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Optionnellement, nous pouvons vouloir changer le port et le protocole sur lesquels OpenVPN fonctionne. La valeur par défaut est UDP: 1194, mais si votre réseau bloque les connexions VPN, ce sera probablement l’une des victimes. Le déguisement serait d’utiliser TCP: 443, qui est le port HTTPS.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;port 443
-
-proto tcp
-;proto udp&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Si vous n’avez pas utilisé «serveur» comme nom de serveur, vos fichiers &lt;code class=&quot;language-text&quot;&gt;crt&lt;/code&gt; ont un nom différent. Mettez-les à jour en conséquence.&lt;/p&gt;
-&lt;div class=&quot;language-text extra-class&quot;&gt;
-&lt;pre class=&quot;language-text code&quot;&gt;
-cert &lt;b&gt;server&lt;/b&gt;.crt
-key &lt;b&gt;server&lt;/b&gt;.key
-&lt;/pre&gt;
-&lt;/div&gt;
-&lt;p&gt;Enregistrez et fermez le fichier.&lt;/p&gt;
-&lt;h2&gt;6. Préparer Ubuntu&lt;/h2&gt;
-&lt;p&gt;Bien que nous ayons déjà configuré le transfert IP, etc., nous devons apporter quelques modifications pour activer ces options.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;nano&lt;/span&gt; /etc/sysctl.conf&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Recherchez la ligne suivante et supprimez le # (caractère de commentaire).&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;net.ipv4.ip_forward=1&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Sauver et fermer. Pour mettre à jour les paramètres de session, exécutez:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; sysctl -p&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Ensuite, nous devons trouver et mettre à jour nos règles de pare-feu (UFW) pour masquer les clients. La première étape consiste à trouver l’interface sur laquelle nous fonctionnons:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;ip route | grep default&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;L’interface que nous voulons est celle qui contient le mot “dev”. Dans notre cas, cela ressemble à ceci:&lt;/p&gt;
-&lt;div class=&quot;language-text extra-class&quot;&gt;
-&lt;pre class=&quot;language-text code&quot;&gt;
-default via 10.138.0.1 dev &lt;b&gt;ens4&lt;/b&gt;
-&lt;/pre&gt;
-&lt;/div&gt;
-&lt;p&gt;Donc, notre interface est &lt;code class=&quot;language-text&quot;&gt;ens4&lt;/code&gt;. Avec cela, nous mettrons à jour nos règles de pare-feu:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;nano&lt;/span&gt; /etc/ufw/before.rules&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Au-dessus, là où il est indiqué &lt;code class=&quot;language-text&quot;&gt;Don&amp;#39;t delete these required lines...&lt;/code&gt; ajoutez le code suivant:&lt;/p&gt;
-&lt;div class=&quot;language-text extra-class&quot;&gt;
-&lt;pre class=&quot;language-text code&quot;&gt;
-# OPENVPN
-# NAT Table
-*nat
-:POSTROUTING ACCEPT [0:0] 
-# OpenVPN client traffic
--A POSTROUTING -s 10.8.0.0/8 -o &lt;b&gt;ens4&lt;/b&gt; -j MASQUERADE
-COMMIT
-# OPENVPN
-&lt;/pre&gt;
-&lt;/div&gt;
-&lt;p&gt;Sauver et fermer. Ensuite, nous devons transférer les paquets.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;nano&lt;/span&gt; /etc/default/ufw&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Recherchez la directive &lt;code class=&quot;language-text&quot;&gt;DEFAULT_FORWARD_POLICY&lt;/code&gt; et remplacez-la de &lt;code class=&quot;language-text&quot;&gt;&amp;quot;DROP&amp;quot;&lt;/code&gt; par &lt;code class=&quot;language-text&quot;&gt;&amp;quot;ACCEPT&amp;quot;&lt;/code&gt;.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;DEFAULT_FORWARD_POLICY=&amp;quot;ACCEPT&amp;quot;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Sauver et fermer.&lt;/p&gt;
-&lt;h2&gt;7. Lancer OpenVPN&lt;/h2&gt;
-&lt;p&gt;Pour démarrer le serveur, exécutez ce qui suit:&lt;/p&gt;
-&lt;div class=&quot;language-bash extra-class&quot;&gt;
-&lt;pre class=&quot;language-bash code&quot;&gt;
-sudo systemctl start openvpn@&lt;b&gt;server&lt;/b&gt;
-&lt;/pre&gt;
-&lt;/div&gt;
-&lt;p&gt;Pour vérifier qu’il a bien démarré, lancez:&lt;/p&gt;
-&lt;div class=&quot;language-bash extra-class&quot;&gt;
-&lt;pre class=&quot;language-bash code&quot;&gt;
-sudo systemctl status openvpn@&lt;b&gt;server&lt;/b&gt;
-&lt;/pre&gt;
-&lt;/div&gt;
-&lt;p&gt;Si tout se passe bien, vous devriez voir une sortie incluant &lt;code class=&quot;language-text&quot;&gt;Active: active (running)&lt;/code&gt;. Vous devrez peut-être &lt;code class=&quot;language-text&quot;&gt;q&lt;/code&gt; sur &lt;code class=&quot;language-text&quot;&gt;q&lt;/code&gt; pour quitter le panneau d’informations. Si cela vous convient, liez le service à la séquence de démarrage.&lt;/p&gt;
-&lt;div class=&quot;language-bash extra-class&quot;&gt;
-&lt;pre class=&quot;language-bash code&quot;&gt;
-sudo systemctl enable openvpn@&lt;b&gt;server&lt;/b&gt;
-&lt;/pre&gt;
-&lt;/div&gt;
-&lt;h2&gt;8. Configuration d’une structure de configuration client&lt;/h2&gt;
-&lt;p&gt;Pour faciliter la configuration des configurations client, nous allons d’abord créer une structure. Pour commencer, créez un dossier de configuration pour stocker les fichiers de configuration du client.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;mkdir&lt;/span&gt; -p ~/clients/files&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Les clés du client seront dans ces configurations, alors verrouillons les permissions sur le répertoire &lt;code class=&quot;language-text&quot;&gt;files&lt;/code&gt;.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;chmod&lt;/span&gt; 700 ~/clients/files&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Copiez l’exemple de configuration.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;cp&lt;/span&gt; /usr/share/doc/openvpn/examples/sample-config-files/client.conf ~/clients/base.conf&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Éditons le fichier:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;nano&lt;/span&gt; ~/clients/base.conf&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Trouvez la directive &lt;code class=&quot;language-text&quot;&gt;remote&lt;/code&gt;. Remplacez &lt;code class=&quot;language-text&quot;&gt;my-server-1&lt;/code&gt; par l’adresse IP externe publique attribuée à votre instance GCE. Si vous avez choisi un port autre que 1194, mettez-le à jour en conséquence.&lt;/p&gt;
-&lt;div class=&quot;language-text extra-class&quot;&gt;
-&lt;pre class=&quot;language-text code&quot;&gt;
-remote &lt;b&gt;35.197.111.236 443&lt;/b&gt;
-&lt;/pre&gt;
-&lt;/div&gt;
-&lt;p&gt;Mettez également à jour votre protocole.&lt;/p&gt;
-&lt;div class=&quot;language-text extra-class&quot;&gt;
-&lt;pre class=&quot;language-text code&quot;&gt;
-proto &lt;b&gt;tcp&lt;/b&gt;
-&lt;/pre&gt;
-&lt;/div&gt;
-&lt;p&gt;Décommentez l’utilisateur et le groupe:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;user nobody
-group nogroup&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Trouvez les directives &lt;code class=&quot;language-text&quot;&gt;ca&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;cert&lt;/code&gt; et &lt;code class=&quot;language-text&quot;&gt;key&lt;/code&gt;, commentez-les, car nos configurations les incluront automatiquement.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;# ca ca.crt
-# cert client.crt
-# key client.key&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Utilisez les mêmes paramètres de chiffrement et d’authentification que précédemment:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;cipher AES-128-CBC
-auth SHA256&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Quelque part, nous devrons ajouter la &lt;code class=&quot;language-text&quot;&gt;key-direction&lt;/code&gt;. Assurez-vous d’utiliser 1, comme c’est le cas pour le client. 0 était pour le serveur.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;key-direction 1&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Si votre configuration client actuelle est (ou sera) utilisée sur un périphérique Linux, ajoutez les éléments suivants:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;script-security 2
-up /etc/openvpn/update-resolv-conf
-down /etc/openvpn/update-resolv-conf&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Notez que si vous les incluez dans un environnement non-Linux (Android et macOS inclus dans un non-Linux), vos clients peuvent se comporter de manière étrange.&lt;/p&gt;
-&lt;p&gt;Sauver et fermer. Ensuite, nous devons écrire un script pour générer nos configs client rapidement et facilement.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;nano&lt;/span&gt; ~/clients/gen_config.sh&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;A l’intérieur, collez ce code:&lt;/p&gt;
-&lt;pre class=&quot;language-text code&quot;&gt;
-#!/bin/bash
-
-# First argument: Client identifier
-
-KEY_DIR=~/openvpn-ca/keys
-OUTPUT_DIR=~/clients/files
-BASE_CONFIG=~/clients/base.conf
-
-cat ${BASE_CONFIG} \
-    &lt;(echo -e &apos;&amp;lt;ca&amp;gt;&apos;) \
-    ${KEY_DIR}/ca.crt \
-    &lt;(echo -e &apos;&amp;lt;/ca&amp;gt;\n&amp;lt;cert&amp;gt;&apos;) \
-    ${KEY_DIR}/${1}.crt \
-    &lt;(echo -e &apos;&amp;lt;/cert&amp;gt;\n&amp;lt;key&amp;gt;&apos;) \
-    ${KEY_DIR}/${1}.key \
-    &lt;(echo -e &apos;&amp;lt;/key&amp;gt;\n&amp;lt;tls-auth&amp;gt;&apos;) \
-    ${KEY_DIR}/&lt;b&gt;tiv&lt;/b&gt;.key \
-    &lt;(echo -e &apos;&amp;lt;/tls-auth&amp;gt;&apos;) \
-    &gt; ${OUTPUT_DIR}/${1}.ovpn
-&lt;/pre&gt;
-&lt;p&gt;&lt;a href=&quot;./02/gen_config.sh&quot; download&gt;gen_config.sh&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Le &lt;code class=&quot;language-text&quot;&gt;{1}&lt;/code&gt; fait ici référence au premier argument, qui sera notre nom de client. Assurez-vous de mettre à jour &lt;strong&gt;tiv&lt;/strong&gt;.key fonction du nom de votre clé HMAC.&lt;/p&gt;
-&lt;p&gt;Autoriser l’exécution de ce script:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;chmod&lt;/span&gt; 700 ~/clients/gen_config.sh&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2&gt;9. Générer des configurations client&lt;/h2&gt;
-&lt;p&gt;Le pas que vous attendiez tous est enfin arrivé. Nous allons générer nos configurations client.&lt;/p&gt;
-&lt;div class=&quot;language-bash extra-class&quot;&gt;
-&lt;pre class=&quot;language-bash code&quot;&gt;
-cd ~/clients
-./gen_config.sh &lt;b&gt;client&lt;/b&gt;
-&lt;/pre&gt;
-&lt;/div&gt;
-&lt;p&gt;Vérifiez que cela a fonctionné en exécutant:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;ls&lt;/span&gt; ~/clients/files&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Si tel est le cas, il devrait maintenant y avoir un fichier &lt;code&gt;&lt;b&gt;client&lt;/b&gt;.ovpn&lt;/code&gt; dans ce répertoire. Nous devons télécharger ce fichier et le transférer sur nos appareils. Pour ce faire, cliquez sur l’icône représentant une roue en haut à droite de la session SSH, puis sélectionnez «Télécharger le fichier».&lt;/p&gt;
-&lt;p&gt;Le chemin pleinement qualifié devrait ressembler à ceci:&lt;/p&gt;
-&lt;div class=&quot;language-text extra-class&quot;&gt;
-&lt;pre class=&quot;language-text code&quot;&gt;
-/home/&lt;b&gt;username&lt;/b&gt;/clients/files/&lt;b&gt;client&lt;/b&gt;.ovpn
-&lt;/pre&gt;
-&lt;/div&gt;
-&lt;h2&gt;10. Installation sur les clients&lt;/h2&gt;
-&lt;p&gt;Pour Windows, téléchargez l’application client &lt;a href=&quot;https://openvpn.net/index.php/open-source/downloads.html&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;OpenVPN&lt;/a&gt;. Une fois installé, déplacez votre fichier &lt;code&gt;&lt;b&gt;client&lt;/b&gt;.ovpn&lt;/code&gt; vers &lt;code class=&quot;language-text&quot;&gt;C:\Program Files\OpenVPN\config&lt;/code&gt;. Pour ouvrir OpenVPN, vous devez exécuter l’application en tant qu’administrateur. Une fois à l’intérieur, vous devriez voir et pouvoir vous connecter à votre VPN.&lt;/p&gt;
-&lt;p&gt;Pour macOS, la plupart des gens suggèrent d’utiliser &lt;a href=&quot;https://tunnelblick.net/&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;Tunnelblick&lt;/a&gt; bien que tout autre client OpenVPN (même s’il soit sans danger) soit probablement bon aussi. Une fois installé, vous devriez pouvoir faire glisser n’importe .ovpn fichier &lt;code class=&quot;language-text&quot;&gt;.ovpn&lt;/code&gt; sur l’icône Tunnelblick de la barre de menus pour installer la configuration. Utilisez la barre de menus pour vous connecter ensuite au VPN. Si vous êtes interrogé sur le plugin &lt;code class=&quot;language-text&quot;&gt;down-root.so&lt;/code&gt;, prenez une décision! Je l’ai sauté parce que je suis capable de reconnecter ma connexion, mais c’est à vous de décider.&lt;/p&gt;
-&lt;p&gt;Sous Linux, installez le paquet &lt;code class=&quot;language-text&quot;&gt;openvpn&lt;/code&gt; en utilisant votre gestionnaire de paquets. Les utilisateurs de CentOS devront d’abord installer &lt;code class=&quot;language-text&quot;&gt;epel-release&lt;/code&gt; utilisant &lt;code class=&quot;language-text&quot;&gt;yum&lt;/code&gt;. Une fois installé, lancez &lt;code class=&quot;language-text&quot;&gt;ls /etc/openvpn&lt;/code&gt;. Si la sortie &lt;strong&gt;ne&lt;/strong&gt; présente &lt;strong&gt;pas&lt;/strong&gt; de fichier &lt;code class=&quot;language-text&quot;&gt;update-resolve-conf&lt;/code&gt;, vous devez modifier votre fichier &lt;code class=&quot;language-text&quot;&gt;.ovpn&lt;/code&gt; et supprimer les lignes suivantes (si vous les avez ajoutées):&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;script-security 2
-up /etc/openvpn/update-resolv-conf
-down /etc/openvpn/update-resolv-conf&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Si vous n’avez jamais ajouté ces lignes mais trouvé un fichier &lt;code class=&quot;language-text&quot;&gt;update-resolv-conf&lt;/code&gt;, ajoutez-les! Les utilisateurs de CentOS devront modifier le &lt;code class=&quot;language-text&quot;&gt;group&lt;/code&gt; dans le fichier &lt;code class=&quot;language-text&quot;&gt;.ovpn&lt;/code&gt; de &lt;code class=&quot;language-text&quot;&gt;nogroup&lt;/code&gt; à &lt;code class=&quot;language-text&quot;&gt;nobody&lt;/code&gt; pour se conformer aux normes du système d’exploitation.&lt;/p&gt;
-&lt;p&gt;Pour vous connecter, lancez &lt;code class=&quot;language-text&quot;&gt;sudo openvpn — config client .ovpn&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;Pour iOS, installez l’application &lt;a href=&quot;https://itunes.apple.com/us/app/id590379981&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;OpenVPN Connect&lt;/a&gt;. Ensuite, ouvrez iTunes sur votre ordinateur et accédez à iPhone&gt; Applications. Faites défiler jusqu’à la section «Partage de fichiers» et sélectionnez “OpenVPN”. Faites glisser votre fichier &lt;code class=&quot;language-text&quot;&gt;.ovpn&lt;/code&gt; dans le panneau “OpenVPN Documents”. Ouvrir l’application sur votre téléphone devrait maintenant afficher un message indiquant qu’un nouveau profil est prêt à être importé. Une fois importé, vous devriez pouvoir vous connecter au VPN.&lt;/p&gt;
-&lt;p&gt;Pour Android, installez l’application &lt;a href=&quot;https://play.google.com/store/apps/details?id=net.openvpn.openvpn&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;OpenVPN Connect&lt;/a&gt;. Ensuite, transférez votre fichier &lt;code class=&quot;language-text&quot;&gt;.ovpn&lt;/code&gt; n’importe où / de toute façon sur votre appareil (je viens d’utiliser Google Drive, mais cela peut ne pas être recommandé). Dans l’application, ouvrez le menu et cliquez sur “Importer”. Accédez à votre fichier &lt;code class=&quot;language-text&quot;&gt;.ovpn&lt;/code&gt; , cliquez dessus, puis appuyez sur “IMPORT” en haut à droite. Une fois terminé, vous devriez pouvoir vous connecter au VPN.&lt;/p&gt;
-&lt;h2&gt;Test du VPN&lt;/h2&gt;
-&lt;p&gt;Le moyen le plus simple de tester votre VPN serait de Google “quelle est mon adresse IP” avant et après la connexion. Votre adresse IP doit passer à l’adresse IP publique externe de votre instance GCE une fois que vous êtes connecté au VPN, puis à l’adresse IP de votre réseau une fois déconnectée du VPN.&lt;/p&gt;
-&lt;p&gt;Si tout s’est bien passé, c’est tout! Votre nouveau VPN est prêt à être utilisé.&lt;/p&gt;
-&lt;h2&gt;Crédits&lt;/h2&gt;
-&lt;p&gt;Cet article est basé en grande partie sur &lt;a href=&quot;https://www.digitalocean.com/community/tutorials/how-to-set-up-an-openvpn-server-on-ubuntu-16-04&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;ce didacticiel de la communauté DigitalOcean&lt;/a&gt;. Bien que la configuration elle-même soit assez similaire, j’ai pensé écrire un article séparé car il existe quelques éléments clés différents dans GCE et il est assez facile de se tromper si vous le faites pour la première fois (je parle par expérience).&lt;/p&gt;
-&lt;style lang=&quot;scss&quot;&gt;
-.content pre.code, 
-.content pre[class*=&quot;language-&quot;].code {
-  /* font-size: 10pt; */
-  font-size: 0.85em;
-  font-family: source-code-pro, Menlo, Monaco, Consolas, &quot;Courier New&quot;, monospace;
-  color: #fff;
-
-  b {
-    color: yellow;
-    /* text-decoration:underline; */
-    /* background-color: green; */
-  }
-}
-&lt;/style&gt;</content:encoded></item><item><title><![CDATA[Map, filter, reduce]]></title><description><![CDATA[Map, filter, reduce Ces trois fonctions sont utiles pour parcourir une liste (ou un tableau) et effectuer une sorte de transformation ou de…]]></description><link>https://softwareontheroad.com/js-map-filter-reduce/</link><guid isPermaLink="false">https://softwareontheroad.com/js-map-filter-reduce/</guid><pubDate>Sun, 03 Mar 2019 08:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;Map, filter, reduce&lt;/h1&gt;
+&lt;hr&gt;</content:encoded></item><item><title><![CDATA[Map, filter, reduce]]></title><description><![CDATA[Map, filter, reduce Ces trois fonctions sont utiles pour parcourir une liste (ou un tableau) et effectuer une sorte de transformation ou de…]]></description><link>https://ludovicwyffels.dev/js-map-filter-reduce/</link><guid isPermaLink="false">https://ludovicwyffels.dev/js-map-filter-reduce/</guid><pubDate>Sun, 03 Mar 2019 08:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;Map, filter, reduce&lt;/h1&gt;
 &lt;p&gt;Ces trois fonctions sont utiles pour parcourir une liste (ou un tableau) et effectuer une sorte de transformation ou de calcul. Cela produira alors une nouvelle liste ou le résultat du calcul effectué sur la liste précédente.&lt;/p&gt;
 &lt;h2&gt;Les types&lt;/h2&gt;
 &lt;p&gt;Avant de plonger dans map, filter et reduce, configurons la liste.&lt;/p&gt;
@@ -2331,7 +2331,7 @@ const losersResult = [
 &lt;blockquote&gt;
 &lt;p&gt;best-names-per-house.ts&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;Maintenant, nous avons de beau nom pour la meilleure personne dans chaque maison.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Introduction aux stratégies de déploiement]]></title><description><![CDATA[Introduction aux stratégies de déploiement: Blue-Green, canary et plus De nos jours, le changement le plus important dans le développement…]]></description><link>https://softwareontheroad.com/deploy/</link><guid isPermaLink="false">https://softwareontheroad.com/deploy/</guid><pubDate>Sat, 02 Feb 2019 08:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;Introduction aux stratégies de déploiement: Blue-Green, canary et plus&lt;/h1&gt;
+&lt;p&gt;Maintenant, nous avons de beau nom pour la meilleure personne dans chaque maison.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Introduction aux stratégies de déploiement]]></title><description><![CDATA[Introduction aux stratégies de déploiement: Blue-Green, canary et plus De nos jours, le changement le plus important dans le développement…]]></description><link>https://ludovicwyffels.dev/deploy/</link><guid isPermaLink="false">https://ludovicwyffels.dev/deploy/</guid><pubDate>Sat, 02 Feb 2019 08:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;Introduction aux stratégies de déploiement: Blue-Green, canary et plus&lt;/h1&gt;
 &lt;p&gt;De nos jours, le changement le plus important dans le développement logiciel est la fréquence des déploiements. Les équipes de produits déploient les versions en production plus tôt (et plus souvent). Des cycles de publication de plusieurs mois ou années sont en train de devenir rares, en particulier parmi ceux qui construisent des produits logiciels purs.&lt;/p&gt;
 &lt;p&gt;Aujourd’hui, en utilisant une approche axée sur les services et sur les microservices, les développeurs peuvent concevoir une base de code modulaire. Cela leur permet d’écrire et de déployer des modifications simultanément sur différentes parties de la base de code.&lt;/p&gt;
 &lt;p&gt;Les avantages commerciaux de cycles de déploiement plus courts sont clairs:&lt;/p&gt;
@@ -2355,7 +2355,7 @@ const losersResult = [
 &lt;h2&gt;Déploiement “Big Bang”&lt;/h2&gt;
 &lt;p&gt;Comme son nom l’indique, les déploiements “big bang” mettent à jour des parties entières ou volumineuses d’une application en un seul coup. Cette stratégie remonte à l’époque où le logiciel était publié sur un support physique et installé par le client.&lt;/p&gt;
 &lt;p&gt;Les déploiements à grande échelle ont obligé l’entreprise à procéder à des développements et à des tests approfondis avant la publication, souvent associés au “modèle en cascade” de grandes versions séquentielles.&lt;/p&gt;
-&lt;p&gt;Les applications modernes présentent l’avantage de se mettre à jour régulièrement et automatiquement, côté client ou côté serveur. Cela rend l’approche big bang plus lente et moins agile pour les équipes modernes.&lt;/p&gt;
+&lt;p&gt;Les applications modernes présentent l’avantage de se mettre à jour régulièrement et automatiquement, côté client ou côté serveur. Cela rend l’approche big bang plus lent et moins agile pour les équipes modernes.&lt;/p&gt;
 &lt;p&gt;Les caractéristiques du déploiement du Big Bang comprennent:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Toutes les pièces majeures conditionnées en un seul déploiement;&lt;/li&gt;
@@ -2365,10 +2365,10 @@ const losersResult = [
 &lt;li&gt;Les délais de réalisation sont généralement longs et peuvent nécessiter les efforts de plusieurs équipes;&lt;/li&gt;
 &lt;li&gt;Action requise des clients pour mettre à jour l’installation côté client.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Les déploiements à fort rendement ne conviennent pas aux applications modernes, car les risques sont inacceptables pour les applications grand public ou critiques pour les entreprises, où les pannes entraînent des pertes financières énormes. Les reculs sont souvent coûteux, prennent du temps, voire sont impossibles.&lt;/p&gt;
-&lt;p&gt;L’approche big bang peut convenir à des systèmes hors production (par exemple, recréer un environnement de développement) ou à des solutions prêtes à l’emploi, telles que les applications de bureau.&lt;/p&gt;
+&lt;p&gt;Les déploiements à fort rendement ne conviennent pas aux applications modernes, car les risques sont inacceptables pour les applications grand public ou critiques pour les entreprises, où les pannes entraînent des pertes financières énormes. Les reculs sont souvent coûteux, prennent du temps, voire impossibles.&lt;/p&gt;
+&lt;p&gt;L’approche big bang peut convenir à des systèmes hors production (par exemple, recréer un environnement de développement) ou à des solutions prêtes à l’emploi, tel que les applications de bureau.&lt;/p&gt;
 &lt;h2&gt;Déploiement progressif (Rolling)&lt;/h2&gt;
-&lt;p&gt;Les déploiements progressifs, par paliers ou par étapes sont préférables aux déploiements big bang car ils minimisent de nombreux risques, y compris les temps d’arrêt pour les utilisateurs, sans restaurations simples.&lt;/p&gt;
+&lt;p&gt;Les déploiements progressifs, par paliers ou par étapes sont préférables aux déploiements big bang, car ils minimisent de nombreux risques, y compris les temps d’arrêt pour les utilisateurs, sans restauration simple.&lt;/p&gt;
 &lt;p&gt;Dans un déploiement en continu, la nouvelle version d’une application remplace progressivement l’ancienne. Le déploiement réel se produit sur une période de temps. Pendant ce temps, les nouvelles versions et les anciennes versions coexisteront sans affecter la fonctionnalité ou l’expérience utilisateur. Ce processus facilite la restauration de tout nouveau composant incompatible avec les anciens composants.&lt;/p&gt;
 &lt;p&gt;Le diagramme suivant illustre le modèle de déploiement: l’ancienne version apparaît en bleu et la nouvelle version en vert sur chaque serveur du cluster.&lt;/p&gt;
 &lt;p&gt;&lt;a
@@ -2455,7 +2455,7 @@ const losersResult = [
       &lt;/picture&gt;
   &lt;/span&gt;
   &lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;La nouvelle version de l’application est déployée dans l’environnement vert et testée pour ses fonctionnalités et ses performances. Une fois les résultats des tests réussis, le trafic des applications passe du bleu au vert. Le vert devient alors la nouvelle production.&lt;/p&gt;
+&lt;p&gt;La nouvelle version de l’application est déployée dans l’environnement vert et testée pour ses fonctionnalités et ses performances. Une fois les résultats des tests réussis, le trafic des applications passent du bleu au vert. Le vert devient alors la nouvelle production.&lt;/p&gt;
 &lt;p&gt;&lt;a
     class=&quot;gatsby-resp-image-link&quot;
     href=&quot;/static/e89e4df2a1a5e75d843264fb524252cc/69857/bluegreen-2.png&quot;
@@ -2557,7 +2557,7 @@ const losersResult = [
 &lt;p&gt;Les équipes d’applications modernes peuvent suivre un certain nombre de meilleures pratiques pour minimiser les risques de déploiement:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Utilisez une liste de déploiement&lt;/strong&gt;. Par exemple, un élément de la liste peut consister à “sauvegarder toutes les bases de données uniquement après que les services d’application ont été arrêtés” afin d’éviter toute corruption des données.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Adopter l’intégration continue (CI)&lt;/strong&gt;. CI s’assure que le code archivé dans la branche de fonctionnalité d’un référentiel de code ne fusionne avec sa branche principale qu’après une série de vérifications de dépendance, de tests d’unité et d’intégration et une génération réussie. S’il y a des erreurs le long du chemin, la construction échoue et l’équipe de l’application en est informée. L’utilisation de CI signifie donc que chaque modification apportée à l’application est testée avant son déploiement. Les exemples d’outils de CI incluent: CircleCI, Jenkins.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Adopter l’intégration continue (CI)&lt;/strong&gt;. CI s’assure que le code archivé dans la branche de fonctionnalité d’un référentiel de code ne fusionne avec sa branche principale qu’après une série de vérifications de dépendance, de tests d’unité et d’intégration et une génération réussit. S’il y a des erreurs le long du chemin, la construction échoue et l’équipe de l’application en est informée. L’utilisation de CI signifie donc que chaque modification apportée à l’application est testée avant son déploiement. Les exemples d’outils de CI incluent: CircleCI, Jenkins.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Adoptez la livraison continue (CD)&lt;/strong&gt;. Avec le CD, l’artefact de code construit par le CI est packagé et toujours prêt à être déployé dans un ou plusieurs environnements.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Utilisez des environnements d’exploitation standard&lt;/strong&gt; pour assurer la cohérence de l’environnement. Vous pouvez utiliser des outils tels que Vagrant et Packer pour les postes de travail et les serveurs de développement.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Utilisez les outils d’automatisation de build pour automatiser les générations d’environnement&lt;/strong&gt;. Avec ces outils, il est souvent simple de cliquer sur un bouton pour détruire une pile d’infrastructure complète et la reconstruire à partir de zéro. CloudFormation est un exemple de tels outils.&lt;/li&gt;
@@ -2571,7 +2571,7 @@ const losersResult = [
 &lt;p&gt;Un outil de surveillance des performances des applications peut aider votre équipe à surveiller les métriques de performances critiques, y compris les temps de réponse du serveur après les déploiements. Les modifications apportées à l’architecture des applications ou du système peuvent affecter considérablement les performances des applications.&lt;/p&gt;
 &lt;p&gt;Une solution de surveillance des erreurs est également essentielle. Il informera rapidement votre équipe des erreurs nouvelles ou réactivées lors d’un déploiement est susceptibles de révéler des bogues importants nécessitant une intervention immédiate.&lt;/p&gt;
 &lt;p&gt;Sans outil de surveillance des erreurs, les bogues n’auraient peut-être jamais été découverts. Alors que quelques utilisateurs rencontrant les bugs prendront le temps de les signaler, la plupart des autres ne le font pas. L’expérience client négative peut entraîner des problèmes de satisfaction au fil du temps ou, pire, empêcher les transactions commerciales d’avoir lieu.&lt;/p&gt;
-&lt;p&gt;Un outil de surveillance des erreurs crée également une visibilité partagée de tous les problèmes de post-déploiement parmi les équipes Opérateur / DevOps et les développeurs. Cette compréhension partagée permet aux équipes d’être plus collaboratives et réactives.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Git hooks avec Husky]]></title><description><![CDATA[Git hooks avec Husky Dans cet article, vous apprendrez à créer et à gérer facilement des git hooks pour vos projets Node/NPM à l’aide de…]]></description><link>https://softwareontheroad.com/git-husky/</link><guid isPermaLink="false">https://softwareontheroad.com/git-husky/</guid><pubDate>Sun, 25 Nov 2018 08:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;Git hooks avec Husky&lt;/h1&gt;
+&lt;p&gt;Un outil de surveillance des erreurs crée également une visibilité partagée de tous les problèmes de post-déploiement parmi les équipes Opérateur / DevOps et les développeurs. Cette compréhension partagée permet aux équipes d’être plus collaboratives et réactives.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Git hooks avec Husky]]></title><description><![CDATA[Git hooks avec Husky Dans cet article, vous apprendrez à créer et à gérer facilement des git hooks pour vos projets Node/NPM à l’aide de…]]></description><link>https://ludovicwyffels.dev/git-husky/</link><guid isPermaLink="false">https://ludovicwyffels.dev/git-husky/</guid><pubDate>Sun, 25 Nov 2018 08:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;Git hooks avec Husky&lt;/h1&gt;
 &lt;p&gt;Dans cet article, vous apprendrez à créer et à gérer facilement des git hooks pour vos projets Node/NPM à l’aide de Husky.&lt;/p&gt;
 &lt;h2&gt;Git Hooks&lt;/h2&gt;
 &lt;p&gt;En termes simples, les git hooks sont des scripts personnalisés, qui peuvent être exécutés automatiquement lorsque des événements spécifiques se produisent. Des points d’ancrage côté client sont déclenchés pour des actions telles que le commit ou le merge. Les hooks côté serveur s’exécutent dans des situations telles que la réception de données (&lt;code class=&quot;language-text&quot;&gt;git push&lt;/code&gt;) du client.&lt;/p&gt;
@@ -2689,7 +2689,7 @@ const losersResult = [
 &lt;h2&gt;Performance&lt;/h2&gt;
 &lt;p&gt;Bien que les hooks côté client tels que le pre-commit puissent s’avérer très utiles, vous devez garder à l’esprit qu’ils prennent un certain temps à s’exécuter. Les commits, qui sont généralement très rapides car ils ne se produisent que sur le client, peuvent prendre soudainement très longtemps. Vous serez peut-être tenté d’exécuter tous les tests, l’analyse de code statique, les vérifications préalables, etc., avant chaque validation. Lorsqu’un commit prend des années, vos développeurs ne seront pas heureux et seront tentés d’ignorer les hooks lors de l’exécution de leurs commandes git. Vous devez donc trouver le bon équilibre entre ce qui doit être effectué sur le client et ce qui peut être un point d’accès côté serveur.&lt;/p&gt;
 &lt;h2&gt;Conclusion&lt;/h2&gt;
-&lt;p&gt;Husky est un outil utile qui permet de créer et de gérer facilement des hooks git sur le client. Vous n’avez plus besoin de distribuer vos hooks manuellement. Comme pour tout, gardez le nombre de hooks côté client avec modération afin d’éviter les temps d’exécution trop longs.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Comment envoyer un epub vers une Kindle sans utiliser Calibre ni de cable USB ?]]></title><description><![CDATA[Comment envoyer un epub vers une Kindle sans utiliser Calibre ni de cable USB ? Si vous avez un  Kindle  d’Amazon, vous ne le savez peut…]]></description><link>https://softwareontheroad.com/kindle/</link><guid isPermaLink="false">https://softwareontheroad.com/kindle/</guid><pubDate>Sat, 24 Nov 2018 08:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;Comment envoyer un epub vers une Kindle sans utiliser Calibre ni de cable USB ?&lt;/h1&gt;
+&lt;p&gt;Husky est un outil utile qui permet de créer et de gérer facilement des hooks git sur le client. Vous n’avez plus besoin de distribuer vos hooks manuellement. Comme pour tout, gardez le nombre de hooks côté client avec modération afin d’éviter les temps d’exécution trop longs.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Comment envoyer un epub vers une Kindle sans utiliser Calibre ni de cable USB ?]]></title><description><![CDATA[Comment envoyer un epub vers une Kindle sans utiliser Calibre ni de cable USB ? Si vous avez un  Kindle  d’Amazon, vous ne le savez peut…]]></description><link>https://ludovicwyffels.dev/kindle/</link><guid isPermaLink="false">https://ludovicwyffels.dev/kindle/</guid><pubDate>Sat, 24 Nov 2018 08:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;Comment envoyer un epub vers une Kindle sans utiliser Calibre ni de cable USB ?&lt;/h1&gt;
 &lt;p&gt;Si vous avez un &lt;a href=&quot;https://www.amazon.fr/dp/B00QJDO0QC&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;Kindle&lt;/a&gt; d’Amazon, vous ne le savez peut-être pas, mais vous possédez une adresse mail ….@kindle.com qui vous permet de vous envoyer des livres et documents directement sur votre liseuse.&lt;/p&gt;
 &lt;p&gt;Pour cela, il faut ajouter votre email &lt;a href=&quot;https://www.amazon.com/hz/mycd/myx#/home/settings/payment?tag=amazon0d16-21&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;via cette page&lt;/a&gt;, dans la section &lt;strong&gt;“Settings”&lt;/strong&gt; &gt; &lt;strong&gt;“Personal Document Settings”&lt;/strong&gt; &gt; &lt;strong&gt;“Approved Personal Document E-mail List”&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;Et juste au-dessus, vous devriez voir dans la section &lt;strong&gt;“Send-to-Kindle E-Mail Settings”&lt;/strong&gt;, le ou les emails @kindle.com associés avec chacun de vos appareils Kindle.&lt;/p&gt;
@@ -2710,7 +2710,7 @@ const losersResult = [
 &lt;p&gt;Malheureusement, comme vous pouvez le voir, &lt;strong&gt;pas de format epub&lt;/strong&gt;. Obligé de brancher le Kindle à votre ordinateur et d’utiliser Calibre ?&lt;/p&gt;
 &lt;p&gt;Non, non, non. Il suffit de vous rendre sur le site &lt;a href=&quot;https://www.sendepubtokindle.com/&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;&lt;strong&gt;Send epub to Kindle&lt;/strong&gt;&lt;/a&gt; , puis de renseigner les infos demandées, à savoir votre email référencé, l’email Kindle et de glisser-déposer le livre au format epub de votre choix.&lt;/p&gt;
 &lt;p&gt;Cliquez ensuite sur le bouton vert « Upload &amp;#x26; Send » et tadaaaa, au bout de quelques secondes, le livre apparaitra sur votre liseuse Kindle.&lt;/p&gt;
-&lt;p&gt;Elle est pas belle la vie ?&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Docker Swarm vs Kubernetes]]></title><description><![CDATA[Docker Swarm vs Kubernetes J’ai installé Docker Swarm et Kubernetes sur deux machines virtuelles. J’ai trouvé que Docker Swarm est très…]]></description><link>https://softwareontheroad.com/dockerSwarm-vs-kubernetes/</link><guid isPermaLink="false">https://softwareontheroad.com/dockerSwarm-vs-kubernetes/</guid><pubDate>Thu, 01 Nov 2018 08:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;Docker Swarm vs Kubernetes&lt;/h1&gt;
+&lt;p&gt;Elle est pas belle la vie ?&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Docker Swarm vs Kubernetes]]></title><description><![CDATA[Docker Swarm vs Kubernetes J’ai installé Docker Swarm et Kubernetes sur deux machines virtuelles. J’ai trouvé que Docker Swarm est très…]]></description><link>https://ludovicwyffels.dev/dockerSwarm-vs-kubernetes/</link><guid isPermaLink="false">https://ludovicwyffels.dev/dockerSwarm-vs-kubernetes/</guid><pubDate>Thu, 01 Nov 2018 08:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;Docker Swarm vs Kubernetes&lt;/h1&gt;
 &lt;p&gt;J’ai installé Docker Swarm et Kubernetes sur deux machines virtuelles. J’ai trouvé que Docker Swarm est très facile à installer et à configurer, alors que Kubernetes est un peu plus difficile à installer mais reste simple à utiliser.&lt;/p&gt;
 &lt;h2&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;Cela fait des années que je veux essayer des conteneurs: la configuration manuelle de serveurs prend du temps, n’est pas reproductible et risque d’introduire des différences entre mon environnement de test local et la production. Les containers offrent une solution à tous ces problèmes et facilite beaucoup l’exécution d’instances supplémentaires d’une application. Cela peut rendre un service plus évolutif.&lt;/p&gt;
@@ -2957,14 +2957,14 @@ samba-57945b8895-qhrtl 1/1   Running 0        12m&lt;/code&gt;&lt;/pre&gt;&lt;/d
 &lt;li&gt;Comment déployer une application sur Docker Swarm et Kubernetes&lt;/li&gt;
 &lt;li&gt;Comment réparer quoi que ce soit en redémarrant un ordinateur assez souvent, comme si je utilisais encore Windows 98&lt;/li&gt;
 &lt;li&gt;Kubernetes et Docker Swarm ne sont pas aussi intimidants qu’ils semblent&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Comment paginer des enregistrements dans MySQL avec Sequelize et Nodejs]]></title><description><![CDATA[Comment paginer des enregistrements dans MySQL avec Sequelize et Nodejs Souvent, je me trouve aux prises avec Sequelize pour trouver une…]]></description><link>https://softwareontheroad.com/node-sequelize-pagination/</link><guid isPermaLink="false">https://softwareontheroad.com/node-sequelize-pagination/</guid><pubDate>Sat, 13 Oct 2018 08:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;Comment paginer des enregistrements dans MySQL avec Sequelize et Nodejs&lt;/h1&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Comment paginer des enregistrements dans MySQL avec Sequelize et Nodejs]]></title><description><![CDATA[Comment paginer des enregistrements dans MySQL avec Sequelize et Nodejs Souvent, je me trouve aux prises avec Sequelize pour trouver une…]]></description><link>https://ludovicwyffels.dev/node-sequelize-pagination/</link><guid isPermaLink="false">https://ludovicwyffels.dev/node-sequelize-pagination/</guid><pubDate>Sat, 13 Oct 2018 08:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;Comment paginer des enregistrements dans MySQL avec Sequelize et Nodejs&lt;/h1&gt;
 &lt;p&gt;Souvent, je me trouve aux prises avec Sequelize pour trouver une réponse directe à ma requête. Récemment, je travaillais sur une application full stack dans laquelle il était impératif de paginer les résultats depuis le backend (API REST) vers le client. Je me suis battu pour deux raisons. Tout d’abord, venant du context NoSQL, il est difficile de saisir les bases de données SQL. La deuxième raison étant que la documentation de Sequelize ne fournit pas une solution claire et directe à cette abstraction très basique. Beaucoup de gens supposent des choses dans le monde des bases de données SQL.&lt;/p&gt;
 &lt;p&gt;Ainsi, dans cet article, nous allons parler d’un module de base de pagination utilisant Sequelize, MySQL et Node.js. J’utilise des tables et des enregistrements dans votre base de données MySQL. Pour configurer une nouvelle application et établir une connexion à une base de données, lisez mon post sur &lt;code class=&quot;language-text&quot;&gt;Premiers pas avec Sequelize&lt;/code&gt;.&lt;/p&gt;
 &lt;h2&gt;Définir un modèle&lt;/h2&gt;
 &lt;p&gt;Je saute directement sur la définition du modèle utilisateur:&lt;/p&gt;
 &lt;p&gt;J’utilise une table contenant une centaine d’enregistrement d’utilisateur que nous voulons afficher sur une application Web, par exemple dans le panneau d’administration, et nous voulons afficher seulement 50 enregistrements à la fois.&lt;/p&gt;
 &lt;p&gt;Dans le fichier &lt;code class=&quot;language-text&quot;&gt;api/user.js&lt;/code&gt;, je définis un endpoint &lt;code class=&quot;language-text&quot;&gt;/:page&lt;/code&gt; qui extraira le nombre de résultats nécessaires de la base de données.&lt;/p&gt;
-&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;findAndCountAll&lt;/code&gt; est le modèle de recherche dans plusieurs enregistrements de la base de données. Il retourne à la fois les données requises et le nombre d’éléments de cette table. La requête ci-dessus obtiendra 50 enregistrements d’utilisateur à la fois jusqu’à ce que la page suivante soit appelée pour extraire les 50 prochains enregistrements. &lt;code class=&quot;language-text&quot;&gt;limit&lt;/code&gt; et &lt;code class=&quot;language-text&quot;&gt;offset&lt;/code&gt; sont nécessaires dans les requêtes liées à la pagination dans lesquelles &lt;code class=&quot;language-text&quot;&gt;limit&lt;/code&gt; extrait le nombre de lignes en fonction de la requête, tandis que &lt;code class=&quot;language-text&quot;&gt;offset&lt;/code&gt; est utilisé pour ignorer le nombre&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Démarrer avec Sequelize]]></title><description><![CDATA[Introduction à l’ORM ORM ou Object Relation Mapping est un processus de mappage entre des objets et des systèmes de base de données…]]></description><link>https://softwareontheroad.com/node-sequelize-intro/</link><guid isPermaLink="false">https://softwareontheroad.com/node-sequelize-intro/</guid><pubDate>Fri, 12 Oct 2018 08:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;Introduction à l’ORM&lt;/h2&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;findAndCountAll&lt;/code&gt; est le modèle de recherche dans plusieurs enregistrements de la base de données. Il retourne à la fois les données requises et le nombre d’éléments de cette table. La requête ci-dessus obtiendra 50 enregistrements d’utilisateur à la fois jusqu’à ce que la page suivante soit appelée pour extraire les 50 prochains enregistrements. &lt;code class=&quot;language-text&quot;&gt;limit&lt;/code&gt; et &lt;code class=&quot;language-text&quot;&gt;offset&lt;/code&gt; sont nécessaires dans les requêtes liées à la pagination dans lesquelles &lt;code class=&quot;language-text&quot;&gt;limit&lt;/code&gt; extrait le nombre de lignes en fonction de la requête, tandis que &lt;code class=&quot;language-text&quot;&gt;offset&lt;/code&gt; est utilisé pour ignorer le nombre&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Démarrer avec Sequelize]]></title><description><![CDATA[Introduction à l’ORM ORM ou Object Relation Mapping est un processus de mappage entre des objets et des systèmes de base de données…]]></description><link>https://ludovicwyffels.dev/node-sequelize-intro/</link><guid isPermaLink="false">https://ludovicwyffels.dev/node-sequelize-intro/</guid><pubDate>Fri, 12 Oct 2018 08:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;Introduction à l’ORM&lt;/h2&gt;
 &lt;p&gt;ORM ou Object Relation Mapping est un processus de mappage entre des objets et des systèmes de base de données relationnels. Un ORM agit comme une interface entre deux systèmes. Les ORM offrent aux développeurs des avantages de base, tels que la réduction du temps et des efforts et la concentration sur la logique métier. Le code est robuste au lieu de redondant. ORM aide à gérer les requêtes sur plusieurs tables de manière efficace. Enfin, un ORM (comme sequelize) est capable de se connecter à différentes bases de données (ce qui est pratique lors du passage d’une base de données à une autre).&lt;/p&gt;
 &lt;h1&gt;Démarrer avec Sequelize&lt;/h1&gt;
 &lt;h2&gt;Débuter avec Sequelize&lt;/h2&gt;
@@ -2994,7 +2994,7 @@ $ &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&
   &lt;span class=&quot;token comment&quot;&gt;// For SQLite only&lt;/span&gt;
   storage&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;path/to/database.sqlite&apos;&lt;/span&gt;
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;token template-string&quot;&gt;&lt;span class=&quot;token string&quot;&gt;``&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Flexbox illustré]]></title><description><![CDATA[Flexbox Flex Flex est un ensemble de règles pour étirer automatiquement plusieurs colonnes et lignes de contenu dans son conteneur parent…]]></description><link>https://softwareontheroad.com/css-flexbox-illustre/</link><guid isPermaLink="false">https://softwareontheroad.com/css-flexbox-illustre/</guid><pubDate>Thu, 12 Jul 2018 08:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;Flexbox&lt;/h1&gt;
+&lt;span class=&quot;token template-string&quot;&gt;&lt;span class=&quot;token string&quot;&gt;``&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Flexbox illustré]]></title><description><![CDATA[Flexbox Flex Flex est un ensemble de règles pour étirer automatiquement plusieurs colonnes et lignes de contenu dans son conteneur parent…]]></description><link>https://ludovicwyffels.dev/css-flexbox-illustre/</link><guid isPermaLink="false">https://ludovicwyffels.dev/css-flexbox-illustre/</guid><pubDate>Thu, 12 Jul 2018 08:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;Flexbox&lt;/h1&gt;
 &lt;h2&gt;Flex&lt;/h2&gt;
 &lt;p&gt;Flex est un ensemble de règles pour étirer automatiquement plusieurs colonnes et lignes de contenu dans son conteneur parent.&lt;/p&gt;
 &lt;h2&gt;display:flex&lt;/h2&gt;
@@ -4231,11 +4231,11 @@ $ &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&
   &lt;/a&gt;&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;css&quot;&gt;&lt;pre class=&quot;language-css&quot;&gt;&lt;code class=&quot;language-css&quot;&gt;&lt;span class=&quot;token selector&quot;&gt;.item&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
   &lt;span class=&quot;token property&quot;&gt;justify-items&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; auto | stretch | center | start | end&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Conteneuriser des applications Node.js avec Docker]]></title><description><![CDATA[Conteneuriser des applications Node.js avec Docker Les conteneurs d’applications ont émergé comme un outil puissant dans le développement de…]]></description><link>https://softwareontheroad.com/docker-nodejs/</link><guid isPermaLink="false">https://softwareontheroad.com/docker-nodejs/</guid><pubDate>Fri, 11 May 2018 08:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;Conteneuriser des applications Node.js avec Docker&lt;/h1&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Conteneuriser des applications Node.js avec Docker]]></title><description><![CDATA[Conteneuriser des applications Node.js avec Docker Les conteneurs d’applications ont émergé comme un outil puissant dans le développement de…]]></description><link>https://ludovicwyffels.dev/docker-nodejs/</link><guid isPermaLink="false">https://ludovicwyffels.dev/docker-nodejs/</guid><pubDate>Fri, 11 May 2018 08:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;Conteneuriser des applications Node.js avec Docker&lt;/h1&gt;
 &lt;p&gt;Les conteneurs d’applications ont émergé comme un outil puissant dans le développement de logiciels modernes. Plus légers et plus économes en ressources que les machines virtuelles traditionnelles, les conteneurs offrent aux organisations informatiques de nouvelles opportunités dans le contrôle de version, le déploiement, la graduation (scaling) et la sécurité.&lt;/p&gt;
 &lt;p&gt;Ce post traitera de ce que sont exactement les conteneurs, pourquoi ils se révèlent si avantageux, comment les utilisateurs les utilisent et des meilleures pratiques pour conteneuriser vos applications Node.js avec Docker.&lt;/p&gt;
 &lt;h2&gt;Qu’est-ce qu’un conteneur ?&lt;/h2&gt;
-&lt;p&gt;En termes simples, les conteneurs &lt;strong&gt;exécutent des instances d’ images de conteneur&lt;/strong&gt;. Les images sont des alternatives en couches aux disques de machines virtuelles (VMD) qui permettent aux applications d’être extraites de l’environnement dans lequel elles sont réellement exécutées. Les images conteneur sont exécutables, logiciel isolé avec accès aux ressources de l’hôte, au réseau et au système de fichiers. Ces images sont créées avec leurs propres outils système, bibliothèques, code, environnement d’exécution et dépendances associées codées en dur. Cela permet aux conteneurs d’être filés indépendamment de l’environnement. Cette approche “tout-en-un” aide à résoudre les problèmes d’application indépendantes, en améliorant la sécurité des systèmes et en facilitant le débogage.&lt;/p&gt;
+&lt;p&gt;En termes simples, les conteneurs &lt;strong&gt;exécutent des instances d’ images de conteneur&lt;/strong&gt;. Les images sont des alternatives en couches aux disques de machines virtuelles (VMD) qui permettent aux applications d’être extraites de l’environnement dans lequel elles sont réellement exécutées. Les images conteneur sont exécutables, logiciel isolé avec accès aux ressources de l’hôte, au réseau et au système de fichiers. Ces images sont créées avec leurs propres outils système, bibliothèques, code, environnement d’exécution et dépendances associées codées en dur. Cela permet aux conteneurs d’être filés indépendamment de l’environnement. Cette approche “tout-en-un” aide à résoudre les problèmes d’application indépendante, en améliorant la sécurité des systèmes et en facilitant le débogage.&lt;/p&gt;
 &lt;p&gt;Contrairement aux machines virtuelles traditionnelles, les images de conteneur donnent à chacune de ses instances un accès partagé au système d’exploitation hôte via une exécution de conteneur. Cet accès partagé aux ressources du système hôte permet d’obtenir des performances et des ressources qui ne sont pas trouvées dans d’autres méthodes de virtualisation.&lt;/p&gt;
 &lt;p&gt;&lt;a
     class=&quot;gatsby-resp-image-link&quot;
@@ -4279,13 +4279,13 @@ $ &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&
       &lt;/picture&gt;
   &lt;/span&gt;
   &lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Imaginez une image de conteneur qui nécessite 500 Mo. Dans un environnement conteneurisé, ces 500 Mo peuvent être partagés entre des centaines de conteneurs en supposant qu’ils fonctionnent tous sur la même image de base. D’un autre côté, les machines virtuelles auraient besoin de 500 Mo par machine virtuelle . Cela rend les conteneurs beaucoup plus adaptés aux horizontal scaling et aux environnements restreints aux ressources.&lt;/p&gt;
+&lt;p&gt;Imaginez une image de conteneur qui nécessite 500 Mo. Dans un environnement conteneurisé, ces 500 Mo peuvent être partagés entre des centaines de conteneurs en supposant qu’ils fonctionnent tous sur la même image de base. D’un autre côté, les machines virtuelles auraient besoin de 500 Mo par machine virtuelle . Cela rend les conteneurs beaucoup plus adaptés aux &lt;em&gt;horizontal scaling&lt;/em&gt; et aux environnements restreints aux ressources.&lt;/p&gt;
 &lt;h2&gt;Pourquoi les conteneurs d’applications ?&lt;/h2&gt;
 &lt;p&gt;La légèreté et la reproductibilité des conteneurs en ont fait une option de plus en plus utilisée par les entreprises souhaitant développer des applications logicielles évolutives, hautement disponibles et contrôlées par les versions.&lt;/p&gt;
 &lt;p&gt;Les conteneurs offrent plusieurs avantages clés aux développeurs:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Léger et économe en ressources&lt;/strong&gt;. Par rapport aux machines virtuelles, qui génèrent des copies de leur système d’exploitation hôte pour chaque application ou processus, les conteneurs ont nettement moins d’impact sur la mémoire, l’utilisation du processeur et l’espace disque.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Immuable&lt;/strong&gt;. Les conteneurs sont générés à partir d’une seule source vérifié, une image. Si des modifications sont validées sur une image, une nouvelle image est créée . Cela rend les changements d’image de conteneur faciles à suivre et les restaurations de déploiement intuitives. La reproductibilité et la stabilité des conteneurs permettent aux équipes de développement d’éviter la dérive de la configuration, ce qui simplifie considérablement le test de version et la mise en miroir des environnements de développement et de production.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Immuable&lt;/strong&gt;. Les conteneurs sont générés à partir d’une seule source vérifiée, une image. Si des modifications sont validées sur une image, une nouvelle image est créée . Cela rend les changements d’image de conteneur faciles à suivre et les restaurations de déploiement intuitives. La reproductibilité et la stabilité des conteneurs permettent aux équipes de développement d’éviter la dérive de la configuration, ce qui simplifie considérablement le test de version et la mise en miroir des environnements de développement et de production.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Portable&lt;/strong&gt;. La nature isolée et autonome des conteneurs en fait un excellent choix pour les applications qui doivent fonctionner sur une multitude de services, de plates-formes et d’environnements. Ils peuvent fonctionner sous Linux, Windows et macOS. Fournissez-les depuis le cloud, sur site ou là où votre infrastructure l’exige.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Évolutif et hautement disponible&lt;/strong&gt;. Les conteneurs sont facilement reproductibles et peuvent répondre dynamiquement aux demandes de trafic, grâce aux services d’orchestration tels que les instances de conteneur &lt;a href=&quot;https://azure.microsoft.com/en-us/services/container-instances/&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;Azure&lt;/a&gt;, &lt;a href=&quot;https://cloud.google.com/compute/&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;Google Cloud Engine&lt;/a&gt; et &lt;a href=&quot;https://aws.amazon.com/ecs/&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;Amazon ECS&lt;/a&gt;, qui facilitent et accélèrent la création ou le retrait de conteneurs de votre infrastructure.&lt;/li&gt;
 &lt;/ul&gt;
@@ -4300,9 +4300,9 @@ $ &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&
 &lt;h2&gt;Conteneurs et Node.js&lt;/h2&gt;
 &lt;p&gt;En raison de la pertinence des conteneurs d’applications pour les environnements d’application ciblés, Node.js est sans doute le meilleur moteur d’exécution pour la conteneurisation.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Dépendances explicites&lt;/strong&gt; Les applications Node.js conteneurisées peuvent verrouiller les arborescences de dépendance et gérer des fichiers stables package.json , package-lock.json ou npm-shrinkwrap.json .&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Dépendances explicites&lt;/strong&gt;. Les applications Node.js conteneurisées peuvent verrouiller les arborescences de dépendance et gérer des fichiers stables package.json , package-lock.json ou npm-shrinkwrap.json .&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Démarrage rapide et redémarrage&lt;/strong&gt;. Les conteneurs sont légers et démarrent rapidement, ce qui en fait une paire stratégique pour les applications Node.js. L’une des fonctionnalités les plus appréciées de Node.js est son temps de démarrage impressionnant. Cette performance de démarrage robuste obtient des processus terminés redémarrés rapidement et les applications stabilisées; La conteneurisation fournit une solution évolutive pour maintenir cette performance.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Scaling au niveau du processus&lt;/strong&gt;. Semblable à la meilleure pratique de Node.js consistant à faire tourner plus de processus au lieu de plus de threads, un environnement conteneurisé augmentera le nombre de processus en augmentant le nombre de conteneurs. Cet horizontal scaling crée de la redondance et permet de maintenir les applications hautement disponibles, sans le coût significatif des ressources d’une nouvelle machine virtuelle par processus.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Scaling au niveau du processus&lt;/strong&gt;. Semblable à la meilleure pratique de Node.js consistant à faire tourner plus de processus au lieu de plus de threads, un environnement conteneurisé augmentera le nombre de processus en augmentant le nombre de conteneurs. Cet &lt;em&gt;horizontal scaling&lt;/em&gt; crée de la redondance et permet de maintenir les applications hautement disponibles, sans le coût significatif des ressources d’une nouvelle machine virtuelle par processus.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h1&gt;Dockeriser votre application Node.js&lt;/h1&gt;
 &lt;h2&gt;Présentation de Docker&lt;/h2&gt;
@@ -4336,6 +4336,63 @@ $ &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&
 &lt;span class=&quot;token keyword&quot;&gt;USER&lt;/span&gt; nodejs
 
 &lt;span class=&quot;token punctuation&quot;&gt;...&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;div id=&quot;gist90346317&quot; class=&quot;gist&quot;&gt;
+    &lt;div class=&quot;gist-file&quot;&gt;
+      &lt;div class=&quot;gist-data&quot;&gt;
+        &lt;div class=&quot;js-gist-file-update-container js-task-list-container file-box&quot;&gt;
+  &lt;div id=&quot;file-docker-nodeapp-secure-part1&quot; class=&quot;file&quot;&gt;
+    
+
+  &lt;div itemprop=&quot;text&quot; class=&quot;Box-body p-0 blob-wrapper data type-text &quot;&gt;
+      
+&lt;table class=&quot;highlight tab-size js-file-line-container&quot; data-tab-size=&quot;8&quot;&gt;
+      &lt;tr&gt;
+        &lt;td id=&quot;file-docker-nodeapp-secure-part1-L1&quot; class=&quot;blob-num js-line-number&quot; data-line-number=&quot;1&quot;&gt;&lt;/td&gt;
+        &lt;td id=&quot;file-docker-nodeapp-secure-part1-LC1&quot; class=&quot;blob-code blob-code-inner js-file-line&quot;&gt;FROM node:8 &lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td id=&quot;file-docker-nodeapp-secure-part1-L2&quot; class=&quot;blob-num js-line-number&quot; data-line-number=&quot;2&quot;&gt;&lt;/td&gt;
+        &lt;td id=&quot;file-docker-nodeapp-secure-part1-LC2&quot; class=&quot;blob-code blob-code-inner js-file-line&quot;&gt;
+&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td id=&quot;file-docker-nodeapp-secure-part1-L3&quot; class=&quot;blob-num js-line-number&quot; data-line-number=&quot;3&quot;&gt;&lt;/td&gt;
+        &lt;td id=&quot;file-docker-nodeapp-secure-part1-LC3&quot; class=&quot;blob-code blob-code-inner js-file-line&quot;&gt;RUN groupadd -r nodejs &amp;amp;&amp;amp; useradd -m -r -g -s /bin/bash nodejs nodejs &lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td id=&quot;file-docker-nodeapp-secure-part1-L4&quot; class=&quot;blob-num js-line-number&quot; data-line-number=&quot;4&quot;&gt;&lt;/td&gt;
+        &lt;td id=&quot;file-docker-nodeapp-secure-part1-LC4&quot; class=&quot;blob-code blob-code-inner js-file-line&quot;&gt;
+&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td id=&quot;file-docker-nodeapp-secure-part1-L5&quot; class=&quot;blob-num js-line-number&quot; data-line-number=&quot;5&quot;&gt;&lt;/td&gt;
+        &lt;td id=&quot;file-docker-nodeapp-secure-part1-LC5&quot; class=&quot;blob-code blob-code-inner js-file-line&quot;&gt;USER nodejs&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td id=&quot;file-docker-nodeapp-secure-part1-L6&quot; class=&quot;blob-num js-line-number&quot; data-line-number=&quot;6&quot;&gt;&lt;/td&gt;
+        &lt;td id=&quot;file-docker-nodeapp-secure-part1-LC6&quot; class=&quot;blob-code blob-code-inner js-file-line&quot;&gt;
+&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td id=&quot;file-docker-nodeapp-secure-part1-L7&quot; class=&quot;blob-num js-line-number&quot; data-line-number=&quot;7&quot;&gt;&lt;/td&gt;
+        &lt;td id=&quot;file-docker-nodeapp-secure-part1-LC7&quot; class=&quot;blob-code blob-code-inner js-file-line&quot;&gt;...&lt;/td&gt;
+      &lt;/tr&gt;
+&lt;/table&gt;
+
+
+  &lt;/div&gt;
+
+  &lt;/div&gt;
+&lt;/div&gt;
+
+      &lt;/div&gt;
+      &lt;div class=&quot;gist-meta&quot;&gt;
+        &lt;a href=&quot;https://gist.github.com/ludovicwyffels/6237f74e2cfebbbbd6247c27c4fa1310/raw/a514481490028932ce5615be92070547df63d09f/docker-nodeApp-secure-part1&quot; style=&quot;float:right&quot;&gt;view raw&lt;/a&gt;
+        &lt;a href=&quot;https://gist.github.com/ludovicwyffels/6237f74e2cfebbbbd6247c27c4fa1310#file-docker-nodeapp-secure-part1&quot;&gt;docker-nodeApp-secure-part1&lt;/a&gt;
+        hosted with &amp;#10084; by &lt;a href=&quot;https://github.com&quot;&gt;GitHub&lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;a href=&quot;https://gist.github.com/ludovicwyffels/6237f74e2cfebbbbd6247c27c4fa1310#file-docker-nodeapp-secure-part1&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;Gist&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -4377,9 +4434,98 @@ $ &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&
 &lt;span class=&quot;token keyword&quot;&gt;ENV&lt;/span&gt; NODE_ENV production
 
 &lt;span class=&quot;token keyword&quot;&gt;CMD&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;node.js&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;index.js&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;a href=&quot;https://gist.github.com/ludovicwyffels/27412e8ac874b059a5a509acfe757705#file-docker-nodeapp-secure&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;Gist&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;&lt;div id=&quot;gist90346446&quot; class=&quot;gist&quot;&gt;
+    &lt;div class=&quot;gist-file&quot;&gt;
+      &lt;div class=&quot;gist-data&quot;&gt;
+        &lt;div class=&quot;js-gist-file-update-container js-task-list-container file-box&quot;&gt;
+  &lt;div id=&quot;file-docker-nodeapp-secure&quot; class=&quot;file&quot;&gt;
+    
+
+  &lt;div itemprop=&quot;text&quot; class=&quot;Box-body p-0 blob-wrapper data type-text &quot;&gt;
+      
+&lt;table class=&quot;highlight tab-size js-file-line-container&quot; data-tab-size=&quot;8&quot;&gt;
+      &lt;tr&gt;
+        &lt;td id=&quot;file-docker-nodeapp-secure-L1&quot; class=&quot;blob-num js-line-number&quot; data-line-number=&quot;1&quot;&gt;&lt;/td&gt;
+        &lt;td id=&quot;file-docker-nodeapp-secure-LC1&quot; class=&quot;blob-code blob-code-inner js-file-line&quot;&gt;FROM node:8 &lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td id=&quot;file-docker-nodeapp-secure-L2&quot; class=&quot;blob-num js-line-number&quot; data-line-number=&quot;2&quot;&gt;&lt;/td&gt;
+        &lt;td id=&quot;file-docker-nodeapp-secure-LC2&quot; class=&quot;blob-code blob-code-inner js-file-line&quot;&gt;
+&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td id=&quot;file-docker-nodeapp-secure-L3&quot; class=&quot;blob-num js-line-number&quot; data-line-number=&quot;3&quot;&gt;&lt;/td&gt;
+        &lt;td id=&quot;file-docker-nodeapp-secure-LC3&quot; class=&quot;blob-code blob-code-inner js-file-line&quot;&gt;RUN groupadd -r nodejs &amp;amp;&amp;amp; useradd -m -r -g -s /bin/bash nodejs nodejs &lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td id=&quot;file-docker-nodeapp-secure-L4&quot; class=&quot;blob-num js-line-number&quot; data-line-number=&quot;4&quot;&gt;&lt;/td&gt;
+        &lt;td id=&quot;file-docker-nodeapp-secure-LC4&quot; class=&quot;blob-code blob-code-inner js-file-line&quot;&gt;
+&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td id=&quot;file-docker-nodeapp-secure-L5&quot; class=&quot;blob-num js-line-number&quot; data-line-number=&quot;5&quot;&gt;&lt;/td&gt;
+        &lt;td id=&quot;file-docker-nodeapp-secure-LC5&quot; class=&quot;blob-code blob-code-inner js-file-line&quot;&gt;USER nodejs&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td id=&quot;file-docker-nodeapp-secure-L6&quot; class=&quot;blob-num js-line-number&quot; data-line-number=&quot;6&quot;&gt;&lt;/td&gt;
+        &lt;td id=&quot;file-docker-nodeapp-secure-LC6&quot; class=&quot;blob-code blob-code-inner js-file-line&quot;&gt;
+&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td id=&quot;file-docker-nodeapp-secure-L7&quot; class=&quot;blob-num js-line-number&quot; data-line-number=&quot;7&quot;&gt;&lt;/td&gt;
+        &lt;td id=&quot;file-docker-nodeapp-secure-LC7&quot; class=&quot;blob-code blob-code-inner js-file-line&quot;&gt;WORKDIR /home/nodejs/app &lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td id=&quot;file-docker-nodeapp-secure-L8&quot; class=&quot;blob-num js-line-number&quot; data-line-number=&quot;8&quot;&gt;&lt;/td&gt;
+        &lt;td id=&quot;file-docker-nodeapp-secure-LC8&quot; class=&quot;blob-code blob-code-inner js-file-line&quot;&gt;
+&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td id=&quot;file-docker-nodeapp-secure-L9&quot; class=&quot;blob-num js-line-number&quot; data-line-number=&quot;9&quot;&gt;&lt;/td&gt;
+        &lt;td id=&quot;file-docker-nodeapp-secure-LC9&quot; class=&quot;blob-code blob-code-inner js-file-line&quot;&gt;COPY package.json . &lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td id=&quot;file-docker-nodeapp-secure-L10&quot; class=&quot;blob-num js-line-number&quot; data-line-number=&quot;10&quot;&gt;&lt;/td&gt;
+        &lt;td id=&quot;file-docker-nodeapp-secure-LC10&quot; class=&quot;blob-code blob-code-inner js-file-line&quot;&gt;RUN npm install --production&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td id=&quot;file-docker-nodeapp-secure-L11&quot; class=&quot;blob-num js-line-number&quot; data-line-number=&quot;11&quot;&gt;&lt;/td&gt;
+        &lt;td id=&quot;file-docker-nodeapp-secure-LC11&quot; class=&quot;blob-code blob-code-inner js-file-line&quot;&gt;COPY . .&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td id=&quot;file-docker-nodeapp-secure-L12&quot; class=&quot;blob-num js-line-number&quot; data-line-number=&quot;12&quot;&gt;&lt;/td&gt;
+        &lt;td id=&quot;file-docker-nodeapp-secure-LC12&quot; class=&quot;blob-code blob-code-inner js-file-line&quot;&gt;
+&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td id=&quot;file-docker-nodeapp-secure-L13&quot; class=&quot;blob-num js-line-number&quot; data-line-number=&quot;13&quot;&gt;&lt;/td&gt;
+        &lt;td id=&quot;file-docker-nodeapp-secure-LC13&quot; class=&quot;blob-code blob-code-inner js-file-line&quot;&gt;ENV NODE_ENV production&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td id=&quot;file-docker-nodeapp-secure-L14&quot; class=&quot;blob-num js-line-number&quot; data-line-number=&quot;14&quot;&gt;&lt;/td&gt;
+        &lt;td id=&quot;file-docker-nodeapp-secure-LC14&quot; class=&quot;blob-code blob-code-inner js-file-line&quot;&gt;
+&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td id=&quot;file-docker-nodeapp-secure-L15&quot; class=&quot;blob-num js-line-number&quot; data-line-number=&quot;15&quot;&gt;&lt;/td&gt;
+        &lt;td id=&quot;file-docker-nodeapp-secure-LC15&quot; class=&quot;blob-code blob-code-inner js-file-line&quot;&gt;CMD [&amp;quot;node.js&amp;quot;, &amp;quot;index.js&amp;quot;]&lt;/td&gt;
+      &lt;/tr&gt;
+&lt;/table&gt;
+
+
+  &lt;/div&gt;
+
+  &lt;/div&gt;
+&lt;/div&gt;
+
+      &lt;/div&gt;
+      &lt;div class=&quot;gist-meta&quot;&gt;
+        &lt;a href=&quot;https://gist.github.com/ludovicwyffels/27412e8ac874b059a5a509acfe757705/raw/4c3864831f4bd30de5a4556d7e6df01226235b58/docker-nodeApp-secure&quot; style=&quot;float:right&quot;&gt;view raw&lt;/a&gt;
+        &lt;a href=&quot;https://gist.github.com/ludovicwyffels/27412e8ac874b059a5a509acfe757705#file-docker-nodeapp-secure&quot;&gt;docker-nodeApp-secure&lt;/a&gt;
+        hosted with &amp;#10084; by &lt;a href=&quot;https://github.com&quot;&gt;GitHub&lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;a href=&quot;https://hub.docker.com/&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;DockerHub&lt;/a&gt; fournit une ressource centralisée pour la découverte d’images de conteneur, la distribution et la gestion des modifications, la collaboration entre utilisateurs et équipes et l’automatisation du flux de travail tout au long du pipeline de développement’.
 Pour associer la CLI Docker à votre compte DockerHub, utilisez la &lt;code class=&quot;language-text&quot;&gt;docker login&lt;/code&gt; &lt;code class=&quot;language-text&quot;&gt;docker login [OPTIONS] [SERVER]&lt;/code&gt; : &lt;code class=&quot;language-text&quot;&gt;docker login [OPTIONS] [SERVER]&lt;/code&gt;&lt;/p&gt;
@@ -4393,7 +4539,48 @@ Pour associer la CLI Docker à votre compte DockerHub, utilisez la &lt;code clas
 &lt;h3&gt;SOYEZ EXPLICITE AVEC LES TAGS&lt;/h3&gt;
 &lt;p&gt;Les balises aident à différencier les différentes versions d’images. Les balises peuvent être utilisées pour identifier les builds, les équipes qui travaillent sur l’image et littéralement toute autre désignation utile à une organisation pour gérer le développement des images. Si aucune balise n’est ajoutée explicitement, Docker assignera une balise par défaut à &lt;code class=&quot;language-text&quot;&gt;latest&lt;/code&gt; après la &lt;code class=&quot;language-text&quot;&gt;docker build&lt;/code&gt;. En tant que tag, le développement est le latest en date, mais peut être très problématique dans les environnements de production et de mise en scène.&lt;/p&gt;
 &lt;p&gt;Pour éviter les problèmes &lt;code class=&quot;language-text&quot;&gt;latest&lt;/code&gt; , &lt;strong&gt;soyez explicites avec vos balises de construction&lt;/strong&gt;. Voici un exemple de script attribuant des balises avec des variables d’environnement pour le git sha, le nom de la branche et le numéro de build de la construction, tous les trois pouvant être très utiles dans la gestion des versions, du débogage et du déploiement:&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://gist.github.com/ludovicwyffels/70fdd653abba16c4451c0781f6dd9fc5#file-docker-tag&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;Gist&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;div id=&quot;gist90346485&quot; class=&quot;gist&quot;&gt;
+    &lt;div class=&quot;gist-file&quot;&gt;
+      &lt;div class=&quot;gist-data&quot;&gt;
+        &lt;div class=&quot;js-gist-file-update-container js-task-list-container file-box&quot;&gt;
+  &lt;div id=&quot;file-docker-tag&quot; class=&quot;file&quot;&gt;
+    
+
+  &lt;div itemprop=&quot;text&quot; class=&quot;Box-body p-0 blob-wrapper data type-text &quot;&gt;
+      
+&lt;table class=&quot;highlight tab-size js-file-line-container&quot; data-tab-size=&quot;8&quot;&gt;
+      &lt;tr&gt;
+        &lt;td id=&quot;file-docker-tag-L1&quot; class=&quot;blob-num js-line-number&quot; data-line-number=&quot;1&quot;&gt;&lt;/td&gt;
+        &lt;td id=&quot;file-docker-tag-LC1&quot; class=&quot;blob-code blob-code-inner js-file-line&quot;&gt;# !/bin/sh &lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td id=&quot;file-docker-tag-L2&quot; class=&quot;blob-num js-line-number&quot; data-line-number=&quot;2&quot;&gt;&lt;/td&gt;
+        &lt;td id=&quot;file-docker-tag-LC2&quot; class=&quot;blob-code blob-code-inner js-file-line&quot;&gt;docker tag helloworld:latest yourorg/helloworld:$SHA1 &lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td id=&quot;file-docker-tag-L3&quot; class=&quot;blob-num js-line-number&quot; data-line-number=&quot;3&quot;&gt;&lt;/td&gt;
+        &lt;td id=&quot;file-docker-tag-LC3&quot; class=&quot;blob-code blob-code-inner js-file-line&quot;&gt;docker tag helloworld:latest yourorg/helloworld:$BRANCH_NAME &lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td id=&quot;file-docker-tag-L4&quot; class=&quot;blob-num js-line-number&quot; data-line-number=&quot;4&quot;&gt;&lt;/td&gt;
+        &lt;td id=&quot;file-docker-tag-LC4&quot; class=&quot;blob-code blob-code-inner js-file-line&quot;&gt;docker tag helloworld:latest yourorg/build_$BUILD_NUM&lt;/td&gt;
+      &lt;/tr&gt;
+&lt;/table&gt;
+
+
+  &lt;/div&gt;
+
+  &lt;/div&gt;
+&lt;/div&gt;
+
+      &lt;/div&gt;
+      &lt;div class=&quot;gist-meta&quot;&gt;
+        &lt;a href=&quot;https://gist.github.com/ludovicwyffels/70fdd653abba16c4451c0781f6dd9fc5/raw/1d49ac14e5a358a84bb1afdf5695b5ea95d3811e/docker-tag&quot; style=&quot;float:right&quot;&gt;view raw&lt;/a&gt;
+        &lt;a href=&quot;https://gist.github.com/ludovicwyffels/70fdd653abba16c4451c0781f6dd9fc5#file-docker-tag&quot;&gt;docker-tag&lt;/a&gt;
+        hosted with &amp;#10084; by &lt;a href=&quot;https://github.com&quot;&gt;GitHub&lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;&lt;/p&gt;
 &lt;p&gt;En savoir plus sur le marquage &lt;a href=&quot;https://docs.docker.com/get-started/part2/#tag-the-image&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;ici&lt;/a&gt;.&lt;/p&gt;
 &lt;h2&gt;Conteneurs et gestion des processus&lt;/h2&gt;
 &lt;p&gt;Les conteneurs sont conçus pour être légers et bien adaptés au niveau du processus, ce qui contribue à simplifier la gestion des processus: si le processus se termine, le conteneur se ferme. Cependant, cette cartographie 1:1 est une idéalisation qui n’est pas toujours maintenue dans la pratique.&lt;/p&gt;
