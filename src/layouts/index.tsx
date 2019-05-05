@@ -329,6 +329,7 @@ const GlobalStyles = css`
 
   ol,
   ul {
+    margin-top: -1em;
     padding-left: 1.3em;
     padding-right: 1.5em;
   }
