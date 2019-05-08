@@ -5,7 +5,7 @@ subtitle: "Une architecture de projet simple mais puissante pour les APIs REST d
 author: ludo
 date: "2019-04-20T08:00:00.000Z"
 image: img/rock-zen.jpeg
-tags: ["Architecture", "Node.js", "Javascript", "Best"]
+tags: ["Architecture", "Node.js", "Typescript", "Javascript", "Best"]
 draft: false
 ---
 

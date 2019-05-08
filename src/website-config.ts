@@ -32,8 +32,8 @@ export interface WebsiteConfig {
 }
 
 const config: WebsiteConfig = {
-  title: 'Blog de Ludo',
-  siteTitle: 'Blog de Ludo',
+  title: 'Code avec Ludo',
+  siteTitle: 'Code avec Ludo',
   description: 'Trouvez des articles et des tutoriels sur Node, Angular, intégration continue, docker, et plus ...',
   coverImage: 'img/blog-cover.jpg',
   logo: 'img/ghost-logo.png',

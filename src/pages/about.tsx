@@ -62,7 +62,7 @@ const About: React.FunctionComponent = () => (
               J'espère que vous trouverez ce blog utile.
               </p>
               <p> 
-              Ludovic Wyffels - Avril 2019
+              Ludovic Wyffels
               </p>
             </div>
           </PostFullContent>

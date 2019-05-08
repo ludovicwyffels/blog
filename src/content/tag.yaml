@@ -1,42 +1,42 @@
 - id: Angular
   description:
-  image: img/computer.jpg
+  image: img/blog-cover.jpg
 - id: Architecture
   description:
-  image: img/computer.jpg
+  image: img/blog-cover.jpg
 - id: AWS
   description: Amazon Web Services is a subsidiary of Amazon that provides on-demand cloud computing platforms to individuals, companies and governments, on a paid subscription basis. The technology allows subscribers to have at their disposal a virtual cluster of computers, available all the time, through the Internet.
-  image: img/computer.jpg
+  image: img/blog-cover.jpg
 - id: Best
   description: Collection of in-deep guides about software development
-  image: img/computer.jpg
+  image: img/blog-cover.jpg
 - id: CSS
   description:
-  image: img/computer.jpg
+  image: img/blog-cover.jpg
 - id: DevOps
   description: Set of practices that automates the processes between software development and IT teams, in order that they can build, test, and release software faster and more reliably.
-  image: img/computer.jpg
+  image: img/blog-cover.jpg
 - id: Git
   description:
-  image: img/computer.jpg
+  image: img/blog-cover.jpg
 - id: Google Cloud
   description:
-  image: img/computer.jpg
+  image: img/blog-cover.jpg
 - id: Javascript
   description: The most used language in the world
-  image: img/computer.jpg
+  image: img/blog-cover.jpg
 - id: Kindle
   description:
-  image: img/computer.jpg
+  image: img/blog-cover.jpg
 - id: Node.js
   description:
-  image: img/computer.jpg
+  image: img/blog-cover.jpg
 - id: React
   description: The most powerful UI library ever
-  image: img/computer.jpg
+  image: img/blog-cover.jpg
 - id: Self
   description: Thoughs about life.
-  image: img/computer.jpg
+  image: img/blog-cover.jpg
 - id: SQL
   description: 
-  image: img/computer.jpg
+  image: img/blog-cover.jpg
