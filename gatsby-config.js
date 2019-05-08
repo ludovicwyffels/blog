@@ -130,12 +130,6 @@ module.exports = {
         siteSpeedSampleRate: 10,
       },
     },
-    {
-      resolve: `gatsby-plugin-google-adsense`,
-      options: {
-        publisherId: `ca-pub-4398886056385267`
-      },
-    },
     'gatsby-plugin-catch-links',
     'gatsby-plugin-sitemap',
     `gatsby-plugin-netlify`
