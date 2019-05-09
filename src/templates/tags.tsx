@@ -1,8 +1,9 @@
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 import React from 'react';
 
 import Footer from '../components/Footer';
 import SiteNav from '../components/header/SiteNav';
+import Pagination from '../components/pagination/Pagination';
 import PostCard from '../components/PostCard';
 import Wrapper from '../components/Wrapper';
 import IndexLayout from '../layouts';
@@ -27,6 +28,12 @@ interface TagTemplateProps {
   };
   pageContext: {
     tag: string;
+    tagURL: String;
+    currentPage: number;
+    isCreatedByStatefulCreatePages: boolean;
+    limit: number;
+    numPages: number;
+    skip: number;
   };
   data: {
     allTagYaml: {
@@ -52,6 +59,7 @@ interface TagTemplateProps {
 }
 
 const Tags: React.FunctionComponent<TagTemplateProps> = props => {
+  const { tagURL } = props.pageContext
   const tag = props.pageContext.tag;
   const { edges, totalCount } = props.data.allMarkdownRemark;
   const tagData = props.data.allTagYaml.edges.find(
@@ -120,6 +128,7 @@ const Tags: React.FunctionComponent<TagTemplateProps> = props => {
                 <PostCard key={node.fields.slug} post={node} />
               ))}
             </div>
+            <Pagination pageContext={props.pageContext} baseURL={`/tags/${tagURL}/`} />
           </div>
         </main>
         <Footer />
@@ -131,7 +140,7 @@ const Tags: React.FunctionComponent<TagTemplateProps> = props => {
 export default Tags;
 
 export const pageQuery = graphql`
-  query($tag: String) {
+  query($tag: String, $limit: Int, $skip: Int) {
     allTagYaml {
       edges {
         node {
@@ -148,9 +157,10 @@ export const pageQuery = graphql`
       }
     }
     allMarkdownRemark(
-      limit: 2000
       sort: { fields: [frontmatter___date], order: DESC }
       filter: { frontmatter: { tags: { in: [$tag] }, draft: { ne: true } } }
+      limit: $limit,
+      skip: $skip
     ) {
       totalCount
       edges {

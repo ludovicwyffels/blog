@@ -1,0 +1,39 @@
+.newer-posts, .older-posts {
+  position: absolute;
+  display: inline-block;
+  padding: 0 15px;
+  border: #ddd 1px dashed;
+  text-decoration: none;
+  transition: border .3s ease;
+}
+.newer-posts {
+  left: 0;
+}
+.older-posts {
+  right: 0;
+}
+.page-number {
+  display: inline-block;
+  padding: 2px 0;
+  min-width: 100px;
+}
+
+.pagination {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  margin: 1rem auto;
+  font-size: 1.3rem;
+  color: #9eabb3;
+  text-align: center;
+}
+.pagination a {
+  color: #9eabb3;
+  transition: all .2s ease;
+}
+
+@media (max-width: 500px) {
+  .hide {
+    display: none;
+  }
+}
