@@ -1,10 +1,11 @@
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 import * as React from 'react';
 import { css } from '@emotion/core';
 import Helmet from 'react-helmet';
 
 import Footer from '../components/Footer';
 import SiteNav from '../components/header/SiteNav';
+import Pagination from '../components/pagination/Pagination';
 import PostCard from '../components/PostCard';
 import Wrapper from '../components/Wrapper';
 import IndexLayout from '../layouts';
@@ -64,7 +65,7 @@ const HomePosts = css`
   }
 `;
 
-export interface IndexProps {
+interface PageTemplateProps {
   data: {
     logo: {
       childImageSharp: {
@@ -81,10 +82,17 @@ export interface IndexProps {
         node: PageContext;
       }[];
     };
-  };
+  },
+  pageContext: {
+    currentPage: number;
+    isCreatedByStatefulCreatePages: boolean;
+    limit: number;
+    numPages: number;
+    skip: number;
+  }
 }
 
-const IndexPage: React.FunctionComponent<IndexProps> = props => {
+const PageTemplate: React.FunctionComponent<PageTemplateProps> = props => {
   const width = props.data.header.childImageSharp.fluid.sizes.split(', ')[1].split('px')[0];
   const height = String(Number(width) / props.data.header.childImageSharp.fluid.aspectRatio);
   return (
@@ -152,20 +160,20 @@ const IndexPage: React.FunctionComponent<IndexProps> = props => {
                 );
               })}
             </div>
+            <Pagination pageContext={props.pageContext} baseURL="/" />
           </div>
         </main>
         {props.children}
-
         <Footer />
       </Wrapper>
     </IndexLayout>
   );
 };
 
-export default IndexPage;
+export default PageTemplate;
 
 export const pageQuery = graphql`
-  query {
+  query($limit: Int, $skip: Int) {
     logo: file(relativePath: { eq: "img/ghost-logo.png" }) {
       childImageSharp {
         # Specify the image processing specifications right in the query.
@@ -187,7 +195,8 @@ export const pageQuery = graphql`
     allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC },
       filter: { frontmatter: { draft: { ne: true } } },
-      limit: 1000,
+      limit: $limit,
+      skip: $skip
     ) {
       edges {
         node {

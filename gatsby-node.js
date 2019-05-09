@@ -146,6 +146,22 @@ exports.createPages = async ({ graphql, actions }) => {
     });
   });
 
+  // Create blog-list pages
+  const postsPerPage = 9;
+  const numPages = Math.ceil(posts.length / postsPerPage);
+  Array.from({length: numPages}).forEach((item, index) => {
+    createPage({
+      path: index === 0 ? `/` : `/page/${index + 1}`,
+      component: path.resolve('./src/templates/blog.tsx'),
+      context: {
+        limit: postsPerPage,
+        skip: index * postsPerPage,
+        numPages,
+        currentPage: index + 1,
+      },
+    })
+  })
+
   // Create tag pages
   const tagTemplate = path.resolve('./src/templates/tags.tsx');
   const tags = _.uniq(
@@ -156,12 +172,31 @@ exports.createPages = async ({ graphql, actions }) => {
     ),
   );
   tags.forEach(tag => {
-    createPage({
-      path: `/tags/${_.kebabCase(tag)}/`,
-      component: tagTemplate,
-      context: {
-        tag,
-      },
+    // Pagination
+    graphql(`
+      query {
+        allMarkdownRemark(
+          filter: { frontmatter: { tags: { in: ["${tag}"] }, draft: { ne: true } } }
+        ) {
+          totalCount
+        }
+      }
+    `).then((resultTag) => {
+      const numPages = Math.ceil(resultTag.data.allMarkdownRemark.totalCount / postsPerPage);
+      Array.from({length: numPages}).forEach((item, index) => {
+        createPage({
+          path: index === 0 ? `/tags/${_.kebabCase(tag)}/` : `/tags/${_.kebabCase(tag)}/page/${index + 1}`,
+          component: tagTemplate,
+          context: {
+            tag,
+            tagURL: _.kebabCase(tag),
+            limit: postsPerPage,
+            skip: index * postsPerPage,
+            numPages,
+            currentPage: index + 1,
+          },
+        })
+      })
     });
   });
 
