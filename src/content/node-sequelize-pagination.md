@@ -1,12 +1,11 @@
 ---
 layout: post
-title: "Comment paginer des enregistrements dans MySQL avec Sequelize et Nodejs"
-subtitle: ""
-image: img/sequelize.png
+title: 'Comment paginer des enregistrements dans MySQL avec Sequelize et Nodejs'
+subtitle: ''
+image: img/open-book.jpg
 author: ludo
-date: "2018-10-13T08:00:00.000Z"
-tags: ["Node.js", "Sequelize", "Javascript"]
-twittertags: ["Node.js", "Sequelize", "Javascript"]
+date: '2018-10-13T08:00:00.000Z'
+tags: ['Sequelize', 'Node.js', 'Javascript']
 draft: false
 ---
 

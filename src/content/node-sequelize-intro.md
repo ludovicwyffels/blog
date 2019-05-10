@@ -1,17 +1,18 @@
 ---
 layout: post
-title: "Démarrer avec Sequelize"
-subtitle: "Les ORM offrent aux développeurs des avantages de base, tels que la réduction du temps et des efforts et la concentration sur la logique métier."
+title: 'Démarrer avec Sequelize'
+subtitle: 'Les ORM offrent aux développeurs des avantages de base, tels que la réduction du temps et des efforts et la concentration sur la logique métier.'
 image: img/sequelize.png
 author: ludo
-date: "2018-10-12T08:00:00.000Z"
-tags: ["Node.js", "Sequelize", "Javascript"]
+date: '2018-10-12T08:00:00.000Z'
+tags: ['Sequelize', 'Node.js', 'Javascript']
 draft: false
 ---
 
 ## Introduction à l'ORM
 
 ORM ou Object Relation Mapping est un processus de mappage entre des objets et des systèmes de base de données relationnels. Un ORM agit comme une interface entre deux systèmes. Les ORM offrent aux développeurs des avantages de base, tels que la réduction du temps et des efforts et la concentration sur la logique métier. Le code est robuste au lieu de redondant. ORM aide à gérer les requêtes sur plusieurs tables de manière efficace. Enfin, un ORM (comme sequelize) est capable de se connecter à différentes bases de données (ce qui est pratique lors du passage d’une base de données à une autre).
+
 # Démarrer avec Sequelize
 
 ## Débuter avec Sequelize
@@ -20,8 +21,7 @@ Sequelize est un ORM basé sur des promesses pour Node.js. Sequelize est facile 
 
 ## Installation
 
-Sequelize est disponible via npm. 
-
+Sequelize est disponible via npm.
 
 ```bash
 $ npm install --save sequelize
@@ -40,16 +40,17 @@ Sequelize établit une connexion entre l’API / application restante et votre b
 ```javascript
 const sequelize = new Sequelize('database', 'username', 'password', {
   host: 'localhost',
-  dialect: 'mysql'|'mariadb'|'sqlite'|'postgres'|'mssql',   //choose anyone between them
+  dialect: 'mysql' | 'mariadb' | 'sqlite' | 'postgres' | 'mssql', //choose anyone between them
 
   // To create a pool of connections
   pool: {
     max: 5,
     min: 0,
-    idle: 10000
+    idle: 10000,
   },
 
   // For SQLite only
-  storage: 'path/to/database.sqlite'
+  storage: 'path/to/database.sqlite',
 });
-``
+``;
+```
