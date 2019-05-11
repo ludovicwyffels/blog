@@ -5,6 +5,7 @@ import { css } from '@emotion/core';
 
 import Footer from '../components/Footer';
 import SiteNav from '../components/header/SiteNav';
+import Pagination from '../components/pagination/Pagination';
 import PostCard from '../components/PostCard';
 import Wrapper from '../components/Wrapper';
 import IndexLayout from '../layouts';
@@ -75,7 +76,12 @@ interface AuthorTemplateProps {
     slug: string;
   };
   pageContext: {
-    author: string;
+    authorId: string;
+    currentPage: number;
+    isCreatedByStatefulCreatePages: boolean;
+    limit: number;
+    numPages: number;
+    skip: number;
   };
   data: {
     logo: {
@@ -114,7 +120,7 @@ interface AuthorTemplateProps {
 
 const Author: React.FunctionComponent<AuthorTemplateProps> = props => {
   const author = props.data.authorYaml;
-  
+  const { authorId } = props.pageContext
   const edges = props.data.allMarkdownRemark.edges.filter(
     (edge) => {
       const isDraft = (edge.node.frontmatter.draft !== true ||
@@ -122,7 +128,7 @@ const Author: React.FunctionComponent<AuthorTemplateProps> = props => {
       return isDraft && edge.node.frontmatter.author && edge.node.frontmatter.author.id === author.id
     }
   );
-  const totalCount = edges.length;
+  const { totalCount } = props.data.allMarkdownRemark;
 
   return (
     <IndexLayout>
@@ -178,7 +184,7 @@ const Author: React.FunctionComponent<AuthorTemplateProps> = props => {
               <AuthorMeta>
                 {author.location && (
                   <div css={HiddenMobile}>
-                   📍 {author.location} <Bull>&bull;</Bull>
+                    📍 {author.location} <Bull>&bull;</Bull>
                   </div>
                 )}
                 <div css={HiddenMobile}>
@@ -221,6 +227,7 @@ const Author: React.FunctionComponent<AuthorTemplateProps> = props => {
                 return <PostCard key={node.fields.slug} post={node} />;
               })}
             </div>
+            <Pagination pageContext={props.pageContext} baseURL={`/author/${authorId}/`} />
           </div>
         </main>
         <Footer />
@@ -232,7 +239,7 @@ const Author: React.FunctionComponent<AuthorTemplateProps> = props => {
 export default Author;
 
 export const pageQuery = graphql`
-  query($author: String) {
+  query($author: String, $limit: Int, $skip: Int) {
     authorYaml(id: { eq: $author }) {
       id
       name
@@ -256,7 +263,13 @@ export const pageQuery = graphql`
         }
       }
     }
-    allMarkdownRemark(limit: 2000, sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(
+      sort: { 
+        fields: [frontmatter___date], order: DESC }
+        limit: $limit,
+        skip: $skip
+    ) {
+      totalCount,
       edges {
         node {
           excerpt

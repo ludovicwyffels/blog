@@ -149,7 +149,7 @@ exports.createPages = async ({ graphql, actions }) => {
   // Create blog-list pages
   const postsPerPage = 9;
   const numPages = Math.ceil(posts.length / postsPerPage);
-  Array.from({length: numPages}).forEach((item, index) => {
+  Array.from({ length: numPages }).forEach((item, index) => {
     createPage({
       path: index === 0 ? `/` : `/page/${index + 1}`,
       component: path.resolve('./src/templates/blog.tsx'),
@@ -183,7 +183,7 @@ exports.createPages = async ({ graphql, actions }) => {
       }
     `).then((resultTag) => {
       const numPages = Math.ceil(resultTag.data.allMarkdownRemark.totalCount / postsPerPage);
-      Array.from({length: numPages}).forEach((item, index) => {
+      Array.from({ length: numPages }).forEach((item, index) => {
         createPage({
           path: index === 0 ? `/tags/${_.kebabCase(tag)}/` : `/tags/${_.kebabCase(tag)}/page/${index + 1}`,
           component: tagTemplate,
@@ -203,12 +203,40 @@ exports.createPages = async ({ graphql, actions }) => {
   // Create author pages
   const authorTemplate = path.resolve('./src/templates/author.tsx');
   result.data.allAuthorYaml.edges.forEach(edge => {
-    createPage({
-      path: `/author/${_.kebabCase(edge.node.id)}/`,
-      component: authorTemplate,
-      context: {
-        author: edge.node.id,
-      },
+    // Pagination
+    graphql(`
+      query {
+        authorYaml(id: { eq: "ludo" }) {
+          id
+        }
+        allMarkdownRemark(limit: 2000, sort: { fields: [frontmatter___date], order: DESC }) {
+          edges {
+            node {
+              frontmatter {
+                title,
+                author {
+                  id
+                }
+              }
+            }
+          }
+        }
+      }
+    `).then((resultTag) => {
+      const numPages = Math.ceil(resultTag.data.allMarkdownRemark.edges.length / postsPerPage);
+      Array.from({ length: numPages }).forEach((item, index) => {
+        createPage({
+          path: index === 0 ? `/author/${_.kebabCase(edge.node.id)}/` : `/author/${_.kebabCase(edge.node.id)}/page/${index + 1}`,
+          component: authorTemplate,
+          context: {
+            authorId: edge.node.id,
+            limit: postsPerPage,
+            skip: index * postsPerPage,
+            numPages,
+            currentPage: index + 1,
+          },
+        })
+      })
     });
   });
 };

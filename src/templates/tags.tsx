@@ -28,7 +28,7 @@ interface TagTemplateProps {
   };
   pageContext: {
     tag: string;
-    tagURL: String;
+    tagURL: string;
     currentPage: number;
     isCreatedByStatefulCreatePages: boolean;
     limit: number;
@@ -111,12 +111,12 @@ const Tags: React.FunctionComponent<TagTemplateProps> = props => {
                 {tagData && tagData.node.description ? (
                   tagData.node.description
                 ) : (
-                  <>
-                    A collection of {totalCount > 1 && `${totalCount} posts`}
-                    {totalCount === 1 && `1 post`}
-                    {totalCount === 0 && `No posts`}
-                  </>
-                )}
+                    <>
+                      A collection of {totalCount > 1 && `${totalCount} posts`}
+                      {totalCount === 1 && `1 post`}
+                      {totalCount === 0 && `No posts`}
+                    </>
+                  )}
               </SiteDescription>
             </SiteHeaderContent>
           </div>
