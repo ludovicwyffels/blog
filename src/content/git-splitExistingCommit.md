@@ -5,7 +5,7 @@ subtitle: "Une des choses les plus grandes et les pires avec git est que vous po
 image: img/lumberjack.jpg
 author: ludo
 date: "2019-05-08T08:00:00.000Z"
-tags: ["Git"]
+tags: ["Git", "Bash"]
 draft: false
 ---
 

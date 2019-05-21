@@ -5,7 +5,7 @@ subtitle: "Une des choses les plus grandes et les pires avec git est que vous po
 image: img/infinity.jpg
 author: ludo
 date: "2019-05-08T09:00:00.000Z"
-tags: ["Git"]
+tags: ["Git", "Bash"]
 draft: false
 ---
 
