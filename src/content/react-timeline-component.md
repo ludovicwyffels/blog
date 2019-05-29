@@ -4,7 +4,7 @@ title: "Comment créer une timeline avec React"
 subtitle: ""
 author: ludo
 date: "2019-04-26T08:00:00.000Z"
-image: img/react-timeline.png
+image: img/react-timeline.jpg
 tags: ["React", "Javascript", "Node.js"]
 draft: false
 source: "https://medium.freecodecamp.org/how-to-create-a-timeline-component-with-react-1b216f23d3d4"
