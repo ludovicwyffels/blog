@@ -19,11 +19,13 @@ Le choix de la procédure de déploiement appropriée dépend des besoins. Nous 
 - [Canary](#canary)
 - [A/B testing](#abtesting)
 
+Vous pouvez expérimenter chacune de ces stratégies avec Minikube, les manifestes et les étapes à suivre sont expliqués dans ce [github](https://github.com/ludovicwyffels/k8s-deployment-demo)
+
 Examinons chaque stratégie et voyons quel type d'application vous conviendrez le mieux.
 
 <a name="recreate"></a>
 
-## Recreate - idéal pour l'environnement de développment
+## Recreate - idéal pour l'environnement de développement
 
 Un déploiement défini avec une stratégie de type **recreate** mettra fin à toutes les instances en cours d'exécution, puis les recréera avec la version la plus récente.
 
@@ -35,6 +37,8 @@ spec:
   strategy:
     type: Recreate
 ```
+
+> Vous trouverez un exemple complet et les étapes de déploiement à l'adresse https://github.com/ludovicwyffels/k8s-deployment-demo/tree/master/recreate
 
 Avantage
 - État d'application entièrement renouvelé
@@ -59,12 +63,13 @@ spec:
       maxSurge: 2        # how many pods we can add at a time
       maxUnavailable: 0  # maxUnavailable define how many pods can be unavailable during the rolling update
 ```
+> Vous trouverez un exemple complet et les étapes de déploiement à l'adresse https://github.com/ludovicwyffels/k8s-deployment-demo/tree/master/ramped
 
 Lors de la configuration avec la mise à l' échelle automatique du pod horizontal, il peut être pratique d'utiliser une valeur en pourcentage au lieu d'un nombre pour maxSurge et maxUnavailable .
 
 
-- `maxSurge` permet d'indiquez combien de Pod il peut créer en plus du nombre de replica actuellement configurer
-- `maxUnavailable` permet d’indiquer combien de Pod peuvent être "non disponible" pendant la mise à jour, toujours en fonction du nombre de replica configuré
+- `maxSurge` permet d'indiquez combien de Pod il peut créer en plus du nombre de répliqua actuellement configurer
+- `maxUnavailable` permet d’indiquer combien de Pod peuvent être "non disponible" pendant la mise à jour, toujours en fonction du nombre de répliqua configuré
 
 Si vous déclenchez un déploiement alors qu'un déploiement existant est en cours, le déploiement mettra le déploiement en pause et passera à une nouvelle version en remplaçant le déploiement.
 
@@ -106,6 +111,7 @@ spec:
    app: my-app
    version: v1.0.0
 ```
+> Vous trouverez un exemple complet et les étapes de déploiement à l'adresse https://github.com/ludovicwyffels/k8s-deployment-demo/tree/master/blue-green
 
 Avantages
 - déploiement instantané
@@ -126,7 +132,7 @@ L'utilisation de cette technique **ReplicaSet** nécessite de faire tourner auta
 
 ![](/img/kubernetes/canary.png)
 
-Dans l'example suivant, nous utilisons deux ReplicaSets côte à côte, la version A avec trois répliques (75% du trafic), la version B avec un réplica (25% du trafic).
+Dans l'exemple suivant, nous utilisons deux ReplicaSets côte à côte, la version A avec trois répliques (75% du trafic), la version B avec un répliqua (25% du trafic).
 
 Manifeste de déploiement tronqué version A:
 ```yml
@@ -134,11 +140,13 @@ spec:
   replicas: 3
 ```
 
-Manifeste de déploiement tronqué version B, notez que ous ne démarrons qu'un seul réplica de l'application:
+Manifeste de déploiement tronqué version B, notez que ous ne démarrons qu'un seul répliqua de l'application:
 ```yml
 spec:
   replicas: 1
 ```
+
+> Vous trouverez un exemple complet et les étapes de déploiement à l'adresse https://github.com/ludovicwyffels/k8s-deployment-demo/tree/master/canary
 
 Avantages
 - version publiée pour un sous-ensemble d'utilisateurs
@@ -161,7 +169,7 @@ Le test A/B est en fait une technique permettant de prendre des décisions d'aff
 
 En plus de répartir le trafic entre les versions en fonction du poids, vous pouvez cibler précisément un groupe donné d'utilisateurs en fonction de quelques paramètres (cookie, user agent, etc.). Cette technique est largement utilisée pour tester la conversion d'une fonctionnalité donnée et ne déployer que la version qui convient le plus.
 
-[Istio](https://istio.io/), comme les autres maillages de service, fournit un moyen plus fin de subdiviser les instances de service avec un routage dynamique des requêtes basé sur des poids et/ou des en-têtes HTTP.
+[Istio](https://istio.io/), comme les autres maillages de service, fournis un moyen plus fin de subdiviser les instances de service avec un routage dynamique des requêtes basé sur des poids et/ou des en-têtes HTTP.
 
 ![](/img/kubernetes/abtesting.png)
 
@@ -177,6 +185,8 @@ route:
   weight: 10
 ```
 
+Vous trouverez un exemple complet et les étapes de déploiement à l'adresse https://github.com/ludovicwyffels/k8s-deployment-demo/tree/master/ab-testing
+
 D'autres outils comme [Linkerd](https://linkerd.io/), [Traefik](https://traefik.io/), [NGINX](https://www.nginx.com/), [HAProxy](http://www.haproxy.org/), vous permettent également de le faire.
 
 Avantages
@@ -185,11 +195,11 @@ Avantages
 - un contrôle total sur la répartition du trafic
 
 Inconvénients
-- les erreurs difficiles à dépanner pour une session donnée, le traçage distribué devient obligatoire
+- les erreurs difficiles à dépanner pour une session donnée, le traçage distribué deviennent obligatoires
 - pas simple, vous devez configurer des outils supplémentaires
 
 <a name="summary"></a>
 
 ### En résumé
 
-Il y a différentes façons de déployer une application, lors de la mise en production dans un **environnement de développement/staging**, un déploiement [big bang](#bigbang) ou [progressif](#rolling) est généralement un bon choix. Lorsqu'il s'agit de **production**, un déploiement [progressif](#rolling) ou en [blue/green](#bluegreen) est généralement un bon choix, mais un test approprié de la nouvelle plate-forme est nécessaire. Si vous n'êtes pas sûr de la stabilité de la plate-forme et de l'impact que pourrait avoir la sortie d'une nouvelle version de logiciel, alors une version [canari](#canary) devrait être la bonne solution. Ce faisant, vous laissez le consommateur tester l'application et son intégration à la plate-forme. Enfin, si votre entreprise a besoin de tester une nouvelle fonctionnalité parmi un groupe spécifique d'utilisateurs, par exemple, tous les utilisateurs accédant à l'application à l'aide d'un téléphone mobile sont envoyés à la version A, tous les utilisateurs accédant via un ordinateur passent à la version B. Vous pouvez alors utiliser la technique de [test A/B](#abtesting) qui, en utilisant un réseau de services Kubernetes ou une configuration serveur personnalisée vous permet de déterminer où un utilisateur doit être dirigé en fonction de certains paramètres.
+Il y a différentes façons de déployer une application, lors de la mise en production dans un **environnement de développement/staging**, un déploiement [big bang](#bigbang) ou [progressif](#rolling) est généralement un bon choix. Lorsqu'il s'agit de **production**, un déploiement [progressif](#rolling) ou en [blue/green](#bluegreen) est généralement un bon choix, mais un test approprié de la nouvelle plate-forme est nécessaire. Si vous n'êtes pas sûr de la stabilité de la plate-forme et de l'impact que pourrait avoir la sortie d'une nouvelle version de logiciel, alors une version [canari](#canary) devrait être la bonne solution. Ce faisant, vous laissez le consommateur tester l'application et son intégration à la plate-forme. Enfin, si votre entreprise a besoin de tester une nouvelle fonctionnalité parmi un groupe spécifique d'utilisateurs, par exemple, tous les utilisateurs accédant à l'application à l'aide d'un téléphone mobile sont envoyés à la version A, tous les utilisateurs accédant via un ordinateur passent à la version B. Vous pouvez alors utiliser la technique de [test A/B](#abtesting) qui en utilisant un réseau de services Kubernetes ou une configuration serveur personnalisée vous permet de déterminer où un utilisateur doit être dirigé en fonction de certains paramètres.
