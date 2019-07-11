@@ -5,6 +5,7 @@ subtitle: "Et simplifiez leur maintenance tout en créant moins de bugs."
 author: ludo
 date: "2019-04-27T08:00:00.000Z"
 image: img/node-js-ts.png
+category: ["Node.js"]
 tags: ["Node.js", "TypeScript", "Javascript"]
 draft: false
 source: https://medium.com/@freek_mencke/how-to-write-node-js-applications-in-typescript-a54af696f66

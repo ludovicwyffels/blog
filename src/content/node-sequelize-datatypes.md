@@ -5,6 +5,7 @@ subtitle: 'Les DataTypes sont au coeur de la bibliothèque Sequelize. Ceci est u
 image: img/metal-typesetting.jpg
 author: ludo
 date: '2019-05-10T18:00:00.000Z'
+category: ['Node.js']
 tags: ['Sequelize', 'Node.js', 'Javascript']
 draft: false
 ---

@@ -68,6 +68,7 @@ exports.createPages = async ({ graphql, actions }) => {
               title
               subtitle
               tags
+              category
               date
               draft
               image {
@@ -142,6 +143,7 @@ exports.createPages = async ({ graphql, actions }) => {
         prev,
         next,
         primaryTag: node.frontmatter.tags ? node.frontmatter.tags[0] : '',
+        primaryCategory: node.frontmatter.category ? node.frontmatter.category[0] : '',
       },
     });
   });
@@ -190,6 +192,45 @@ exports.createPages = async ({ graphql, actions }) => {
           context: {
             tag,
             tagURL: _.kebabCase(tag),
+            limit: postsPerPage,
+            skip: index * postsPerPage,
+            numPages,
+            currentPage: index + 1,
+          },
+        })
+      })
+    });
+  });
+
+  // Create category pages
+  const categoryTemplate = path.resolve('./src/templates/category.tsx');
+  const categories = _.uniq(
+    _.flatten(
+      result.data.allMarkdownRemark.edges.map(edge => {
+        return _.castArray(_.get(edge, 'node.frontmatter.category', []));
+      }),
+    ),
+  );
+  categories.forEach(category => {
+    // Pagination
+    graphql(`
+      query {
+        allMarkdownRemark(
+          filter: { frontmatter: { category: { in: ["${category}"] }, draft: { ne: true } } }
+        ) {
+          totalCount
+        }
+      }
+    `).then((resultCategory) => {
+      const numPages = Math.ceil(resultCategory.data.allMarkdownRemark.totalCount / postsPerPage);
+      Array.from({ length: numPages }).forEach((item, index) => {
+        createPage({
+          path: index === 0 ? `/category/${_.kebabCase(category)}/` : `/category/${_.kebabCase(category)}/page/${index + 1}`,
+          component: categoryTemplate,
+          context: {
+            category,
+            tag: category,
+            tagURL: _.kebabCase(categories),
             limit: postsPerPage,
             skip: index * postsPerPage,
             numPages,

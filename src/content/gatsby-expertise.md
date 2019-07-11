@@ -5,6 +5,7 @@ subtitle: "Et simplifiez leur maintenance tout en créant moins de bugs."
 author: ludo
 date: "2019-05-05T22:00:00.000Z"
 image: img/gatsby.png
+category: ["Node.js"]
 tags: ["Gatsby", "Node.js"]
 draft: false
 source: https://www.lekoarts.de/en/blog/welcome-to-my-blog

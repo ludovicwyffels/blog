@@ -5,6 +5,7 @@ subtitle: ""
 image: img/postgres.png
 author: ludo
 date: "2019-04-14T08:00:00.000Z"
+category: ["Database"]
 tags: ["SQL", "PostgreSQL"]
 draft: false
 ---

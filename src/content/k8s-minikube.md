@@ -5,6 +5,7 @@ subtitle: ""
 author: ludo
 date: "2019-05-23T08:00:00.000Z"
 image: img/ship.jpg
+category: ["Kubernetes", "DevOps"]
 tags: ["Kubernetes", "DevOps"]
 draft: false
 ---

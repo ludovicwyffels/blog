@@ -5,6 +5,7 @@ subtitle: "Ces trois fonctions sont utiles pour parcourir une liste (ou un table
 author: ludo
 date: "2019-03-03T08:00:00.000Z"
 image: img/js.png
+category: ["Node.js"]
 tags: ["Javascript", "Node.js"]
 draft: false
 ---

@@ -5,6 +5,7 @@ subtitle: 'Les ORM offrent aux développeurs des avantages de base, tels que la 
 image: img/sequelize.png
 author: ludo
 date: '2018-10-12T08:00:00.000Z'
+category: ['Node.js']
 tags: ['Sequelize', 'Node.js', 'Javascript']
 draft: false
 ---

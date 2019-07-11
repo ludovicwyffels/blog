@@ -5,6 +5,7 @@ subtitle: 'Sequelize supporte les classe ES6, mais la documentation manque un pe
 image: img/drawer.jpg
 author: ludo
 date: '2019-05-10T18:00:00.000Z'
+category: ['Node.js']
 tags: ['Sequelize', 'Node.js', 'Javascript']
 draft: false
 ---

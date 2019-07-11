@@ -5,7 +5,8 @@ subtitle: "La légèreté et la reproductibilité des conteneurs en ont fait une
 author: ludo
 date: "2018-05-11T08:00:00.000Z"
 image: img/container.jpg
-tags: ["DevOps", "Docker", "Node.js", "Javascript", "Best"]
+category: ["DevOps", "Node.js"]
+tags: ["Docker", "Node.js", "Javascript", "DevOps"]
 draft: false
 ---
 

@@ -5,7 +5,8 @@ subtitle: "De nos jours, le changement le plus important dans le développement 
 image: img/servers.jpg
 author: ludo
 date: "2019-02-02T08:00:00.000Z"
-tags: ["DevOps", "CICD", "Deploy", "Best"]
+category: ["DevOps"]
+tags: ["CICD", "Deploy", "DevOps"]
 draft: false
 ---
 

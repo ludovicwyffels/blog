@@ -5,7 +5,8 @@ subtitle: "J'ai trouvé que Docker Swarm est très facile à installer et à con
 author: ludo
 date: "2018-11-01T08:00:00.000Z"
 image: img/dockerswarm-vs-kubernetes.jpg
-tags: ["DevOps", "Docker", "Kubernetes", "Best"]
+category: ["DevOps"]
+tags: ["Kubernetes", "Docker", "DevOps"]
 draft: false
 ---
 

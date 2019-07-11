@@ -5,6 +5,7 @@ subtitle: "Pourquoi Gatsby.js?"
 author: ludo
 date: "2019-04-17T08:00:00.000Z"
 image: img/blog.jpg
+category: ["Node.js"]
 tags: ["Gatsby", "Node.js", "TypeScript", "Javascript"]
 draft: false
 source: https://www.lekoarts.de/en/blog/welcome-to-my-blog

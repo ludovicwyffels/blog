@@ -5,6 +5,7 @@ subtitle: ''
 image: img/open-book.jpg
 author: ludo
 date: '2018-10-13T08:00:00.000Z'
+category: ['Node.js']
 tags: ['Sequelize', 'Node.js', 'Javascript']
 draft: false
 ---

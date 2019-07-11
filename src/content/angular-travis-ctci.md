@@ -5,6 +5,7 @@ subtitle: "Utilisation de Travis CI pour implémenter les tests continus (CT) et
 author: ludo
 date: "2019-04-29T08:00:00.000Z"
 image: img/ngTravisGit.png
+category: ["DevOps", "Node.js"]
 tags: ["Angular", "DevOps", "Typescript", "Node.js"]
 draft: false
 source: https://blog.angularindepth.com/the-angular-devops-series-ct-ci-with-travis-ci-and-github-pages-3c02664f078

@@ -198,6 +198,7 @@ export interface PageContext {
     date: string;
     draft?: boolean;
     tags: string[];
+    category: string[];
     author: {
       id: string;
       bio: string;
@@ -289,11 +290,11 @@ const PageTemplate: React.FunctionComponent<PageTemplateProps> = props => {
                     )} */}
                   {post.frontmatter.tags.map((value, index) => {
                     return <>
-                    <DateDivider>/</DateDivider>
-                    <Link to={`/tags/${_.kebabCase(value)}/`}>
-                      #{value}
-                    </Link>
-                  </>
+                      <DateDivider>/</DateDivider>
+                      <Link to={`/tags/${_.kebabCase(value)}/`}>
+                        #{value}
+                      </Link>
+                    </>
                   })}
                 </PostFullMeta>
                 <PostFullTitle>{post.frontmatter.title}</PostFullTitle>
@@ -307,7 +308,7 @@ const PageTemplate: React.FunctionComponent<PageTemplateProps> = props => {
                   />
                 </PostFullImage>
               )}
-              <PostContent htmlAst={post.htmlAst} 
+              <PostContent htmlAst={post.htmlAst}
                 postURL={encodeURIComponent(config.siteUrl + props.pathContext.slug)}
                 githubFile={`${props.pathContext.slug.slice(
                   0,

@@ -5,6 +5,7 @@ subtitle: "En termes simples, les git hooks sont des scripts personnalisés, qui
 image: img/husky2.jpg
 author: ludo
 date: "2018-11-25T08:00:00.000Z"
+category: ["Git", "Node.js"]
 tags: ["Git", "Node.js", "Javascript"]
 draft: false
 ---

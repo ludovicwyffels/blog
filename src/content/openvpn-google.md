@@ -5,6 +5,7 @@ subtitle: ""
 image: img/openvpn.jpg
 author: ludo
 date: "2019-04-14T08:00:00.000Z"
+category: ["Cloud"]
 tags: ["Google Cloud", "OpenVPN", "VPN"]
 draft: false
 ---

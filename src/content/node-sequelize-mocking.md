@@ -5,6 +5,7 @@ subtitle: 'Cet article passe en revue certains modèles pouvant être utilisés 
 image: img/books.jpg
 author: ludo
 date: '2019-05-11T09:00:00.000Z'
+category: ['Node.js']
 tags: ['Sequelize', 'Node.js', 'Javascript']
 draft: false
 ---

@@ -5,6 +5,7 @@ subtitle: "Dans Kubernetes, il y a plusieurs façons de publier une application,
 author: ludo
 date: "2019-05-25T08:00:00.000Z"
 image: img/interchange.jpg
+category: ["DevOps"]
 tags: ["Kubernetes", "DevOps"]
 draft: false
 ---

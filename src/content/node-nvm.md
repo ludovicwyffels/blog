@@ -5,6 +5,7 @@ subtitle: "NVM, le moyen le plus simple de changer d'environnement Node.js sur v
 author: ludo
 date: "2019-05-07T14:00:00.000Z"
 image: img/nvm.png
+category: ["Node.js"]
 tags: ["NVM", "Node.js"]
 draft: false
 ---

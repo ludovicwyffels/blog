@@ -5,6 +5,7 @@ subtitle: ""
 author: ludo
 date: "2019-05-07T08:00:00.000Z"
 image: img/angular-communication.png
+category: ["Node.js"]
 tags: ["Angular", "Typescript", "Node.js"]
 draft: false
 source: https://medium.com/@mirokoczka/3-ways-to-communicate-between-angular-components-a1e3f3304ecb

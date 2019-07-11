@@ -5,6 +5,7 @@ subtitle: ""
 author: ludo
 date: "2019-04-26T08:00:00.000Z"
 image: img/react-timeline.jpg
+category: ["Node.js"]
 tags: ["React", "Javascript", "Node.js"]
 draft: false
 source: "https://medium.freecodecamp.org/how-to-create-a-timeline-component-with-react-1b216f23d3d4"

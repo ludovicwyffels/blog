@@ -5,6 +5,7 @@ subtitle: "Flex est un ensemble de règles pour étirer automatiquement plusieur
 author: ludo
 date: "2018-07-12T08:00:00.000Z"
 image: img/flexbox.png
+category: ["CSS"]
 tags: ["CSS", "Flexbox", "Style"]
 draft: false
 ---

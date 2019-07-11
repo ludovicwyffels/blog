@@ -5,6 +5,7 @@ subtitle: ""
 image: img/servers.jpg
 author: ludo
 date: "2019-05-21T22:00:00.000Z"
+category: ["Bash", "DevOps"]
 tags: ["Bash", "DevOps"]
 draft: false
 ---

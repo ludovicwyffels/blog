@@ -5,6 +5,7 @@ subtitle: ""
 author: ludo
 date: "2018-11-24T08:00:00.000Z"
 image: img/kindle.jpg
+category: ["Kindle", "Ebook"]
 tags: ["Kindle", "Ebook"]
 draft: false
 ---
