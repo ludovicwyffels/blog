@@ -1,0 +1,5 @@
+{
+  "main.js": "render-page.js",
+  "main.js.map": "render-page.js.map",
+  "static/favicon.ico": "static/favicon-36e47e74810a0d8c32a77f495c49cf8e.ico"
+}
