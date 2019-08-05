@@ -1,11 +1,14 @@
 language: node_js
 node_js:
-  - "10"
+  - "stable"
 dist: trusty
 sudo: required
 branches:
   only:
   - develop
+cache:
+  directories:
+  - node_modules
 script:
 - npm run build
 - cp CNAME public/CNAME
@@ -14,5 +17,6 @@ deploy:
   skip_cleanup: true
   github_token: $GITHUB_TOKEN
   local_dir: public
+  keep-history: true
   on:
     branch: develop
