@@ -20,7 +20,8 @@ Utiliser `git cherry-pick <commit-hash>` n'est pas une option, car cela implique
 
 La solution consiste à scinder le commit en 2 et à ne sélectionner que le nouveau commit contenant les modifications pour A.
 
-Pour faire ça: 
+Pour faire ça:
+
 - lancez `git rebase -i <commit-hash>~` (notez le `-`) ou `git rebase -i <hash-of-previous-commit>`
 - recherchez le commit que vous voulez scinder dans l'écran d'édition du rebase, changez le `pick` en `e` (**edit**)
 - sauvegardez et quittez (`ESC` suivi de `:wq` pour fermer VIM)
@@ -28,8 +29,8 @@ Pour faire ça:
 - `git add [files-to-add]` tous les fichiers que nous voulons ajouter au premier commit (ici, ce serait `git add A`)
 - `git commit` normalement, avec un message, etc.
 - Exécutez autant de fois que vous le souhaitez:
-    - `git add [other-files-to-add]`
-    - `git commit`
-- `git rebase -- continue` d'indiquer que la division est terminée et continue la refonte 
+  - `git add [other-files-to-add]`
+  - `git commit`
+- `git rebase -- continue` d'indiquer que la division est terminée et continue la refonte
 
 Enfin, nous pouvons `git cherry-pick <new-commit-hash>` pour intégrer les modifications dans notre branche.
