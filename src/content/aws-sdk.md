@@ -19,11 +19,11 @@ Cependant, la méthode recommandée pour initialiser divers clients de service A
 `gist:ludovicwyffels/ab860daf4dfb446ded1a9b03dc3942e4`
 
 > NB: vous pouvez toujours accéder à l’espace de noms AWS global sans chaque service AWS associé en écrivant sous le code. Cette technique est utile lorsque vous appliquez la même configuration à plusieurs services AWS individuels, par exemple pour fournir les mêmes informations d’identification à tous les services AWS.
-> 
+>
 > `const aws = require('aws-sdk/global');`
 
 Consultez la documentation officielle d’AWS pour plus d’informations ci-dessous.
 
-https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/creating-and-calling-service-objects.html
+[https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/creating-and-calling-service-objects.html](https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/creating-and-calling-service-objects.html)
 
 Bonne programmation!

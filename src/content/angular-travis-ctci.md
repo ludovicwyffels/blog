@@ -51,7 +51,7 @@ cd travis-demo
 ng serve
 ```
 
-Aller sur: http://localhost:4200
+Aller sur: [http://localhost:4200](http://localhost:4200)
 
 ## GitHub
 
@@ -129,7 +129,7 @@ Malheureusement, nous ne pouvons pas simplement `npm run test` sur Travis CI. En
 
 Suivez les instructions pour créer un nouveau script npm comme celui-ci:
 
-```
+```text
 "test-headless": "ng test --watch=false --browsers=ChromeHeadless",
 ```
 
@@ -215,6 +215,6 @@ git push
 
 Nous devrions également pouvoir accéder à l'URL de nos pages GitHub et voir notre application déployée.
 
-```
-https://ludovicwyffels.github.io/travis-demo/ 
+```text
+https://ludovicwyffels.github.io/travis-demo/
 ```

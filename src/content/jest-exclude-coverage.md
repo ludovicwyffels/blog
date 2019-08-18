@@ -1,7 +1,7 @@
 ---
 layout: post
-title: 'Jest ignore ou exclut le fichier/fonction/état de la couverture de test'
-subtitle: ''
+title: 'Jest ignore ou exclure le fichier/fonction/état de la couverture de test'
+subtitle: 'Cet article explique comment ignorer les fichiers, fonctions, lignes et déclarations de la couverture dans Jest en utilisant la configuration ou istanbul pragmas. Ainsi que les raisons et les limites du pourquoi/comment vous feriez une telle chose.'
 image: img/cactus.jpg
 author: ludo
 date: '2019-08-18T09:00:00.000Z'

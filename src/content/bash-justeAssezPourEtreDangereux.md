@@ -17,6 +17,7 @@ Malgré mon profond intérêt pour les subtilités de Bash (_/sarcasme_), j'ai c
 Pour éviter d'avoir à le refaire moi-même et pour votre plaisir de lecture, les voici.
 
 Pour être dangereux en termes d'installation, de CI et de flux de déploiement, nous rencontrerons ce qui suit:
+
 - azerty
 - azerty
 
@@ -50,7 +51,7 @@ fi
 if [[ -z "${CIRCLE_BRANCH}"] ]; then
     npm run redis-cli flushall
 fi
- 
+
 npm run sync
 
 # one-liner

@@ -96,7 +96,7 @@ Vous pouvez utiliser la base de données primaire en bleu pour les opérations d
 
 Une fois que le vert devient actif, vous pouvez fermer ou recycler les anciennes instances bleues. Vous pouvez déployer une version plus récente sur ces instances et en faire le nouveau vert pour la prochaine version.
 
-Les déploiements Blue-Green reposent sur le routage du trafic. Cela peut être fait en mettant à jour les DNS (CNAMES) pour les hôtes. Cependant, des valeurs TTL longues peuvent retarder ces modifications. Vous pouvez également modifier les paramètres du load balancer pour que les modifications prennent effet immédiatement. 
+Les déploiements Blue-Green reposent sur le routage du trafic. Cela peut être fait en mettant à jour les DNS (CNAMES) pour les hôtes. Cependant, des valeurs TTL longues peuvent retarder ces modifications. Vous pouvez également modifier les paramètres du load balancer pour que les modifications prennent effet immédiatement.
 
 ## Déploiement canari
 
@@ -142,4 +142,3 @@ Une solution de surveillance des erreurs est également essentielle. Il informer
 Sans outil de surveillance des erreurs, les bogues n'auraient peut-être jamais été découverts. Alors que quelques utilisateurs rencontrant les bugs prendront le temps de les signaler, la plupart des autres ne le font pas. L'expérience client négative peut entraîner des problèmes de satisfaction au fil du temps ou, pire, empêcher les transactions commerciales d'avoir lieu.
 
 Un outil de surveillance des erreurs crée également une visibilité partagée de tous les problèmes de post-déploiement parmi les équipes Opérateur / DevOps et les développeurs. Cette compréhension partagée permet aux équipes d'être plus collaboratives et réactives.
-

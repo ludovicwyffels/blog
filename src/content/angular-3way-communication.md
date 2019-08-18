@@ -15,11 +15,11 @@ Bien que le titre de cet article soit un peu trompeur, car nous ne souhaitons pa
 
 **Comment communiquer entre les composants?** C'est le sujet sur lequel j'ai vu beaucoup de nouveaux développeurs angular lutter pour communiquer entre les composants. Je vais vous montrer les trois approches les plus courantes, avec des exemples qui correspondent à différents cas d'utilisation.
 
-Il y a aussi le "moyen de redux" que je pourrais couvrir dans un autre article à l'avenir. 
+Il y a aussi le "moyen de redux" que je pourrais couvrir dans un autre article à l'avenir.
 
 ---
 
-![](/img/angular-communication/angular-communication-component.png)
+![angular-communication-component](/img/angular-communication/angular-communication-component.png)
 
 Imaginez le cas d'utilisation de la barre latérale dans votre application. La barre latérale est ouverte ou fermée. Vous avez le composant side-bar et ensuite vous avez un composant (ou plusieurs composants) qui peuvent l'ouvrir / le fermer ou demander son état.
 
@@ -27,22 +27,23 @@ Imaginez le cas d'utilisation de la barre latérale dans votre application. La b
 
 1. Passer la référence d'un composant à un autre
 2. Communication par le composant parent
-3. Communication à travers le service 
+3. Communication à travers le service
 
 ## 1. Passer la référence d'un composant à un autre
 
-Cette solution doit être utilisée lorsque les composants ont une dépendance entre eux. Par exemple, dropdown et dropdown toggle. Ils ne peuvent généralement pas exister l'un sans l'autre. 
+Cette solution doit être utilisée lorsque les composants ont une dépendance entre eux. Par exemple, dropdown et dropdown toggle. Ils ne peuvent généralement pas exister l'un sans l'autre.
 
 > [Demo](https://stackblitz.com/edit/angular-communication-1-chjsqo)
 
 Nous allons créer le composant `side-bar-toggle` qui aura le composant `side-bar` en entrée et en cliquant sur le bouton bascule nous ouvrirons / fermerons le composant `side-bar`.
 
-Voici le code pertinent: 
+Voici le code pertinent:
 
 ```html
 <app-side-bar-toggle [sideBar]="sideBar"></app-side-bar-toggle>
 <app-side-bar #sideBar></app-side-bar>
 ```
+
 > app.component.html
 
 ```ts
@@ -61,6 +62,7 @@ export class SideBarToggleComponent {
   }
 }
 ```
+
 > side-bar-toggle.component.ts
 
 ```ts
@@ -79,14 +81,14 @@ export class SideBarComponent {
   }
 }
 ```
-> side-bar.component.ts
 
+> side-bar.component.ts
 
 ---
 
 ## 2. Communication par le composant parent
 
-Peut être utilisé lorsqu'il est facile de contrôler l'état partagé entre des composants via leur composant parent et que vous ne souhaitez pas créer de nouveau service ou créer du code standard, à cause d'une variable. 
+Peut être utilisé lorsqu'il est facile de contrôler l'état partagé entre des composants via leur composant parent et que vous ne souhaitez pas créer de nouveau service ou créer du code standard, à cause d'une variable.
 
 > [Demo](https://stackblitz.com/edit/angular-communication-2-7oahtg)
 
@@ -96,6 +98,7 @@ La mise en oeuvre de cette approche est presque la même que la précédente, ma
 <app-side-bar-toggle (toggle)="toggleSideBar()"></app-side-bar-toggle>
 <app-side-bar [isOpen]="sideBarIsOpened"></app-side-bar>
 ```
+
 > app.component.html
 
 ```ts
@@ -112,6 +115,7 @@ export class AppComponent {
   }
 }
 ```
+
 > app.component.ts
 
 ```ts
@@ -131,6 +135,7 @@ export class SideBarToggleComponent {
 
 }
 ```
+
 > side-bar-toggle.component.ts
 
 ```ts
@@ -146,15 +151,16 @@ export class SideBarComponent {
 
 }
 ```
+
 > side-bar.component.ts
 
 ---
 
 ## 3. Communication à travers le service
 
-Enfin, cette option est utile et doit être utilisée lorsque vous avez un composant contrôlé ou que son état est demandé à plusieurs instances. 
+Enfin, cette option est utile et doit être utilisée lorsque vous avez un composant contrôlé ou que son état est demandé à plusieurs instances.
 
-![](/img/angular-communication/angular-communication-service.png)
+![angular-communication-service](/img/angular-communication/angular-communication-service.png)
 
 Nous avons maintenant plusieurs emplacements dans l'application qui devront accéder à notre composant `sibe-bar`. Voyons comment nous le faisons.
 
@@ -162,17 +168,19 @@ Nous allons maintenant créer `side-bar.service.ts` donc nous aurons:
 
 - side-bar.service.ts
 - side-bar.component.ts
-- side-bar.component.html 
+- side-bar.component.html
 
 Les services de la barre latérale auront une méthode et un événement à changer pour que chaque composant qui injectera ce service puisse être averti de l'ouverture ou de la bascule d'un panneau.
 
 Dans cet exemple, aucun composant latéral ni composant latéral ne comporte de paramètres d'entrée, car ils communiquent via le service.
 
-Maintenant le code: 
+Maintenant le code:
+
 ```html
 <app-side-bar-toggle></app-side-bar-toggle>
 <app-side-bar></app-side-bar>
 ```
+
 > app.component.html
 
 ```ts
@@ -193,6 +201,7 @@ export class SideBarToggleComponent {
   }
 }
 ```
+
 > side-bar-toggle.component.ts
 
 ```ts
@@ -217,6 +226,7 @@ export class SideBarComponent {
   }
 }
 ```
+
 > side-bar.component.ts
 
 ```ts
@@ -233,4 +243,5 @@ export class SideBarService {
   }
 }
 ```
+
 > side-bar.service.ts

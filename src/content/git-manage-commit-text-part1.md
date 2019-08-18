@@ -10,7 +10,7 @@ tags: ["Git", "Node.js"]
 draft: false
 ---
 
-Que l’on soit backend, frontend, il y a une chose qui nous rassemble, c’est notre gestionnaire de source et son utilisation.
+Que l’on soit backend ou frontend, il y a une chose qui nous rassemble, c’est notre gestionnaire de source et son utilisation.
 
 Dans cet article, je vais vous présenter le conventional-changelog qui vous permettra de produire un historique de super qualité 🙌!
 
@@ -36,7 +36,7 @@ Comment s’y retrouver? Comment exploiter un historique qui ne vous donne quasi
 
 La solution, c’est d’utiliser le Conventional-Changelog (oui, on dirait une pub de télé-achat 😝).
 
-## Qu’est-ce que c’est le conventional-changelog?
+## Qu’est-ce que le conventional-changelog?
 
 C’est bien de vous vendre une solution, mais il faudrait peut-être expliquer ce que c’est... en vrai.
 
@@ -121,11 +121,11 @@ C’est un point de vue qui est personnel, mais je pense que le body est le meil
 
 Cette dernière partie permet de placer les références vers toutes les issues, User stories & co. On s'en sert généralement pour lier (`Linked to`) ou clôturer (`Closes`) les issues directement depuis git.
 
-Autre élément qui peut être ajouté dans ce footer est la notion de Breaking Change. Il suffit d'ajouter `BREAKING CHANGE:` suivi du détail de ce fameux breaking change.
+Autre élément qui peut être ajouté dans ce footer est la notion de "Breaking Change". Il suffit d'ajouter `BREAKING CHANGE:` suivi du détail de ce fameux breaking change.
 
 ## Je suis obligé d’écrire tout cela à chaque fois?
 
-Non, rassurez-vous, vous n’êtes pas obligé... même s’il est bien de mettre un max d’information dans le message de commit.
+Non, rassurez-vous, vous n’êtes pas obligé... même s’il est bien de mettre un max d’informations dans le message de commit.
 
 La convention veut que seule la 1ère ligne soit obligatoire. Donc, libre à vous, de ne pas mettre de body et de footer
 
