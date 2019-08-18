@@ -10,8 +10,8 @@
 <url> <loc>https://ludovicwyffels.dev/git-husky/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://ludovicwyffels.dev/deploy/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://ludovicwyffels.dev/js-map-filter-reduce/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://ludovicwyffels.dev/sql-principes/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://ludovicwyffels.dev/openvpn-google/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://ludovicwyffels.dev/sql-principes/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://ludovicwyffels.dev/gatsby-welcome/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://ludovicwyffels.dev/js-console-log/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://ludovicwyffels.dev/js-conditions/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -38,6 +38,7 @@
 <url> <loc>https://ludovicwyffels.dev/node-automate-dependency-updates/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://ludovicwyffels.dev/git-manage-commit-text-part1/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://ludovicwyffels.dev/git-manage-commit-text-part2/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://ludovicwyffels.dev/jest-exclude-coverage/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://ludovicwyffels.dev/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://ludovicwyffels.dev/page/2</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://ludovicwyffels.dev/page/3</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -62,11 +63,11 @@
 <url> <loc>https://ludovicwyffels.dev/tags/git/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://ludovicwyffels.dev/tags/cicd/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://ludovicwyffels.dev/tags/deploy/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://ludovicwyffels.dev/tags/sql/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://ludovicwyffels.dev/tags/postgre-sql/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://ludovicwyffels.dev/tags/google-cloud/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://ludovicwyffels.dev/tags/open-vpn/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://ludovicwyffels.dev/tags/vpn/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://ludovicwyffels.dev/tags/sql/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://ludovicwyffels.dev/tags/postgre-sql/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://ludovicwyffels.dev/tags/gatsby/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://ludovicwyffels.dev/tags/type-script/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://ludovicwyffels.dev/tags/architecture/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -79,6 +80,7 @@
 <url> <loc>https://ludovicwyffels.dev/tags/mac/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://ludovicwyffels.dev/tags/loop-back/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://ludovicwyffels.dev/tags/pm-2/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://ludovicwyffels.dev/tags/jest/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://ludovicwyffels.dev/category/dev-ops/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://ludovicwyffels.dev/category/node-js/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://ludovicwyffels.dev/category/node-js/page/2</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
