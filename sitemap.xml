@@ -25,8 +25,8 @@
 <url> <loc>https://ludovicwyffels.dev/node-nvm/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://ludovicwyffels.dev/git-splitExistingCommit/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://ludovicwyffels.dev/git-changeGitOfCommit/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://ludovicwyffels.dev/node-sequelize-classes/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://ludovicwyffels.dev/node-sequelize-datatypes/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://ludovicwyffels.dev/node-sequelize-classes/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://ludovicwyffels.dev/node-sequelize-mocking/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://ludovicwyffels.dev/bash-justeAssezPourEtreDangereux/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://ludovicwyffels.dev/k8s-minikube/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -38,7 +38,10 @@
 <url> <loc>https://ludovicwyffels.dev/node-automate-dependency-updates/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://ludovicwyffels.dev/git-manage-commit-text-part1/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://ludovicwyffels.dev/git-manage-commit-text-part2/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://ludovicwyffels.dev/node-callback-promise/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://ludovicwyffels.dev/jest-exclude-coverage/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://ludovicwyffels.dev/jest-mocking-current-date/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://ludovicwyffels.dev/node-logging/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://ludovicwyffels.dev/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://ludovicwyffels.dev/page/2</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://ludovicwyffels.dev/page/3</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -48,6 +51,7 @@
 <url> <loc>https://ludovicwyffels.dev/tags/node-js/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://ludovicwyffels.dev/tags/node-js/page/2</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://ludovicwyffels.dev/tags/node-js/page/3</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://ludovicwyffels.dev/tags/node-js/page/4</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://ludovicwyffels.dev/tags/javascript/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://ludovicwyffels.dev/tags/javascript/page/2</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://ludovicwyffels.dev/tags/dev-ops/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -85,6 +89,7 @@
 <url> <loc>https://ludovicwyffels.dev/category/node-js/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://ludovicwyffels.dev/category/node-js/page/2</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://ludovicwyffels.dev/category/node-js/page/3</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://ludovicwyffels.dev/category/node-js/page/4</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://ludovicwyffels.dev/category/css/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://ludovicwyffels.dev/category/cloud/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://ludovicwyffels.dev/category/kindle/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
