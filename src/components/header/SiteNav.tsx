@@ -123,12 +123,6 @@ class SiteNav extends React.Component<SiteNavProps, SiteNaveState> {
               <Link to="/tags/node-js/">Node.js</Link>
             </li>
             <li role="menuitem">
-              <Link to="/tags/javascript/">JavaScript</Link>
-            </li>
-            <li role="menuitem">
-              <Link to="/tags/typescript/">TypeScript</Link>
-            </li>
-            <li role="menuitem">
               <Link to="/tags/dev-ops/">DevOps</Link>
             </li>
 
