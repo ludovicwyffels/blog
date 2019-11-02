@@ -7,7 +7,7 @@
     "@emotion/core": "^10.0.22",
     "@emotion/styled": "^10.0.23",
     "@emotion/styled-base": "^10.0.23",
-    "@types/react-share": "^2.1.1",
+    "@types/react-share": "^3.0.1",
     "classnames": "^2.2.6",
     "cssnano": "^4.1.10",
     "emotion": "^10.0.17",
