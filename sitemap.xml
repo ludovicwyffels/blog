@@ -25,8 +25,8 @@
 <url> <loc>https://ludovicwyffels.dev/node-nvm/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://ludovicwyffels.dev/git-splitExistingCommit/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://ludovicwyffels.dev/git-changeGitOfCommit/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://ludovicwyffels.dev/node-sequelize-datatypes/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://ludovicwyffels.dev/node-sequelize-classes/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://ludovicwyffels.dev/node-sequelize-datatypes/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://ludovicwyffels.dev/node-sequelize-mocking/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://ludovicwyffels.dev/bash-justeAssezPourEtreDangereux/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://ludovicwyffels.dev/k8s-minikube/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
