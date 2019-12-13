@@ -212,14 +212,14 @@
   Link: </app-3d90e94e461e09477055.js>; rel=preload; as=script
   Link: </commons-86fb6cec3322466ae0da.js>; rel=preload; as=script
   Link: </component---src-templates-post-tsx-18e648153ce3e2733898.js>; rel=preload; as=script
-/node-sequelize-classes/
+/node-sequelize-datatypes/
   Link: </webpack-runtime-672f463e14ae01d98d1c.js>; rel=preload; as=script
   Link: </styles-f46ea2462799060ffa44.js>; rel=preload; as=script
   Link: </commons-86fb6cec3322466ae0da.js>; rel=preload; as=script
   Link: </app-3d90e94e461e09477055.js>; rel=preload; as=script
   Link: </commons-86fb6cec3322466ae0da.js>; rel=preload; as=script
   Link: </component---src-templates-post-tsx-18e648153ce3e2733898.js>; rel=preload; as=script
-/node-sequelize-datatypes/
+/node-sequelize-classes/
   Link: </webpack-runtime-672f463e14ae01d98d1c.js>; rel=preload; as=script
   Link: </styles-f46ea2462799060ffa44.js>; rel=preload; as=script
   Link: </commons-86fb6cec3322466ae0da.js>; rel=preload; as=script
