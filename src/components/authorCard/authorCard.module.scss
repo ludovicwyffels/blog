@@ -1,0 +1,28 @@
+@import '../../styles/colors';
+
+.authorCardSection {
+  display: flex;
+}
+
+.authorCardName {
+  margin: 8px 0 2px 0;
+  padding: 0;
+  font-size: 2rem;
+
+  a {
+    color: rgb(0, 0, 0);
+    font-weight: 700;
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+}
+
+.authorCardContent {
+  p {
+    margin: 0;
+    color: #647a83;
+    line-height: 1.3em;
+  }
+}

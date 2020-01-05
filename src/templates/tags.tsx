@@ -1,11 +1,10 @@
-import { graphql, Link } from 'gatsby';
+import { graphql } from 'gatsby';
 import React from 'react';
 
-import Footer from '../components/Footer';
-import SiteNav from '../components/header/SiteNav';
-import Pagination from '../components/pagination/Pagination';
-import PostCard from '../components/PostCard';
-import Wrapper from '../components/Wrapper';
+import Footer from '../components/footer/footer';
+import SiteNav from '../components/header/siteNav/siteNav';
+import PostCard from '../components/postCard/postCard';
+import Wrapper from '../components/wrapper/wrapper';
 import IndexLayout from '../layouts';
 import {
   inner,
@@ -28,16 +27,10 @@ interface TagTemplateProps {
   };
   pageContext: {
     tag: string;
-    tagURL: string;
-    currentPage: number;
-    isCreatedByStatefulCreatePages: boolean;
-    limit: number;
-    numPages: number;
-    skip: number;
   };
   data: {
     allTagYaml: {
-      edges: {
+      edges: Array<{
         node: {
           id: string;
           description: string;
@@ -47,20 +40,19 @@ interface TagTemplateProps {
             };
           };
         };
-      }[];
+      }>;
     };
     allMarkdownRemark: {
       totalCount: number;
-      edges: {
+      edges: Array<{
         node: PageContext;
-      }[];
+      }>;
     };
   };
 }
 
-const Tags: React.FunctionComponent<TagTemplateProps> = props => {
-  const { tagURL } = props.pageContext
-  const tag = props.pageContext.tag;
+const Tags: React.FC<TagTemplateProps> = props => {
+  const tag = (props.pageContext.tag) ? props.pageContext.tag : '';
   const { edges, totalCount } = props.data.allMarkdownRemark;
   const tagData = props.data.allTagYaml.edges.find(
     n => n.node.id.toLowerCase() === tag.toLowerCase(),
@@ -71,19 +63,19 @@ const Tags: React.FunctionComponent<TagTemplateProps> = props => {
       <Helmet>
         <html lang={config.lang} />
         <title>
-          {tag} - {config.siteTitle}
+          {tag} - {config.title}
         </title>
         <meta
           name="description"
           content={tagData && tagData.node ? tagData.node.description : ''}
         />
-        <meta property="og:site_name" content={config.siteTitle} />
+        <meta property="og:site_name" content={config.title} />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content={`${tag} - ${config.siteTitle}`} />
+        <meta property="og:title" content={`${tag} - ${config.title}`} />
         <meta property="og:url" content={config.siteUrl + props.pathContext.slug} />
         {config.facebook && <meta property="article:publisher" content={config.facebook} />}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={`${tag} - ${config.siteTitle}`} />
+        <meta name="twitter:title" content={`${tag} - ${config.title}`} />
         <meta name="twitter:url" content={config.siteUrl + props.pathContext.slug} />
         {config.twitter && (
           <meta
@@ -98,9 +90,9 @@ const Tags: React.FunctionComponent<TagTemplateProps> = props => {
           css={[outer, SiteHeader]}
           style={{
             backgroundImage:
-              tagData && tagData.node.image
-                ? `url('${tagData.node.image.childImageSharp.fluid.src}')`
-                : '',
+              tagData && tagData.node.image ?
+                `url('${tagData.node.image.childImageSharp.fluid.src}')` :
+                '',
           }}
         >
           <div css={inner}>
@@ -111,12 +103,12 @@ const Tags: React.FunctionComponent<TagTemplateProps> = props => {
                 {tagData && tagData.node.description ? (
                   tagData.node.description
                 ) : (
-                    <>
-                      A collection of {totalCount > 1 && `${totalCount} posts`}
-                      {totalCount === 1 && `1 post`}
-                      {totalCount === 0 && `No posts`}
-                    </>
-                  )}
+                  <>
+                    A collection of {totalCount > 1 && `${totalCount} posts`}
+                    {totalCount === 1 && '1 post'}
+                    {totalCount === 0 && 'No posts'}
+                  </>
+                )}
               </SiteDescription>
             </SiteHeaderContent>
           </div>
@@ -128,7 +120,6 @@ const Tags: React.FunctionComponent<TagTemplateProps> = props => {
                 <PostCard key={node.fields.slug} post={node} />
               ))}
             </div>
-            <Pagination pageContext={props.pageContext} baseURL={`/tags/${tagURL}/`} />
           </div>
         </main>
         <Footer />
@@ -140,7 +131,7 @@ const Tags: React.FunctionComponent<TagTemplateProps> = props => {
 export default Tags;
 
 export const pageQuery = graphql`
-  query($tag: String, $limit: Int, $skip: Int) {
+  query($tag: String) {
     allTagYaml {
       edges {
         node {
@@ -157,10 +148,9 @@ export const pageQuery = graphql`
       }
     }
     allMarkdownRemark(
+      limit: 2000
       sort: { fields: [frontmatter___date], order: DESC }
       filter: { frontmatter: { tags: { in: [$tag] }, draft: { ne: true } } }
-      limit: $limit,
-      skip: $skip
     ) {
       totalCount
       edges {
@@ -169,8 +159,8 @@ export const pageQuery = graphql`
           timeToRead
           frontmatter {
             title
-            subtitle
             tags
+            category
             date
             image {
               childImageSharp {

@@ -1,0 +1,15 @@
+.container {
+   background: #e5eff5;
+   height: 5px;
+   width: 100vw;
+   opacity: 75%;
+   position: fixed;
+   top: 0;
+   z-index: 200;
+
+   .bar {
+     background: #0f7dba;
+     height: 100%;
+     // transition: all .05s linear;
+   }
+ }
