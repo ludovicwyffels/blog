@@ -41,6 +41,10 @@ export const NoImage = css`
   }
 `;
 
+export const Espace = css`
+  width: 10px;
+`;
+
 export const PostFullHeader = styled.header`
   margin: 0 auto;
   padding: 6vw 3vw 3vw;
@@ -88,6 +92,7 @@ interface PageTemplateProps {
         category: string[];
         author: {
           id: string;
+          name: string
           bio: string;
           avatar: {
             children: {
@@ -139,6 +144,7 @@ export interface PageContext {
     category: string[];
     author: {
       id: string;
+      name: string;
       bio: string;
       avatar: {
         children: {
@@ -158,6 +164,11 @@ const PageTemplate: React.FC<PageTemplateProps> = props => {
   if (post.frontmatter.image && post.frontmatter.image.childImageSharp) {
     width = post.frontmatter.image.childImageSharp.fluid.sizes.split(', ')[1].split('px')[0];
     height = String(Number(width) / post.frontmatter.image.childImageSharp.fluid.aspectRatio);
+  }
+
+  const tags = [];
+  for (let i = 0; i < post.frontmatter.tags.length && i < 2; i++) {
+    tags.push(post.frontmatter.tags[i]);
   }
 
   return (
@@ -232,12 +243,17 @@ const PageTemplate: React.FC<PageTemplateProps> = props => {
                   <time dateTime={post.frontmatter.date} className="PostFullMetaDate">
                     {post.frontmatter.userDate}
                   </time>
-                  {post.frontmatter.tags && post.frontmatter.tags.length > 0 && (
+                  {tags && tags.length > 0 && (
                     <>
                       <span className="DateDivider">/</span>
-                      <Link to={`/tags/${_.kebabCase(post.frontmatter.tags[0])}/`}>
-                        {post.frontmatter.tags[0]}
-                      </Link>
+                        {tags.map((tag, i) => {
+                          return (
+                            <>
+                              <Link to={`/tags/${_.kebabCase(tag)}/`} key={i}>{tag}</Link>
+                              <div css={Espace}></div>
+                            </>
+                          );
+                        })}
                     </>
                   )}
                 </section>
@@ -270,7 +286,7 @@ const PageTemplate: React.FC<PageTemplateProps> = props => {
           <div css={inner}>
             <div className="ReadNextFeed">
               {props.data.relatedPosts && (
-                <ReadNextCard tags={post.frontmatter.tags} category={post.frontmatter.category} relatedPosts={props.data.relatedPosts} />
+                <ReadNextCard tags={post.frontmatter.tags} relatedPosts={props.data.relatedPosts} />
               )}
 
               {props.pageContext.prev && <PostCard post={props.pageContext.prev} />}
@@ -315,6 +331,7 @@ export const query = graphql`
         }
         author {
           id
+          name
           bio
           avatar {
             children {

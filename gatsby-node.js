@@ -83,6 +83,7 @@ exports.createPages = async ({ graphql, actions }) => {
               }
               author {
                 id
+                name
                 bio
                 avatar {
                   children {

@@ -21,7 +21,6 @@ import {
   SocialLink,
 } from '../styles/shared';
 import { PageContext } from './post';
-import Facebook from '../components/icons/facebook';
 import Helmet from 'react-helmet';
 import config from '../website-config';
 import Website from '../components/icons/website';
@@ -86,15 +85,15 @@ interface AuthorTemplateProps {
     };
     allMarkdownRemark: {
       totalCount: number;
-      edges: Array<{
+      edges: {
         node: PageContext;
-      }>;
+      }[];
     };
     authorYaml: {
       id: string;
+      name: string;
       website?: string;
       twitter?: string;
-      facebook?: string;
       location?: string;
       // eslint-disable-next-line @typescript-eslint/camelcase
       profile_image?: {
@@ -129,17 +128,15 @@ const Author: React.FC<AuthorTemplateProps> = props => {
       <Helmet>
         <html lang={config.lang} />
         <title>
-          {author.id} - {config.title}
+          {author.name} - {config.title}
         </title>
         <meta name="description" content={author.bio} />
         <meta property="og:site_name" content={config.title} />
         <meta property="og:type" content="profile" />
-        <meta property="og:title" content={`${author.id} - ${config.title}`} />
+        <meta property="og:title" content={`${author.name} - ${config.title}`} />
         <meta property="og:url" content={config.siteUrl + props.pathContext.slug} />
-        <meta property="article:publisher" content="https://www.facebook.com/ghost" />
-        <meta property="article:author" content="https://www.facebook.com/ghost" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content={`${author.id} - ${config.title}`} />
+        <meta name="twitter:title" content={`${author.name} - ${config.title}`} />
         <meta name="twitter:url" content={config.siteUrl + props.pathContext.slug} />
         {config.twitter && (
           <meta
@@ -173,7 +170,7 @@ const Author: React.FC<AuthorTemplateProps> = props => {
                 src={props.data.authorYaml.avatar.childImageSharp.fluid.src}
                 alt={author.id}
               />
-              <SiteTitle>{author.id}</SiteTitle>
+              <SiteTitle>{author.name}</SiteTitle>
               {author.bio && <AuthorBio>{author.bio}</AuthorBio>}
               <AuthorMeta>
                 {author.location && (
@@ -210,18 +207,6 @@ const Author: React.FC<AuthorTemplateProps> = props => {
                     rel="noopener noreferrer"
                   >
                     <Twitter />
-                  </a>
-                )}
-                {author.facebook && (
-                  <a
-                    className="social-link-fb"
-                    css={SocialLink}
-                    href={`https://www.facebook.com/${author.facebook}`}
-                    title="Facebook"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Facebook />
                   </a>
                 )}
                 {/* TODO: RSS for author */}
@@ -265,10 +250,10 @@ export const pageQuery = graphql`
   query($author: String) {
     authorYaml(id: { eq: $author }) {
       id
+      name
       website
       twitter
       bio
-      facebook
       location
       profile_image {
         childImageSharp {
@@ -309,6 +294,7 @@ export const pageQuery = graphql`
             }
             author {
               id
+              name
               bio
               avatar {
                 children {

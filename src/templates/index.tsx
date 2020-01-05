@@ -222,6 +222,7 @@ export const pageQuery = graphql`
             }
             author {
               id
+              name
               bio
               avatar {
                 children {

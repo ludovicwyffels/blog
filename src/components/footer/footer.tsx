@@ -48,7 +48,7 @@ const Footer: React.FC = () => {
             Ghost
           </a> */}
 
-          <a href="/rss.xml">RSS</a>
+          {/* <a href="/rss.xml">RSS</a> */}
         </nav>
       </div>
     </footer>

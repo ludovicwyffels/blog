@@ -11,6 +11,11 @@ export interface PostCardProps {
 }
 
 const PostCard: React.FC<PostCardProps> = ({ post }) => {
+  const tags = [];
+  for (let i = 0; i < post.frontmatter.tags.length && i < 2; i++) {
+    tags.push(post.frontmatter.tags[i]);
+  }
+
   return (
     <article className={`${style.container} post-card ${post.frontmatter.image ? '' : 'no-image'}`}>
       {post.frontmatter.image && (
@@ -34,20 +39,10 @@ const PostCard: React.FC<PostCardProps> = ({ post }) => {
       <div className={`post-card-content ${style.PostCardContent}`}>
         <Link className={style.PostCardContentLink} to={post.fields.slug}>
           <header className={style.PostCardHeader}>
-            {/*{post.frontmatter.tags && (*/}
-            {/*  <span className={style.PostCardTags}>{post.frontmatter.tags[0]}</span>*/}
-            {/*)}*/}
-            {post.frontmatter.tags && (
+            {tags && (
                 <span className={style.PostCardTags}>
-                  {post.frontmatter.tags.map((tag, i) => {
-                    return (<span key={i}>#{tag}</span>)
-                  })}
-                </span>
-            )}
-            {post.frontmatter.category && (
-                <span className={style.PostCardTags}>
-                  {post.frontmatter.category.map((tag, i) => {
-                    return (<span key={i}>#{tag}</span>)
+                  {tags.map((tag, i) => {
+                    return (<span key={i}>#{tag} </span>)
                   })}
                 </span>
             )}
@@ -61,7 +56,7 @@ const PostCard: React.FC<PostCardProps> = ({ post }) => {
           <ul className={style.AuthorList}>
             <li className={style.AuthorListItem}>
               <div className={style.AuthorNameTooltip}>
-                {post.frontmatter.author.id}
+                {post.frontmatter.author.name}
               </div>
               <Link
                 className={style.StaticAvatar}

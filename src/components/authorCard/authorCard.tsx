@@ -17,7 +17,7 @@ const AuthorCard: React.FC<AuthorCardProps> = ({ author }) => {
       <img css={AuthorProfileImage} src={author.avatar.children[0].fixed.src} alt={author.id} />
       <section className={style.authorCardContent}>
         <div className={style.authorCardName}>
-          <Link to={`/author/${_.kebabCase(author.id)}/`}>{author.id}</Link>
+          <Link to={`/author/${_.kebabCase(author.id)}/`}>{author.name}</Link>
         </div>
         {author.bio ? (
           <p>{author.bio}</p>
