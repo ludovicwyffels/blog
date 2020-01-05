@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Software on the road]]></title><description><![CDATA[Software on the road]]></description><link>https://ludovicwyffels.dev</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 03 Jan 2020 19:34:32 GMT</lastBuildDate><item><title><![CDATA[Gestion des environnements Angular en livraison continue]]></title><description><![CDATA[Dans les applications métiers, nous rencontrons souvent une configuration de livraison continue comportant plusieurs stages. Chaque étape a…]]></description><link>https://ludovicwyffels.dev/angular-dynamic-environment/</link><guid isPermaLink="false">https://ludovicwyffels.dev/angular-dynamic-environment/</guid><pubDate>Sun, 08 Sep 2019 17:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Dans les applications métiers, nous rencontrons souvent une configuration de livraison continue comportant plusieurs stages. Chaque étape a sa configuration pour accéder aux systèmes périphériques spécifiques à l’environnement. Pour ce faire, nous devons gérer les configurations basées sur les stages.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Software on the road]]></title><description><![CDATA[Software on the road]]></description><link>https://ludovicwyffels.dev</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 05 Jan 2020 20:39:28 GMT</lastBuildDate><item><title><![CDATA[Gestion des environnements Angular en livraison continue]]></title><description><![CDATA[Dans les applications métiers, nous rencontrons souvent une configuration de livraison continue comportant plusieurs stages. Chaque étape a…]]></description><link>https://ludovicwyffels.dev/angular-dynamic-environment/</link><guid isPermaLink="false">https://ludovicwyffels.dev/angular-dynamic-environment/</guid><pubDate>Sun, 08 Sep 2019 17:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Dans les applications métiers, nous rencontrons souvent une configuration de livraison continue comportant plusieurs stages. Chaque étape a sa configuration pour accéder aux systèmes périphériques spécifiques à l’environnement. Pour ce faire, nous devons gérer les configurations basées sur les stages.&lt;/p&gt;
 &lt;p&gt;Angular CLI est livré avec certains concepts intégrés permettant de gérer différents environnements.&lt;/p&gt;
 &lt;p&gt;Mais quelle est leur fiabilité dans un environnement de livraison continu ? 🤔&lt;/p&gt;
 &lt;h2&gt;Livraison continue - une courte introduction&lt;/h2&gt;
@@ -46,6 +46,7 @@ Chaque validation entraîne une exécution du pipeline sur notre serveur CI. Les
           alt=&quot;Continuous Deployment&quot;
           title=&quot;Continuous Deployment&quot;
           loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         /&gt;
       &lt;/picture&gt;
   &lt;/a&gt;
@@ -1179,7 +1180,7 @@ commitizen init cz-conventional-changelog --save-dev --save-exact&lt;/code&gt;&l
 &lt;p&gt;Dans cet article, je vais vous présenter le conventional-changelog qui vous permettra de produire un historique de super qualité 🙌!&lt;/p&gt;
 &lt;h2&gt;Le problème&lt;/h2&gt;
 &lt;p&gt;Combien d’entre vous sont tombés sur des projets avec un historique qui ressemble à cela: 🤕&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-text line-numbers&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;e60930a9 (HEAD -&amp;gt; develop, origin/develop) Modification front
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-text line-numbers&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;e60930a9 (HEAD -&amp;gt; developundefined origin/develop) Modification front
 49ff1d07 Fix an error
 59a4d13e Add log
 44e2f204 Update conf
@@ -1204,7 +1205,7 @@ a62f7880 No comment
 &lt;p&gt;Si ce format est bien appliqué, cela peut donner ce type de texte de commit :&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;txt&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-txt line-numbers&quot;&gt;&lt;code class=&quot;language-txt&quot;&gt;feat(users): add user management page
 
-In order to add users into the system, a management page has been added. The route and services are integrated into the UserModule. A mock has been added due to back-end limitation.
+In order to add users into the systemundefined a management page has been added. The route and services are integrated into the UserModule. A mock has been added due to back-end limitation.
 
 Closes #456 and PRJ-345&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;C’est un peu plus agréable à lire non ?&lt;/p&gt;
@@ -1257,13 +1258,13 @@ Closes #456 and PRJ-345&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=
 &lt;h2&gt;Conclusion&lt;/h2&gt;
 &lt;p&gt;Avec cette convention, vous prendrez plaisir à fouiller dans l’historique de votre projet, trouver la source d’une modification et surtout savoir “Pourquoi cela a été fait comme cela !”&lt;/p&gt;
 &lt;p&gt;Et quand l’on regarde, la différence entre l’ancienne version :&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-text line-numbers&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;e60930a9 (HEAD -&amp;gt; develop, origin/develop) Front modification
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-text line-numbers&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;e60930a9 (HEAD -&amp;gt; developundefined origin/develop) Front modification
 49ff1d07 Error correction
 59a4d13e Add log
 44e2f204 Update config
 03d00e2e Fix typos&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;et la nouvelle (certes, sur des projets différents):&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-text line-numbers&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;b1365d1fa (HEAD -&amp;gt; master, origin/master, origin/HEAD) refactor(ivy): remove directiveRefresh instruction (#22745)
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-text line-numbers&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;b1365d1fa (HEAD -&amp;gt; masterundefined origin/masterundefined origin/HEAD) refactor(ivy): remove directiveRefresh instruction (#22745)
 4ac606b41 docs(compiler): fix spelling errors (#22704)
 51027d73c fix(ivy): Update rollup rule to prevent inlining symbols in debug. (#22747)
 48636f3e8 chore(aio): compute stability and deprecate `@stable` tag (#22674)
@@ -1572,7 +1573,7 @@ Exécutez le script. &lt;code&gt;next-update&lt;/code&gt; ira de l’avant et tr
 ? Project description: My API
 ? Project root directory: my-api
 ? Application class name: MyApiApplication
-? Select features to enable in the project Enable tslint, Enable prettier, Enable mocha, Enable loopbackBuild, Enable vscode, Enable repositories, Enable services&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+? Select features to enable in the project Enable tslintundefined Enable prettierundefined Enable mochaundefined Enable loopbackBuildundefined Enable vscodeundefined Enable repositoriesundefined Enable services&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-bash line-numbers&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token builtin class-name&quot;&gt;cd&lt;/span&gt; ./my-api&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;LoopBack 4 ajoute un dossier datasources au projet.&lt;/p&gt;
 &lt;p&gt;Initialement, on supposerait que ce dossier est configuré pour être lu de la même manière que les fichiers JSON des sources de données LoopBack 3. Cependant, c’est juste le dossier par défaut utilisé par le CLI pour y déposer les nouveaux fichiers.&lt;/p&gt;
@@ -1741,7 +1742,7 @@ Controller People was created in src/controllers/&lt;/code&gt;&lt;span aria-hidd
 ? Project description: (projects) A simple Payment API
 ? Project root directory: (payment-api)
 ? Application class name: (PaymentApiApplication)
-? Select project build settings: (Press &amp;lt;space&amp;gt; to select, &amp;lt;a&amp;gt; to toggle all, &amp;lt;i&amp;gt; to invert selection) ... Press enter for default selection&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+? Select project build settings: (Press &amp;lt;space&amp;gt; to selectundefined &amp;lt;a&amp;gt; to toggle allundefined &amp;lt;i&amp;gt; to invert selection) ... Press enter for default selection&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Après avoir parcouru l’assistant CLI ci-dessus, il créera un tas de répertoires et de fichiers boilerplate ainsi que lancera &lt;code&gt;npm install&lt;/code&gt; à notre place. Nous pouvons alors naviguer dans notre répertoire nouvellement créé et démarrer l’application.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-bash line-numbers&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token builtin class-name&quot;&gt;cd&lt;/span&gt; payment-api
 &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; start&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
@@ -1978,6 +1979,7 @@ Un nouveau point final peut être créé en écrivant une nouvelle fonction déc
           alt=&quot;recreate&quot;
           title=&quot;recreate&quot;
           loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         /&gt;
       &lt;/picture&gt;
   &lt;/a&gt;
@@ -2038,6 +2040,7 @@ Un nouveau point final peut être créé en écrivant une nouvelle fonction déc
           alt=&quot;ramped&quot;
           title=&quot;ramped&quot;
           loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         /&gt;
       &lt;/picture&gt;
   &lt;/a&gt;
@@ -2110,6 +2113,7 @@ Un nouveau point final peut être créé en écrivant une nouvelle fonction déc
           alt=&quot;bluegreen&quot;
           title=&quot;bluegreen&quot;
           loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         /&gt;
       &lt;/picture&gt;
   &lt;/a&gt;
@@ -2189,6 +2193,7 @@ Un nouveau point final peut être créé en écrivant une nouvelle fonction déc
           alt=&quot;canary&quot;
           title=&quot;canary&quot;
           loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         /&gt;
       &lt;/picture&gt;
   &lt;/a&gt;
@@ -2259,6 +2264,7 @@ Un nouveau point final peut être créé en écrivant une nouvelle fonction déc
           alt=&quot;abtesting&quot;
           title=&quot;abtesting&quot;
           loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         /&gt;
       &lt;/picture&gt;
   &lt;/a&gt;
@@ -2462,117 +2468,7 @@ helm init&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-num
     &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
   &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
   &lt;span class=&quot;token function&quot;&gt;expect&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;model&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;isAvailable&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;bind&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Date&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;Date&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;now&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;not&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;toThrow&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Sequelize DataTypes: guide pratique]]></title><description><![CDATA[Les DataTypes sont au coeur de la bibliothèque Sequelize. Ceci est un guide pratique et complet pour compenser la documentation officielle…]]></description><link>https://ludovicwyffels.dev/node-sequelize-datatypes/</link><guid isPermaLink="false">https://ludovicwyffels.dev/node-sequelize-datatypes/</guid><pubDate>Fri, 10 May 2019 18:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Les DataTypes sont au coeur de la bibliothèque Sequelize. Ceci est un guide pratique et complet pour compenser la documentation officielle clairsemée de Sequelize sur le sujet.&lt;/p&gt;
-&lt;p&gt;Tout d’abord, DataTypes contient à la fois les types et les générateurs pour les valeurs par défaut: &lt;code&gt;NOW&lt;/code&gt; , &lt;code&gt;UUIDV1&lt;/code&gt; et &lt;code&gt;UUIDV4&lt;/code&gt; sont des valeurs par défaut spéciales.&lt;/p&gt;
-&lt;p&gt;Les endroits où vous êtes susceptible de rencontrer des DataTypes se trouvent dans la définition du champ de modèle et dans les définitions de migration. Notez que pour un modèle et un champ donnés, le type de données doit être identique dans le modèle et dans la migration.&lt;/p&gt;
-&lt;p&gt;Table des matières:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#text-types&quot;&gt;Types de texte&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#default-values&quot;&gt;Les valeurs par défaut&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#number&quot;&gt;Nombre&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#fancy-primitive-types&quot;&gt;Types primitifs fantaisie&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#date-time&quot;&gt;Date/heure&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#fancy-types&quot;&gt;Types de fantaisie&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#postgres-fancy-types&quot;&gt;Types fantaisie Postgres&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;a name=&quot;text-types&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h2&gt;Types de texte&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;STRING&lt;/code&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Une chaîne de longueur variable.&lt;/li&gt;
-&lt;li&gt;Longueur par défaut 255.&lt;/li&gt;
-&lt;li&gt;Prend en charge &lt;code&gt;BINARY&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Utilisation: une chaîne binaire de 100 longueurs &lt;code&gt;DataTypes.STRING(100).BINARY&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;CHAR&lt;/code&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Une chaîne de longueur fixe.&lt;/li&gt;
-&lt;li&gt;Longueur par défaut 255.&lt;/li&gt;
-&lt;li&gt;Prend en charge &lt;code&gt;BINARY&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Utilisation: un caractère binaire de 100 longueurs &lt;code&gt;DataTypes.CHAR(100).BINARY&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;TEXT&lt;/code&gt; : une colonne de texte de longueur illimitée&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;a name=&quot;default-values&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h2&gt;Les valeurs par défaut&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;NOW&lt;/code&gt; : une valeur par défaut de l’horodatage actuel&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;UUIDV1&lt;/code&gt; : Un identifiant universel unique par défaut généré conformément à la norme UUID v1&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;UUIDV4&lt;/code&gt; : Un identifiant universel unique par défaut généré conformément à la norme UUID v2&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;a name=&quot;number&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h2&gt;Nombre&lt;/h2&gt;
-&lt;p&gt;Tous les éléments suivants prennent en charge ces propriétés: &lt;code&gt;UNSIGNED&lt;/code&gt;, &lt;code&gt;ZEROFILL&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;Par exemple:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-js line-numbers&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;DataTypes&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;INTEGER&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;UNSIGNED&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;ZEROFILL&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;token comment&quot;&gt;// or&lt;/span&gt;
-DataTypes&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;INTEGER&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;ZEROFILL&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;UNSIGNED&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;La même chose peut être faite en utilisant &lt;code&gt;BIGINT.UNSIGNED&lt;/code&gt;, &lt;code&gt;FLOAT.UNSIGNED&lt;/code&gt;,…&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;INTEGER&lt;/code&gt;: Un entier de 32 bits.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;BIGINT&lt;/code&gt;: Un entier de 64 bits.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;FLOAT&lt;/code&gt;: nombre à virgule flottante (précision sur 4 octets). Accepte un ou deux arguments de précision&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;REAL&lt;/code&gt;: nombre à virgule flottante (précision sur 4 octets). Accepte un ou deux arguments de précision&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;DOUBLE&lt;/code&gt;: nombre à virgule flottante (précision sur 8 octets). Accepte un ou deux arguments de précision&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;DECIMAL&lt;/code&gt;: nombre décimal. Accepte un ou deux arguments de précision&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;a name=&quot;fancy-primitive-types&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h2&gt;Types primitifs fantaisie&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;BOOLEAN&lt;/code&gt;: colonne booléenne / tinyint qui est forcée de devenir un booléen JavaScript.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;UUID&lt;/code&gt;: Une colonne contenant un identifiant universel unique, la forme est validée, à utiliser avec les valeurs par défaut &lt;code&gt;UUIDV1&lt;/code&gt; ou &lt;code&gt;UUIDV4&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;a name=&quot;date-time&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h2&gt;Date/heure&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;TIME&lt;/code&gt;: une colonne de temps&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;DATE&lt;/code&gt;: une colonne datetime&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;DATEONLY&lt;/code&gt;: Une colonne de date seulement&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;a name=&quot;fancy-types&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h2&gt;Types fantaisie&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;BLOB&lt;/code&gt;: Stockage binaire. Longueurs disponibles: &lt;code&gt;tiny&lt;/code&gt;, &lt;code&gt;medium&lt;/code&gt;, &lt;code&gt;long&lt;/code&gt;. Par exemple: &lt;code&gt;DataTypes.BLOG(&apos;tiny&apos;)&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;VIRTUAL&lt;/code&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Une valeur virtuelle qui n’est pas stockée dans la base de données. Cela peut par exemple être utile si vous souhaitez fournir une valeur par défaut dans votre modèle, qui est renvoyée à l’utilisateur mais non stockée dans la base de données.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://sequelize.readthedocs.io/en/2.0/api/datatypes/#virtual&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;Voir les docs&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;ENUM&lt;/code&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Une énumération.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;DataTypes.ENUM(&apos;value&apos;, &apos;another value&apos;)&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Idéalement, devrait être utilisé avec les chaînes stockées dans les constantes&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-js line-numbers&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;FIRST_ENUM_VALUE&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;FIRST_ENUM_VALUE&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;OTHER_ENUM_VALUE&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;OTHER_ENUM_VALUE&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;token comment&quot;&gt;// In migration or model definition&lt;/span&gt;
-DataTypes&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;ENUM&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;FIRST_ENUM_VALUE&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;OTHER_ENUM_VALUE&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;a name=&quot;postgres-fancy-types&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h2&gt;Types fantaisie Postgres&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;HSTORE&lt;/code&gt;: une colonne clé/valeur&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;JSON&lt;/code&gt;: une colonne de chaîne JSON.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;JSONB&lt;/code&gt;: une colonne de données JSON pré-traitée.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;RANGE&lt;/code&gt;: Pour Postgres 9.4+, les types de plage sont des types de données représentant une plage de valeurs d’un type d’élément (appelé sous-type de plage).&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;ARRAY&lt;/code&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Un tableau de &lt;code&gt;type&lt;/code&gt;, par exemple &lt;code&gt;DataTypes.ARRAY(DataTypes.DECIMAL)&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Utilisation des classes ES6 pour les modèles Sequelize 4 ou 5]]></title><description><![CDATA[La spécification ES2015 ou ES6 a introduit la class en JavaScript. Des bibliothèques telles que React sont passées de React.createClass à la…]]></description><link>https://ludovicwyffels.dev/node-sequelize-classes/</link><guid isPermaLink="false">https://ludovicwyffels.dev/node-sequelize-classes/</guid><pubDate>Fri, 10 May 2019 18:00:00 GMT</pubDate><content:encoded>&lt;p&gt;La spécification ES2015 ou ES6 a introduit la &lt;code&gt;class&lt;/code&gt; en JavaScript. Des bibliothèques telles que React sont passées de &lt;code&gt;React.createClass&lt;/code&gt; à la &lt;code&gt;class MyComponent extends React.Component&lt;/code&gt;, c’est-à-dire qu’ils sont passés de l’utilisation de leur propre constructeur à l’utilisation d’un langage intégré pour transmettre l’intention du programmeur.&lt;/p&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Utilisation des classes ES6 pour les modèles Sequelize 4 ou 5]]></title><description><![CDATA[La spécification ES2015 ou ES6 a introduit la class en JavaScript. Des bibliothèques telles que React sont passées de React.createClass à la…]]></description><link>https://ludovicwyffels.dev/node-sequelize-classes/</link><guid isPermaLink="false">https://ludovicwyffels.dev/node-sequelize-classes/</guid><pubDate>Fri, 10 May 2019 18:00:00 GMT</pubDate><content:encoded>&lt;p&gt;La spécification ES2015 ou ES6 a introduit la &lt;code&gt;class&lt;/code&gt; en JavaScript. Des bibliothèques telles que React sont passées de &lt;code&gt;React.createClass&lt;/code&gt; à la &lt;code&gt;class MyComponent extends React.Component&lt;/code&gt;, c’est-à-dire qu’ils sont passés de l’utilisation de leur propre constructeur à l’utilisation d’un langage intégré pour transmettre l’intention du programmeur.&lt;/p&gt;
 &lt;p&gt;Pour la couche de persistance d’une application Web Node.js, quelques bases de données me viennent à l’esprit, comme &lt;a href=&quot;https://www.mongodb.com/&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;MongoDB&lt;/a&gt; (éventuellement associé à &lt;a href=&quot;https://mongoosejs.com/&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;mongoose&lt;/a&gt;), ou une association de clés-valeurs comme &lt;a href=&quot;https://redis.io/&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;Redis&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Pour exécuter une base de données relationnelle avec une application Node, &lt;a href=&quot;http://docs.sequelizejs.com/&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;Sequelize&lt;/a&gt; , “Un ORM de dialecte multi-SQL facile à utiliser pour Node.js” est une bonne option. Il permet à l’application de fonctionner avec une instance MySQL ou PostgreSQL et offre un moyen simple de mapper la représentation des entités dans la base de données vers JavaScript et inversement.&lt;/p&gt;
 &lt;p&gt;Les API v4 et inférieure de Sequelize pour les définitions de modèle se présentent comme suit:&lt;/p&gt;
@@ -2704,7 +2600,117 @@ Object&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cla
   sequelize&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
 
-module&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;exports &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; db&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Changer la date d'un commit]]></title><description><![CDATA[Une des choses les plus grandes et les pires avec git est que vous pouvez réécrire l’histoire. Voici une façon sournoise d’abuser de cela…]]></description><link>https://ludovicwyffels.dev/git-changeGitOfCommit/</link><guid isPermaLink="false">https://ludovicwyffels.dev/git-changeGitOfCommit/</guid><pubDate>Wed, 08 May 2019 09:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Une des choses les plus grandes et les pires avec git est que vous pouvez réécrire l’histoire. Voici une façon sournoise d’abuser de cela, je ne peux pas penser à une raison légitime de le faire.&lt;/p&gt;
+module&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;exports &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; db&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Sequelize DataTypes: guide pratique]]></title><description><![CDATA[Les DataTypes sont au coeur de la bibliothèque Sequelize. Ceci est un guide pratique et complet pour compenser la documentation officielle…]]></description><link>https://ludovicwyffels.dev/node-sequelize-datatypes/</link><guid isPermaLink="false">https://ludovicwyffels.dev/node-sequelize-datatypes/</guid><pubDate>Fri, 10 May 2019 18:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Les DataTypes sont au coeur de la bibliothèque Sequelize. Ceci est un guide pratique et complet pour compenser la documentation officielle clairsemée de Sequelize sur le sujet.&lt;/p&gt;
+&lt;p&gt;Tout d’abord, DataTypes contient à la fois les types et les générateurs pour les valeurs par défaut: &lt;code&gt;NOW&lt;/code&gt; , &lt;code&gt;UUIDV1&lt;/code&gt; et &lt;code&gt;UUIDV4&lt;/code&gt; sont des valeurs par défaut spéciales.&lt;/p&gt;
+&lt;p&gt;Les endroits où vous êtes susceptible de rencontrer des DataTypes se trouvent dans la définition du champ de modèle et dans les définitions de migration. Notez que pour un modèle et un champ donnés, le type de données doit être identique dans le modèle et dans la migration.&lt;/p&gt;
+&lt;p&gt;Table des matières:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#text-types&quot;&gt;Types de texte&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#default-values&quot;&gt;Les valeurs par défaut&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#number&quot;&gt;Nombre&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#fancy-primitive-types&quot;&gt;Types primitifs fantaisie&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#date-time&quot;&gt;Date/heure&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#fancy-types&quot;&gt;Types de fantaisie&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#postgres-fancy-types&quot;&gt;Types fantaisie Postgres&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;a name=&quot;text-types&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Types de texte&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;STRING&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Une chaîne de longueur variable.&lt;/li&gt;
+&lt;li&gt;Longueur par défaut 255.&lt;/li&gt;
+&lt;li&gt;Prend en charge &lt;code&gt;BINARY&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Utilisation: une chaîne binaire de 100 longueurs &lt;code&gt;DataTypes.STRING(100).BINARY&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;CHAR&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Une chaîne de longueur fixe.&lt;/li&gt;
+&lt;li&gt;Longueur par défaut 255.&lt;/li&gt;
+&lt;li&gt;Prend en charge &lt;code&gt;BINARY&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Utilisation: un caractère binaire de 100 longueurs &lt;code&gt;DataTypes.CHAR(100).BINARY&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;TEXT&lt;/code&gt; : une colonne de texte de longueur illimitée&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a name=&quot;default-values&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Les valeurs par défaut&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;NOW&lt;/code&gt; : une valeur par défaut de l’horodatage actuel&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;UUIDV1&lt;/code&gt; : Un identifiant universel unique par défaut généré conformément à la norme UUID v1&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;UUIDV4&lt;/code&gt; : Un identifiant universel unique par défaut généré conformément à la norme UUID v2&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a name=&quot;number&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Nombre&lt;/h2&gt;
+&lt;p&gt;Tous les éléments suivants prennent en charge ces propriétés: &lt;code&gt;UNSIGNED&lt;/code&gt;, &lt;code&gt;ZEROFILL&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Par exemple:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-js line-numbers&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;DataTypes&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;INTEGER&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;UNSIGNED&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;ZEROFILL&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;// or&lt;/span&gt;
+DataTypes&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;INTEGER&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;ZEROFILL&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;UNSIGNED&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;La même chose peut être faite en utilisant &lt;code&gt;BIGINT.UNSIGNED&lt;/code&gt;, &lt;code&gt;FLOAT.UNSIGNED&lt;/code&gt;,…&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;INTEGER&lt;/code&gt;: Un entier de 32 bits.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;BIGINT&lt;/code&gt;: Un entier de 64 bits.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;FLOAT&lt;/code&gt;: nombre à virgule flottante (précision sur 4 octets). Accepte un ou deux arguments de précision&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;REAL&lt;/code&gt;: nombre à virgule flottante (précision sur 4 octets). Accepte un ou deux arguments de précision&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;DOUBLE&lt;/code&gt;: nombre à virgule flottante (précision sur 8 octets). Accepte un ou deux arguments de précision&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;DECIMAL&lt;/code&gt;: nombre décimal. Accepte un ou deux arguments de précision&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a name=&quot;fancy-primitive-types&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Types primitifs fantaisie&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;BOOLEAN&lt;/code&gt;: colonne booléenne / tinyint qui est forcée de devenir un booléen JavaScript.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;UUID&lt;/code&gt;: Une colonne contenant un identifiant universel unique, la forme est validée, à utiliser avec les valeurs par défaut &lt;code&gt;UUIDV1&lt;/code&gt; ou &lt;code&gt;UUIDV4&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a name=&quot;date-time&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Date/heure&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;TIME&lt;/code&gt;: une colonne de temps&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;DATE&lt;/code&gt;: une colonne datetime&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;DATEONLY&lt;/code&gt;: Une colonne de date seulement&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a name=&quot;fancy-types&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Types fantaisie&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;BLOB&lt;/code&gt;: Stockage binaire. Longueurs disponibles: &lt;code&gt;tiny&lt;/code&gt;, &lt;code&gt;medium&lt;/code&gt;, &lt;code&gt;long&lt;/code&gt;. Par exemple: &lt;code&gt;DataTypes.BLOG(&apos;tiny&apos;)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;VIRTUAL&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Une valeur virtuelle qui n’est pas stockée dans la base de données. Cela peut par exemple être utile si vous souhaitez fournir une valeur par défaut dans votre modèle, qui est renvoyée à l’utilisateur mais non stockée dans la base de données.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://sequelize.readthedocs.io/en/2.0/api/datatypes/#virtual&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;Voir les docs&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;ENUM&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Une énumération.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;DataTypes.ENUM(&apos;value&apos;, &apos;another value&apos;)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Idéalement, devrait être utilisé avec les chaînes stockées dans les constantes&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-js line-numbers&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;FIRST_ENUM_VALUE&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;FIRST_ENUM_VALUE&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;OTHER_ENUM_VALUE&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;OTHER_ENUM_VALUE&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;// In migration or model definition&lt;/span&gt;
+DataTypes&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;ENUM&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;FIRST_ENUM_VALUE&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;OTHER_ENUM_VALUE&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a name=&quot;postgres-fancy-types&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Types fantaisie Postgres&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;HSTORE&lt;/code&gt;: une colonne clé/valeur&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;JSON&lt;/code&gt;: une colonne de chaîne JSON.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;JSONB&lt;/code&gt;: une colonne de données JSON pré-traitée.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;RANGE&lt;/code&gt;: Pour Postgres 9.4+, les types de plage sont des types de données représentant une plage de valeurs d’un type d’élément (appelé sous-type de plage).&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;ARRAY&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Un tableau de &lt;code&gt;type&lt;/code&gt;, par exemple &lt;code&gt;DataTypes.ARRAY(DataTypes.DECIMAL)&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Changer la date d'un commit]]></title><description><![CDATA[Une des choses les plus grandes et les pires avec git est que vous pouvez réécrire l’histoire. Voici une façon sournoise d’abuser de cela…]]></description><link>https://ludovicwyffels.dev/git-changeGitOfCommit/</link><guid isPermaLink="false">https://ludovicwyffels.dev/git-changeGitOfCommit/</guid><pubDate>Wed, 08 May 2019 09:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Une des choses les plus grandes et les pires avec git est que vous pouvez réécrire l’histoire. Voici une façon sournoise d’abuser de cela, je ne peux pas penser à une raison légitime de le faire.&lt;/p&gt;
 &lt;p&gt;Comme pour tout, merci StackOverflow pour toutes les options que je peux choisir parmi&lt;/p&gt;
 &lt;h2&gt;Fixe la date du dernier commit à la date du jour&lt;/h2&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-bash line-numbers&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token assign-left variable&quot;&gt;GIT_COMMITTER_DATE&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;&lt;span class=&quot;token variable&quot;&gt;&lt;span class=&quot;token variable&quot;&gt;$(&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;date&lt;/span&gt;&lt;span class=&quot;token variable&quot;&gt;)&lt;/span&gt;&lt;/span&gt;&quot;&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; commit --amend --no-edit --date &lt;span class=&quot;token string&quot;&gt;&quot;&lt;span class=&quot;token variable&quot;&gt;&lt;span class=&quot;token variable&quot;&gt;$(&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;date&lt;/span&gt;&lt;span class=&quot;token variable&quot;&gt;)&lt;/span&gt;&lt;/span&gt;&quot;&lt;/span&gt;&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
@@ -2843,6 +2849,7 @@ nvm &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; node&lt;/c
           alt=&quot;angular-communication-component&quot;
           title=&quot;angular-communication-component&quot;
           loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         /&gt;
       &lt;/picture&gt;
   &lt;/a&gt;
@@ -2996,6 +3003,7 @@ nvm &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; node&lt;/c
           alt=&quot;angular-communication-service&quot;
           title=&quot;angular-communication-service&quot;
           loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         /&gt;
       &lt;/picture&gt;
   &lt;/a&gt;
@@ -3123,6 +3131,7 @@ nvm &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; node&lt;/c
           alt=&quot;venn learn&quot;
           title=&quot;venn learn&quot;
           loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         /&gt;
       &lt;/picture&gt;
   &lt;/a&gt;
@@ -3173,6 +3182,7 @@ Mais ce module, &lt;a href=&quot;https://github.com/web-push-libs/web-push&quot;
           alt=&quot;service worker&quot;
           title=&quot;service worker&quot;
           loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         /&gt;
       &lt;/picture&gt;
   &lt;/a&gt;
@@ -3410,7 +3420,7 @@ ng serve&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numb
 &lt;p&gt;Maintenant que nous avons créé nos applications, allons dans le monde des &lt;strong&gt;tests continus&lt;/strong&gt; en laissant &lt;strong&gt;Travis CI&lt;/strong&gt; exécuter nos &lt;strong&gt;tests unitaires&lt;/strong&gt; à chaque nouveau commit.&lt;/p&gt;
 &lt;p&gt;Malheureusement, nous ne pouvons pas simplement &lt;code&gt;npm run test&lt;/code&gt; sur Travis CI. En effet, nous ne pouvons pas réellement lancer une interface graphique de navigateur. Nous allons donc utiliser &lt;strong&gt;Headless Chrome&lt;/strong&gt; pour exécuter nos tests unitaires.&lt;/p&gt;
 &lt;p&gt;Suivez les instructions pour créer un nouveau script npm comme celui-ci:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-text line-numbers&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;&amp;quot;test-headless&amp;quot;: &amp;quot;ng test --watch=false --browsers=ChromeHeadless&amp;quot;,&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-text line-numbers&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;&amp;quot;test-headless&amp;quot;: &amp;quot;ng test --watch=false --browsers=ChromeHeadless&amp;quot;undefined&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Nous pouvons maintenant exécuter nos tests unitaires en utilisant Headless Chrome comme ceci:&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-bash line-numbers&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; run test-headless&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Maintenant, ajouter &lt;code&gt;npm run test-headless&lt;/code&gt; à notre fichier &lt;strong&gt;.travis.yml&lt;/strong&gt; dans la section script comme ceci:&lt;/p&gt;
@@ -3505,8 +3515,8 @@ module&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;exports &lt;
 informationLogger&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;logApplicationInformation&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
 informationLogger&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;logSystemInformation&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Ce script de base enregistre certaines informations d’application et système sur la console. Je peux voir la sortie suivante après avoir exécuté le &lt;code&gt;node main.js&lt;/code&gt;&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-text line-numbers&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;{ application: { name: &amp;#39;node-typescript&amp;#39;, version: &amp;#39;0.0.1&amp;#39; } }
-{ system: { platform: &amp;#39;linux&amp;#39;, cpus: 8 } }&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-text line-numbers&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;{ application: { name: &amp;#39;node-typescript&amp;#39;undefined version: &amp;#39;0.0.1&amp;#39; } }
+{ system: { platform: &amp;#39;linux&amp;#39;undefined cpus: 8 } }&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h2&gt;Webpack&lt;/h2&gt;
 &lt;p&gt;La première chose à faire avant d’utiliser Webpack est d’installer les dépendances nécessaires. N’oubliez pas d’utiliser l’indicateur &lt;code&gt;-D&lt;/code&gt; car il s’agit de devDependencies.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-bash line-numbers&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; i -D webpack webpack-cli&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
@@ -3698,18 +3708,18 @@ webpack.config.js&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;
 &lt;p&gt;Voyons à quoi cela pourrait ressembler: &lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;txt&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-txt line-numbers&quot;&gt;&lt;code class=&quot;language-txt&quot;&gt;[
     {
-        text: &amp;#39;Wrote my first blog post ever on Medium&amp;#39;,
-        date: &amp;#39;March 03 2017&amp;#39;,
+        text: &amp;#39;Wrote my first blog post ever on Medium&amp;#39;undefined
+        date: &amp;#39;March 03 2017&amp;#39;undefined
         category: {
-            tag: &amp;#39;medium&amp;#39;,
+            tag: &amp;#39;medium&amp;#39;undefined
             color: &amp;#39;#018f69&amp;#39;
-        },
+        }undefined
         link: {
             url:
-                &amp;#39;https://medium.com/@popflorin1705/javascript-coding-challenge-1-6d9c712963d2&amp;#39;,
+                &amp;#39;https://medium.com/@popflorin1705/javascript-coding-challenge-1-6d9c712963d2&amp;#39;undefined
             text: &amp;#39;Read more&amp;#39;
         }
-    },
+    }undefined
     {
         // Another object with data
     }
@@ -4006,6 +4016,7 @@ webpack.config.js&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;
           alt=&quot;3 layer pattern&quot;
           title=&quot;3 layer pattern&quot;
           loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         /&gt;
       &lt;/picture&gt;
   &lt;/a&gt;
@@ -4048,6 +4059,7 @@ webpack.config.js&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;
           alt=&quot;3 layer pattern for node.js REST API&quot;
           title=&quot;3 layer pattern for node.js REST API&quot;
           loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         /&gt;
       &lt;/picture&gt;
   &lt;/a&gt;
@@ -4917,6 +4929,7 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
           alt=&quot;1&quot;
           title=&quot;1&quot;
           loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         /&gt;
       &lt;/picture&gt;
   &lt;/a&gt;
@@ -4959,6 +4972,7 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
           alt=&quot;2&quot;
           title=&quot;2&quot;
           loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         /&gt;
       &lt;/picture&gt;
   &lt;/a&gt;
@@ -5402,6 +5416,7 @@ down /etc/openvpn/update-resolv-conf&lt;/code&gt;&lt;span aria-hidden=&quot;true
           alt=&quot;Cross Join&quot;
           title=&quot;Cross Join&quot;
           loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         /&gt;
       &lt;/picture&gt;
   &lt;/a&gt;
@@ -5448,6 +5463,7 @@ down /etc/openvpn/update-resolv-conf&lt;/code&gt;&lt;span aria-hidden=&quot;true
           alt=&quot;Cross Join tout sélectionner&quot;
           title=&quot;Cross Join tout sélectionner&quot;
           loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         /&gt;
       &lt;/picture&gt;
   &lt;/a&gt;
@@ -5494,6 +5510,7 @@ down /etc/openvpn/update-resolv-conf&lt;/code&gt;&lt;span aria-hidden=&quot;true
           alt=&quot;crossjoinpart&quot;
           title=&quot;crossjoinpart&quot;
           loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         /&gt;
       &lt;/picture&gt;
   &lt;/a&gt;
@@ -5538,6 +5555,7 @@ down /etc/openvpn/update-resolv-conf&lt;/code&gt;&lt;span aria-hidden=&quot;true
           alt=&quot;crossjoinpart2&quot;
           title=&quot;crossjoinpart2&quot;
           loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         /&gt;
       &lt;/picture&gt;
   &lt;/a&gt;
@@ -5584,6 +5602,7 @@ down /etc/openvpn/update-resolv-conf&lt;/code&gt;&lt;span aria-hidden=&quot;true
           alt=&quot;Inner join&quot;
           title=&quot;Inner join&quot;
           loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         /&gt;
       &lt;/picture&gt;
   &lt;/a&gt;
@@ -5630,6 +5649,7 @@ down /etc/openvpn/update-resolv-conf&lt;/code&gt;&lt;span aria-hidden=&quot;true
           alt=&quot;innerexample&quot;
           title=&quot;innerexample&quot;
           loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         /&gt;
       &lt;/picture&gt;
   &lt;/a&gt;
@@ -5677,6 +5697,7 @@ down /etc/openvpn/update-resolv-conf&lt;/code&gt;&lt;span aria-hidden=&quot;true
           alt=&quot;left join&quot;
           title=&quot;left join&quot;
           loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         /&gt;
       &lt;/picture&gt;
   &lt;/a&gt;
@@ -5723,6 +5744,7 @@ down /etc/openvpn/update-resolv-conf&lt;/code&gt;&lt;span aria-hidden=&quot;true
           alt=&quot;leftjoinexample&quot;
           title=&quot;leftjoinexample&quot;
           loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         /&gt;
       &lt;/picture&gt;
   &lt;/a&gt;
@@ -5767,6 +5789,7 @@ down /etc/openvpn/update-resolv-conf&lt;/code&gt;&lt;span aria-hidden=&quot;true
           alt=&quot;Right join&quot;
           title=&quot;Right join&quot;
           loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         /&gt;
       &lt;/picture&gt;
   &lt;/a&gt;
@@ -5813,6 +5836,7 @@ down /etc/openvpn/update-resolv-conf&lt;/code&gt;&lt;span aria-hidden=&quot;true
           alt=&quot;rightjointexample&quot;
           title=&quot;rightjointexample&quot;
           loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         /&gt;
       &lt;/picture&gt;
   &lt;/a&gt;
@@ -5859,6 +5883,7 @@ down /etc/openvpn/update-resolv-conf&lt;/code&gt;&lt;span aria-hidden=&quot;true
           alt=&quot;Full join&quot;
           title=&quot;Full join&quot;
           loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         /&gt;
       &lt;/picture&gt;
   &lt;/a&gt;
@@ -5904,6 +5929,7 @@ down /etc/openvpn/update-resolv-conf&lt;/code&gt;&lt;span aria-hidden=&quot;true
           alt=&quot;fulljoinexample&quot;
           title=&quot;fulljoinexample&quot;
           loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         /&gt;
       &lt;/picture&gt;
   &lt;/a&gt;
@@ -5951,6 +5977,7 @@ down /etc/openvpn/update-resolv-conf&lt;/code&gt;&lt;span aria-hidden=&quot;true
           alt=&quot;union&quot;
           title=&quot;union&quot;
           loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         /&gt;
       &lt;/picture&gt;
   &lt;/a&gt;
@@ -6000,6 +6027,7 @@ down /etc/openvpn/update-resolv-conf&lt;/code&gt;&lt;span aria-hidden=&quot;true
           alt=&quot;orderby&quot;
           title=&quot;orderby&quot;
           loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         /&gt;
       &lt;/picture&gt;
   &lt;/a&gt;
@@ -6043,6 +6071,7 @@ down /etc/openvpn/update-resolv-conf&lt;/code&gt;&lt;span aria-hidden=&quot;true
           alt=&quot;alias&quot;
           title=&quot;alias&quot;
           loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         /&gt;
       &lt;/picture&gt;
   &lt;/a&gt;
@@ -6088,6 +6117,7 @@ down /etc/openvpn/update-resolv-conf&lt;/code&gt;&lt;span aria-hidden=&quot;true
           alt=&quot;alias2&quot;
           title=&quot;alias2&quot;
           loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         /&gt;
       &lt;/picture&gt;
   &lt;/a&gt;
@@ -6198,14 +6228,14 @@ type Wizard &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span
 &lt;/blockquote&gt;
 &lt;p&gt;Cette fonction parcourt la liste des assistants, obtient leur nom et le place dans un nouveau tableau. Le résultat de ceci ressemble à ceci.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-text line-numbers&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;[
-  &amp;quot;Harry Potter&amp;quot;,
-  &amp;quot;Hermione Granger&amp;quot;,
-  &amp;quot;Draco Malfoy&amp;quot;,
-  &amp;quot;Lin Manuel Miranda&amp;quot;,
-  &amp;quot;Taylor Swift&amp;quot;,
-  &amp;quot;Cedric Diggory&amp;quot;,
-  &amp;quot;Sally Perks&amp;quot;,
-  &amp;quot;Luna Lovegood&amp;quot;,
+  &amp;quot;Harry Potter&amp;quot;undefined
+  &amp;quot;Hermione Granger&amp;quot;undefined
+  &amp;quot;Draco Malfoy&amp;quot;undefined
+  &amp;quot;Lin Manuel Miranda&amp;quot;undefined
+  &amp;quot;Taylor Swift&amp;quot;undefined
+  &amp;quot;Cedric Diggory&amp;quot;undefined
+  &amp;quot;Sally Perks&amp;quot;undefined
+  &amp;quot;Luna Lovegood&amp;quot;undefined
   &amp;quot;Cho Chang&amp;quot;
 ];&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Dans cet exemple, nous utilisions une fonction lambda (ou fonction anonyme), mais nous pouvons également utiliser une fonction nommée.&lt;/p&gt;
@@ -6218,15 +6248,15 @@ type Wizard &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span
 &lt;/blockquote&gt;
 &lt;p&gt;Dans cet exemple, nous avons une fonction appelée &lt;code&gt;wizardToString&lt;/code&gt; que nous transmettons directement au map. Il retournera alors une nouvelle liste qui ressemble à ceci.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-text line-numbers&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;[
-  &amp;quot;Harry Potter, Gryffindor, 40&amp;quot;,
-  &amp;quot;Hermione Granger, Gryffindor, 140&amp;quot;,
-  &amp;quot;Draco Malfoy, Slytherin, -20&amp;quot;,
-  &amp;quot;Lin Manuel Miranda, Slytherin, 5000&amp;quot;,
-  &amp;quot;Taylor Swift, Slytherin, 100&amp;quot;,
-  &amp;quot;Cedric Diggory, Hufflepuff, 12&amp;quot;,
-  &amp;quot;Sally Perks, Hufflepuff, 15&amp;quot;,
-  &amp;quot;Luna Lovegood, Ravenclaw, 100&amp;quot;,
-  &amp;quot;Cho Chang, Ravenclaw, 100&amp;quot;
+  &amp;quot;Harry Potterundefined Gryffindorundefined 40&amp;quot;undefined
+  &amp;quot;Hermione Grangerundefined Gryffindorundefined 140&amp;quot;undefined
+  &amp;quot;Draco Malfoyundefined Slytherinundefined -20&amp;quot;undefined
+  &amp;quot;Lin Manuel Mirandaundefined Slytherinundefined 5000&amp;quot;undefined
+  &amp;quot;Taylor Swiftundefined Slytherinundefined 100&amp;quot;undefined
+  &amp;quot;Cedric Diggoryundefined Hufflepuffundefined 12&amp;quot;undefined
+  &amp;quot;Sally Perksundefined Hufflepuffundefined 15&amp;quot;undefined
+  &amp;quot;Luna Lovegoodundefined Ravenclawundefined 100&amp;quot;undefined
+  &amp;quot;Cho Changundefined Ravenclawundefined 100&amp;quot;
 ];&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h2&gt;Filter&lt;/h2&gt;
 &lt;p&gt;Le &lt;code&gt;filter&lt;/code&gt; se comporte comme un &lt;code&gt;map&lt;/code&gt; dans la mesure où il itère sur la liste, mais au lieu de transformer chaque élément, il transforme la liste entière. Le filter prend une fonction qui renvoie &lt;em&gt;true&lt;/em&gt; ou &lt;em&gt;false&lt;/em&gt; ou un &lt;em&gt;prédicat&lt;/em&gt;. Il renvoie ensuite une nouvelle liste avec des éléments où le prédicat renvoie &lt;code&gt;true&lt;/code&gt;. Regardons un exemple.&lt;/p&gt;
@@ -6236,9 +6266,9 @@ type Wizard &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span
 &lt;/blockquote&gt;
 &lt;p&gt;Dans cet exemple, nous filtrons par-dessus la liste et n’incluons que les sorciers qui se trouvent dans la maison Serpentard. Le résultat serait ceci.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-text line-numbers&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;[
-  { name: &amp;quot;Draco Malfoy&amp;quot;, house: &amp;quot;Slytherin&amp;quot;, points: -20 },
-  { name: &amp;quot;Lin Manuel Miranda&amp;quot;, house: &amp;quot;Slytherin&amp;quot;, points: 5000 },
-  { name: &amp;quot;Taylor Swift&amp;quot;, house: &amp;quot;Slytherin&amp;quot;, points: 100 }
+  { name: &amp;quot;Draco Malfoy&amp;quot;undefined house: &amp;quot;Slytherin&amp;quot;undefined points: -20 }undefined
+  { name: &amp;quot;Lin Manuel Miranda&amp;quot;undefined house: &amp;quot;Slytherin&amp;quot;undefined points: 5000 }undefined
+  { name: &amp;quot;Taylor Swift&amp;quot;undefined house: &amp;quot;Slytherin&amp;quot;undefined points: 100 }
 ];&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;En passant, Taylor et Lin sont deux des Serpentards les plus acclamés de notre époque.&lt;/p&gt;
 &lt;p&gt;Comme avec map, nous n’avons pas besoin d’utiliser un lambda , nous pouvons également utiliser une fonction prédéfinie.&lt;/p&gt;
@@ -6255,11 +6285,11 @@ type Wizard &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span
 &lt;/blockquote&gt;
 &lt;p&gt;Dans cet exemple, nous faisons deux listes, la liste des Serpentards ayant gagné des points (gagnants) et la liste des Serpentards ayant perdu des points (perdants). Nous pouvons voir ces résultats ci-dessous.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-text line-numbers&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;const winnersResult = [
-  { name: &amp;quot;Lin Manuel Miranda&amp;quot;, house: &amp;quot;Slytherin&amp;quot;, points: 5000 },
-  { name: &amp;quot;Taylor Swift&amp;quot;, house: &amp;quot;Slytherin&amp;quot;, points: 100 }
+  { name: &amp;quot;Lin Manuel Miranda&amp;quot;undefined house: &amp;quot;Slytherin&amp;quot;undefined points: 5000 }undefined
+  { name: &amp;quot;Taylor Swift&amp;quot;undefined house: &amp;quot;Slytherin&amp;quot;undefined points: 100 }
 ];
 const losersResult = [
-  { name: &amp;quot;Draco Malfoy&amp;quot;, house: &amp;quot;Slytherin&amp;quot;, points: -20 }
+  { name: &amp;quot;Draco Malfoy&amp;quot;undefined house: &amp;quot;Slytherin&amp;quot;undefined points: -20 }
 ];&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h2&gt;Reduce&lt;/h2&gt;
 &lt;p&gt;Nous arrivons maintenant à la fonction la plus intéressante, reduce. Reduce itère sur une liste et produit une valeur unique. Regardons un exemple.&lt;/p&gt;
@@ -6283,9 +6313,9 @@ const losersResult = [
 &lt;/blockquote&gt;
 &lt;p&gt;Dans ce cas, nous initialisons notre accumulateur ou &lt;code&gt;acc&lt;/code&gt; avec &lt;code&gt;{}&lt;/code&gt;. Ensuite, pour chaque assistant, nous appelons une fonction qui ajoute le nombre de points qu’il a gagnés pour sa maison. Si vous êtes curieux, ce résultat ressemble à ceci.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-text line-numbers&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;{
-  Gryffindor: 180,
-  Slytherin: 5080,
-  Hufflepuff: 27,
+  Gryffindor: 180undefined
+  Slytherin: 5080undefined
+  Hufflepuff: 27undefined
   Ravenclaw: 200
 };&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Regardons un autre exemple, disons que nous voulons le meilleur assistant pour chaque maison. Nous pouvons modifier notre fonction précédente pour utiliser le meilleur assistant pour chaque maison.&lt;/p&gt;
@@ -6303,10 +6333,10 @@ const losersResult = [
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Si vous êtes curieux, le résultat est le suivant.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-text line-numbers&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;{
-  Gryffindor: { name: &amp;quot;Hermione Granger&amp;quot;, house: &amp;quot;Gryffindor&amp;quot;, points: 140 },
-  Slytherin: { name: &amp;quot;Lin Manuel Miranda&amp;quot;, house: &amp;quot;Slytherin&amp;quot;, points: 5000 },
-  Hufflepuff: { name: &amp;quot;Sally Perks&amp;quot;, house: &amp;quot;Hufflepuff&amp;quot;, points: 15 },
-  Ravenclaw: { name: &amp;quot;Luna Lovegood&amp;quot;, house: &amp;quot;Ravenclaw&amp;quot;, points: 100 }
+  Gryffindor: { name: &amp;quot;Hermione Granger&amp;quot;undefined house: &amp;quot;Gryffindor&amp;quot;undefined points: 140 }undefined
+  Slytherin: { name: &amp;quot;Lin Manuel Miranda&amp;quot;undefined house: &amp;quot;Slytherin&amp;quot;undefined points: 5000 }undefined
+  Hufflepuff: { name: &amp;quot;Sally Perks&amp;quot;undefined house: &amp;quot;Hufflepuff&amp;quot;undefined points: 15 }undefined
+  Ravenclaw: { name: &amp;quot;Luna Lovegood&amp;quot;undefined house: &amp;quot;Ravenclaw&amp;quot;undefined points: 100 }
 };&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Juste un peu plus de plaisir maintenant, nous pouvons utiliser &lt;code&gt;Object.values&lt;/code&gt; pour transformer cet map.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-js line-numbers&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; bestNamesPerHouse &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; Object&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;values&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;bestPerHouse&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;wizardToString&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
@@ -6394,6 +6424,7 @@ const losersResult = [
           alt=&quot;Déploiement continu&quot;
           title=&quot;Déploiement continu&quot;
           loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         /&gt;
       &lt;/picture&gt;
   &lt;/a&gt;
@@ -6438,6 +6469,7 @@ const losersResult = [
           alt=&quot;Avant le déploiement Blue-Green&quot;
           title=&quot;Avant le déploiement Blue-Green&quot;
           loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         /&gt;
       &lt;/picture&gt;
   &lt;/a&gt;
@@ -6479,6 +6511,7 @@ const losersResult = [
           alt=&quot;Après le déploiement Blue-Green&quot;
           title=&quot;Après le déploiement Blue-Green&quot;
           loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         /&gt;
       &lt;/picture&gt;
   &lt;/a&gt;
@@ -6528,6 +6561,7 @@ const losersResult = [
           alt=&quot;Déploiement canari&quot;
           title=&quot;Déploiement canari&quot;
           loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         /&gt;
       &lt;/picture&gt;
   &lt;/a&gt;
@@ -6601,6 +6635,7 @@ const losersResult = [
           alt=&quot;Répertoire Git Hooks&quot;
           title=&quot;Répertoire Git Hooks&quot;
           loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         /&gt;
       &lt;/picture&gt;
   &lt;/a&gt;
@@ -6731,14 +6766,14 @@ smb: \&amp;gt;&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;lin
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-text line-numbers&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;~$ docker swarm init --advertise-addr 10.133.7.100 
 Swarm initialized: current node (abcdefghijklmnopqrstuvwxy) is now a manager.
 
-To add a worker to this swarm, run the following command:
+To add a worker to this swarmundefined run the following command:
 
 docker swarm join --token SWMTKN-1-abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwx-abcdefghijklmnopqrstuvwxy 10.133.7.100:2377
 
-To add a manager to this swarm, run &amp;#39;docker swarm join-token manager&amp;#39; and follow the instructions.&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+To add a manager to this swarmundefined run &amp;#39;docker swarm join-token manager&amp;#39; and follow the instructions.&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;C’est tout: le moteur Docker tourne maintenant en mode Swarm.&lt;/p&gt;
 &lt;p&gt;Ensuite, j’ai déployé un registre privé Docker afin que les autres noeuds puissent extraire des images, en suivant à nouveau les &lt;a href=&quot;https://docs.docker.com/engine/swarm/stack-deploy/#set-up-a-docker-registry&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;instructions d’installation&lt;/a&gt;:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-text line-numbers&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;docker service create --name registry --publish published=5000,target=5000 registry:2&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-text line-numbers&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;docker service create --name registry --publish published=5000undefinedtarget=5000 registry:2&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h2&gt;Déploiement de l’application&lt;/h2&gt;
 &lt;p&gt;Docker Swarm utilise le format &lt;a href=&quot;https://docs.docker.com/compose/overview/&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;Docker Compose&lt;/a&gt; pour spécifier les conteneurs à exécuter et les ports qu’ils exportent.&lt;/p&gt;
 &lt;p&gt;Après le &lt;a href=&quot;https://docs.docker.com/compose/gettingstarted/#step-3-define-services-in-a-compose-file&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;didacticiel Docker Compose&lt;/a&gt;, j’ai créé ce manifeste Docker Compose:&lt;/p&gt;
@@ -6821,7 +6856,7 @@ root@dora:~# systemctl restart kubelet.service&lt;/code&gt;&lt;span aria-hidden=
 &lt;p&gt;Les options &lt;code&gt;--apiserver-advertise-address&lt;/code&gt; et &lt;code&gt;--apiserver-cert-extra-sans&lt;/code&gt; ont été ajoutées à cause d’un problème particulier dans l’installation de VirtualBox: la carte virtuelle principale des machines virtuelles (IP 10.0.2.15) ne peut accéder qu’à l’Internet. J’ai dû préciser que d’autres noeuds doivent accéder au maître à l’aide de l’adresse IP 10.133.7.100.&lt;/p&gt;
 &lt;p&gt;Après avoir exécuté cette commande, Kubeadm a affiché quelques instructions:&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-text line-numbers&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;Your Kubernetes master has initialized successfully!
-To start using your cluster, you need to run the following as a regular user:
+To start using your clusterundefined you need to run the following as a regular user:
 
 mkdir -p $HOME/.kube
 sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
@@ -7157,6 +7192,7 @@ $ &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&
           alt=&quot;15314221531955&quot;
           title=&quot;15314221531955&quot;
           loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         /&gt;
       &lt;/picture&gt;
   &lt;/a&gt;
@@ -7207,6 +7243,7 @@ $ &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&
           alt=&quot;15314221815702&quot;
           title=&quot;15314221815702&quot;
           loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         /&gt;
       &lt;/picture&gt;
   &lt;/a&gt;
@@ -7252,6 +7289,7 @@ $ &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&
           alt=&quot;15314221922744&quot;
           title=&quot;15314221922744&quot;
           loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         /&gt;
       &lt;/picture&gt;
   &lt;/a&gt;
@@ -7298,6 +7336,7 @@ $ &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&
           alt=&quot;15314222044035&quot;
           title=&quot;15314222044035&quot;
           loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         /&gt;
       &lt;/picture&gt;
   &lt;/a&gt;
@@ -7343,6 +7382,7 @@ $ &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&
           alt=&quot;flex direction row&quot;
           title=&quot;flex direction row&quot;
           loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         /&gt;
       &lt;/picture&gt;
   &lt;/a&gt;
@@ -7385,6 +7425,7 @@ $ &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&
           alt=&quot;15314222323110&quot;
           title=&quot;15314222323110&quot;
           loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         /&gt;
       &lt;/picture&gt;
   &lt;/a&gt;
@@ -7430,6 +7471,7 @@ $ &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&
           alt=&quot;15314222381066&quot;
           title=&quot;15314222381066&quot;
           loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         /&gt;
       &lt;/picture&gt;
   &lt;/a&gt;
@@ -7475,6 +7517,7 @@ $ &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&
           alt=&quot;15314222496092&quot;
           title=&quot;15314222496092&quot;
           loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         /&gt;
       &lt;/picture&gt;
   &lt;/a&gt;
@@ -7517,6 +7560,7 @@ $ &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&
           alt=&quot;15314222567787&quot;
           title=&quot;15314222567787&quot;
           loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         /&gt;
       &lt;/picture&gt;
   &lt;/a&gt;
@@ -7561,6 +7605,7 @@ $ &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&
           alt=&quot;15314222854358&quot;
           title=&quot;15314222854358&quot;
           loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         /&gt;
       &lt;/picture&gt;
   &lt;/a&gt;
@@ -7604,6 +7649,7 @@ $ &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&
           alt=&quot;15314222935771&quot;
           title=&quot;15314222935771&quot;
           loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         /&gt;
       &lt;/picture&gt;
   &lt;/a&gt;
@@ -7648,6 +7694,7 @@ $ &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&
           alt=&quot;15314222996390&quot;
           title=&quot;15314222996390&quot;
           loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         /&gt;
       &lt;/picture&gt;
   &lt;/a&gt;
@@ -7693,6 +7740,7 @@ $ &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&
           alt=&quot;15314223071439&quot;
           title=&quot;15314223071439&quot;
           loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         /&gt;
       &lt;/picture&gt;
   &lt;/a&gt;
@@ -7736,6 +7784,7 @@ $ &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&
           alt=&quot;15314223197263&quot;
           title=&quot;15314223197263&quot;
           loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         /&gt;
       &lt;/picture&gt;
   &lt;/a&gt;
@@ -7782,6 +7831,7 @@ $ &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&
           alt=&quot;15314815802685&quot;
           title=&quot;15314815802685&quot;
           loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         /&gt;
       &lt;/picture&gt;
   &lt;/a&gt;
@@ -7831,6 +7881,7 @@ $ &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&
           alt=&quot;15314223335135&quot;
           title=&quot;15314223335135&quot;
           loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         /&gt;
       &lt;/picture&gt;
   &lt;/a&gt;
@@ -7875,6 +7926,7 @@ $ &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&
           alt=&quot;15314223514996&quot;
           title=&quot;15314223514996&quot;
           loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         /&gt;
       &lt;/picture&gt;
   &lt;/a&gt;
@@ -7920,6 +7972,7 @@ $ &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&
           alt=&quot;15314223629978&quot;
           title=&quot;15314223629978&quot;
           loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         /&gt;
       &lt;/picture&gt;
   &lt;/a&gt;
@@ -7968,6 +8021,7 @@ $ &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&
           alt=&quot;15314236292664&quot;
           title=&quot;15314236292664&quot;
           loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         /&gt;
       &lt;/picture&gt;
   &lt;/a&gt;
@@ -8015,6 +8069,7 @@ $ &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&
           alt=&quot;15314236681469&quot;
           title=&quot;15314236681469&quot;
           loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         /&gt;
       &lt;/picture&gt;
   &lt;/a&gt;
@@ -8065,6 +8120,7 @@ $ &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&
           alt=&quot;15314237212173&quot;
           title=&quot;15314237212173&quot;
           loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         /&gt;
       &lt;/picture&gt;
   &lt;/a&gt;
@@ -8112,6 +8168,7 @@ $ &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&
           alt=&quot;15314224014856&quot;
           title=&quot;15314224014856&quot;
           loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         /&gt;
       &lt;/picture&gt;
   &lt;/a&gt;
@@ -8157,6 +8214,7 @@ $ &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&
           alt=&quot;15314224076177&quot;
           title=&quot;15314224076177&quot;
           loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         /&gt;
       &lt;/picture&gt;
   &lt;/a&gt;
@@ -8206,6 +8264,7 @@ $ &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&
           alt=&quot;15314223926451&quot;
           title=&quot;15314223926451&quot;
           loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         /&gt;
       &lt;/picture&gt;
   &lt;/a&gt;
@@ -8254,6 +8313,7 @@ $ &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&
           alt=&quot;15314239254436&quot;
           title=&quot;15314239254436&quot;
           loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         /&gt;
       &lt;/picture&gt;
   &lt;/a&gt;
@@ -8297,6 +8357,7 @@ $ &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&
           alt=&quot;15314224155902&quot;
           title=&quot;15314224155902&quot;
           loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         /&gt;
       &lt;/picture&gt;
   &lt;/a&gt;
@@ -8343,6 +8404,7 @@ $ &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&
           alt=&quot;15314224258603&quot;
           title=&quot;15314224258603&quot;
           loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         /&gt;
       &lt;/picture&gt;
   &lt;/a&gt;
@@ -8392,6 +8454,7 @@ $ &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&
           alt=&quot;Virtual Machines vs Containers&quot;
           title=&quot;Virtual Machines vs Containers&quot;
           loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         /&gt;
       &lt;/picture&gt;
   &lt;/a&gt;
