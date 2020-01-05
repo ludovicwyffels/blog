@@ -1,6 +1,5 @@
 export interface WebsiteConfig {
   title: string;
-  siteTitle: string;
   description: string;
   coverImage: string;
   logo: string;
@@ -13,10 +12,22 @@ export interface WebsiteConfig {
    * blog full path, no ending slash!
    */
   siteUrl: string;
+  /**
+   * full url, no username
+   */
   facebook?: string;
-  github?: string;
-  gitlab?: string;
+  /**
+   * full url, no username
+   */
   twitter?: string;
+  /**
+   * full url, no username
+   */
+  github?: string;
+  /**
+   * full url, no username
+   */
+  gitlab?: string;
   /**
    * hide or show all email subscribe boxes
    */
@@ -29,22 +40,38 @@ export interface WebsiteConfig {
    * this is the hidden input field name
    */
   mailchimpName?: string;
+  /**
+   * name and id of the mailchimp email field
+   */
+  mailchimpEmailFieldName?: string;
+  /**
+   * Meta tag for Google Webmaster Tools
+   */
+  googleSiteVerification?: string;
+  /**
+   * Appears alongside the footer, after the credits
+   */
+  footer?: string;
 }
 
 const config: WebsiteConfig = {
   title: 'Code avec Ludo',
-  siteTitle: 'Code avec Ludo',
-  description: 'Trouvez des articles et des tutoriels sur Node, Angular, intégration continue, docker, et plus ...',
+  description:
+    'Trouvez des articles et des tutoriels sur Node, Angular, intégration continue, docker, et plus ...',
   coverImage: 'img/blog-cover.jpg',
   logo: 'img/ghost-logo.png',
   lang: 'fr',
   siteUrl: 'https://ludovicwyffels.github.io',
+  // facebook: 'https://www.facebook.com/ghost',
+  // twitter: 'https://twitter.com/tryghost',
   github: 'https://github.com/ludovicwyffels',
-  gitlab: 'https://gitlab.com/ludovic.wyffels',
-  // twitter: 'https://twitter.com/WYFFELSLudovic',
   showSubscribe: false,
-  // mailchimpAction: 'https://softwareontheroad.us20.list-manage.com/subscribe/post?u=337d8675485234c707e63777d&amp;id=14f1331817',
-  // mailchimpName: 'b_a81b6927ac288c81b0b7f3a0f_7d717b7d75',
+  // mailchimpAction:
+  //   'https://twitter.us19.list-manage.com/subscribe/post?u=a89b6987ac248c81b0b7f3a0f&amp;id=7d777b7d75',
+  // mailchimpName: 'b_a89b6987ac248c81b0b7f3a0f_7d777b7d75',
+  // mailchimpEmailFieldName: 'MERGE0',
+  googleSiteVerification: 'GoogleCode',
+  // footer: 'is based on Gatsby Casper',
 };
 
 export default config;

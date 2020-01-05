@@ -1,16 +1,41 @@
 const path = require('path');
+const cssnano = require('css-mqpacker');
+const autoprefixer = require('autoprefixer');
+const mqPacker = require('css-mqpacker');
 
 module.exports = {
   siteMetadata: {
     title: 'Software on the road',
     description: '',
-    author: `@ludo`,
     siteUrl: 'https://ludovicwyffels.dev', // full path to blog - no ending slash
   },
   mapping: {
     'MarkdownRemark.frontmatter.author': 'AuthorYaml',
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-sass`,
+      // options: {
+      //   postCssPlugins: [
+      //     autoprefixer(),
+      //     // cssnano({
+      //     //   preset: [
+      //     //     'default',
+      //     //     {
+      //     //       autoprefixer: true,
+      //     //       discardUnused: true,
+      //     //       mergeIdents: true,
+      //     //       zindex: true,
+      //     //     },
+      //     //   ],
+      //     // }),
+      //     // mqPacker({
+      //     //   sort: true,
+      //     // }),
+      //   ],
+      // },
+    },
+    'gatsby-plugin-sitemap',
     'gatsby-plugin-sharp',
     {
       resolve: 'gatsby-source-filesystem',
@@ -22,7 +47,7 @@ module.exports = {
     {
       resolve: 'gatsby-transformer-remark',
       options: {
-        "excerpt_separator": `<!-- end -->`,
+        excerpt_separator: `<!-- end -->`,
         plugins: [
           {
             resolve: 'gatsby-remark-responsive-iframe',
@@ -31,11 +56,11 @@ module.exports = {
             },
           },
           {
-            resolve: "gatsby-remark-embed-gist",
+            resolve: 'gatsby-remark-embed-gist',
             options: {
               // the github handler whose gists are to be accessed
               username: 'ludovicwyffels',
-            }
+            },
           },
           {
             resolve: `gatsby-remark-prismjs`,
@@ -47,7 +72,7 @@ module.exports = {
               // you may use this to prevent Prism from re-processing syntax.
               // This is an uncommon use-case though;
               // If you're unsure, it's best to use the default value.
-              classPrefix: "language-",
+              classPrefix: 'language-',
               // This is used to allow setting a language for inline code
               // (i.e. single backticks) by creating a separator.
               // This separator is a string and will do no white-space
@@ -81,15 +106,15 @@ module.exports = {
             options: {
               maxWidth: 1170,
               quality: 80,
-              withWebp: true
+              withWebp: true,
             },
           },
           {
-            resolve: "gatsby-remark-external-links",
+            resolve: 'gatsby-remark-external-links',
             options: {
-              target: "_blank",
-            }
-          }
+              target: '_blank',
+            },
+          },
         ],
       },
     },
@@ -107,21 +132,15 @@ module.exports = {
     'gatsby-transformer-yaml',
     'gatsby-plugin-feed',
     {
-      resolve: 'gatsby-plugin-postcss',
-      options: {
-        postCssPlugins: [require('postcss-color-function'), require('cssnano')()],
-      },
-    },
-    {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: 'UA-138733938-1',
         // Puts tracking script in the head instead of the body
         head: true,
         // IP anonymization for GDPR compliance
-        anonymize: false,
+        anonymize: true,
         // Disable analytics for users with `Do Not Track` enabled
-        respectDNT: false,
+        respectDNT: true,
         // Avoids sending pageview hits from custom paths
         exclude: ['/preview/**'],
         // Specifies what percentage of users should be tracked
@@ -132,6 +151,6 @@ module.exports = {
     },
     'gatsby-plugin-catch-links',
     'gatsby-plugin-sitemap',
-    `gatsby-plugin-netlify`
+    `gatsby-plugin-netlify`,
   ],
-}
+};

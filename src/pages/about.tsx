@@ -1,29 +1,23 @@
 import IndexLayout from '../layouts';
-import Wrapper from '../components/Wrapper';
-import SiteNav from '../components/header/SiteNav';
+import Wrapper from '../components/wrapper/wrapper';
+import SiteNav from '../components/header/siteNav/siteNav';
 import { SiteHeader, outer, inner, SiteMain } from '../styles/shared';
 import * as React from 'react';
-import { css } from '@emotion/core';
 
 import { PostFullHeader, PostFullTitle, NoImage, PostFull } from '../templates/post';
-import { PostFullContent } from '../components/PostContent';
-import Footer from '../components/Footer';
+import { PostFullContent } from '../components/postContent/postContent';
+import Footer from '../components/footer/footer';
 import Helmet from 'react-helmet';
 
-const PageTemplate = css`
-  .site-main {
-    background: #fff;
-    padding-bottom: 4vw;
-  }
-`;
+import '../components/postContent/postContent.scss'
+import style from './about.module.scss';
 
-
-const About: React.FunctionComponent = () => (
+const About: React.FC = () => (
   <IndexLayout>
     <Helmet>
-      <title>About</title>
+      <title>A propos</title>
     </Helmet>
-    <Wrapper css={PageTemplate}>
+    <Wrapper css={style}>
       <header css={[outer, SiteHeader]}>
         <div css={inner}>
           <SiteNav />
@@ -31,11 +25,11 @@ const About: React.FunctionComponent = () => (
       </header>
       <main id="site-main" className="site-main" css={[SiteMain, outer]}>
         <article className="post page" css={[PostFull, NoImage]}>
-        <PostFullHeader>
-            <PostFullTitle>Bonjour tout le monde. C'est Ludovic</PostFullTitle>
+          <PostFullHeader>
+            <PostFullTitle>A propos</PostFullTitle>
           </PostFullHeader>
 
-          <PostFullContent className="post-full-content">
+          <section className="post-full-content PostFullContent">
             <div className="post-content">
               <p>
                 Dans mes cinq années d'expérience en tant que développeur de logiciel, j'ai travaillé pour une startup pendant 2 ans, en tant que développeur mobile. J'ai eu la chance d'expérimenter ce qu'est écrire un MVP puis le réécrire en utilisant les meilleurs pratiques du marché tout en ayant à le faire évoluer, tel que du Node.js et du AWS.
@@ -49,23 +43,23 @@ const About: React.FunctionComponent = () => (
                   Mes compétences vont du fullstack javascript au devops.
                 </div>
               </p>
-              <p> 
-              Ma vision pour ce blog est d'être une source de connaissances pour plusieurs sujet de développement de logiciel principalement javascript, node.js, typescript, cloud computing, AWS, GCP, intégration continue et livraison continue.
+              <p>
+                Ma vision pour ce blog est d'être une source de connaissances pour plusieurs sujet de développement de logiciel principalement javascript, node.js, typescript, cloud computing, AWS, GCP, intégration continue et livraison continue.
               </p>
-              <p> 
+              <p>
                 Si vous voulez en savoir plus sur mon expérience professionnelle antérieure, consultez mon profil <a href="https://www.linkedin.com/in/ludovicwyffels/">LinkedIn</a>.
               </p>
-              <p> 
+              <p>
                 Ce blog est Open Source, donc si vous pensez que quelque chose peut être amélioré, ouvrez simplement une issue ou une pull request.
               </p>
-              <p> 
-              J'espère que vous trouverez ce blog utile.
+              <p>
+                J'espère que vous trouverez ce blog utile.
               </p>
-              <p> 
-              Ludovic Wyffels
+              <p>
+                Ludovic Wyffels
               </p>
             </div>
-          </PostFullContent>
+          </section>
         </article>
       </main>
       <Footer />

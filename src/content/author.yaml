@@ -1,10 +1,9 @@
 - id: ludo
-  name: Wyffels Ludovic
+  name: Ludovic Wyffels
   avatar: avatars/ghost.png
   bio: "Développeur senior. Fullstack + DevOps"
   twitter: WYFFELSLudovic
-  facebook: ludovicwyffels
   github: ludovicwyffels
-  website: https://ludovicwyffels.github.io
+  website: https://ludovicwyffels.dev
   location: Comines, Belgique
-  profile_image: avatars/ghost.png
+  profile_image: img/blog-cover.jpg

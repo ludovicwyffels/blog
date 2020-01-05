@@ -3,11 +3,10 @@ import React from 'react';
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 
-import Footer from '../components/Footer';
-import SiteNav from '../components/header/SiteNav';
-import Pagination from '../components/pagination/Pagination';
-import PostCard from '../components/PostCard';
-import Wrapper from '../components/Wrapper';
+import Footer from '../components/footer/footer';
+import SiteNav from '../components/header/siteNav/siteNav';
+import PostCard from '../components/postCard/postCard';
+import Wrapper from '../components/wrapper/wrapper';
 import IndexLayout from '../layouts';
 import {
   AuthorProfileImage,
@@ -24,8 +23,8 @@ import {
 import { PageContext } from './post';
 import Helmet from 'react-helmet';
 import config from '../website-config';
+import Website from '../components/icons/website';
 import Twitter from '../components/icons/twitter';
-import Github from '../components/icons/github';
 
 const HiddenMobile = css`
   @media (max-width: 500px) {
@@ -76,12 +75,7 @@ interface AuthorTemplateProps {
     slug: string;
   };
   pageContext: {
-    authorId: string;
-    currentPage: number;
-    isCreatedByStatefulCreatePages: boolean;
-    limit: number;
-    numPages: number;
-    skip: number;
+    author: string;
   };
   data: {
     logo: {
@@ -100,9 +94,8 @@ interface AuthorTemplateProps {
       name: string;
       website?: string;
       twitter?: string;
-      facebook?: string;
-      github?: string;
       location?: string;
+      // eslint-disable-next-line @typescript-eslint/camelcase
       profile_image?: {
         childImageSharp: {
           fluid: any;
@@ -118,34 +111,32 @@ interface AuthorTemplateProps {
   };
 }
 
-const Author: React.FunctionComponent<AuthorTemplateProps> = props => {
+const Author: React.FC<AuthorTemplateProps> = props => {
   const author = props.data.authorYaml;
-  const { authorId } = props.pageContext
+
   const edges = props.data.allMarkdownRemark.edges.filter(
-    (edge) => {
+    edge => {
       const isDraft = (edge.node.frontmatter.draft !== true ||
-        process.env.NODE_ENV === 'development')
-      return isDraft && edge.node.frontmatter.author && edge.node.frontmatter.author.id === author.id
+        process.env.NODE_ENV === 'development');
+      return isDraft && edge.node.frontmatter.author && edge.node.frontmatter.author.id === author.id;
     }
   );
-  const { totalCount } = props.data.allMarkdownRemark;
+  const totalCount = edges.length;
 
   return (
     <IndexLayout>
       <Helmet>
         <html lang={config.lang} />
         <title>
-          {author.id} - {config.siteTitle}
+          {author.name} - {config.title}
         </title>
         <meta name="description" content={author.bio} />
-        <meta property="og:site_name" content={config.siteTitle} />
+        <meta property="og:site_name" content={config.title} />
         <meta property="og:type" content="profile" />
-        <meta property="og:title" content={`${author.id} - ${config.siteTitle}`} />
+        <meta property="og:title" content={`${author.name} - ${config.title}`} />
         <meta property="og:url" content={config.siteUrl + props.pathContext.slug} />
-        <meta property="article:publisher" content="https://www.facebook.com/santypk4" />
-        <meta property="article:author" content="https://www.facebook.com/santypk4" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content={`${author.id} - ${config.title}`} />
+        <meta name="twitter:title" content={`${author.name} - ${config.title}`} />
         <meta name="twitter:url" content={config.siteUrl + props.pathContext.slug} />
         {config.twitter && (
           <meta
@@ -159,17 +150,17 @@ const Author: React.FunctionComponent<AuthorTemplateProps> = props => {
             content={`@${config.twitter.split('https://twitter.com/')[1]}`}
           />
         )}
-        {config.github && (
-          <meta
-            name="github:site"
-            content={`@${config.github.split('https://github.com/')[1]}`}
-          />
-        )}
       </Helmet>
       <Wrapper>
         <header
           className="no-cover"
           css={[outer, SiteHeader]}
+          style={{
+            // eslint-disable-next-line @typescript-eslint/camelcase
+            backgroundImage: author.profile_image ?
+              `url(${author.profile_image.childImageSharp.fluid.src})` :
+              '',
+          }}
         >
           <div css={inner}>
             <SiteNav isHome={false} />
@@ -179,19 +170,33 @@ const Author: React.FunctionComponent<AuthorTemplateProps> = props => {
                 src={props.data.authorYaml.avatar.childImageSharp.fluid.src}
                 alt={author.id}
               />
-              <SiteTitle>{author.name} </SiteTitle>
+              <SiteTitle>{author.name}</SiteTitle>
               {author.bio && <AuthorBio>{author.bio}</AuthorBio>}
               <AuthorMeta>
                 {author.location && (
                   <div css={HiddenMobile}>
-                    📍 {author.location} <Bull>&bull;</Bull>
+                    {author.location} <Bull>&bull;</Bull>
                   </div>
                 )}
                 <div css={HiddenMobile}>
                   {totalCount > 1 && `${totalCount} posts`}
-                  {totalCount === 1 && `1 post`}
-                  {totalCount === 0 && `No posts`} <Bull>•</Bull>
+                  {totalCount === 1 && '1 post'}
+                  {totalCount === 0 && 'No posts'} <Bull>•</Bull>
                 </div>
+                {author.website && (
+                  <div>
+                    <a
+                      className="social-link-wb"
+                      css={SocialLink}
+                      href={author.website}
+                      title="Website"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Website />
+                    </a>
+                  </div>
+                )}
                 {author.twitter && (
                   <a
                     className="social-link-tw"
@@ -204,18 +209,22 @@ const Author: React.FunctionComponent<AuthorTemplateProps> = props => {
                     <Twitter />
                   </a>
                 )}
-                {author.github && (
-                  <a
-                    className="social-link-gh"
-                    css={SocialLink}
-                    href={`https://github.com/${author.github}`}
-                    title="Github"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                {/* TODO: RSS for author */}
+                {/* <a
+                  css={SocialLink} className="social-link-rss"
+                  href="https://feedly.com/i/subscription/feed/https://demo.ghost.io/author/ghost/rss/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    style={{ height: '1.9rem' }}
                   >
-                    <Github />
-                  </a>
-                )}
+                    <circle cx="6.18" cy="17.82" r="2.18" />
+                    <path d="M4 4.44v2.83c7.03 0 12.73 5.7 12.73 12.73h2.83c0-8.59-6.97-15.56-15.56-15.56zm0 5.66v2.83c3.9 0 7.07 3.17 7.07 7.07h2.83c0-5.47-4.43-9.9-9.9-9.9z" />
+                  </svg>
+                </a> */}
               </AuthorMeta>
             </SiteHeaderContent>
           </div>
@@ -227,7 +236,6 @@ const Author: React.FunctionComponent<AuthorTemplateProps> = props => {
                 return <PostCard key={node.fields.slug} post={node} />;
               })}
             </div>
-            <Pagination pageContext={props.pageContext} baseURL={`/author/${authorId}/`} />
           </div>
         </main>
         <Footer />
@@ -239,14 +247,13 @@ const Author: React.FunctionComponent<AuthorTemplateProps> = props => {
 export default Author;
 
 export const pageQuery = graphql`
-  query($author: String, $limit: Int, $skip: Int) {
+  query($author: String) {
     authorYaml(id: { eq: $author }) {
       id
       name
       website
       twitter
       bio
-      facebook
       location
       profile_image {
         childImageSharp {
@@ -264,20 +271,18 @@ export const pageQuery = graphql`
       }
     }
     allMarkdownRemark(
-      sort: { 
-        fields: [frontmatter___date], order: DESC }
-        limit: $limit,
-        skip: $skip
+      filter: { frontmatter: { draft: { ne: true } } },
+      sort: { fields: [frontmatter___date], order: DESC },
+      limit: 2000,
     ) {
-      totalCount,
       edges {
         node {
           excerpt
           timeToRead
           frontmatter {
             title
-            subtitle
             tags
+            category
             date
             draft
             image {
@@ -289,6 +294,7 @@ export const pageQuery = graphql`
             }
             author {
               id
+              name
               bio
               avatar {
                 children {

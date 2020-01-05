@@ -1,52 +1,14 @@
 import { graphql, Link } from 'gatsby';
 import * as React from 'react';
-import styled from '@emotion/styled';
-import { css } from '@emotion/core';
 
-import SiteNavLogo from '../components/header/SiteNavLogo';
-import PostCard from '../components/PostCard';
-import Wrapper from '../components/Wrapper';
+import SiteNavLogo from '../components/header/siteNavLogo/siteNavLogo';
+import PostCard from '../components/postCard/postCard';
+import Wrapper from '../components/wrapper/wrapper';
 import IndexLayout from '../layouts';
-import { colors } from '../styles/colors';
 import { inner, outer, PostFeed, SiteHeader } from '../styles/shared';
 import { PageContext } from '../templates/post';
-//import Subscribe from '../components/subscribe/Subscribe';
 
-const SiteNavCenter = styled.nav`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-
-  .site-nav-logo {
-    margin-right: 0;
-  }
-`;
-
-const ErrorTemplate = css`
-  padding: 7vw 4vw;
-`;
-
-const ErrorCode = styled.h1`
-  margin: 0;
-  font-size: 12vw;
-  line-height: 1em;
-  letter-spacing: -5px;
-  opacity: 0.3;
-`;
-
-const ErrorDescription = styled.p`
-  margin: 0;
-  color: ${colors.midgrey};
-  font-size: 3rem;
-  line-height: 1.3em;
-  font-weight: 400;
-`;
-
-const ErrorLink = css`
-  display: inline-block;
-  margin-top: 5px;
-`;
+import style from './404.module.scss';
 
 interface NotFoundTemplateProps {
   data: {
@@ -59,7 +21,7 @@ interface NotFoundTemplateProps {
   };
 }
 
-const NotFoundPage: React.FunctionComponent<NotFoundTemplateProps> = props => {
+const NotFoundPage: React.FC<NotFoundTemplateProps> = props => {
   const { edges } = props.data.allMarkdownRemark;
 
   return (
@@ -67,20 +29,19 @@ const NotFoundPage: React.FunctionComponent<NotFoundTemplateProps> = props => {
       <Wrapper>
         <header css={[SiteHeader, outer]}>
           <div className="inner">
-            <SiteNavCenter>
+            <nav className={style.siteNavCenter}>
               <SiteNavLogo />
-            </SiteNavCenter>
+            </nav>
           </div>
         </header>
-        <main id="site-main" css={[ErrorTemplate, outer]}>
+        <main id="site-main" className={style.errorTemplate} css={outer}>
           <div css={inner}>
             <section style={{ textAlign: 'center' }}>
-              <ErrorCode>404</ErrorCode>
-              <ErrorDescription>Page not found</ErrorDescription>
-              <Link css={ErrorLink} to={''}>
+              <h1 className={style.errorCode}>404</h1>
+              <p className={style.errorDescription}>Page not found</p>
+              <Link className={style.errorLink} to="">
                 Go to the front page →
               </Link>
-              {/* <Subscribe color={'white'} /> */}
             </section>
           </div>
         </main>
@@ -110,6 +71,7 @@ export const pageQuery = graphql`
             title
             date
             tags
+            category
             image {
               childImageSharp {
                 fluid(maxWidth: 3720) {
@@ -119,6 +81,7 @@ export const pageQuery = graphql`
             }
             author {
               id
+              name
               bio
               avatar {
                 children {

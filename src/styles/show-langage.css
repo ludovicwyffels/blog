@@ -1,6 +1,0 @@
-div[data-language] {
-  content: attr(data-language);
-  position: relative;
-  top: 0;
-  right: 0;
-}

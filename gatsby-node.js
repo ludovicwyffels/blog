@@ -2,7 +2,14 @@ const path = require('path');
 const _ = require('lodash');
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
-  const { createNodeField } = actions;
+  const { createNodeField, createRedirect } = actions;
+  // create a redirection
+  createRedirect({
+    fromPath: `/author/ludo/`,
+    toPath: `/author/ludovic-wyffels/`,
+    isPermanent: true,
+    statusCode: 200,
+  });
 
   // Sometimes, optional fields tend to get not picked up by the GraphQL
   // interpreter if not a single content uses it. Therefore, we're putting them
@@ -43,15 +50,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 };
 
 exports.createPages = async ({ graphql, actions }) => {
-  const { createPage, createRedirect } = actions;
-
-  // create a redirection
-  createRedirect({
-    fromPath: `/2019-03-01-s3-direct-browser-upload`,
-    toPath: `/aws-s3-secure-direct-upload`,
-    isPermanent: true,
-    statusCode: 200,
-  })
+  const { createPage } = actions;
 
   const result = await graphql(`
     {
@@ -84,6 +83,7 @@ exports.createPages = async ({ graphql, actions }) => {
               }
               author {
                 id
+                name
                 bio
                 avatar {
                   children {
@@ -120,6 +120,24 @@ exports.createPages = async ({ graphql, actions }) => {
 
   // Create post pages
   const posts = result.data.allMarkdownRemark.edges;
+
+  // Create paginated index
+  const postsPerPage = 6;
+  const numPages = Math.ceil(posts.length / postsPerPage);
+
+  Array.from({ length: numPages }).forEach((_, i) => {
+    createPage({
+      path: i === 0 ? '/' : `/${i + 1}`,
+      component: path.resolve('./src/templates/index.tsx'),
+      context: {
+        limit: postsPerPage,
+        skip: i * postsPerPage,
+        numPages,
+        currentPage: i + 1,
+      },
+    });
+  });
+
   posts.forEach(({ node }, index) => {
     const { slug, layout } = node.fields;
     const prev = index === 0 ? null : posts[index - 1].node;
@@ -148,22 +166,6 @@ exports.createPages = async ({ graphql, actions }) => {
     });
   });
 
-  // Create blog-list pages
-  const postsPerPage = 9;
-  const numPages = Math.ceil(posts.length / postsPerPage);
-  Array.from({ length: numPages }).forEach((item, index) => {
-    createPage({
-      path: index === 0 ? `/` : `/page/${index + 1}`,
-      component: path.resolve('./src/templates/blog.tsx'),
-      context: {
-        limit: postsPerPage,
-        skip: index * postsPerPage,
-        numPages,
-        currentPage: index + 1,
-      },
-    })
-  })
-
   // Create tag pages
   const tagTemplate = path.resolve('./src/templates/tags.tsx');
   const tags = _.uniq(
@@ -174,110 +176,71 @@ exports.createPages = async ({ graphql, actions }) => {
     ),
   );
   tags.forEach(tag => {
-    // Pagination
-    graphql(`
-      query {
-        allMarkdownRemark(
-          filter: { frontmatter: { tags: { in: ["${tag}"] }, draft: { ne: true } } }
-        ) {
-          totalCount
-        }
-      }
-    `).then((resultTag) => {
-      const numPages = Math.ceil(resultTag.data.allMarkdownRemark.totalCount / postsPerPage);
-      Array.from({ length: numPages }).forEach((item, index) => {
-        createPage({
-          path: index === 0 ? `/tags/${_.kebabCase(tag)}/` : `/tags/${_.kebabCase(tag)}/page/${index + 1}`,
-          component: tagTemplate,
-          context: {
-            tag,
-            tagURL: _.kebabCase(tag),
-            limit: postsPerPage,
-            skip: index * postsPerPage,
-            numPages,
-            currentPage: index + 1,
-          },
-        })
-      })
+    createPage({
+      path: `/tags/${_.kebabCase(tag)}/`,
+      component: tagTemplate,
+      context: {
+        tag,
+      },
     });
   });
+  // tags.forEach(tag => {
+  //   // Pagination
+  //   graphql(`
+  //     query {
+  //       allMarkdownRemark(
+  //         filter: { frontmatter: { tags: { in: ["${tag}"] }, draft: { ne: true } } }
+  //       ) {
+  //         totalCount
+  //       }
+  //     }
+  //   `).then((resultTag) => {
+  //     const numPages = Math.ceil(resultTag.data.allMarkdownRemark.totalCount / postsPerPage);
+  //     Array.from({ length: numPages }).forEach((item, index) => {
+  //       createPage({
+  //         path: index === 0 ? `/tags/${_.kebabCase(tag)}/` : `/tags/${_.kebabCase(tag)}/page/${index + 1}`,
+  //         component: tagTemplate,
+  //         context: {
+  //           tag,
+  //           tagURL: _.kebabCase(tag),
+  //           limit: postsPerPage,
+  //           skip: index * postsPerPage,
+  //           numPages,
+  //           currentPage: index + 1,
+  //         },
+  //       })
+  //     })
+  //   });
+  // });
 
   // Create category pages
   const categoryTemplate = path.resolve('./src/templates/category.tsx');
   const categories = _.uniq(
-    _.flatten(
-      result.data.allMarkdownRemark.edges.map(edge => {
-        return _.castArray(_.get(edge, 'node.frontmatter.category', []));
-      }),
-    ),
+      _.flatten(
+          result.data.allMarkdownRemark.edges.map(edge => {
+            return _.castArray(_.get(edge, 'node.frontmatter.category', []));
+          }),
+      ),
   );
-  categories.forEach(category => {
-    // Pagination
-    graphql(`
-      query {
-        allMarkdownRemark(
-          filter: { frontmatter: { category: { in: ["${category}"] }, draft: { ne: true } } }
-        ) {
-          totalCount
-        }
-      }
-    `).then((resultCategory) => {
-      const numPages = Math.ceil(resultCategory.data.allMarkdownRemark.totalCount / postsPerPage);
-      Array.from({ length: numPages }).forEach((item, index) => {
-        createPage({
-          path: index === 0 ? `/category/${_.kebabCase(category)}/` : `/category/${_.kebabCase(category)}/page/${index + 1}`,
-          component: categoryTemplate,
-          context: {
-            category,
-            tag: category,
-            tagURL: _.kebabCase(categories),
-            limit: postsPerPage,
-            skip: index * postsPerPage,
-            numPages,
-            currentPage: index + 1,
-          },
-        })
-      })
+  categories.forEach(item => {
+    createPage({
+      path: `/category/${_.kebabCase(item)}/`,
+      component: categoryTemplate,
+      context: {
+        category: item,
+      },
     });
   });
 
   // Create author pages
   const authorTemplate = path.resolve('./src/templates/author.tsx');
   result.data.allAuthorYaml.edges.forEach(edge => {
-    // Pagination
-    graphql(`
-      query {
-        authorYaml(id: { eq: "ludo" }) {
-          id
-        }
-        allMarkdownRemark(limit: 2000, sort: { fields: [frontmatter___date], order: DESC }) {
-          edges {
-            node {
-              frontmatter {
-                title,
-                author {
-                  id
-                }
-              }
-            }
-          }
-        }
-      }
-    `).then((resultTag) => {
-      const numPages = Math.ceil(resultTag.data.allMarkdownRemark.edges.length / postsPerPage);
-      Array.from({ length: numPages }).forEach((item, index) => {
-        createPage({
-          path: index === 0 ? `/author/${_.kebabCase(edge.node.id)}/` : `/author/${_.kebabCase(edge.node.id)}/page/${index + 1}`,
-          component: authorTemplate,
-          context: {
-            authorId: edge.node.id,
-            limit: postsPerPage,
-            skip: index * postsPerPage,
-            numPages,
-            currentPage: index + 1,
-          },
-        })
-      })
+    createPage({
+      path: `/author/${_.kebabCase(edge.node.id)}/`,
+      component: authorTemplate,
+      context: {
+        author: edge.node.id,
+      },
     });
   });
 };

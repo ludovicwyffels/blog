@@ -1,0 +1,96 @@
+.postTemplate {
+  
+}
+
+#site-main {
+  background: #fff;
+  padding-bottom: 4vw;
+}
+
+.PostFull {
+  position: relative;
+  z-index: 50;
+}
+
+.NoImage {
+  .post-full-content {
+    padding-top: 0;
+  }
+
+  .post-full-content:before,
+  .post-full-content:after {
+    display: none;
+  }
+}
+
+.PostFullHeader {
+  margin: 0 auto;
+  padding: 6vw 3vw 3vw;
+  max-width: 1040px;
+  text-align: center;
+
+  @media (max-width: 500px) {
+    padding: 14vw 3vw 10vw;
+  }
+}
+
+.PostFullMeta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #647a83;
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-transform: uppercase;
+
+  @media (max-width: 500px) {
+    font-size: 1.2rem;
+    line-height: 1.3em;
+  }
+}
+
+.PostFullMetaDate {
+  color: #0f7dba;
+}
+
+.PostFullTitle {
+  margin: 0;
+  color:lighten(#15171a, 0.05);
+  @media (max-width: 500px) {
+    font-size: 2.9rem;
+  }
+}
+
+.PostFullImage {
+  margin: 0 -10vw -165px;
+  height: 800px;
+  background: #c5d2d9 center center;
+  background-size: cover;
+  border-radius: 5px;
+
+  @media (max-width: 1170px) {
+    margin: 0 -4vw -100px;
+    height: 600px;
+    border-radius: 0;
+  }
+
+  @media (max-width: 800px) {
+    height: 400px;
+  }
+  @media (max-width: 500px) {
+    margin-bottom: 4vw;
+    height: 350px;
+  }
+}
+
+.DateDivider {
+  display: inline-block;
+  margin: 0 6px 1px;
+}
+
+.ReadNextFeed {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -20px;
+  padding: 40px 0 0 0;
+}
