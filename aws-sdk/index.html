@@ -29,11 +29,11 @@
 <table class="highlight tab-size js-file-line-container" data-tab-size="8">
       <tbody><tr>
         <td id="file-aws-sdk-node-best-practices-non-optimized-js-L1" class="blob-num js-line-number" data-line-number="1"></td>
-        <td id="file-aws-sdk-node-best-practices-non-optimized-js-LC1" class="blob-code blob-code-inner js-file-line"><span class="pl-c"><span class="pl-c">//</span> imports the entire AWS SDK</span></td>
+        <td id="file-aws-sdk-node-best-practices-non-optimized-js-LC1" class="blob-code blob-code-inner js-file-line"><span class="pl-c">// imports the entire AWS SDK</span></td>
       </tr>
       <tr>
         <td id="file-aws-sdk-node-best-practices-non-optimized-js-L2" class="blob-num js-line-number" data-line-number="2"></td>
-        <td id="file-aws-sdk-node-best-practices-non-optimized-js-LC2" class="blob-code blob-code-inner js-file-line"><span class="pl-k">const</span> <span class="pl-c1">aws</span> <span class="pl-k">=</span> <span class="pl-c1">require</span>(<span class="pl-s"><span class="pl-pds">&#x27;</span>aws-sdk<span class="pl-pds">&#x27;</span></span>);</td>
+        <td id="file-aws-sdk-node-best-practices-non-optimized-js-LC2" class="blob-code blob-code-inner js-file-line"><span class="pl-k">const</span> <span class="pl-s1">aws</span> <span class="pl-c1">=</span> <span class="pl-en">require</span><span class="pl-kos">(</span><span class="pl-s">&#x27;aws-sdk&#x27;</span><span class="pl-kos">)</span><span class="pl-kos">;</span></td>
       </tr>
       <tr>
         <td id="file-aws-sdk-node-best-practices-non-optimized-js-L3" class="blob-num js-line-number" data-line-number="3"></td>
@@ -42,19 +42,19 @@
       </tr>
       <tr>
         <td id="file-aws-sdk-node-best-practices-non-optimized-js-L4" class="blob-num js-line-number" data-line-number="4"></td>
-        <td id="file-aws-sdk-node-best-practices-non-optimized-js-LC4" class="blob-code blob-code-inner js-file-line"><span class="pl-smi">aws</span>.<span class="pl-smi">config</span>.<span class="pl-en">update</span>({</td>
+        <td id="file-aws-sdk-node-best-practices-non-optimized-js-LC4" class="blob-code blob-code-inner js-file-line"><span class="pl-s1">aws</span><span class="pl-kos">.</span><span class="pl-c1">config</span><span class="pl-kos">.</span><span class="pl-en">update</span><span class="pl-kos">(</span><span class="pl-kos">{</span></td>
       </tr>
       <tr>
         <td id="file-aws-sdk-node-best-practices-non-optimized-js-L5" class="blob-num js-line-number" data-line-number="5"></td>
-        <td id="file-aws-sdk-node-best-practices-non-optimized-js-LC5" class="blob-code blob-code-inner js-file-line">  region<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">&#x27;</span>us-east-1<span class="pl-pds">&#x27;</span></span>,</td>
+        <td id="file-aws-sdk-node-best-practices-non-optimized-js-LC5" class="blob-code blob-code-inner js-file-line">  <span class="pl-c1">region</span>: <span class="pl-s">&#x27;us-east-1&#x27;</span><span class="pl-kos">,</span></td>
       </tr>
       <tr>
         <td id="file-aws-sdk-node-best-practices-non-optimized-js-L6" class="blob-num js-line-number" data-line-number="6"></td>
-        <td id="file-aws-sdk-node-best-practices-non-optimized-js-LC6" class="blob-code blob-code-inner js-file-line">  endpoint<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">&#x27;</span>https://dynamodb.us-east-1.amazonaws.com<span class="pl-pds">&#x27;</span></span></td>
+        <td id="file-aws-sdk-node-best-practices-non-optimized-js-LC6" class="blob-code blob-code-inner js-file-line">  <span class="pl-c1">endpoint</span>: <span class="pl-s">&#x27;https://dynamodb.us-east-1.amazonaws.com&#x27;</span></td>
       </tr>
       <tr>
         <td id="file-aws-sdk-node-best-practices-non-optimized-js-L7" class="blob-num js-line-number" data-line-number="7"></td>
-        <td id="file-aws-sdk-node-best-practices-non-optimized-js-LC7" class="blob-code blob-code-inner js-file-line">});</td>
+        <td id="file-aws-sdk-node-best-practices-non-optimized-js-LC7" class="blob-code blob-code-inner js-file-line"><span class="pl-kos">}</span><span class="pl-kos">)</span><span class="pl-kos">;</span></td>
       </tr>
       <tr>
         <td id="file-aws-sdk-node-best-practices-non-optimized-js-L8" class="blob-num js-line-number" data-line-number="8"></td>
@@ -63,7 +63,7 @@
       </tr>
       <tr>
         <td id="file-aws-sdk-node-best-practices-non-optimized-js-L9" class="blob-num js-line-number" data-line-number="9"></td>
-        <td id="file-aws-sdk-node-best-practices-non-optimized-js-LC9" class="blob-code blob-code-inner js-file-line"><span class="pl-k">const</span> <span class="pl-c1">docClient</span> <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en">aws.DynamoDB.DocumentClient</span>();</td>
+        <td id="file-aws-sdk-node-best-practices-non-optimized-js-LC9" class="blob-code blob-code-inner js-file-line"><span class="pl-k">const</span> <span class="pl-s1">docClient</span> <span class="pl-c1">=</span> <span class="pl-k">new</span> <span class="pl-s1">aws</span><span class="pl-kos">.</span><span class="pl-c1">DynamoDB</span><span class="pl-kos">.</span><span class="pl-en">DocumentClient</span><span class="pl-kos">(</span><span class="pl-kos">)</span><span class="pl-kos">;</span></td>
       </tr>
 </tbody></table>
 
@@ -94,11 +94,11 @@
 <table class="highlight tab-size js-file-line-container" data-tab-size="8">
       <tbody><tr>
         <td id="file-aws-sdk-node-best-practices-optimized-js-L1" class="blob-num js-line-number" data-line-number="1"></td>
-        <td id="file-aws-sdk-node-best-practices-optimized-js-LC1" class="blob-code blob-code-inner js-file-line"><span class="pl-c"><span class="pl-c">//</span> only imports the AWS DynamoDB service client</span></td>
+        <td id="file-aws-sdk-node-best-practices-optimized-js-LC1" class="blob-code blob-code-inner js-file-line"><span class="pl-c">// only imports the AWS DynamoDB service client</span></td>
       </tr>
       <tr>
         <td id="file-aws-sdk-node-best-practices-optimized-js-L2" class="blob-num js-line-number" data-line-number="2"></td>
-        <td id="file-aws-sdk-node-best-practices-optimized-js-LC2" class="blob-code blob-code-inner js-file-line"><span class="pl-k">const</span> <span class="pl-c1">dynamodb</span> <span class="pl-k">=</span> <span class="pl-c1">require</span>(<span class="pl-s"><span class="pl-pds">&#x27;</span>aws-sdk/clients/dynamodb<span class="pl-pds">&#x27;</span></span>);</td>
+        <td id="file-aws-sdk-node-best-practices-optimized-js-LC2" class="blob-code blob-code-inner js-file-line"><span class="pl-k">const</span> <span class="pl-s1">dynamodb</span> <span class="pl-c1">=</span> <span class="pl-en">require</span><span class="pl-kos">(</span><span class="pl-s">&#x27;aws-sdk/clients/dynamodb&#x27;</span><span class="pl-kos">)</span><span class="pl-kos">;</span></td>
       </tr>
       <tr>
         <td id="file-aws-sdk-node-best-practices-optimized-js-L3" class="blob-num js-line-number" data-line-number="3"></td>
@@ -107,19 +107,19 @@
       </tr>
       <tr>
         <td id="file-aws-sdk-node-best-practices-optimized-js-L4" class="blob-num js-line-number" data-line-number="4"></td>
-        <td id="file-aws-sdk-node-best-practices-optimized-js-LC4" class="blob-code blob-code-inner js-file-line"><span class="pl-k">const</span> <span class="pl-c1">config</span> <span class="pl-k">=</span> {</td>
+        <td id="file-aws-sdk-node-best-practices-optimized-js-LC4" class="blob-code blob-code-inner js-file-line"><span class="pl-k">const</span> <span class="pl-s1">config</span> <span class="pl-c1">=</span> <span class="pl-kos">{</span></td>
       </tr>
       <tr>
         <td id="file-aws-sdk-node-best-practices-optimized-js-L5" class="blob-num js-line-number" data-line-number="5"></td>
-        <td id="file-aws-sdk-node-best-practices-optimized-js-LC5" class="blob-code blob-code-inner js-file-line">  region<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">&#x27;</span>us-east-1<span class="pl-pds">&#x27;</span></span>,</td>
+        <td id="file-aws-sdk-node-best-practices-optimized-js-LC5" class="blob-code blob-code-inner js-file-line">  <span class="pl-c1">region</span>: <span class="pl-s">&#x27;us-east-1&#x27;</span><span class="pl-kos">,</span></td>
       </tr>
       <tr>
         <td id="file-aws-sdk-node-best-practices-optimized-js-L6" class="blob-num js-line-number" data-line-number="6"></td>
-        <td id="file-aws-sdk-node-best-practices-optimized-js-LC6" class="blob-code blob-code-inner js-file-line">  endpoint<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">&#x27;</span>https://dynamodb.us-east-1.amazonaws.com<span class="pl-pds">&#x27;</span></span></td>
+        <td id="file-aws-sdk-node-best-practices-optimized-js-LC6" class="blob-code blob-code-inner js-file-line">  <span class="pl-c1">endpoint</span>: <span class="pl-s">&#x27;https://dynamodb.us-east-1.amazonaws.com&#x27;</span></td>
       </tr>
       <tr>
         <td id="file-aws-sdk-node-best-practices-optimized-js-L7" class="blob-num js-line-number" data-line-number="7"></td>
-        <td id="file-aws-sdk-node-best-practices-optimized-js-LC7" class="blob-code blob-code-inner js-file-line">};</td>
+        <td id="file-aws-sdk-node-best-practices-optimized-js-LC7" class="blob-code blob-code-inner js-file-line"><span class="pl-kos">}</span><span class="pl-kos">;</span></td>
       </tr>
       <tr>
         <td id="file-aws-sdk-node-best-practices-optimized-js-L8" class="blob-num js-line-number" data-line-number="8"></td>
@@ -128,7 +128,7 @@
       </tr>
       <tr>
         <td id="file-aws-sdk-node-best-practices-optimized-js-L9" class="blob-num js-line-number" data-line-number="9"></td>
-        <td id="file-aws-sdk-node-best-practices-optimized-js-LC9" class="blob-code blob-code-inner js-file-line"><span class="pl-k">const</span> <span class="pl-c1">docClient</span> <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en">dynamodb.DocumentClient</span>(config);</td>
+        <td id="file-aws-sdk-node-best-practices-optimized-js-LC9" class="blob-code blob-code-inner js-file-line"><span class="pl-k">const</span> <span class="pl-s1">docClient</span> <span class="pl-c1">=</span> <span class="pl-k">new</span> <span class="pl-s1">dynamodb</span><span class="pl-kos">.</span><span class="pl-c1">DocumentClient</span><span class="pl-kos">(</span><span class="pl-s1">config</span><span class="pl-kos">)</span><span class="pl-kos">;</span></td>
       </tr>
 </tbody></table>
 
