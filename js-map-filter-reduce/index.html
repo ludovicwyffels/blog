@@ -111,14 +111,14 @@ type Wizard <span class="token operator">=</span> <span class="token punctuation
 </blockquote>
 <p>Cette fonction parcourt la liste des assistants, obtient leur nom et le place dans un nouveau tableau. Le résultat de ceci ressemble à ceci.</p>
 <div class="gatsby-highlight" data-language="text"><pre style="counter-reset:linenumber NaN" class="language-text line-numbers"><code class="language-text">[
-  &quot;Harry Potter&quot;undefined
-  &quot;Hermione Granger&quot;undefined
-  &quot;Draco Malfoy&quot;undefined
-  &quot;Lin Manuel Miranda&quot;undefined
-  &quot;Taylor Swift&quot;undefined
-  &quot;Cedric Diggory&quot;undefined
-  &quot;Sally Perks&quot;undefined
-  &quot;Luna Lovegood&quot;undefined
+  &quot;Harry Potter&quot;,
+  &quot;Hermione Granger&quot;,
+  &quot;Draco Malfoy&quot;,
+  &quot;Lin Manuel Miranda&quot;,
+  &quot;Taylor Swift&quot;,
+  &quot;Cedric Diggory&quot;,
+  &quot;Sally Perks&quot;,
+  &quot;Luna Lovegood&quot;,
   &quot;Cho Chang&quot;
 ];</code><span aria-hidden="true" class="line-numbers-rows" style="white-space:normal;width:auto;left:0"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
 <p>Dans cet exemple, nous utilisions une fonction lambda (ou fonction anonyme), mais nous pouvons également utiliser une fonction nommée.</p>
@@ -131,15 +131,15 @@ type Wizard <span class="token operator">=</span> <span class="token punctuation
 </blockquote>
 <p>Dans cet exemple, nous avons une fonction appelée <code>wizardToString</code> que nous transmettons directement au map. Il retournera alors une nouvelle liste qui ressemble à ceci.</p>
 <div class="gatsby-highlight" data-language="text"><pre style="counter-reset:linenumber NaN" class="language-text line-numbers"><code class="language-text">[
-  &quot;Harry Potterundefined Gryffindorundefined 40&quot;undefined
-  &quot;Hermione Grangerundefined Gryffindorundefined 140&quot;undefined
-  &quot;Draco Malfoyundefined Slytherinundefined -20&quot;undefined
-  &quot;Lin Manuel Mirandaundefined Slytherinundefined 5000&quot;undefined
-  &quot;Taylor Swiftundefined Slytherinundefined 100&quot;undefined
-  &quot;Cedric Diggoryundefined Hufflepuffundefined 12&quot;undefined
-  &quot;Sally Perksundefined Hufflepuffundefined 15&quot;undefined
-  &quot;Luna Lovegoodundefined Ravenclawundefined 100&quot;undefined
-  &quot;Cho Changundefined Ravenclawundefined 100&quot;
+  &quot;Harry Potter, Gryffindor, 40&quot;,
+  &quot;Hermione Granger, Gryffindor, 140&quot;,
+  &quot;Draco Malfoy, Slytherin, -20&quot;,
+  &quot;Lin Manuel Miranda, Slytherin, 5000&quot;,
+  &quot;Taylor Swift, Slytherin, 100&quot;,
+  &quot;Cedric Diggory, Hufflepuff, 12&quot;,
+  &quot;Sally Perks, Hufflepuff, 15&quot;,
+  &quot;Luna Lovegood, Ravenclaw, 100&quot;,
+  &quot;Cho Chang, Ravenclaw, 100&quot;
 ];</code><span aria-hidden="true" class="line-numbers-rows" style="white-space:normal;width:auto;left:0"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
 <h2>Filter</h2>
 <p>Le <code>filter</code> se comporte comme un <code>map</code> dans la mesure où il itère sur la liste, mais au lieu de transformer chaque élément, il transforme la liste entière. Le filter prend une fonction qui renvoie <em>true</em> ou <em>false</em> ou un <em>prédicat</em>. Il renvoie ensuite une nouvelle liste avec des éléments où le prédicat renvoie <code>true</code>. Regardons un exemple.</p>
@@ -149,9 +149,9 @@ type Wizard <span class="token operator">=</span> <span class="token punctuation
 </blockquote>
 <p>Dans cet exemple, nous filtrons par-dessus la liste et n’incluons que les sorciers qui se trouvent dans la maison Serpentard. Le résultat serait ceci.</p>
 <div class="gatsby-highlight" data-language="text"><pre style="counter-reset:linenumber NaN" class="language-text line-numbers"><code class="language-text">[
-  { name: &quot;Draco Malfoy&quot;undefined house: &quot;Slytherin&quot;undefined points: -20 }undefined
-  { name: &quot;Lin Manuel Miranda&quot;undefined house: &quot;Slytherin&quot;undefined points: 5000 }undefined
-  { name: &quot;Taylor Swift&quot;undefined house: &quot;Slytherin&quot;undefined points: 100 }
+  { name: &quot;Draco Malfoy&quot;, house: &quot;Slytherin&quot;, points: -20 },
+  { name: &quot;Lin Manuel Miranda&quot;, house: &quot;Slytherin&quot;, points: 5000 },
+  { name: &quot;Taylor Swift&quot;, house: &quot;Slytherin&quot;, points: 100 }
 ];</code><span aria-hidden="true" class="line-numbers-rows" style="white-space:normal;width:auto;left:0"><span></span><span></span><span></span><span></span><span></span></span></pre></div>
 <p>En passant, Taylor et Lin sont deux des Serpentards les plus acclamés de notre époque.</p>
 <p>Comme avec map, nous n’avons pas besoin d’utiliser un lambda , nous pouvons également utiliser une fonction prédéfinie.</p>
@@ -168,11 +168,11 @@ type Wizard <span class="token operator">=</span> <span class="token punctuation
 </blockquote>
 <p>Dans cet exemple, nous faisons deux listes, la liste des Serpentards ayant gagné des points (gagnants) et la liste des Serpentards ayant perdu des points (perdants). Nous pouvons voir ces résultats ci-dessous.</p>
 <div class="gatsby-highlight" data-language="text"><pre style="counter-reset:linenumber NaN" class="language-text line-numbers"><code class="language-text">const winnersResult = [
-  { name: &quot;Lin Manuel Miranda&quot;undefined house: &quot;Slytherin&quot;undefined points: 5000 }undefined
-  { name: &quot;Taylor Swift&quot;undefined house: &quot;Slytherin&quot;undefined points: 100 }
+  { name: &quot;Lin Manuel Miranda&quot;, house: &quot;Slytherin&quot;, points: 5000 },
+  { name: &quot;Taylor Swift&quot;, house: &quot;Slytherin&quot;, points: 100 }
 ];
 const losersResult = [
-  { name: &quot;Draco Malfoy&quot;undefined house: &quot;Slytherin&quot;undefined points: -20 }
+  { name: &quot;Draco Malfoy&quot;, house: &quot;Slytherin&quot;, points: -20 }
 ];</code><span aria-hidden="true" class="line-numbers-rows" style="white-space:normal;width:auto;left:0"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
 <h2>Reduce</h2>
 <p>Nous arrivons maintenant à la fonction la plus intéressante, reduce. Reduce itère sur une liste et produit une valeur unique. Regardons un exemple.</p>
@@ -196,9 +196,9 @@ const losersResult = [
 </blockquote>
 <p>Dans ce cas, nous initialisons notre accumulateur ou <code>acc</code> avec <code>{}</code>. Ensuite, pour chaque assistant, nous appelons une fonction qui ajoute le nombre de points qu’il a gagnés pour sa maison. Si vous êtes curieux, ce résultat ressemble à ceci.</p>
 <div class="gatsby-highlight" data-language="text"><pre style="counter-reset:linenumber NaN" class="language-text line-numbers"><code class="language-text">{
-  Gryffindor: 180undefined
-  Slytherin: 5080undefined
-  Hufflepuff: 27undefined
+  Gryffindor: 180,
+  Slytherin: 5080,
+  Hufflepuff: 27,
   Ravenclaw: 200
 };</code><span aria-hidden="true" class="line-numbers-rows" style="white-space:normal;width:auto;left:0"><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
 <p>Regardons un autre exemple, disons que nous voulons le meilleur assistant pour chaque maison. Nous pouvons modifier notre fonction précédente pour utiliser le meilleur assistant pour chaque maison.</p>
@@ -216,10 +216,10 @@ const losersResult = [
 <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space:normal;width:auto;left:0"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
 <p>Si vous êtes curieux, le résultat est le suivant.</p>
 <div class="gatsby-highlight" data-language="text"><pre style="counter-reset:linenumber NaN" class="language-text line-numbers"><code class="language-text">{
-  Gryffindor: { name: &quot;Hermione Granger&quot;undefined house: &quot;Gryffindor&quot;undefined points: 140 }undefined
-  Slytherin: { name: &quot;Lin Manuel Miranda&quot;undefined house: &quot;Slytherin&quot;undefined points: 5000 }undefined
-  Hufflepuff: { name: &quot;Sally Perks&quot;undefined house: &quot;Hufflepuff&quot;undefined points: 15 }undefined
-  Ravenclaw: { name: &quot;Luna Lovegood&quot;undefined house: &quot;Ravenclaw&quot;undefined points: 100 }
+  Gryffindor: { name: &quot;Hermione Granger&quot;, house: &quot;Gryffindor&quot;, points: 140 },
+  Slytherin: { name: &quot;Lin Manuel Miranda&quot;, house: &quot;Slytherin&quot;, points: 5000 },
+  Hufflepuff: { name: &quot;Sally Perks&quot;, house: &quot;Hufflepuff&quot;, points: 15 },
+  Ravenclaw: { name: &quot;Luna Lovegood&quot;, house: &quot;Ravenclaw&quot;, points: 100 }
 };</code><span aria-hidden="true" class="line-numbers-rows" style="white-space:normal;width:auto;left:0"><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
 <p>Juste un peu plus de plaisir maintenant, nous pouvons utiliser <code>Object.values</code> pour transformer cet map.</p>
 <div class="gatsby-highlight" data-language="js"><pre style="counter-reset:linenumber NaN" class="language-js line-numbers"><code class="language-js"><span class="token keyword">const</span> bestNamesPerHouse <span class="token operator">=</span> Object<span class="token punctuation">.</span><span class="token function">values</span><span class="token punctuation">(</span>bestPerHouse<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span>wizardToString<span class="token punctuation">)</span><span class="token punctuation">;</span>

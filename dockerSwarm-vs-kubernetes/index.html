@@ -50,14 +50,14 @@ smb: \&gt;</code><span aria-hidden="true" class="line-numbers-rows" style="white
 <div class="gatsby-highlight" data-language="text"><pre style="counter-reset:linenumber NaN" class="language-text line-numbers"><code class="language-text">~$ docker swarm init --advertise-addr 10.133.7.100 
 Swarm initialized: current node (abcdefghijklmnopqrstuvwxy) is now a manager.
 
-To add a worker to this swarmundefined run the following command:
+To add a worker to this swarm, run the following command:
 
 docker swarm join --token SWMTKN-1-abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwx-abcdefghijklmnopqrstuvwxy 10.133.7.100:2377
 
-To add a manager to this swarmundefined run &#x27;docker swarm join-token manager&#x27; and follow the instructions.</code><span aria-hidden="true" class="line-numbers-rows" style="white-space:normal;width:auto;left:0"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+To add a manager to this swarm, run &#x27;docker swarm join-token manager&#x27; and follow the instructions.</code><span aria-hidden="true" class="line-numbers-rows" style="white-space:normal;width:auto;left:0"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
 <p>C’est tout: le moteur Docker tourne maintenant en mode Swarm.</p>
 <p>Ensuite, j’ai déployé un registre privé Docker afin que les autres noeuds puissent extraire des images, en suivant à nouveau les <a href="https://docs.docker.com/engine/swarm/stack-deploy/#set-up-a-docker-registry" target="_blank" rel="nofollow noopener noreferrer">instructions d’installation</a>:</p>
-<div class="gatsby-highlight" data-language="text"><pre style="counter-reset:linenumber NaN" class="language-text line-numbers"><code class="language-text">docker service create --name registry --publish published=5000undefinedtarget=5000 registry:2</code><span aria-hidden="true" class="line-numbers-rows" style="white-space:normal;width:auto;left:0"><span></span></span></pre></div>
+<div class="gatsby-highlight" data-language="text"><pre style="counter-reset:linenumber NaN" class="language-text line-numbers"><code class="language-text">docker service create --name registry --publish published=5000,target=5000 registry:2</code><span aria-hidden="true" class="line-numbers-rows" style="white-space:normal;width:auto;left:0"><span></span></span></pre></div>
 <h2>Déploiement de l’application</h2>
 <p>Docker Swarm utilise le format <a href="https://docs.docker.com/compose/overview/" target="_blank" rel="nofollow noopener noreferrer">Docker Compose</a> pour spécifier les conteneurs à exécuter et les ports qu’ils exportent.</p>
 <p>Après le <a href="https://docs.docker.com/compose/gettingstarted/#step-3-define-services-in-a-compose-file" target="_blank" rel="nofollow noopener noreferrer">didacticiel Docker Compose</a>, j’ai créé ce manifeste Docker Compose:</p>
@@ -140,7 +140,7 @@ root@dora:~# systemctl restart kubelet.service</code><span aria-hidden="true" cl
 <p>Les options <code>--apiserver-advertise-address</code> et <code>--apiserver-cert-extra-sans</code> ont été ajoutées à cause d’un problème particulier dans l’installation de VirtualBox: la carte virtuelle principale des machines virtuelles (IP 10.0.2.15) ne peut accéder qu’à l’Internet. J’ai dû préciser que d’autres noeuds doivent accéder au maître à l’aide de l’adresse IP 10.133.7.100.</p>
 <p>Après avoir exécuté cette commande, Kubeadm a affiché quelques instructions:</p>
 <div class="gatsby-highlight" data-language="text"><pre style="counter-reset:linenumber NaN" class="language-text line-numbers"><code class="language-text">Your Kubernetes master has initialized successfully!
-To start using your clusterundefined you need to run the following as a regular user:
+To start using your cluster, you need to run the following as a regular user:
 
 mkdir -p $HOME/.kube
 sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
