@@ -27,69 +27,69 @@
 <span class="token punctuation">}</span>
 
 type Wizard <span class="token operator">=</span> <span class="token punctuation">{</span>
-  name<span class="token punctuation">:</span> string<span class="token punctuation">;</span>
-  house<span class="token punctuation">:</span> House<span class="token punctuation">;</span>
-  points<span class="token punctuation">:</span> number<span class="token punctuation">;</span>
+  name<span class="token operator">:</span> string<span class="token punctuation">;</span>
+  house<span class="token operator">:</span> House<span class="token punctuation">;</span>
+  points<span class="token operator">:</span> number<span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space:normal;width:auto;left:0"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
 <blockquote>
 <p>types.ts</p>
 </blockquote>
 <p>Chaque objet de l’assistant a un nom, une maison et le nombre de points qu’il a gagnés pour sa maison. Déclarons un groupe de magiciens et mettons-les dans une liste.</p>
-<div class="gatsby-highlight" data-language="js"><pre style="counter-reset:linenumber NaN" class="language-js line-numbers"><code class="language-js"><span class="token keyword">const</span> HarryPotter<span class="token punctuation">:</span> Wizard <span class="token operator">=</span> <span class="token punctuation">{</span>
-  name<span class="token punctuation">:</span> <span class="token string">&quot;Harry Potter&quot;</span><span class="token punctuation">,</span>
-  house<span class="token punctuation">:</span> House<span class="token punctuation">.</span>Gryffindor<span class="token punctuation">,</span>
-  points<span class="token punctuation">:</span> <span class="token number">40</span>
+<div class="gatsby-highlight" data-language="js"><pre style="counter-reset:linenumber NaN" class="language-js line-numbers"><code class="language-js"><span class="token keyword">const</span> HarryPotter<span class="token operator">:</span> Wizard <span class="token operator">=</span> <span class="token punctuation">{</span>
+  name<span class="token operator">:</span> <span class="token string">&quot;Harry Potter&quot;</span><span class="token punctuation">,</span>
+  house<span class="token operator">:</span> House<span class="token punctuation">.</span>Gryffindor<span class="token punctuation">,</span>
+  points<span class="token operator">:</span> <span class="token number">40</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
 
-<span class="token keyword">const</span> HermioneGranger<span class="token punctuation">:</span> Wizard <span class="token operator">=</span> <span class="token punctuation">{</span>
-  name<span class="token punctuation">:</span> <span class="token string">&quot;Hermione Granger&quot;</span><span class="token punctuation">,</span>
-  house<span class="token punctuation">:</span> House<span class="token punctuation">.</span>Gryffindor<span class="token punctuation">,</span>
-  points<span class="token punctuation">:</span> <span class="token number">140</span>
+<span class="token keyword">const</span> HermioneGranger<span class="token operator">:</span> Wizard <span class="token operator">=</span> <span class="token punctuation">{</span>
+  name<span class="token operator">:</span> <span class="token string">&quot;Hermione Granger&quot;</span><span class="token punctuation">,</span>
+  house<span class="token operator">:</span> House<span class="token punctuation">.</span>Gryffindor<span class="token punctuation">,</span>
+  points<span class="token operator">:</span> <span class="token number">140</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
 
-<span class="token keyword">const</span> DracoMalfoy<span class="token punctuation">:</span> Wizard <span class="token operator">=</span> <span class="token punctuation">{</span>
-  name<span class="token punctuation">:</span> <span class="token string">&quot;Draco Malfoy&quot;</span><span class="token punctuation">,</span>
-  house<span class="token punctuation">:</span> House<span class="token punctuation">.</span>Slytherin<span class="token punctuation">,</span>
-  points<span class="token punctuation">:</span> <span class="token operator">-</span><span class="token number">20</span>
+<span class="token keyword">const</span> DracoMalfoy<span class="token operator">:</span> Wizard <span class="token operator">=</span> <span class="token punctuation">{</span>
+  name<span class="token operator">:</span> <span class="token string">&quot;Draco Malfoy&quot;</span><span class="token punctuation">,</span>
+  house<span class="token operator">:</span> House<span class="token punctuation">.</span>Slytherin<span class="token punctuation">,</span>
+  points<span class="token operator">:</span> <span class="token operator">-</span><span class="token number">20</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
 
-<span class="token keyword">const</span> TaylorSwift<span class="token punctuation">:</span> Wizard <span class="token operator">=</span> <span class="token punctuation">{</span>
-  name<span class="token punctuation">:</span> <span class="token string">&quot;Taylor Swift&quot;</span><span class="token punctuation">,</span>
-  house<span class="token punctuation">:</span> House<span class="token punctuation">.</span>Slytherin<span class="token punctuation">,</span>
-  points<span class="token punctuation">:</span> <span class="token number">100</span>
+<span class="token keyword">const</span> TaylorSwift<span class="token operator">:</span> Wizard <span class="token operator">=</span> <span class="token punctuation">{</span>
+  name<span class="token operator">:</span> <span class="token string">&quot;Taylor Swift&quot;</span><span class="token punctuation">,</span>
+  house<span class="token operator">:</span> House<span class="token punctuation">.</span>Slytherin<span class="token punctuation">,</span>
+  points<span class="token operator">:</span> <span class="token number">100</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
 
-<span class="token keyword">const</span> LinManuelMiranda<span class="token punctuation">:</span> Wizard <span class="token operator">=</span> <span class="token punctuation">{</span>
-  name<span class="token punctuation">:</span> <span class="token string">&quot;Lin Manuel Miranda&quot;</span><span class="token punctuation">,</span>
-  house<span class="token punctuation">:</span> House<span class="token punctuation">.</span>Slytherin<span class="token punctuation">,</span>
-  points<span class="token punctuation">:</span> <span class="token number">5000</span>
+<span class="token keyword">const</span> LinManuelMiranda<span class="token operator">:</span> Wizard <span class="token operator">=</span> <span class="token punctuation">{</span>
+  name<span class="token operator">:</span> <span class="token string">&quot;Lin Manuel Miranda&quot;</span><span class="token punctuation">,</span>
+  house<span class="token operator">:</span> House<span class="token punctuation">.</span>Slytherin<span class="token punctuation">,</span>
+  points<span class="token operator">:</span> <span class="token number">5000</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
 
-<span class="token keyword">const</span> CedricDiggory<span class="token punctuation">:</span> Wizard <span class="token operator">=</span> <span class="token punctuation">{</span>
-  name<span class="token punctuation">:</span> <span class="token string">&quot;Cedric Diggory&quot;</span><span class="token punctuation">,</span>
-  house<span class="token punctuation">:</span> House<span class="token punctuation">.</span>Hufflepuff<span class="token punctuation">,</span>
-  points<span class="token punctuation">:</span> <span class="token number">12</span>
+<span class="token keyword">const</span> CedricDiggory<span class="token operator">:</span> Wizard <span class="token operator">=</span> <span class="token punctuation">{</span>
+  name<span class="token operator">:</span> <span class="token string">&quot;Cedric Diggory&quot;</span><span class="token punctuation">,</span>
+  house<span class="token operator">:</span> House<span class="token punctuation">.</span>Hufflepuff<span class="token punctuation">,</span>
+  points<span class="token operator">:</span> <span class="token number">12</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
 
-<span class="token keyword">const</span> SallyPerks<span class="token punctuation">:</span> Wizard <span class="token operator">=</span> <span class="token punctuation">{</span>
-  name<span class="token punctuation">:</span> <span class="token string">&quot;Sally Perks&quot;</span><span class="token punctuation">,</span>
-  house<span class="token punctuation">:</span> House<span class="token punctuation">.</span>Hufflepuff<span class="token punctuation">,</span>
-  points<span class="token punctuation">:</span> <span class="token number">15</span>
+<span class="token keyword">const</span> SallyPerks<span class="token operator">:</span> Wizard <span class="token operator">=</span> <span class="token punctuation">{</span>
+  name<span class="token operator">:</span> <span class="token string">&quot;Sally Perks&quot;</span><span class="token punctuation">,</span>
+  house<span class="token operator">:</span> House<span class="token punctuation">.</span>Hufflepuff<span class="token punctuation">,</span>
+  points<span class="token operator">:</span> <span class="token number">15</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
 
-<span class="token keyword">const</span> LunaLovegood<span class="token punctuation">:</span> Wizard <span class="token operator">=</span> <span class="token punctuation">{</span>
-  name<span class="token punctuation">:</span> <span class="token string">&quot;Luna Lovegood&quot;</span><span class="token punctuation">,</span>
-  house<span class="token punctuation">:</span> House<span class="token punctuation">.</span>Ravenclaw<span class="token punctuation">,</span>
-  points<span class="token punctuation">:</span> <span class="token number">100</span>
+<span class="token keyword">const</span> LunaLovegood<span class="token operator">:</span> Wizard <span class="token operator">=</span> <span class="token punctuation">{</span>
+  name<span class="token operator">:</span> <span class="token string">&quot;Luna Lovegood&quot;</span><span class="token punctuation">,</span>
+  house<span class="token operator">:</span> House<span class="token punctuation">.</span>Ravenclaw<span class="token punctuation">,</span>
+  points<span class="token operator">:</span> <span class="token number">100</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
 
-<span class="token keyword">const</span> ChoChang<span class="token punctuation">:</span> Wizard <span class="token operator">=</span> <span class="token punctuation">{</span>
-  name<span class="token punctuation">:</span> <span class="token string">&quot;Cho Chang&quot;</span><span class="token punctuation">,</span>
-  house<span class="token punctuation">:</span> House<span class="token punctuation">.</span>Ravenclaw<span class="token punctuation">,</span>
-  points<span class="token punctuation">:</span> <span class="token number">100</span>
+<span class="token keyword">const</span> ChoChang<span class="token operator">:</span> Wizard <span class="token operator">=</span> <span class="token punctuation">{</span>
+  name<span class="token operator">:</span> <span class="token string">&quot;Cho Chang&quot;</span><span class="token punctuation">,</span>
+  house<span class="token operator">:</span> House<span class="token punctuation">.</span>Ravenclaw<span class="token punctuation">,</span>
+  points<span class="token operator">:</span> <span class="token number">100</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
 
-<span class="token keyword">const</span> wizards<span class="token punctuation">:</span> Wizard<span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span>
+<span class="token keyword">const</span> wizards<span class="token operator">:</span> Wizard<span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span>
   HarryPotter<span class="token punctuation">,</span>
   HermioneGranger<span class="token punctuation">,</span>
   DracoMalfoy<span class="token punctuation">,</span>
@@ -122,7 +122,7 @@ type Wizard <span class="token operator">=</span> <span class="token punctuation
   &quot;Cho Chang&quot;
 ];</code><span aria-hidden="true" class="line-numbers-rows" style="white-space:normal;width:auto;left:0"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
 <p>Dans cet exemple, nous utilisions une fonction lambda (ou fonction anonyme), mais nous pouvons également utiliser une fonction nommée.</p>
-<div class="gatsby-highlight" data-language="js"><pre style="counter-reset:linenumber NaN" class="language-js line-numbers"><code class="language-js"><span class="token keyword">function</span> <span class="token function">wizardToString</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> name<span class="token punctuation">,</span> house<span class="token punctuation">,</span> points <span class="token punctuation">}</span><span class="token punctuation">:</span> Wizard</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<div class="gatsby-highlight" data-language="js"><pre style="counter-reset:linenumber NaN" class="language-js line-numbers"><code class="language-js"><span class="token keyword">function</span> <span class="token function">wizardToString</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> name<span class="token punctuation">,</span> house<span class="token punctuation">,</span> points <span class="token punctuation">}</span><span class="token operator">:</span> Wizard</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token keyword">return</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>name<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">, </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>house<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">, </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>points<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 <span class="token keyword">const</span> wizardStrings <span class="token operator">=</span> wizards<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span>wizardToString<span class="token punctuation">)</span><span class="token punctuation">;</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space:normal;width:auto;left:0"><span></span><span></span><span></span><span></span></span></pre></div>
@@ -155,10 +155,10 @@ type Wizard <span class="token operator">=</span> <span class="token punctuation
 ];</code><span aria-hidden="true" class="line-numbers-rows" style="white-space:normal;width:auto;left:0"><span></span><span></span><span></span><span></span><span></span></span></pre></div>
 <p>En passant, Taylor et Lin sont deux des Serpentards les plus acclamés de notre époque.</p>
 <p>Comme avec map, nous n’avons pas besoin d’utiliser un lambda , nous pouvons également utiliser une fonction prédéfinie.</p>
-<div class="gatsby-highlight" data-language="js"><pre style="counter-reset:linenumber NaN" class="language-js line-numbers"><code class="language-js"><span class="token keyword">function</span> <span class="token function">isWinner</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> points <span class="token punctuation">}</span><span class="token punctuation">:</span> Wizard</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<div class="gatsby-highlight" data-language="js"><pre style="counter-reset:linenumber NaN" class="language-js line-numbers"><code class="language-js"><span class="token keyword">function</span> <span class="token function">isWinner</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> points <span class="token punctuation">}</span><span class="token operator">:</span> Wizard</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token keyword">return</span> points <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-<span class="token keyword">function</span> <span class="token function">isLoser</span><span class="token punctuation">(</span><span class="token parameter">wizard<span class="token punctuation">:</span> Wizard</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token keyword">function</span> <span class="token function">isLoser</span><span class="token punctuation">(</span><span class="token parameter">wizard<span class="token operator">:</span> Wizard</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token keyword">return</span> <span class="token operator">!</span><span class="token function">isWinner</span><span class="token punctuation">(</span>wizard<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 <span class="token keyword">const</span> winners <span class="token operator">=</span> slytherins<span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span><span class="token parameter">wizard</span> <span class="token operator">=&gt;</span> wizard<span class="token punctuation">.</span>points <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>

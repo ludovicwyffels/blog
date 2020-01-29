@@ -76,21 +76,21 @@ Cette approche garantit que le même artefact qui a été testé entre égalemen
 <span class="token keyword">import</span> <span class="token punctuation">{</span>shareReplay<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&#x27;rxjs/operators&#x27;</span><span class="token punctuation">;</span>
 
 <span class="token keyword">interface</span> <span class="token class-name">Configuration</span> <span class="token punctuation">{</span>
-  resourceServerA<span class="token punctuation">:</span> <span class="token builtin">string</span><span class="token punctuation">;</span>
-  resourceServerB<span class="token punctuation">:</span> <span class="token builtin">string</span><span class="token punctuation">;</span>
-  stage<span class="token punctuation">:</span> <span class="token builtin">string</span><span class="token punctuation">;</span>
+  resourceServerA<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">;</span>
+  resourceServerB<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">;</span>
+  stage<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 
-@<span class="token function">Injectable</span><span class="token punctuation">(</span><span class="token punctuation">{</span>providedIn<span class="token punctuation">:</span> <span class="token string">&#x27;root&#x27;</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+@<span class="token function">Injectable</span><span class="token punctuation">(</span><span class="token punctuation">{</span>providedIn<span class="token operator">:</span> <span class="token string">&#x27;root&#x27;</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
 <span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">ConfigAssetLoaderService</span> <span class="token punctuation">{</span>
 
   <span class="token keyword">private</span> <span class="token keyword">readonly</span> <span class="token constant">CONFIG_URL</span> <span class="token operator">=</span> <span class="token string">&#x27;assets/config/config.json&#x27;</span><span class="token punctuation">;</span>
-  <span class="token keyword">private</span> configuration$<span class="token punctuation">:</span> Observable<span class="token operator">&lt;</span>Configuration<span class="token operator">&gt;</span><span class="token punctuation">;</span>
+  <span class="token keyword">private</span> configuration$<span class="token operator">:</span> Observable<span class="token operator">&lt;</span>Configuration<span class="token operator">&gt;</span><span class="token punctuation">;</span>
 
-  <span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="token parameter"><span class="token keyword">private</span> http<span class="token punctuation">:</span> HttpClient</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="token parameter"><span class="token keyword">private</span> http<span class="token operator">:</span> HttpClient</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token punctuation">}</span>
 
-  <span class="token keyword">public</span> <span class="token function">loadConfigurations</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token builtin">any</span> <span class="token punctuation">{</span>
+  <span class="token keyword">public</span> <span class="token function">loadConfigurations</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">any</span> <span class="token punctuation">{</span>
     <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token keyword">this</span><span class="token punctuation">.</span>configuration$<span class="token punctuation">)</span> <span class="token punctuation">{</span>
       <span class="token keyword">this</span><span class="token punctuation">.</span>configuration$ <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>http<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token operator">&lt;</span>Configuration<span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span><span class="token constant">CONFIG_URL</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">pipe</span><span class="token punctuation">(</span>
         <span class="token function">shareReplay</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
@@ -115,9 +115,9 @@ Cette approche garantit que le même artefact qui a été testé entre égalemen
 <p>Notre <code>environment.prod.ts</code> ne contient pas les valeurs réelles; il contient des valeurs d’espace réservé qui seront écrasées à chaque étape par un script de construction.</p>
 <p>Un exemple de fichier <code>environment.prod.ts</code> pourrait ressembler à ceci:</p>
 <div class="gatsby-highlight" data-language="ts"><pre style="counter-reset:linenumber NaN" class="language-ts line-numbers"><code class="language-ts"><span class="token keyword">export</span> <span class="token keyword">const</span> environment <span class="token operator">=</span> <span class="token punctuation">{</span>
-  resourceServerA<span class="token punctuation">:</span> <span class="token string">&#x27;REPLACED_BY_BUILD_RESOURCEA&#x27;</span><span class="token punctuation">,</span>
-  resourceServerB<span class="token punctuation">:</span> <span class="token string">&#x27;REPLACED_BY_BUILD_RESOURCEB&#x27;</span><span class="token punctuation">,</span>
-  stage<span class="token punctuation">:</span> <span class="token string">&#x27;REPLACED_BY_BUILD_STAGE&#x27;</span><span class="token punctuation">,</span>
+  resourceServerA<span class="token operator">:</span> <span class="token string">&#x27;REPLACED_BY_BUILD_RESOURCEA&#x27;</span><span class="token punctuation">,</span>
+  resourceServerB<span class="token operator">:</span> <span class="token string">&#x27;REPLACED_BY_BUILD_RESOURCEB&#x27;</span><span class="token punctuation">,</span>
+  stage<span class="token operator">:</span> <span class="token string">&#x27;REPLACED_BY_BUILD_STAGE&#x27;</span><span class="token punctuation">,</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space:normal;width:auto;left:0"><span></span><span></span><span></span><span></span><span></span></span></pre></div>
 <p>Lorsque nous démarrons notre serveur Web, nous pouvons ensuite utiliser un script <code>start.sh</code> qui remplacera les espaces réservés.</p>
 <div class="gatsby-highlight" data-language="bash"><pre style="counter-reset:linenumber NaN" class="language-bash line-numbers"><code class="language-bash"><span class="token shebang important">#!/bin/sh</span>
@@ -170,7 +170,7 @@ Cette approche garantit que le même artefact qui a été testé entre égalemen
 <div class="gatsby-highlight" data-language="ts"><pre style="counter-reset:linenumber NaN" class="language-ts line-numbers"><code class="language-ts"><span class="token keyword">import</span> <span class="token punctuation">{</span> Injectable <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&#x27;@angular/core&#x27;</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> <span class="token punctuation">{</span> <span class="token keyword">from</span> <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&#x27;rxjs&#x27;</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> <span class="token punctuation">{</span> filter<span class="token punctuation">,</span> map<span class="token punctuation">,</span> switchMap<span class="token punctuation">,</span> tap <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&#x27;rxjs/operators&#x27;</span><span class="token punctuation">;</span>
-<span class="token keyword">declare</span> <span class="token keyword">var</span> window<span class="token punctuation">:</span> <span class="token builtin">any</span><span class="token punctuation">;</span>
+<span class="token keyword">declare</span> <span class="token keyword">var</span> window<span class="token operator">:</span> <span class="token builtin">any</span><span class="token punctuation">;</span>
 
 @<span class="token function">Injectable</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 <span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">AppInitService</span> <span class="token punctuation">{</span>
@@ -191,22 +191,22 @@ Cette approche garantit que le même artefact qui a été testé entre égalemen
 <span class="token punctuation">}</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space:normal;width:auto;left:0"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
 <p>Ce service s’exécutera au démarrage et garantira que la configuration de l’application est récupérée en utilisant <code>fetch</code> pour obtenir le fichier de configuration, puis enregistrez-le dans <code>window</code> pour le rendre globalement disponible pour l’application. Notez que lorsque vous utilisez <code>fetch</code>, vous aurez peut-être besoin de polyfills pour la prise en charge du navigateur IE.</p>
 <p>Le service d’initialisation d’application est configuré dans le module <code>app.module</code> comme suit:</p>
-<div class="gatsby-highlight" data-language="ts"><pre style="counter-reset:linenumber NaN" class="language-ts line-numbers"><code class="language-ts"><span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">init_app</span><span class="token punctuation">(</span><span class="token parameter">appLoadService<span class="token punctuation">:</span> AppInitService</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<div class="gatsby-highlight" data-language="ts"><pre style="counter-reset:linenumber NaN" class="language-ts line-numbers"><code class="language-ts"><span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">init_app</span><span class="token punctuation">(</span><span class="token parameter">appLoadService<span class="token operator">:</span> AppInitService</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token keyword">return</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> appLoadService<span class="token punctuation">.</span><span class="token function">init</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 @<span class="token function">NgModule</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
-  declarations<span class="token punctuation">:</span> <span class="token punctuation">[</span>AppComponent<span class="token punctuation">,</span> ComponentAComponent<span class="token punctuation">,</span> ComponentBComponent<span class="token punctuation">]</span><span class="token punctuation">,</span>
-  imports<span class="token punctuation">:</span> <span class="token punctuation">[</span>BrowserModule<span class="token punctuation">,</span> CoreModule<span class="token punctuation">,</span> HttpClientModule<span class="token punctuation">]</span><span class="token punctuation">,</span>
-  providers<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+  declarations<span class="token operator">:</span> <span class="token punctuation">[</span>AppComponent<span class="token punctuation">,</span> ComponentAComponent<span class="token punctuation">,</span> ComponentBComponent<span class="token punctuation">]</span><span class="token punctuation">,</span>
+  imports<span class="token operator">:</span> <span class="token punctuation">[</span>BrowserModule<span class="token punctuation">,</span> CoreModule<span class="token punctuation">,</span> HttpClientModule<span class="token punctuation">]</span><span class="token punctuation">,</span>
+  providers<span class="token operator">:</span> <span class="token punctuation">[</span>
     AppInitService<span class="token punctuation">,</span>
     <span class="token punctuation">{</span>
-      provide<span class="token punctuation">:</span> <span class="token constant">APP_INITIALIZER</span><span class="token punctuation">,</span>
-      useFactory<span class="token punctuation">:</span> init_app<span class="token punctuation">,</span>
-      deps<span class="token punctuation">:</span> <span class="token punctuation">[</span>AppInitService<span class="token punctuation">]</span><span class="token punctuation">,</span>
-      multi<span class="token punctuation">:</span> <span class="token boolean">true</span>
+      provide<span class="token operator">:</span> <span class="token constant">APP_INITIALIZER</span><span class="token punctuation">,</span>
+      useFactory<span class="token operator">:</span> init_app<span class="token punctuation">,</span>
+      deps<span class="token operator">:</span> <span class="token punctuation">[</span>AppInitService<span class="token punctuation">]</span><span class="token punctuation">,</span>
+      multi<span class="token operator">:</span> <span class="token boolean">true</span>
     <span class="token punctuation">}</span>
   <span class="token punctuation">]</span><span class="token punctuation">,</span>
-  bootstrap<span class="token punctuation">:</span> <span class="token punctuation">[</span>AppComponent<span class="token punctuation">]</span>
+  bootstrap<span class="token operator">:</span> <span class="token punctuation">[</span>AppComponent<span class="token punctuation">]</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span>
 <span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">AppModule</span> <span class="token punctuation">{</span><span class="token punctuation">}</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space:normal;width:auto;left:0"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
 <p>L’utilisation d’un service d’initialisation d’application crée un léger retard sur le temps de démarrage de l’application, mais des éléments simples comme celui-ci n’auront pas d’impact considérable sur le temps de démarrage. Néanmoins, je vous recommande d’indiquer à vos utilisateurs d’attendre avec une spinner de chargement.</p>
@@ -214,7 +214,7 @@ Cette approche garantit que le même artefact qui a été testé entre égalemen
 <p>Maintenant que nous chargeons le JSON de configuration de manière dynamique et que nous les enregistrons dans <code>window</code>, nous voulons pouvoir les référencer en toute sécurité. Pour ce faire, nous devrions avoir trois fichiers d’environnement: <code>environment</code>, <code>environment.prod</code> et <code>dynamic-environment</code>.</p>
 <p><code>environment</code> est destiné à être utilisé localement, <code>environment.prod</code> est destiné à la production et <code>dynamic-environment</code> est partagé avec <code>environment</code> et <code>environment.prod</code> afin de fournir une configuration dynamique.</p>
 <p><code>dynamic-environment</code> ressemble à ceci:</p>
-<div class="gatsby-highlight" data-language="ts"><pre style="counter-reset:linenumber NaN" class="language-ts line-numbers"><code class="language-ts"><span class="token keyword">declare</span> <span class="token keyword">var</span> window<span class="token punctuation">:</span> <span class="token builtin">any</span><span class="token punctuation">;</span>
+<div class="gatsby-highlight" data-language="ts"><pre style="counter-reset:linenumber NaN" class="language-ts line-numbers"><code class="language-ts"><span class="token keyword">declare</span> <span class="token keyword">var</span> window<span class="token operator">:</span> <span class="token builtin">any</span><span class="token punctuation">;</span>
 
 <span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">DynamicEnvironment</span> <span class="token punctuation">{</span>
   <span class="token keyword">public</span> <span class="token keyword">get</span> <span class="token function">environment</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -225,7 +225,7 @@ Cette approche garantit que le même artefact qui a été testé entre égalemen
 <div class="gatsby-highlight" data-language="ts"><pre style="counter-reset:linenumber NaN" class="language-ts line-numbers"><code class="language-ts"><span class="token keyword">import</span> <span class="token punctuation">{</span> DynamicEnvironment <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&#x27;./dynamic-environment&#x27;</span><span class="token punctuation">;</span>
 <span class="token keyword">class</span> <span class="token class-name">Environment</span> <span class="token keyword">extends</span> <span class="token class-name">DynamicEnvironment</span> <span class="token punctuation">{</span>
 
-  <span class="token keyword">public</span> production<span class="token punctuation">:</span> <span class="token builtin">boolean</span><span class="token punctuation">;</span>
+  <span class="token keyword">public</span> production<span class="token operator">:</span> <span class="token builtin">boolean</span><span class="token punctuation">;</span>
   <span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">super</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token keyword">this</span><span class="token punctuation">.</span>production <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>

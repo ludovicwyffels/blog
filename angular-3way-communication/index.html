@@ -50,13 +50,13 @@
 <p>app.component.html</p>
 </blockquote>
 <div class="gatsby-highlight" data-language="ts"><pre style="counter-reset:linenumber NaN" class="language-ts line-numbers"><code class="language-ts">@<span class="token function">Component</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
-  selector<span class="token punctuation">:</span> <span class="token string">&#x27;app-side-bar-toggle&#x27;</span><span class="token punctuation">,</span>
-  templateUrl<span class="token punctuation">:</span> <span class="token string">&#x27;./side-bar-toggle.component.html&#x27;</span><span class="token punctuation">,</span>
-  styleUrls<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">&#x27;./side-bar-toggle.component.css&#x27;</span><span class="token punctuation">]</span>
+  selector<span class="token operator">:</span> <span class="token string">&#x27;app-side-bar-toggle&#x27;</span><span class="token punctuation">,</span>
+  templateUrl<span class="token operator">:</span> <span class="token string">&#x27;./side-bar-toggle.component.html&#x27;</span><span class="token punctuation">,</span>
+  styleUrls<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&#x27;./side-bar-toggle.component.css&#x27;</span><span class="token punctuation">]</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span>
 <span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">SideBarToggleComponent</span> <span class="token punctuation">{</span>
 
-  @<span class="token function">Input</span><span class="token punctuation">(</span><span class="token punctuation">)</span> sideBar<span class="token punctuation">:</span> SideBarComponent<span class="token punctuation">;</span>
+  @<span class="token function">Input</span><span class="token punctuation">(</span><span class="token punctuation">)</span> sideBar<span class="token operator">:</span> SideBarComponent<span class="token punctuation">;</span>
 
   @<span class="token function">HostListener</span><span class="token punctuation">(</span><span class="token string">&#x27;click&#x27;</span><span class="token punctuation">)</span>
   <span class="token function">click</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -67,9 +67,9 @@
 <p>side-bar-toggle.component.ts</p>
 </blockquote>
 <div class="gatsby-highlight" data-language="ts"><pre style="counter-reset:linenumber NaN" class="language-ts line-numbers"><code class="language-ts">@<span class="token function">Component</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
-  selector<span class="token punctuation">:</span> <span class="token string">&#x27;app-side-bar&#x27;</span><span class="token punctuation">,</span>
-  templateUrl<span class="token punctuation">:</span> <span class="token string">&#x27;./side-bar.component.html&#x27;</span><span class="token punctuation">,</span>
-  styleUrls<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">&#x27;./side-bar.component.css&#x27;</span><span class="token punctuation">]</span>
+  selector<span class="token operator">:</span> <span class="token string">&#x27;app-side-bar&#x27;</span><span class="token punctuation">,</span>
+  templateUrl<span class="token operator">:</span> <span class="token string">&#x27;./side-bar.component.html&#x27;</span><span class="token punctuation">,</span>
+  styleUrls<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&#x27;./side-bar.component.css&#x27;</span><span class="token punctuation">]</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span>
 <span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">SideBarComponent</span> <span class="token punctuation">{</span>
 
@@ -96,14 +96,14 @@
 <p>app.component.html</p>
 </blockquote>
 <div class="gatsby-highlight" data-language="ts"><pre style="counter-reset:linenumber NaN" class="language-ts line-numbers"><code class="language-ts">@<span class="token function">Component</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
-  selector<span class="token punctuation">:</span> <span class="token string">&#x27;my-app&#x27;</span><span class="token punctuation">,</span>
-  templateUrl<span class="token punctuation">:</span> <span class="token string">&#x27;./app.component.html&#x27;</span><span class="token punctuation">,</span>
-  styleUrls<span class="token punctuation">:</span> <span class="token punctuation">[</span> <span class="token string">&#x27;./app.component.css&#x27;</span> <span class="token punctuation">]</span>
+  selector<span class="token operator">:</span> <span class="token string">&#x27;my-app&#x27;</span><span class="token punctuation">,</span>
+  templateUrl<span class="token operator">:</span> <span class="token string">&#x27;./app.component.html&#x27;</span><span class="token punctuation">,</span>
+  styleUrls<span class="token operator">:</span> <span class="token punctuation">[</span> <span class="token string">&#x27;./app.component.css&#x27;</span> <span class="token punctuation">]</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span>
 <span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">AppComponent</span> <span class="token punctuation">{</span>
   sideBarIsOpened <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
 
-  <span class="token function">toggleSideBar</span><span class="token punctuation">(</span><span class="token parameter">shouldOpen<span class="token punctuation">:</span> <span class="token builtin">boolean</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token function">toggleSideBar</span><span class="token punctuation">(</span><span class="token parameter">shouldOpen<span class="token operator">:</span> <span class="token builtin">boolean</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">this</span><span class="token punctuation">.</span>sideBarIsOpened <span class="token operator">=</span> <span class="token operator">!</span><span class="token keyword">this</span><span class="token punctuation">.</span>sideBarIsOpened<span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space:normal;width:auto;left:0"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
@@ -111,13 +111,13 @@
 <p>app.component.ts</p>
 </blockquote>
 <div class="gatsby-highlight" data-language="ts"><pre style="counter-reset:linenumber NaN" class="language-ts line-numbers"><code class="language-ts">@<span class="token function">Component</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
-  selector<span class="token punctuation">:</span> <span class="token string">&#x27;app-side-bar-toggle&#x27;</span><span class="token punctuation">,</span>
-  templateUrl<span class="token punctuation">:</span> <span class="token string">&#x27;./side-bar-toggle.component.html&#x27;</span><span class="token punctuation">,</span>
-  styleUrls<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">&#x27;./side-bar-toggle.component.css&#x27;</span><span class="token punctuation">]</span>
+  selector<span class="token operator">:</span> <span class="token string">&#x27;app-side-bar-toggle&#x27;</span><span class="token punctuation">,</span>
+  templateUrl<span class="token operator">:</span> <span class="token string">&#x27;./side-bar-toggle.component.html&#x27;</span><span class="token punctuation">,</span>
+  styleUrls<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&#x27;./side-bar-toggle.component.css&#x27;</span><span class="token punctuation">]</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span>
 <span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">SideBarToggleComponent</span> <span class="token punctuation">{</span>
 
-  @<span class="token function">Output</span><span class="token punctuation">(</span><span class="token punctuation">)</span> toggle<span class="token punctuation">:</span> EventEmitter<span class="token operator">&lt;</span><span class="token keyword">null</span><span class="token operator">&gt;</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">EventEmitter</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  @<span class="token function">Output</span><span class="token punctuation">(</span><span class="token punctuation">)</span> toggle<span class="token operator">:</span> EventEmitter<span class="token operator">&lt;</span><span class="token keyword">null</span><span class="token operator">&gt;</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">EventEmitter</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
   @<span class="token function">HostListener</span><span class="token punctuation">(</span><span class="token string">&#x27;click&#x27;</span><span class="token punctuation">)</span>
   <span class="token function">click</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -129,9 +129,9 @@
 <p>side-bar-toggle.component.ts</p>
 </blockquote>
 <div class="gatsby-highlight" data-language="ts"><pre style="counter-reset:linenumber NaN" class="language-ts line-numbers"><code class="language-ts">@<span class="token function">Component</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
-  selector<span class="token punctuation">:</span> <span class="token string">&#x27;app-side-bar&#x27;</span><span class="token punctuation">,</span>
-  templateUrl<span class="token punctuation">:</span> <span class="token string">&#x27;./side-bar.component.html&#x27;</span><span class="token punctuation">,</span>
-  styleUrls<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">&#x27;./side-bar.component.css&#x27;</span><span class="token punctuation">]</span>
+  selector<span class="token operator">:</span> <span class="token string">&#x27;app-side-bar&#x27;</span><span class="token punctuation">,</span>
+  templateUrl<span class="token operator">:</span> <span class="token string">&#x27;./side-bar.component.html&#x27;</span><span class="token punctuation">,</span>
+  styleUrls<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&#x27;./side-bar.component.css&#x27;</span><span class="token punctuation">]</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span>
 <span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">SideBarComponent</span> <span class="token punctuation">{</span>
 
@@ -171,14 +171,14 @@
 <p>app.component.html</p>
 </blockquote>
 <div class="gatsby-highlight" data-language="ts"><pre style="counter-reset:linenumber NaN" class="language-ts line-numbers"><code class="language-ts">@<span class="token function">Component</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
-  selector<span class="token punctuation">:</span> <span class="token string">&#x27;app-side-bar-toggle&#x27;</span><span class="token punctuation">,</span>
-  templateUrl<span class="token punctuation">:</span> <span class="token string">&#x27;./side-bar-toggle.component.html&#x27;</span><span class="token punctuation">,</span>
-  styleUrls<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">&#x27;./side-bar-toggle.component.css&#x27;</span><span class="token punctuation">]</span>
+  selector<span class="token operator">:</span> <span class="token string">&#x27;app-side-bar-toggle&#x27;</span><span class="token punctuation">,</span>
+  templateUrl<span class="token operator">:</span> <span class="token string">&#x27;./side-bar-toggle.component.html&#x27;</span><span class="token punctuation">,</span>
+  styleUrls<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&#x27;./side-bar-toggle.component.css&#x27;</span><span class="token punctuation">]</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span>
 <span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">SideBarToggleComponent</span> <span class="token punctuation">{</span>
 
   <span class="token keyword">constructor</span><span class="token punctuation">(</span>
-    <span class="token parameter"><span class="token keyword">private</span> sideBarService<span class="token punctuation">:</span> SideBarService</span>
+    <span class="token parameter"><span class="token keyword">private</span> sideBarService<span class="token operator">:</span> SideBarService</span>
   <span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token punctuation">}</span>
 
   @<span class="token function">HostListener</span><span class="token punctuation">(</span><span class="token string">&#x27;click&#x27;</span><span class="token punctuation">)</span>
@@ -190,9 +190,9 @@
 <p>side-bar-toggle.component.ts</p>
 </blockquote>
 <div class="gatsby-highlight" data-language="ts"><pre style="counter-reset:linenumber NaN" class="language-ts line-numbers"><code class="language-ts">@<span class="token function">Component</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
-  selector<span class="token punctuation">:</span> <span class="token string">&#x27;app-side-bar&#x27;</span><span class="token punctuation">,</span>
-  templateUrl<span class="token punctuation">:</span> <span class="token string">&#x27;./side-bar.component.html&#x27;</span><span class="token punctuation">,</span>
-  styleUrls<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">&#x27;./side-bar.component.css&#x27;</span><span class="token punctuation">]</span>
+  selector<span class="token operator">:</span> <span class="token string">&#x27;app-side-bar&#x27;</span><span class="token punctuation">,</span>
+  templateUrl<span class="token operator">:</span> <span class="token string">&#x27;./side-bar.component.html&#x27;</span><span class="token punctuation">,</span>
+  styleUrls<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&#x27;./side-bar.component.css&#x27;</span><span class="token punctuation">]</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span>
 <span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">SideBarComponent</span> <span class="token punctuation">{</span>
 
@@ -200,7 +200,7 @@
   isOpen <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
 
   <span class="token keyword">constructor</span><span class="token punctuation">(</span>
-    <span class="token parameter"><span class="token keyword">private</span> sideBarService<span class="token punctuation">:</span> SideBarService</span>
+    <span class="token parameter"><span class="token keyword">private</span> sideBarService<span class="token operator">:</span> SideBarService</span>
   <span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token punctuation">}</span>
 
   <span class="token function">ngOnInit</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -217,7 +217,7 @@
 
   isOpen <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
 
-  @<span class="token function">Output</span><span class="token punctuation">(</span><span class="token punctuation">)</span> change<span class="token punctuation">:</span> EventEmitter<span class="token operator">&lt;</span><span class="token builtin">boolean</span><span class="token operator">&gt;</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">EventEmitter</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  @<span class="token function">Output</span><span class="token punctuation">(</span><span class="token punctuation">)</span> change<span class="token operator">:</span> EventEmitter<span class="token operator">&lt;</span><span class="token builtin">boolean</span><span class="token operator">&gt;</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">EventEmitter</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
   <span class="token function">toggle</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">this</span><span class="token punctuation">.</span>isOpen <span class="token operator">=</span> <span class="token operator">!</span><span class="token keyword">this</span><span class="token punctuation">.</span>isOpen<span class="token punctuation">;</span>

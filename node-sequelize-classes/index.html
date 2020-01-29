@@ -54,7 +54,7 @@ MyModel<span class="token punctuation">.</span><span class="token function-varia
   <span class="token keyword">static</span> <span class="token function">init</span><span class="token punctuation">(</span><span class="token parameter">sequelize<span class="token punctuation">,</span> DataTypes</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">return</span> <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">init</span><span class="token punctuation">(</span>
       <span class="token punctuation">{</span>
-        myField<span class="token punctuation">:</span> DataTypes<span class="token punctuation">.</span><span class="token constant">STRING</span><span class="token punctuation">,</span>
+        myField<span class="token operator">:</span> DataTypes<span class="token punctuation">.</span><span class="token constant">STRING</span><span class="token punctuation">,</span>
       <span class="token punctuation">}</span><span class="token punctuation">,</span>
       <span class="token punctuation">{</span> sequelize <span class="token punctuation">}</span><span class="token punctuation">,</span>
     <span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -80,7 +80,7 @@ MyModel<span class="token punctuation">.</span><span class="token function-varia
         <span class="token comment">// field definitions</span>
       <span class="token punctuation">}</span><span class="token punctuation">,</span>
       <span class="token punctuation">{</span>
-        tableName<span class="token punctuation">:</span> <span class="token string">&#x27;myModels&#x27;</span><span class="token punctuation">,</span>
+        tableName<span class="token operator">:</span> <span class="token string">&#x27;myModels&#x27;</span><span class="token punctuation">,</span>
         sequelize<span class="token punctuation">,</span>
       <span class="token punctuation">}</span><span class="token punctuation">,</span>
     <span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -96,7 +96,7 @@ MyModel<span class="token punctuation">.</span><span class="token function-varia
         <span class="token comment">// field definitions</span>
       <span class="token punctuation">}</span><span class="token punctuation">,</span>
       <span class="token punctuation">{</span>
-        modelName<span class="token punctuation">:</span> <span class="token string">&#x27;myModel&#x27;</span><span class="token punctuation">,</span>
+        modelName<span class="token operator">:</span> <span class="token string">&#x27;myModel&#x27;</span><span class="token punctuation">,</span>
         sequelize<span class="token punctuation">,</span>
       <span class="token punctuation">}</span><span class="token punctuation">,</span>
     <span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -109,8 +109,8 @@ MyModel<span class="token punctuation">.</span><span class="token function-varia
   <span class="token keyword">static</span> <span class="token function">getId</span><span class="token punctuation">(</span><span class="token parameter">where</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">findOne</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
       where<span class="token punctuation">,</span>
-      attributes<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">&#x27;id&#x27;</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
-      order<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token string">&#x27;createdAt&#x27;</span><span class="token punctuation">,</span> <span class="token string">&#x27;DESC&#x27;</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+      attributes<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&#x27;id&#x27;</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+      order<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token string">&#x27;createdAt&#x27;</span><span class="token punctuation">,</span> <span class="token string">&#x27;DESC&#x27;</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
     <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space:normal;width:auto;left:0"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
@@ -134,9 +134,9 @@ MyModel<span class="token punctuation">.</span><span class="token function-varia
 <span class="token keyword">const</span> ThirdModel <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&#x27;./third-model&#x27;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> models <span class="token operator">=</span> <span class="token punctuation">{</span>
-  First<span class="token punctuation">:</span> FirstModel<span class="token punctuation">.</span><span class="token function">init</span><span class="token punctuation">(</span>sequelize<span class="token punctuation">,</span> Sequelize<span class="token punctuation">)</span><span class="token punctuation">,</span>
-  Second<span class="token punctuation">:</span> SecondModel<span class="token punctuation">.</span><span class="token function">init</span><span class="token punctuation">(</span>sequelize<span class="token punctuation">,</span> Sequelize<span class="token punctuation">)</span><span class="token punctuation">,</span>
-  Third<span class="token punctuation">:</span> ThirdModel<span class="token punctuation">.</span><span class="token function">init</span><span class="token punctuation">(</span>sequelize<span class="token punctuation">,</span> Sequelize<span class="token punctuation">)</span><span class="token punctuation">,</span>
+  First<span class="token operator">:</span> FirstModel<span class="token punctuation">.</span><span class="token function">init</span><span class="token punctuation">(</span>sequelize<span class="token punctuation">,</span> Sequelize<span class="token punctuation">)</span><span class="token punctuation">,</span>
+  Second<span class="token operator">:</span> SecondModel<span class="token punctuation">.</span><span class="token function">init</span><span class="token punctuation">(</span>sequelize<span class="token punctuation">,</span> Sequelize<span class="token punctuation">)</span><span class="token punctuation">,</span>
+  Third<span class="token operator">:</span> ThirdModel<span class="token punctuation">.</span><span class="token function">init</span><span class="token punctuation">(</span>sequelize<span class="token punctuation">,</span> Sequelize<span class="token punctuation">)</span><span class="token punctuation">,</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
 
 <span class="token comment">// Run `.associate` if it exists,</span>
