@@ -25,7 +25,7 @@
     "gatsby-plugin-postcss": "^2.1.18",
     "gatsby-plugin-react-helmet": "^3.1.22",
     "gatsby-plugin-sass": "^2.1.26",
-    "gatsby-plugin-sharp": "^2.3.13",
+    "gatsby-plugin-sharp": "^2.4.0",
     "gatsby-plugin-sitemap": "^2.2.24",
     "gatsby-plugin-typescript": "^2.1.26",
     "gatsby-remark-abbr": "^2.0.0",
