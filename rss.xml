@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Software on the road]]></title><description><![CDATA[Software on the road]]></description><link>https://ludovicwyffels.dev</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 20 Feb 2020 12:25:45 GMT</lastBuildDate><item><title><![CDATA[Gestion des environnements Angular en livraison continue]]></title><description><![CDATA[Dans les applications métiers, nous rencontrons souvent une configuration de livraison continue comportant plusieurs stages. Chaque étape a…]]></description><link>https://ludovicwyffels.dev/angular-dynamic-environment/</link><guid isPermaLink="false">https://ludovicwyffels.dev/angular-dynamic-environment/</guid><pubDate>Sun, 08 Sep 2019 17:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Dans les applications métiers, nous rencontrons souvent une configuration de livraison continue comportant plusieurs stages. Chaque étape a sa configuration pour accéder aux systèmes périphériques spécifiques à l’environnement. Pour ce faire, nous devons gérer les configurations basées sur les stages.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Software on the road]]></title><description><![CDATA[Software on the road]]></description><link>https://ludovicwyffels.dev</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 20 Feb 2020 12:28:37 GMT</lastBuildDate><item><title><![CDATA[Gestion des environnements Angular en livraison continue]]></title><description><![CDATA[Dans les applications métiers, nous rencontrons souvent une configuration de livraison continue comportant plusieurs stages. Chaque étape a…]]></description><link>https://ludovicwyffels.dev/angular-dynamic-environment/</link><guid isPermaLink="false">https://ludovicwyffels.dev/angular-dynamic-environment/</guid><pubDate>Sun, 08 Sep 2019 17:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Dans les applications métiers, nous rencontrons souvent une configuration de livraison continue comportant plusieurs stages. Chaque étape a sa configuration pour accéder aux systèmes périphériques spécifiques à l’environnement. Pour ce faire, nous devons gérer les configurations basées sur les stages.&lt;/p&gt;
 &lt;p&gt;Angular CLI est livré avec certains concepts intégrés permettant de gérer différents environnements.&lt;/p&gt;
 &lt;p&gt;Mais quelle est leur fiabilité dans un environnement de livraison continu ? 🤔&lt;/p&gt;
 &lt;h2&gt;Livraison continue - une courte introduction&lt;/h2&gt;
@@ -16,7 +16,7 @@ Chaque validation entraîne une exécution du pipeline sur notre serveur CI. Les
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/13c78901660c3a1ee09b0f1d126463e2/c0a24/continuous-deployment.png&quot;
+    href=&quot;/static/13c78901660c3a1ee09b0f1d126463e2/332ff/continuous-deployment.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -34,15 +34,15 @@ Chaque validation entraîne une exécution du pipeline sur notre serveur CI. Les
           type=&quot;image/webp&quot;
         /&gt;
         &lt;source
-          srcset=&quot;/static/13c78901660c3a1ee09b0f1d126463e2/b6dd9/continuous-deployment.png 293w,
-/static/13c78901660c3a1ee09b0f1d126463e2/037e5/continuous-deployment.png 585w,
-/static/13c78901660c3a1ee09b0f1d126463e2/c0a24/continuous-deployment.png 1000w&quot;
+          srcset=&quot;/static/13c78901660c3a1ee09b0f1d126463e2/0ecc1/continuous-deployment.png 293w,
+/static/13c78901660c3a1ee09b0f1d126463e2/1bd4c/continuous-deployment.png 585w,
+/static/13c78901660c3a1ee09b0f1d126463e2/332ff/continuous-deployment.png 1000w&quot;
           sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
           type=&quot;image/png&quot;
         /&gt;
         &lt;img
           class=&quot;gatsby-resp-image-image&quot;
-          src=&quot;/static/13c78901660c3a1ee09b0f1d126463e2/c0a24/continuous-deployment.png&quot;
+          src=&quot;/static/13c78901660c3a1ee09b0f1d126463e2/332ff/continuous-deployment.png&quot;
           alt=&quot;Continuous Deployment&quot;
           title=&quot;Continuous Deployment&quot;
           loading=&quot;lazy&quot;
@@ -1947,7 +1947,7 @@ Un nouveau point final peut être créé en écrivant une nouvelle fonction déc
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/f27c880058cf7fa455879ae4b9ba03ab/6ca50/recreate.png&quot;
+    href=&quot;/static/f27c880058cf7fa455879ae4b9ba03ab/8537d/recreate.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -1966,16 +1966,16 @@ Un nouveau point final peut être créé en écrivant une nouvelle fonction déc
           type=&quot;image/webp&quot;
         /&gt;
         &lt;source
-          srcset=&quot;/static/f27c880058cf7fa455879ae4b9ba03ab/b6dd9/recreate.png 293w,
-/static/f27c880058cf7fa455879ae4b9ba03ab/037e5/recreate.png 585w,
-/static/f27c880058cf7fa455879ae4b9ba03ab/0f291/recreate.png 1170w,
-/static/f27c880058cf7fa455879ae4b9ba03ab/6ca50/recreate.png 1200w&quot;
+          srcset=&quot;/static/f27c880058cf7fa455879ae4b9ba03ab/0ecc1/recreate.png 293w,
+/static/f27c880058cf7fa455879ae4b9ba03ab/1bd4c/recreate.png 585w,
+/static/f27c880058cf7fa455879ae4b9ba03ab/0776b/recreate.png 1170w,
+/static/f27c880058cf7fa455879ae4b9ba03ab/8537d/recreate.png 1200w&quot;
           sizes=&quot;(max-width: 1170px) 100vw, 1170px&quot;
           type=&quot;image/png&quot;
         /&gt;
         &lt;img
           class=&quot;gatsby-resp-image-image&quot;
-          src=&quot;/static/f27c880058cf7fa455879ae4b9ba03ab/0f291/recreate.png&quot;
+          src=&quot;/static/f27c880058cf7fa455879ae4b9ba03ab/0776b/recreate.png&quot;
           alt=&quot;recreate&quot;
           title=&quot;recreate&quot;
           loading=&quot;lazy&quot;
@@ -2008,7 +2008,7 @@ Un nouveau point final peut être créé en écrivant une nouvelle fonction déc
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/1d809290f395c4681a3991173760108e/6ca50/ramped.png&quot;
+    href=&quot;/static/1d809290f395c4681a3991173760108e/8537d/ramped.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -2027,16 +2027,16 @@ Un nouveau point final peut être créé en écrivant une nouvelle fonction déc
           type=&quot;image/webp&quot;
         /&gt;
         &lt;source
-          srcset=&quot;/static/1d809290f395c4681a3991173760108e/b6dd9/ramped.png 293w,
-/static/1d809290f395c4681a3991173760108e/037e5/ramped.png 585w,
-/static/1d809290f395c4681a3991173760108e/0f291/ramped.png 1170w,
-/static/1d809290f395c4681a3991173760108e/6ca50/ramped.png 1200w&quot;
+          srcset=&quot;/static/1d809290f395c4681a3991173760108e/0ecc1/ramped.png 293w,
+/static/1d809290f395c4681a3991173760108e/1bd4c/ramped.png 585w,
+/static/1d809290f395c4681a3991173760108e/0776b/ramped.png 1170w,
+/static/1d809290f395c4681a3991173760108e/8537d/ramped.png 1200w&quot;
           sizes=&quot;(max-width: 1170px) 100vw, 1170px&quot;
           type=&quot;image/png&quot;
         /&gt;
         &lt;img
           class=&quot;gatsby-resp-image-image&quot;
-          src=&quot;/static/1d809290f395c4681a3991173760108e/0f291/ramped.png&quot;
+          src=&quot;/static/1d809290f395c4681a3991173760108e/0776b/ramped.png&quot;
           alt=&quot;ramped&quot;
           title=&quot;ramped&quot;
           loading=&quot;lazy&quot;
@@ -2081,7 +2081,7 @@ Un nouveau point final peut être créé en écrivant une nouvelle fonction déc
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/403f058c1985c38bd1357cea1f175a03/6ca50/bluegreen.png&quot;
+    href=&quot;/static/403f058c1985c38bd1357cea1f175a03/8537d/bluegreen.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -2100,16 +2100,16 @@ Un nouveau point final peut être créé en écrivant une nouvelle fonction déc
           type=&quot;image/webp&quot;
         /&gt;
         &lt;source
-          srcset=&quot;/static/403f058c1985c38bd1357cea1f175a03/b6dd9/bluegreen.png 293w,
-/static/403f058c1985c38bd1357cea1f175a03/037e5/bluegreen.png 585w,
-/static/403f058c1985c38bd1357cea1f175a03/0f291/bluegreen.png 1170w,
-/static/403f058c1985c38bd1357cea1f175a03/6ca50/bluegreen.png 1200w&quot;
+          srcset=&quot;/static/403f058c1985c38bd1357cea1f175a03/0ecc1/bluegreen.png 293w,
+/static/403f058c1985c38bd1357cea1f175a03/1bd4c/bluegreen.png 585w,
+/static/403f058c1985c38bd1357cea1f175a03/0776b/bluegreen.png 1170w,
+/static/403f058c1985c38bd1357cea1f175a03/8537d/bluegreen.png 1200w&quot;
           sizes=&quot;(max-width: 1170px) 100vw, 1170px&quot;
           type=&quot;image/png&quot;
         /&gt;
         &lt;img
           class=&quot;gatsby-resp-image-image&quot;
-          src=&quot;/static/403f058c1985c38bd1357cea1f175a03/0f291/bluegreen.png&quot;
+          src=&quot;/static/403f058c1985c38bd1357cea1f175a03/0776b/bluegreen.png&quot;
           alt=&quot;bluegreen&quot;
           title=&quot;bluegreen&quot;
           loading=&quot;lazy&quot;
@@ -2161,7 +2161,7 @@ Un nouveau point final peut être créé en écrivant une nouvelle fonction déc
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/eb6ae0806d639a4d47f11a6eb498ddde/6ca50/canary.png&quot;
+    href=&quot;/static/eb6ae0806d639a4d47f11a6eb498ddde/8537d/canary.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -2180,16 +2180,16 @@ Un nouveau point final peut être créé en écrivant une nouvelle fonction déc
           type=&quot;image/webp&quot;
         /&gt;
         &lt;source
-          srcset=&quot;/static/eb6ae0806d639a4d47f11a6eb498ddde/b6dd9/canary.png 293w,
-/static/eb6ae0806d639a4d47f11a6eb498ddde/037e5/canary.png 585w,
-/static/eb6ae0806d639a4d47f11a6eb498ddde/0f291/canary.png 1170w,
-/static/eb6ae0806d639a4d47f11a6eb498ddde/6ca50/canary.png 1200w&quot;
+          srcset=&quot;/static/eb6ae0806d639a4d47f11a6eb498ddde/0ecc1/canary.png 293w,
+/static/eb6ae0806d639a4d47f11a6eb498ddde/1bd4c/canary.png 585w,
+/static/eb6ae0806d639a4d47f11a6eb498ddde/0776b/canary.png 1170w,
+/static/eb6ae0806d639a4d47f11a6eb498ddde/8537d/canary.png 1200w&quot;
           sizes=&quot;(max-width: 1170px) 100vw, 1170px&quot;
           type=&quot;image/png&quot;
         /&gt;
         &lt;img
           class=&quot;gatsby-resp-image-image&quot;
-          src=&quot;/static/eb6ae0806d639a4d47f11a6eb498ddde/0f291/canary.png&quot;
+          src=&quot;/static/eb6ae0806d639a4d47f11a6eb498ddde/0776b/canary.png&quot;
           alt=&quot;canary&quot;
           title=&quot;canary&quot;
           loading=&quot;lazy&quot;
@@ -2232,7 +2232,7 @@ Un nouveau point final peut être créé en écrivant une nouvelle fonction déc
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/159c113c9cbb5b8dadfdfd540f888ee9/6ca50/abtesting.png&quot;
+    href=&quot;/static/159c113c9cbb5b8dadfdfd540f888ee9/8537d/abtesting.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -2251,16 +2251,16 @@ Un nouveau point final peut être créé en écrivant une nouvelle fonction déc
           type=&quot;image/webp&quot;
         /&gt;
         &lt;source
-          srcset=&quot;/static/159c113c9cbb5b8dadfdfd540f888ee9/b6dd9/abtesting.png 293w,
-/static/159c113c9cbb5b8dadfdfd540f888ee9/037e5/abtesting.png 585w,
-/static/159c113c9cbb5b8dadfdfd540f888ee9/0f291/abtesting.png 1170w,
-/static/159c113c9cbb5b8dadfdfd540f888ee9/6ca50/abtesting.png 1200w&quot;
+          srcset=&quot;/static/159c113c9cbb5b8dadfdfd540f888ee9/0ecc1/abtesting.png 293w,
+/static/159c113c9cbb5b8dadfdfd540f888ee9/1bd4c/abtesting.png 585w,
+/static/159c113c9cbb5b8dadfdfd540f888ee9/0776b/abtesting.png 1170w,
+/static/159c113c9cbb5b8dadfdfd540f888ee9/8537d/abtesting.png 1200w&quot;
           sizes=&quot;(max-width: 1170px) 100vw, 1170px&quot;
           type=&quot;image/png&quot;
         /&gt;
         &lt;img
           class=&quot;gatsby-resp-image-image&quot;
-          src=&quot;/static/159c113c9cbb5b8dadfdfd540f888ee9/0f291/abtesting.png&quot;
+          src=&quot;/static/159c113c9cbb5b8dadfdfd540f888ee9/0776b/abtesting.png&quot;
           alt=&quot;abtesting&quot;
           title=&quot;abtesting&quot;
           loading=&quot;lazy&quot;
@@ -2821,7 +2821,7 @@ nvm &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; node&lt;/c
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/2e8ce8fad9da85cf8aa8818b8e2adc5e/cac3d/angular-communication-component.png&quot;
+    href=&quot;/static/2e8ce8fad9da85cf8aa8818b8e2adc5e/cf84a/angular-communication-component.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -2838,14 +2838,14 @@ nvm &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; node&lt;/c
           type=&quot;image/webp&quot;
         /&gt;
         &lt;source
-          srcset=&quot;/static/2e8ce8fad9da85cf8aa8818b8e2adc5e/b6dd9/angular-communication-component.png 293w,
-/static/2e8ce8fad9da85cf8aa8818b8e2adc5e/cac3d/angular-communication-component.png 450w&quot;
+          srcset=&quot;/static/2e8ce8fad9da85cf8aa8818b8e2adc5e/0ecc1/angular-communication-component.png 293w,
+/static/2e8ce8fad9da85cf8aa8818b8e2adc5e/cf84a/angular-communication-component.png 450w&quot;
           sizes=&quot;(max-width: 450px) 100vw, 450px&quot;
           type=&quot;image/png&quot;
         /&gt;
         &lt;img
           class=&quot;gatsby-resp-image-image&quot;
-          src=&quot;/static/2e8ce8fad9da85cf8aa8818b8e2adc5e/cac3d/angular-communication-component.png&quot;
+          src=&quot;/static/2e8ce8fad9da85cf8aa8818b8e2adc5e/cf84a/angular-communication-component.png&quot;
           alt=&quot;angular-communication-component&quot;
           title=&quot;angular-communication-component&quot;
           loading=&quot;lazy&quot;
@@ -2975,7 +2975,7 @@ nvm &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; node&lt;/c
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/bfe98952691679cd400bca2daa253bd3/cac3d/angular-communication-service.png&quot;
+    href=&quot;/static/bfe98952691679cd400bca2daa253bd3/cf84a/angular-communication-service.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -2992,14 +2992,14 @@ nvm &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; node&lt;/c
           type=&quot;image/webp&quot;
         /&gt;
         &lt;source
-          srcset=&quot;/static/bfe98952691679cd400bca2daa253bd3/b6dd9/angular-communication-service.png 293w,
-/static/bfe98952691679cd400bca2daa253bd3/cac3d/angular-communication-service.png 450w&quot;
+          srcset=&quot;/static/bfe98952691679cd400bca2daa253bd3/0ecc1/angular-communication-service.png 293w,
+/static/bfe98952691679cd400bca2daa253bd3/cf84a/angular-communication-service.png 450w&quot;
           sizes=&quot;(max-width: 450px) 100vw, 450px&quot;
           type=&quot;image/png&quot;
         /&gt;
         &lt;img
           class=&quot;gatsby-resp-image-image&quot;
-          src=&quot;/static/bfe98952691679cd400bca2daa253bd3/cac3d/angular-communication-service.png&quot;
+          src=&quot;/static/bfe98952691679cd400bca2daa253bd3/cf84a/angular-communication-service.png&quot;
           alt=&quot;angular-communication-service&quot;
           title=&quot;angular-communication-service&quot;
           loading=&quot;lazy&quot;
@@ -3099,7 +3099,7 @@ nvm &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; node&lt;/c
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/9140fb73e84257bf363b3adaaf856403/8f529/venn-learn.png&quot;
+    href=&quot;/static/9140fb73e84257bf363b3adaaf856403/1a152/venn-learn.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -3118,16 +3118,16 @@ nvm &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; node&lt;/c
           type=&quot;image/webp&quot;
         /&gt;
         &lt;source
-          srcset=&quot;/static/9140fb73e84257bf363b3adaaf856403/b6dd9/venn-learn.png 293w,
-/static/9140fb73e84257bf363b3adaaf856403/037e5/venn-learn.png 585w,
-/static/9140fb73e84257bf363b3adaaf856403/0f291/venn-learn.png 1170w,
-/static/9140fb73e84257bf363b3adaaf856403/8f529/venn-learn.png 1600w&quot;
+          srcset=&quot;/static/9140fb73e84257bf363b3adaaf856403/0ecc1/venn-learn.png 293w,
+/static/9140fb73e84257bf363b3adaaf856403/1bd4c/venn-learn.png 585w,
+/static/9140fb73e84257bf363b3adaaf856403/0776b/venn-learn.png 1170w,
+/static/9140fb73e84257bf363b3adaaf856403/1a152/venn-learn.png 1600w&quot;
           sizes=&quot;(max-width: 1170px) 100vw, 1170px&quot;
           type=&quot;image/png&quot;
         /&gt;
         &lt;img
           class=&quot;gatsby-resp-image-image&quot;
-          src=&quot;/static/9140fb73e84257bf363b3adaaf856403/0f291/venn-learn.png&quot;
+          src=&quot;/static/9140fb73e84257bf363b3adaaf856403/0776b/venn-learn.png&quot;
           alt=&quot;venn learn&quot;
           title=&quot;venn learn&quot;
           loading=&quot;lazy&quot;
@@ -3152,7 +3152,7 @@ Mais ce module, &lt;a href=&quot;https://github.com/web-push-libs/web-push&quot;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/79230e921f88318b2fdfc6f0b4da7472/82635/service-worker.png&quot;
+    href=&quot;/static/79230e921f88318b2fdfc6f0b4da7472/517d9/service-worker.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -3170,15 +3170,15 @@ Mais ce module, &lt;a href=&quot;https://github.com/web-push-libs/web-push&quot;
           type=&quot;image/webp&quot;
         /&gt;
         &lt;source
-          srcset=&quot;/static/79230e921f88318b2fdfc6f0b4da7472/b6dd9/service-worker.png 293w,
-/static/79230e921f88318b2fdfc6f0b4da7472/037e5/service-worker.png 585w,
-/static/79230e921f88318b2fdfc6f0b4da7472/82635/service-worker.png 694w&quot;
+          srcset=&quot;/static/79230e921f88318b2fdfc6f0b4da7472/0ecc1/service-worker.png 293w,
+/static/79230e921f88318b2fdfc6f0b4da7472/1bd4c/service-worker.png 585w,
+/static/79230e921f88318b2fdfc6f0b4da7472/517d9/service-worker.png 694w&quot;
           sizes=&quot;(max-width: 694px) 100vw, 694px&quot;
           type=&quot;image/png&quot;
         /&gt;
         &lt;img
           class=&quot;gatsby-resp-image-image&quot;
-          src=&quot;/static/79230e921f88318b2fdfc6f0b4da7472/82635/service-worker.png&quot;
+          src=&quot;/static/79230e921f88318b2fdfc6f0b4da7472/517d9/service-worker.png&quot;
           alt=&quot;service worker&quot;
           title=&quot;service worker&quot;
           loading=&quot;lazy&quot;
@@ -3986,7 +3986,7 @@ webpack.config.js&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/e7549783fc618ca44dcc8daef066a986/06940/server_layers.png&quot;
+    href=&quot;/static/e7549783fc618ca44dcc8daef066a986/7cd47/server_layers.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -4004,15 +4004,15 @@ webpack.config.js&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;
           type=&quot;image/webp&quot;
         /&gt;
         &lt;source
-          srcset=&quot;/static/e7549783fc618ca44dcc8daef066a986/b6dd9/server_layers.png 293w,
-/static/e7549783fc618ca44dcc8daef066a986/037e5/server_layers.png 585w,
-/static/e7549783fc618ca44dcc8daef066a986/06940/server_layers.png 755w&quot;
+          srcset=&quot;/static/e7549783fc618ca44dcc8daef066a986/0ecc1/server_layers.png 293w,
+/static/e7549783fc618ca44dcc8daef066a986/1bd4c/server_layers.png 585w,
+/static/e7549783fc618ca44dcc8daef066a986/7cd47/server_layers.png 755w&quot;
           sizes=&quot;(max-width: 755px) 100vw, 755px&quot;
           type=&quot;image/png&quot;
         /&gt;
         &lt;img
           class=&quot;gatsby-resp-image-image&quot;
-          src=&quot;/static/e7549783fc618ca44dcc8daef066a986/06940/server_layers.png&quot;
+          src=&quot;/static/e7549783fc618ca44dcc8daef066a986/7cd47/server_layers.png&quot;
           alt=&quot;3 layer pattern&quot;
           title=&quot;3 layer pattern&quot;
           loading=&quot;lazy&quot;
@@ -4029,7 +4029,7 @@ webpack.config.js&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/8ba15b5b22a1a677396ca792a04418e3/ad6dd/server_layers_2.png&quot;
+    href=&quot;/static/8ba15b5b22a1a677396ca792a04418e3/ef2ec/server_layers_2.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -4047,15 +4047,15 @@ webpack.config.js&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;
           type=&quot;image/webp&quot;
         /&gt;
         &lt;source
-          srcset=&quot;/static/8ba15b5b22a1a677396ca792a04418e3/b6dd9/server_layers_2.png 293w,
-/static/8ba15b5b22a1a677396ca792a04418e3/037e5/server_layers_2.png 585w,
-/static/8ba15b5b22a1a677396ca792a04418e3/ad6dd/server_layers_2.png 652w&quot;
+          srcset=&quot;/static/8ba15b5b22a1a677396ca792a04418e3/0ecc1/server_layers_2.png 293w,
+/static/8ba15b5b22a1a677396ca792a04418e3/1bd4c/server_layers_2.png 585w,
+/static/8ba15b5b22a1a677396ca792a04418e3/ef2ec/server_layers_2.png 652w&quot;
           sizes=&quot;(max-width: 652px) 100vw, 652px&quot;
           type=&quot;image/png&quot;
         /&gt;
         &lt;img
           class=&quot;gatsby-resp-image-image&quot;
-          src=&quot;/static/8ba15b5b22a1a677396ca792a04418e3/ad6dd/server_layers_2.png&quot;
+          src=&quot;/static/8ba15b5b22a1a677396ca792a04418e3/ef2ec/server_layers_2.png&quot;
           alt=&quot;3 layer pattern for node.js REST API&quot;
           title=&quot;3 layer pattern for node.js REST API&quot;
           loading=&quot;lazy&quot;
@@ -4901,7 +4901,7 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/bc1d8c0fe43fbdbd290421761c57cb77/cac3d/1.png&quot;
+    href=&quot;/static/bc1d8c0fe43fbdbd290421761c57cb77/cf84a/1.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -4918,14 +4918,14 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
           type=&quot;image/webp&quot;
         /&gt;
         &lt;source
-          srcset=&quot;/static/bc1d8c0fe43fbdbd290421761c57cb77/b6dd9/1.png 293w,
-/static/bc1d8c0fe43fbdbd290421761c57cb77/cac3d/1.png 450w&quot;
+          srcset=&quot;/static/bc1d8c0fe43fbdbd290421761c57cb77/0ecc1/1.png 293w,
+/static/bc1d8c0fe43fbdbd290421761c57cb77/cf84a/1.png 450w&quot;
           sizes=&quot;(max-width: 450px) 100vw, 450px&quot;
           type=&quot;image/png&quot;
         /&gt;
         &lt;img
           class=&quot;gatsby-resp-image-image&quot;
-          src=&quot;/static/bc1d8c0fe43fbdbd290421761c57cb77/cac3d/1.png&quot;
+          src=&quot;/static/bc1d8c0fe43fbdbd290421761c57cb77/cf84a/1.png&quot;
           alt=&quot;1&quot;
           title=&quot;1&quot;
           loading=&quot;lazy&quot;
@@ -4944,7 +4944,7 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/73eb40d4f0bb7c23d2790b3c426d1575/e6f90/2.png&quot;
+    href=&quot;/static/73eb40d4f0bb7c23d2790b3c426d1575/c2963/2.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -4961,14 +4961,14 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
           type=&quot;image/webp&quot;
         /&gt;
         &lt;source
-          srcset=&quot;/static/73eb40d4f0bb7c23d2790b3c426d1575/b6dd9/2.png 293w,
-/static/73eb40d4f0bb7c23d2790b3c426d1575/e6f90/2.png 467w&quot;
+          srcset=&quot;/static/73eb40d4f0bb7c23d2790b3c426d1575/0ecc1/2.png 293w,
+/static/73eb40d4f0bb7c23d2790b3c426d1575/c2963/2.png 467w&quot;
           sizes=&quot;(max-width: 467px) 100vw, 467px&quot;
           type=&quot;image/png&quot;
         /&gt;
         &lt;img
           class=&quot;gatsby-resp-image-image&quot;
-          src=&quot;/static/73eb40d4f0bb7c23d2790b3c426d1575/e6f90/2.png&quot;
+          src=&quot;/static/73eb40d4f0bb7c23d2790b3c426d1575/c2963/2.png&quot;
           alt=&quot;2&quot;
           title=&quot;2&quot;
           loading=&quot;lazy&quot;
@@ -5384,7 +5384,7 @@ down /etc/openvpn/update-resolv-conf&lt;/code&gt;&lt;span aria-hidden=&quot;true
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/29e3e8a840fc500356e30313b0782efe/b0217/crossjoin.png&quot;
+    href=&quot;/static/29e3e8a840fc500356e30313b0782efe/edec1/crossjoin.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -5403,16 +5403,16 @@ down /etc/openvpn/update-resolv-conf&lt;/code&gt;&lt;span aria-hidden=&quot;true
           type=&quot;image/webp&quot;
         /&gt;
         &lt;source
-          srcset=&quot;/static/29e3e8a840fc500356e30313b0782efe/b6dd9/crossjoin.png 293w,
-/static/29e3e8a840fc500356e30313b0782efe/037e5/crossjoin.png 585w,
-/static/29e3e8a840fc500356e30313b0782efe/0f291/crossjoin.png 1170w,
-/static/29e3e8a840fc500356e30313b0782efe/b0217/crossjoin.png 1252w&quot;
+          srcset=&quot;/static/29e3e8a840fc500356e30313b0782efe/0ecc1/crossjoin.png 293w,
+/static/29e3e8a840fc500356e30313b0782efe/1bd4c/crossjoin.png 585w,
+/static/29e3e8a840fc500356e30313b0782efe/0776b/crossjoin.png 1170w,
+/static/29e3e8a840fc500356e30313b0782efe/edec1/crossjoin.png 1252w&quot;
           sizes=&quot;(max-width: 1170px) 100vw, 1170px&quot;
           type=&quot;image/png&quot;
         /&gt;
         &lt;img
           class=&quot;gatsby-resp-image-image&quot;
-          src=&quot;/static/29e3e8a840fc500356e30313b0782efe/0f291/crossjoin.png&quot;
+          src=&quot;/static/29e3e8a840fc500356e30313b0782efe/0776b/crossjoin.png&quot;
           alt=&quot;Cross Join&quot;
           title=&quot;Cross Join&quot;
           loading=&quot;lazy&quot;
@@ -5431,7 +5431,7 @@ down /etc/openvpn/update-resolv-conf&lt;/code&gt;&lt;span aria-hidden=&quot;true
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/a7ef6ad35711b3c4d4fd7580469f3425/8f529/crossjoinselect.png&quot;
+    href=&quot;/static/a7ef6ad35711b3c4d4fd7580469f3425/1a152/crossjoinselect.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -5450,16 +5450,16 @@ down /etc/openvpn/update-resolv-conf&lt;/code&gt;&lt;span aria-hidden=&quot;true
           type=&quot;image/webp&quot;
         /&gt;
         &lt;source
-          srcset=&quot;/static/a7ef6ad35711b3c4d4fd7580469f3425/b6dd9/crossjoinselect.png 293w,
-/static/a7ef6ad35711b3c4d4fd7580469f3425/037e5/crossjoinselect.png 585w,
-/static/a7ef6ad35711b3c4d4fd7580469f3425/0f291/crossjoinselect.png 1170w,
-/static/a7ef6ad35711b3c4d4fd7580469f3425/8f529/crossjoinselect.png 1600w&quot;
+          srcset=&quot;/static/a7ef6ad35711b3c4d4fd7580469f3425/0ecc1/crossjoinselect.png 293w,
+/static/a7ef6ad35711b3c4d4fd7580469f3425/1bd4c/crossjoinselect.png 585w,
+/static/a7ef6ad35711b3c4d4fd7580469f3425/0776b/crossjoinselect.png 1170w,
+/static/a7ef6ad35711b3c4d4fd7580469f3425/1a152/crossjoinselect.png 1600w&quot;
           sizes=&quot;(max-width: 1170px) 100vw, 1170px&quot;
           type=&quot;image/png&quot;
         /&gt;
         &lt;img
           class=&quot;gatsby-resp-image-image&quot;
-          src=&quot;/static/a7ef6ad35711b3c4d4fd7580469f3425/0f291/crossjoinselect.png&quot;
+          src=&quot;/static/a7ef6ad35711b3c4d4fd7580469f3425/0776b/crossjoinselect.png&quot;
           alt=&quot;Cross Join tout sélectionner&quot;
           title=&quot;Cross Join tout sélectionner&quot;
           loading=&quot;lazy&quot;
@@ -5478,7 +5478,7 @@ down /etc/openvpn/update-resolv-conf&lt;/code&gt;&lt;span aria-hidden=&quot;true
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/275a8b3c2d723380b7a2c3452a817d18/7340e/crossjoinpart.png&quot;
+    href=&quot;/static/275a8b3c2d723380b7a2c3452a817d18/7108d/crossjoinpart.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -5497,16 +5497,16 @@ down /etc/openvpn/update-resolv-conf&lt;/code&gt;&lt;span aria-hidden=&quot;true
           type=&quot;image/webp&quot;
         /&gt;
         &lt;source
-          srcset=&quot;/static/275a8b3c2d723380b7a2c3452a817d18/b6dd9/crossjoinpart.png 293w,
-/static/275a8b3c2d723380b7a2c3452a817d18/037e5/crossjoinpart.png 585w,
-/static/275a8b3c2d723380b7a2c3452a817d18/0f291/crossjoinpart.png 1170w,
-/static/275a8b3c2d723380b7a2c3452a817d18/7340e/crossjoinpart.png 1336w&quot;
+          srcset=&quot;/static/275a8b3c2d723380b7a2c3452a817d18/0ecc1/crossjoinpart.png 293w,
+/static/275a8b3c2d723380b7a2c3452a817d18/1bd4c/crossjoinpart.png 585w,
+/static/275a8b3c2d723380b7a2c3452a817d18/0776b/crossjoinpart.png 1170w,
+/static/275a8b3c2d723380b7a2c3452a817d18/7108d/crossjoinpart.png 1336w&quot;
           sizes=&quot;(max-width: 1170px) 100vw, 1170px&quot;
           type=&quot;image/png&quot;
         /&gt;
         &lt;img
           class=&quot;gatsby-resp-image-image&quot;
-          src=&quot;/static/275a8b3c2d723380b7a2c3452a817d18/0f291/crossjoinpart.png&quot;
+          src=&quot;/static/275a8b3c2d723380b7a2c3452a817d18/0776b/crossjoinpart.png&quot;
           alt=&quot;crossjoinpart&quot;
           title=&quot;crossjoinpart&quot;
           loading=&quot;lazy&quot;
@@ -5523,7 +5523,7 @@ down /etc/openvpn/update-resolv-conf&lt;/code&gt;&lt;span aria-hidden=&quot;true
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/b249e7e43d99ec1ceef9f57df07e8b22/6ca50/crossjoinpart2.png&quot;
+    href=&quot;/static/b249e7e43d99ec1ceef9f57df07e8b22/8537d/crossjoinpart2.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -5542,16 +5542,16 @@ down /etc/openvpn/update-resolv-conf&lt;/code&gt;&lt;span aria-hidden=&quot;true
           type=&quot;image/webp&quot;
         /&gt;
         &lt;source
-          srcset=&quot;/static/b249e7e43d99ec1ceef9f57df07e8b22/b6dd9/crossjoinpart2.png 293w,
-/static/b249e7e43d99ec1ceef9f57df07e8b22/037e5/crossjoinpart2.png 585w,
-/static/b249e7e43d99ec1ceef9f57df07e8b22/0f291/crossjoinpart2.png 1170w,
-/static/b249e7e43d99ec1ceef9f57df07e8b22/6ca50/crossjoinpart2.png 1200w&quot;
+          srcset=&quot;/static/b249e7e43d99ec1ceef9f57df07e8b22/0ecc1/crossjoinpart2.png 293w,
+/static/b249e7e43d99ec1ceef9f57df07e8b22/1bd4c/crossjoinpart2.png 585w,
+/static/b249e7e43d99ec1ceef9f57df07e8b22/0776b/crossjoinpart2.png 1170w,
+/static/b249e7e43d99ec1ceef9f57df07e8b22/8537d/crossjoinpart2.png 1200w&quot;
           sizes=&quot;(max-width: 1170px) 100vw, 1170px&quot;
           type=&quot;image/png&quot;
         /&gt;
         &lt;img
           class=&quot;gatsby-resp-image-image&quot;
-          src=&quot;/static/b249e7e43d99ec1ceef9f57df07e8b22/0f291/crossjoinpart2.png&quot;
+          src=&quot;/static/b249e7e43d99ec1ceef9f57df07e8b22/0776b/crossjoinpart2.png&quot;
           alt=&quot;crossjoinpart2&quot;
           title=&quot;crossjoinpart2&quot;
           loading=&quot;lazy&quot;
@@ -5570,7 +5570,7 @@ down /etc/openvpn/update-resolv-conf&lt;/code&gt;&lt;span aria-hidden=&quot;true
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/1696bc619a8faae2a659584b0b485b75/b0217/innerjoin.png&quot;
+    href=&quot;/static/1696bc619a8faae2a659584b0b485b75/edec1/innerjoin.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -5589,16 +5589,16 @@ down /etc/openvpn/update-resolv-conf&lt;/code&gt;&lt;span aria-hidden=&quot;true
           type=&quot;image/webp&quot;
         /&gt;
         &lt;source
-          srcset=&quot;/static/1696bc619a8faae2a659584b0b485b75/b6dd9/innerjoin.png 293w,
-/static/1696bc619a8faae2a659584b0b485b75/037e5/innerjoin.png 585w,
-/static/1696bc619a8faae2a659584b0b485b75/0f291/innerjoin.png 1170w,
-/static/1696bc619a8faae2a659584b0b485b75/b0217/innerjoin.png 1252w&quot;
+          srcset=&quot;/static/1696bc619a8faae2a659584b0b485b75/0ecc1/innerjoin.png 293w,
+/static/1696bc619a8faae2a659584b0b485b75/1bd4c/innerjoin.png 585w,
+/static/1696bc619a8faae2a659584b0b485b75/0776b/innerjoin.png 1170w,
+/static/1696bc619a8faae2a659584b0b485b75/edec1/innerjoin.png 1252w&quot;
           sizes=&quot;(max-width: 1170px) 100vw, 1170px&quot;
           type=&quot;image/png&quot;
         /&gt;
         &lt;img
           class=&quot;gatsby-resp-image-image&quot;
-          src=&quot;/static/1696bc619a8faae2a659584b0b485b75/0f291/innerjoin.png&quot;
+          src=&quot;/static/1696bc619a8faae2a659584b0b485b75/0776b/innerjoin.png&quot;
           alt=&quot;Inner join&quot;
           title=&quot;Inner join&quot;
           loading=&quot;lazy&quot;
@@ -5617,7 +5617,7 @@ down /etc/openvpn/update-resolv-conf&lt;/code&gt;&lt;span aria-hidden=&quot;true
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/c69f5611fb5a032c4dce68f3b6db3888/8f529/innerexample.png&quot;
+    href=&quot;/static/c69f5611fb5a032c4dce68f3b6db3888/1a152/innerexample.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -5636,16 +5636,16 @@ down /etc/openvpn/update-resolv-conf&lt;/code&gt;&lt;span aria-hidden=&quot;true
           type=&quot;image/webp&quot;
         /&gt;
         &lt;source
-          srcset=&quot;/static/c69f5611fb5a032c4dce68f3b6db3888/b6dd9/innerexample.png 293w,
-/static/c69f5611fb5a032c4dce68f3b6db3888/037e5/innerexample.png 585w,
-/static/c69f5611fb5a032c4dce68f3b6db3888/0f291/innerexample.png 1170w,
-/static/c69f5611fb5a032c4dce68f3b6db3888/8f529/innerexample.png 1600w&quot;
+          srcset=&quot;/static/c69f5611fb5a032c4dce68f3b6db3888/0ecc1/innerexample.png 293w,
+/static/c69f5611fb5a032c4dce68f3b6db3888/1bd4c/innerexample.png 585w,
+/static/c69f5611fb5a032c4dce68f3b6db3888/0776b/innerexample.png 1170w,
+/static/c69f5611fb5a032c4dce68f3b6db3888/1a152/innerexample.png 1600w&quot;
           sizes=&quot;(max-width: 1170px) 100vw, 1170px&quot;
           type=&quot;image/png&quot;
         /&gt;
         &lt;img
           class=&quot;gatsby-resp-image-image&quot;
-          src=&quot;/static/c69f5611fb5a032c4dce68f3b6db3888/0f291/innerexample.png&quot;
+          src=&quot;/static/c69f5611fb5a032c4dce68f3b6db3888/0776b/innerexample.png&quot;
           alt=&quot;innerexample&quot;
           title=&quot;innerexample&quot;
           loading=&quot;lazy&quot;
@@ -5665,7 +5665,7 @@ down /etc/openvpn/update-resolv-conf&lt;/code&gt;&lt;span aria-hidden=&quot;true
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/7fa3c04fc7f3f18d4d3dc5e2b510a641/b0217/leftjoin.png&quot;
+    href=&quot;/static/7fa3c04fc7f3f18d4d3dc5e2b510a641/edec1/leftjoin.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -5684,16 +5684,16 @@ down /etc/openvpn/update-resolv-conf&lt;/code&gt;&lt;span aria-hidden=&quot;true
           type=&quot;image/webp&quot;
         /&gt;
         &lt;source
-          srcset=&quot;/static/7fa3c04fc7f3f18d4d3dc5e2b510a641/b6dd9/leftjoin.png 293w,
-/static/7fa3c04fc7f3f18d4d3dc5e2b510a641/037e5/leftjoin.png 585w,
-/static/7fa3c04fc7f3f18d4d3dc5e2b510a641/0f291/leftjoin.png 1170w,
-/static/7fa3c04fc7f3f18d4d3dc5e2b510a641/b0217/leftjoin.png 1252w&quot;
+          srcset=&quot;/static/7fa3c04fc7f3f18d4d3dc5e2b510a641/0ecc1/leftjoin.png 293w,
+/static/7fa3c04fc7f3f18d4d3dc5e2b510a641/1bd4c/leftjoin.png 585w,
+/static/7fa3c04fc7f3f18d4d3dc5e2b510a641/0776b/leftjoin.png 1170w,
+/static/7fa3c04fc7f3f18d4d3dc5e2b510a641/edec1/leftjoin.png 1252w&quot;
           sizes=&quot;(max-width: 1170px) 100vw, 1170px&quot;
           type=&quot;image/png&quot;
         /&gt;
         &lt;img
           class=&quot;gatsby-resp-image-image&quot;
-          src=&quot;/static/7fa3c04fc7f3f18d4d3dc5e2b510a641/0f291/leftjoin.png&quot;
+          src=&quot;/static/7fa3c04fc7f3f18d4d3dc5e2b510a641/0776b/leftjoin.png&quot;
           alt=&quot;left join&quot;
           title=&quot;left join&quot;
           loading=&quot;lazy&quot;
@@ -5712,7 +5712,7 @@ down /etc/openvpn/update-resolv-conf&lt;/code&gt;&lt;span aria-hidden=&quot;true
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/da53e8de3d233a74208b5b13fc2ede47/8f529/leftjoinexample.png&quot;
+    href=&quot;/static/da53e8de3d233a74208b5b13fc2ede47/1a152/leftjoinexample.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -5731,16 +5731,16 @@ down /etc/openvpn/update-resolv-conf&lt;/code&gt;&lt;span aria-hidden=&quot;true
           type=&quot;image/webp&quot;
         /&gt;
         &lt;source
-          srcset=&quot;/static/da53e8de3d233a74208b5b13fc2ede47/b6dd9/leftjoinexample.png 293w,
-/static/da53e8de3d233a74208b5b13fc2ede47/037e5/leftjoinexample.png 585w,
-/static/da53e8de3d233a74208b5b13fc2ede47/0f291/leftjoinexample.png 1170w,
-/static/da53e8de3d233a74208b5b13fc2ede47/8f529/leftjoinexample.png 1600w&quot;
+          srcset=&quot;/static/da53e8de3d233a74208b5b13fc2ede47/0ecc1/leftjoinexample.png 293w,
+/static/da53e8de3d233a74208b5b13fc2ede47/1bd4c/leftjoinexample.png 585w,
+/static/da53e8de3d233a74208b5b13fc2ede47/0776b/leftjoinexample.png 1170w,
+/static/da53e8de3d233a74208b5b13fc2ede47/1a152/leftjoinexample.png 1600w&quot;
           sizes=&quot;(max-width: 1170px) 100vw, 1170px&quot;
           type=&quot;image/png&quot;
         /&gt;
         &lt;img
           class=&quot;gatsby-resp-image-image&quot;
-          src=&quot;/static/da53e8de3d233a74208b5b13fc2ede47/0f291/leftjoinexample.png&quot;
+          src=&quot;/static/da53e8de3d233a74208b5b13fc2ede47/0776b/leftjoinexample.png&quot;
           alt=&quot;leftjoinexample&quot;
           title=&quot;leftjoinexample&quot;
           loading=&quot;lazy&quot;
@@ -5757,7 +5757,7 @@ down /etc/openvpn/update-resolv-conf&lt;/code&gt;&lt;span aria-hidden=&quot;true
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/799ec65bf117690e0f3a72778a460cfb/b0217/rightjoin.png&quot;
+    href=&quot;/static/799ec65bf117690e0f3a72778a460cfb/edec1/rightjoin.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -5776,16 +5776,16 @@ down /etc/openvpn/update-resolv-conf&lt;/code&gt;&lt;span aria-hidden=&quot;true
           type=&quot;image/webp&quot;
         /&gt;
         &lt;source
-          srcset=&quot;/static/799ec65bf117690e0f3a72778a460cfb/b6dd9/rightjoin.png 293w,
-/static/799ec65bf117690e0f3a72778a460cfb/037e5/rightjoin.png 585w,
-/static/799ec65bf117690e0f3a72778a460cfb/0f291/rightjoin.png 1170w,
-/static/799ec65bf117690e0f3a72778a460cfb/b0217/rightjoin.png 1252w&quot;
+          srcset=&quot;/static/799ec65bf117690e0f3a72778a460cfb/0ecc1/rightjoin.png 293w,
+/static/799ec65bf117690e0f3a72778a460cfb/1bd4c/rightjoin.png 585w,
+/static/799ec65bf117690e0f3a72778a460cfb/0776b/rightjoin.png 1170w,
+/static/799ec65bf117690e0f3a72778a460cfb/edec1/rightjoin.png 1252w&quot;
           sizes=&quot;(max-width: 1170px) 100vw, 1170px&quot;
           type=&quot;image/png&quot;
         /&gt;
         &lt;img
           class=&quot;gatsby-resp-image-image&quot;
-          src=&quot;/static/799ec65bf117690e0f3a72778a460cfb/0f291/rightjoin.png&quot;
+          src=&quot;/static/799ec65bf117690e0f3a72778a460cfb/0776b/rightjoin.png&quot;
           alt=&quot;Right join&quot;
           title=&quot;Right join&quot;
           loading=&quot;lazy&quot;
@@ -5804,7 +5804,7 @@ down /etc/openvpn/update-resolv-conf&lt;/code&gt;&lt;span aria-hidden=&quot;true
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/31972c42804d65c58b8b6bb70089879d/8f529/rightjointexample.png&quot;
+    href=&quot;/static/31972c42804d65c58b8b6bb70089879d/1a152/rightjointexample.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -5823,16 +5823,16 @@ down /etc/openvpn/update-resolv-conf&lt;/code&gt;&lt;span aria-hidden=&quot;true
           type=&quot;image/webp&quot;
         /&gt;
         &lt;source
-          srcset=&quot;/static/31972c42804d65c58b8b6bb70089879d/b6dd9/rightjointexample.png 293w,
-/static/31972c42804d65c58b8b6bb70089879d/037e5/rightjointexample.png 585w,
-/static/31972c42804d65c58b8b6bb70089879d/0f291/rightjointexample.png 1170w,
-/static/31972c42804d65c58b8b6bb70089879d/8f529/rightjointexample.png 1600w&quot;
+          srcset=&quot;/static/31972c42804d65c58b8b6bb70089879d/0ecc1/rightjointexample.png 293w,
+/static/31972c42804d65c58b8b6bb70089879d/1bd4c/rightjointexample.png 585w,
+/static/31972c42804d65c58b8b6bb70089879d/0776b/rightjointexample.png 1170w,
+/static/31972c42804d65c58b8b6bb70089879d/1a152/rightjointexample.png 1600w&quot;
           sizes=&quot;(max-width: 1170px) 100vw, 1170px&quot;
           type=&quot;image/png&quot;
         /&gt;
         &lt;img
           class=&quot;gatsby-resp-image-image&quot;
-          src=&quot;/static/31972c42804d65c58b8b6bb70089879d/0f291/rightjointexample.png&quot;
+          src=&quot;/static/31972c42804d65c58b8b6bb70089879d/0776b/rightjointexample.png&quot;
           alt=&quot;rightjointexample&quot;
           title=&quot;rightjointexample&quot;
           loading=&quot;lazy&quot;
@@ -5851,7 +5851,7 @@ down /etc/openvpn/update-resolv-conf&lt;/code&gt;&lt;span aria-hidden=&quot;true
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/29e3e8a840fc500356e30313b0782efe/b0217/fulljoin.png&quot;
+    href=&quot;/static/29e3e8a840fc500356e30313b0782efe/edec1/fulljoin.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -5870,16 +5870,16 @@ down /etc/openvpn/update-resolv-conf&lt;/code&gt;&lt;span aria-hidden=&quot;true
           type=&quot;image/webp&quot;
         /&gt;
         &lt;source
-          srcset=&quot;/static/29e3e8a840fc500356e30313b0782efe/b6dd9/fulljoin.png 293w,
-/static/29e3e8a840fc500356e30313b0782efe/037e5/fulljoin.png 585w,
-/static/29e3e8a840fc500356e30313b0782efe/0f291/fulljoin.png 1170w,
-/static/29e3e8a840fc500356e30313b0782efe/b0217/fulljoin.png 1252w&quot;
+          srcset=&quot;/static/29e3e8a840fc500356e30313b0782efe/0ecc1/fulljoin.png 293w,
+/static/29e3e8a840fc500356e30313b0782efe/1bd4c/fulljoin.png 585w,
+/static/29e3e8a840fc500356e30313b0782efe/0776b/fulljoin.png 1170w,
+/static/29e3e8a840fc500356e30313b0782efe/edec1/fulljoin.png 1252w&quot;
           sizes=&quot;(max-width: 1170px) 100vw, 1170px&quot;
           type=&quot;image/png&quot;
         /&gt;
         &lt;img
           class=&quot;gatsby-resp-image-image&quot;
-          src=&quot;/static/29e3e8a840fc500356e30313b0782efe/0f291/fulljoin.png&quot;
+          src=&quot;/static/29e3e8a840fc500356e30313b0782efe/0776b/fulljoin.png&quot;
           alt=&quot;Full join&quot;
           title=&quot;Full join&quot;
           loading=&quot;lazy&quot;
@@ -5897,7 +5897,7 @@ down /etc/openvpn/update-resolv-conf&lt;/code&gt;&lt;span aria-hidden=&quot;true
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/97dc580d3604ab840d9413c6b74816ce/8f529/fulljoinexample.png&quot;
+    href=&quot;/static/97dc580d3604ab840d9413c6b74816ce/1a152/fulljoinexample.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -5916,16 +5916,16 @@ down /etc/openvpn/update-resolv-conf&lt;/code&gt;&lt;span aria-hidden=&quot;true
           type=&quot;image/webp&quot;
         /&gt;
         &lt;source
-          srcset=&quot;/static/97dc580d3604ab840d9413c6b74816ce/b6dd9/fulljoinexample.png 293w,
-/static/97dc580d3604ab840d9413c6b74816ce/037e5/fulljoinexample.png 585w,
-/static/97dc580d3604ab840d9413c6b74816ce/0f291/fulljoinexample.png 1170w,
-/static/97dc580d3604ab840d9413c6b74816ce/8f529/fulljoinexample.png 1600w&quot;
+          srcset=&quot;/static/97dc580d3604ab840d9413c6b74816ce/0ecc1/fulljoinexample.png 293w,
+/static/97dc580d3604ab840d9413c6b74816ce/1bd4c/fulljoinexample.png 585w,
+/static/97dc580d3604ab840d9413c6b74816ce/0776b/fulljoinexample.png 1170w,
+/static/97dc580d3604ab840d9413c6b74816ce/1a152/fulljoinexample.png 1600w&quot;
           sizes=&quot;(max-width: 1170px) 100vw, 1170px&quot;
           type=&quot;image/png&quot;
         /&gt;
         &lt;img
           class=&quot;gatsby-resp-image-image&quot;
-          src=&quot;/static/97dc580d3604ab840d9413c6b74816ce/0f291/fulljoinexample.png&quot;
+          src=&quot;/static/97dc580d3604ab840d9413c6b74816ce/0776b/fulljoinexample.png&quot;
           alt=&quot;fulljoinexample&quot;
           title=&quot;fulljoinexample&quot;
           loading=&quot;lazy&quot;
@@ -5947,7 +5947,7 @@ down /etc/openvpn/update-resolv-conf&lt;/code&gt;&lt;span aria-hidden=&quot;true
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/b545339b9344dfeab85903bf704e7956/8d2e0/union.png&quot;
+    href=&quot;/static/b545339b9344dfeab85903bf704e7956/70ccf/union.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -5965,15 +5965,15 @@ down /etc/openvpn/update-resolv-conf&lt;/code&gt;&lt;span aria-hidden=&quot;true
           type=&quot;image/webp&quot;
         /&gt;
         &lt;source
-          srcset=&quot;/static/b545339b9344dfeab85903bf704e7956/b6dd9/union.png 293w,
-/static/b545339b9344dfeab85903bf704e7956/037e5/union.png 585w,
-/static/b545339b9344dfeab85903bf704e7956/8d2e0/union.png 650w&quot;
+          srcset=&quot;/static/b545339b9344dfeab85903bf704e7956/0ecc1/union.png 293w,
+/static/b545339b9344dfeab85903bf704e7956/1bd4c/union.png 585w,
+/static/b545339b9344dfeab85903bf704e7956/70ccf/union.png 650w&quot;
           sizes=&quot;(max-width: 650px) 100vw, 650px&quot;
           type=&quot;image/png&quot;
         /&gt;
         &lt;img
           class=&quot;gatsby-resp-image-image&quot;
-          src=&quot;/static/b545339b9344dfeab85903bf704e7956/8d2e0/union.png&quot;
+          src=&quot;/static/b545339b9344dfeab85903bf704e7956/70ccf/union.png&quot;
           alt=&quot;union&quot;
           title=&quot;union&quot;
           loading=&quot;lazy&quot;
@@ -5995,7 +5995,7 @@ down /etc/openvpn/update-resolv-conf&lt;/code&gt;&lt;span aria-hidden=&quot;true
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/31db92e261d604c62a93eb6b56dadb97/b0217/orderby.png&quot;
+    href=&quot;/static/31db92e261d604c62a93eb6b56dadb97/edec1/orderby.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -6014,16 +6014,16 @@ down /etc/openvpn/update-resolv-conf&lt;/code&gt;&lt;span aria-hidden=&quot;true
           type=&quot;image/webp&quot;
         /&gt;
         &lt;source
-          srcset=&quot;/static/31db92e261d604c62a93eb6b56dadb97/b6dd9/orderby.png 293w,
-/static/31db92e261d604c62a93eb6b56dadb97/037e5/orderby.png 585w,
-/static/31db92e261d604c62a93eb6b56dadb97/0f291/orderby.png 1170w,
-/static/31db92e261d604c62a93eb6b56dadb97/b0217/orderby.png 1252w&quot;
+          srcset=&quot;/static/31db92e261d604c62a93eb6b56dadb97/0ecc1/orderby.png 293w,
+/static/31db92e261d604c62a93eb6b56dadb97/1bd4c/orderby.png 585w,
+/static/31db92e261d604c62a93eb6b56dadb97/0776b/orderby.png 1170w,
+/static/31db92e261d604c62a93eb6b56dadb97/edec1/orderby.png 1252w&quot;
           sizes=&quot;(max-width: 1170px) 100vw, 1170px&quot;
           type=&quot;image/png&quot;
         /&gt;
         &lt;img
           class=&quot;gatsby-resp-image-image&quot;
-          src=&quot;/static/31db92e261d604c62a93eb6b56dadb97/0f291/orderby.png&quot;
+          src=&quot;/static/31db92e261d604c62a93eb6b56dadb97/0776b/orderby.png&quot;
           alt=&quot;orderby&quot;
           title=&quot;orderby&quot;
           loading=&quot;lazy&quot;
@@ -6043,7 +6043,7 @@ down /etc/openvpn/update-resolv-conf&lt;/code&gt;&lt;span aria-hidden=&quot;true
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/4e5838dddfadaa7a507848178e1c8f7d/3c24c/alias.png&quot;
+    href=&quot;/static/4e5838dddfadaa7a507848178e1c8f7d/29127/alias.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -6060,14 +6060,14 @@ down /etc/openvpn/update-resolv-conf&lt;/code&gt;&lt;span aria-hidden=&quot;true
           type=&quot;image/webp&quot;
         /&gt;
         &lt;source
-          srcset=&quot;/static/4e5838dddfadaa7a507848178e1c8f7d/b6dd9/alias.png 293w,
-/static/4e5838dddfadaa7a507848178e1c8f7d/3c24c/alias.png 476w&quot;
+          srcset=&quot;/static/4e5838dddfadaa7a507848178e1c8f7d/0ecc1/alias.png 293w,
+/static/4e5838dddfadaa7a507848178e1c8f7d/29127/alias.png 476w&quot;
           sizes=&quot;(max-width: 476px) 100vw, 476px&quot;
           type=&quot;image/png&quot;
         /&gt;
         &lt;img
           class=&quot;gatsby-resp-image-image&quot;
-          src=&quot;/static/4e5838dddfadaa7a507848178e1c8f7d/3c24c/alias.png&quot;
+          src=&quot;/static/4e5838dddfadaa7a507848178e1c8f7d/29127/alias.png&quot;
           alt=&quot;alias&quot;
           title=&quot;alias&quot;
           loading=&quot;lazy&quot;
@@ -6089,7 +6089,7 @@ down /etc/openvpn/update-resolv-conf&lt;/code&gt;&lt;span aria-hidden=&quot;true
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/ef33855965537ae2dd6d0dfc023f5510/5bdfc/alias2.png&quot;
+    href=&quot;/static/ef33855965537ae2dd6d0dfc023f5510/0f92e/alias2.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -6106,14 +6106,14 @@ down /etc/openvpn/update-resolv-conf&lt;/code&gt;&lt;span aria-hidden=&quot;true
           type=&quot;image/webp&quot;
         /&gt;
         &lt;source
-          srcset=&quot;/static/ef33855965537ae2dd6d0dfc023f5510/b6dd9/alias2.png 293w,
-/static/ef33855965537ae2dd6d0dfc023f5510/5bdfc/alias2.png 550w&quot;
+          srcset=&quot;/static/ef33855965537ae2dd6d0dfc023f5510/0ecc1/alias2.png 293w,
+/static/ef33855965537ae2dd6d0dfc023f5510/0f92e/alias2.png 550w&quot;
           sizes=&quot;(max-width: 550px) 100vw, 550px&quot;
           type=&quot;image/png&quot;
         /&gt;
         &lt;img
           class=&quot;gatsby-resp-image-image&quot;
-          src=&quot;/static/ef33855965537ae2dd6d0dfc023f5510/5bdfc/alias2.png&quot;
+          src=&quot;/static/ef33855965537ae2dd6d0dfc023f5510/0f92e/alias2.png&quot;
           alt=&quot;alias2&quot;
           title=&quot;alias2&quot;
           loading=&quot;lazy&quot;
@@ -6394,7 +6394,7 @@ const losersResult = [
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/0b12bf01bb94837761152d7076de13e2/03ca2/rolling.png&quot;
+    href=&quot;/static/0b12bf01bb94837761152d7076de13e2/38c0d/rolling.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -6412,15 +6412,15 @@ const losersResult = [
           type=&quot;image/webp&quot;
         /&gt;
         &lt;source
-          srcset=&quot;/static/0b12bf01bb94837761152d7076de13e2/b6dd9/rolling.png 293w,
-/static/0b12bf01bb94837761152d7076de13e2/037e5/rolling.png 585w,
-/static/0b12bf01bb94837761152d7076de13e2/03ca2/rolling.png 880w&quot;
+          srcset=&quot;/static/0b12bf01bb94837761152d7076de13e2/0ecc1/rolling.png 293w,
+/static/0b12bf01bb94837761152d7076de13e2/1bd4c/rolling.png 585w,
+/static/0b12bf01bb94837761152d7076de13e2/38c0d/rolling.png 880w&quot;
           sizes=&quot;(max-width: 880px) 100vw, 880px&quot;
           type=&quot;image/png&quot;
         /&gt;
         &lt;img
           class=&quot;gatsby-resp-image-image&quot;
-          src=&quot;/static/0b12bf01bb94837761152d7076de13e2/03ca2/rolling.png&quot;
+          src=&quot;/static/0b12bf01bb94837761152d7076de13e2/38c0d/rolling.png&quot;
           alt=&quot;Déploiement continu&quot;
           title=&quot;Déploiement continu&quot;
           loading=&quot;lazy&quot;
@@ -6439,7 +6439,7 @@ const losersResult = [
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/b6b08527d33c833f35055797a7ea1324/03ca2/bluegreen-1.png&quot;
+    href=&quot;/static/b6b08527d33c833f35055797a7ea1324/38c0d/bluegreen-1.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -6457,15 +6457,15 @@ const losersResult = [
           type=&quot;image/webp&quot;
         /&gt;
         &lt;source
-          srcset=&quot;/static/b6b08527d33c833f35055797a7ea1324/b6dd9/bluegreen-1.png 293w,
-/static/b6b08527d33c833f35055797a7ea1324/037e5/bluegreen-1.png 585w,
-/static/b6b08527d33c833f35055797a7ea1324/03ca2/bluegreen-1.png 880w&quot;
+          srcset=&quot;/static/b6b08527d33c833f35055797a7ea1324/0ecc1/bluegreen-1.png 293w,
+/static/b6b08527d33c833f35055797a7ea1324/1bd4c/bluegreen-1.png 585w,
+/static/b6b08527d33c833f35055797a7ea1324/38c0d/bluegreen-1.png 880w&quot;
           sizes=&quot;(max-width: 880px) 100vw, 880px&quot;
           type=&quot;image/png&quot;
         /&gt;
         &lt;img
           class=&quot;gatsby-resp-image-image&quot;
-          src=&quot;/static/b6b08527d33c833f35055797a7ea1324/03ca2/bluegreen-1.png&quot;
+          src=&quot;/static/b6b08527d33c833f35055797a7ea1324/38c0d/bluegreen-1.png&quot;
           alt=&quot;Avant le déploiement Blue-Green&quot;
           title=&quot;Avant le déploiement Blue-Green&quot;
           loading=&quot;lazy&quot;
@@ -6481,7 +6481,7 @@ const losersResult = [
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/e89e4df2a1a5e75d843264fb524252cc/03ca2/bluegreen-2.png&quot;
+    href=&quot;/static/e89e4df2a1a5e75d843264fb524252cc/38c0d/bluegreen-2.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -6499,15 +6499,15 @@ const losersResult = [
           type=&quot;image/webp&quot;
         /&gt;
         &lt;source
-          srcset=&quot;/static/e89e4df2a1a5e75d843264fb524252cc/b6dd9/bluegreen-2.png 293w,
-/static/e89e4df2a1a5e75d843264fb524252cc/037e5/bluegreen-2.png 585w,
-/static/e89e4df2a1a5e75d843264fb524252cc/03ca2/bluegreen-2.png 880w&quot;
+          srcset=&quot;/static/e89e4df2a1a5e75d843264fb524252cc/0ecc1/bluegreen-2.png 293w,
+/static/e89e4df2a1a5e75d843264fb524252cc/1bd4c/bluegreen-2.png 585w,
+/static/e89e4df2a1a5e75d843264fb524252cc/38c0d/bluegreen-2.png 880w&quot;
           sizes=&quot;(max-width: 880px) 100vw, 880px&quot;
           type=&quot;image/png&quot;
         /&gt;
         &lt;img
           class=&quot;gatsby-resp-image-image&quot;
-          src=&quot;/static/e89e4df2a1a5e75d843264fb524252cc/03ca2/bluegreen-2.png&quot;
+          src=&quot;/static/e89e4df2a1a5e75d843264fb524252cc/38c0d/bluegreen-2.png&quot;
           alt=&quot;Après le déploiement Blue-Green&quot;
           title=&quot;Après le déploiement Blue-Green&quot;
           loading=&quot;lazy&quot;
@@ -6531,7 +6531,7 @@ const losersResult = [
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/78642c8dd77bf1c3b88d2bb27d66797e/03ca2/canari.png&quot;
+    href=&quot;/static/78642c8dd77bf1c3b88d2bb27d66797e/38c0d/canari.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -6549,15 +6549,15 @@ const losersResult = [
           type=&quot;image/webp&quot;
         /&gt;
         &lt;source
-          srcset=&quot;/static/78642c8dd77bf1c3b88d2bb27d66797e/b6dd9/canari.png 293w,
-/static/78642c8dd77bf1c3b88d2bb27d66797e/037e5/canari.png 585w,
-/static/78642c8dd77bf1c3b88d2bb27d66797e/03ca2/canari.png 880w&quot;
+          srcset=&quot;/static/78642c8dd77bf1c3b88d2bb27d66797e/0ecc1/canari.png 293w,
+/static/78642c8dd77bf1c3b88d2bb27d66797e/1bd4c/canari.png 585w,
+/static/78642c8dd77bf1c3b88d2bb27d66797e/38c0d/canari.png 880w&quot;
           sizes=&quot;(max-width: 880px) 100vw, 880px&quot;
           type=&quot;image/png&quot;
         /&gt;
         &lt;img
           class=&quot;gatsby-resp-image-image&quot;
-          src=&quot;/static/78642c8dd77bf1c3b88d2bb27d66797e/03ca2/canari.png&quot;
+          src=&quot;/static/78642c8dd77bf1c3b88d2bb27d66797e/38c0d/canari.png&quot;
           alt=&quot;Déploiement canari&quot;
           title=&quot;Déploiement canari&quot;
           loading=&quot;lazy&quot;
@@ -6603,7 +6603,7 @@ const losersResult = [
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/7fb95d529b6827b77db65603da882cba/eef53/githooks.png&quot;
+    href=&quot;/static/7fb95d529b6827b77db65603da882cba/350a9/githooks.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -6622,16 +6622,16 @@ const losersResult = [
           type=&quot;image/webp&quot;
         /&gt;
         &lt;source
-          srcset=&quot;/static/7fb95d529b6827b77db65603da882cba/b6dd9/githooks.png 293w,
-/static/7fb95d529b6827b77db65603da882cba/037e5/githooks.png 585w,
-/static/7fb95d529b6827b77db65603da882cba/0f291/githooks.png 1170w,
-/static/7fb95d529b6827b77db65603da882cba/eef53/githooks.png 1248w&quot;
+          srcset=&quot;/static/7fb95d529b6827b77db65603da882cba/0ecc1/githooks.png 293w,
+/static/7fb95d529b6827b77db65603da882cba/1bd4c/githooks.png 585w,
+/static/7fb95d529b6827b77db65603da882cba/0776b/githooks.png 1170w,
+/static/7fb95d529b6827b77db65603da882cba/350a9/githooks.png 1248w&quot;
           sizes=&quot;(max-width: 1170px) 100vw, 1170px&quot;
           type=&quot;image/png&quot;
         /&gt;
         &lt;img
           class=&quot;gatsby-resp-image-image&quot;
-          src=&quot;/static/7fb95d529b6827b77db65603da882cba/0f291/githooks.png&quot;
+          src=&quot;/static/7fb95d529b6827b77db65603da882cba/0776b/githooks.png&quot;
           alt=&quot;Répertoire Git Hooks&quot;
           title=&quot;Répertoire Git Hooks&quot;
           loading=&quot;lazy&quot;
@@ -7158,7 +7158,7 @@ $ &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/b4d59495c2fa971c6f8803bcead03304/f5dff/15314221531955.jpg&quot;
+    href=&quot;/static/b4d59495c2fa971c6f8803bcead03304/9bea7/15314221531955.jpg&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -7178,17 +7178,17 @@ $ &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&
           type=&quot;image/webp&quot;
         /&gt;
         &lt;source
-          srcset=&quot;/static/b4d59495c2fa971c6f8803bcead03304/ec1cd/15314221531955.jpg 293w,
-/static/b4d59495c2fa971c6f8803bcead03304/f2ede/15314221531955.jpg 585w,
-/static/b4d59495c2fa971c6f8803bcead03304/740b7/15314221531955.jpg 1170w,
-/static/b4d59495c2fa971c6f8803bcead03304/31d97/15314221531955.jpg 1755w,
-/static/b4d59495c2fa971c6f8803bcead03304/f5dff/15314221531955.jpg 2000w&quot;
+          srcset=&quot;/static/b4d59495c2fa971c6f8803bcead03304/c5f41/15314221531955.jpg 293w,
+/static/b4d59495c2fa971c6f8803bcead03304/2567e/15314221531955.jpg 585w,
+/static/b4d59495c2fa971c6f8803bcead03304/4a896/15314221531955.jpg 1170w,
+/static/b4d59495c2fa971c6f8803bcead03304/caea5/15314221531955.jpg 1755w,
+/static/b4d59495c2fa971c6f8803bcead03304/9bea7/15314221531955.jpg 2000w&quot;
           sizes=&quot;(max-width: 1170px) 100vw, 1170px&quot;
           type=&quot;image/jpeg&quot;
         /&gt;
         &lt;img
           class=&quot;gatsby-resp-image-image&quot;
-          src=&quot;/static/b4d59495c2fa971c6f8803bcead03304/740b7/15314221531955.jpg&quot;
+          src=&quot;/static/b4d59495c2fa971c6f8803bcead03304/4a896/15314221531955.jpg&quot;
           alt=&quot;15314221531955&quot;
           title=&quot;15314221531955&quot;
           loading=&quot;lazy&quot;
@@ -7209,7 +7209,7 @@ $ &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/c17120844d0912e10a0819dd072fa464/f5dff/15314221815702.jpg&quot;
+    href=&quot;/static/c17120844d0912e10a0819dd072fa464/9bea7/15314221815702.jpg&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -7229,17 +7229,17 @@ $ &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&
           type=&quot;image/webp&quot;
         /&gt;
         &lt;source
-          srcset=&quot;/static/c17120844d0912e10a0819dd072fa464/ec1cd/15314221815702.jpg 293w,
-/static/c17120844d0912e10a0819dd072fa464/f2ede/15314221815702.jpg 585w,
-/static/c17120844d0912e10a0819dd072fa464/740b7/15314221815702.jpg 1170w,
-/static/c17120844d0912e10a0819dd072fa464/31d97/15314221815702.jpg 1755w,
-/static/c17120844d0912e10a0819dd072fa464/f5dff/15314221815702.jpg 2000w&quot;
+          srcset=&quot;/static/c17120844d0912e10a0819dd072fa464/c5f41/15314221815702.jpg 293w,
+/static/c17120844d0912e10a0819dd072fa464/2567e/15314221815702.jpg 585w,
+/static/c17120844d0912e10a0819dd072fa464/4a896/15314221815702.jpg 1170w,
+/static/c17120844d0912e10a0819dd072fa464/caea5/15314221815702.jpg 1755w,
+/static/c17120844d0912e10a0819dd072fa464/9bea7/15314221815702.jpg 2000w&quot;
           sizes=&quot;(max-width: 1170px) 100vw, 1170px&quot;
           type=&quot;image/jpeg&quot;
         /&gt;
         &lt;img
           class=&quot;gatsby-resp-image-image&quot;
-          src=&quot;/static/c17120844d0912e10a0819dd072fa464/740b7/15314221815702.jpg&quot;
+          src=&quot;/static/c17120844d0912e10a0819dd072fa464/4a896/15314221815702.jpg&quot;
           alt=&quot;15314221815702&quot;
           title=&quot;15314221815702&quot;
           loading=&quot;lazy&quot;
@@ -7255,7 +7255,7 @@ $ &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/d0cd04ceb7942d4e08690b95287aea28/f5dff/15314221922744.jpg&quot;
+    href=&quot;/static/d0cd04ceb7942d4e08690b95287aea28/9bea7/15314221922744.jpg&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -7275,17 +7275,17 @@ $ &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&
           type=&quot;image/webp&quot;
         /&gt;
         &lt;source
-          srcset=&quot;/static/d0cd04ceb7942d4e08690b95287aea28/ec1cd/15314221922744.jpg 293w,
-/static/d0cd04ceb7942d4e08690b95287aea28/f2ede/15314221922744.jpg 585w,
-/static/d0cd04ceb7942d4e08690b95287aea28/740b7/15314221922744.jpg 1170w,
-/static/d0cd04ceb7942d4e08690b95287aea28/31d97/15314221922744.jpg 1755w,
-/static/d0cd04ceb7942d4e08690b95287aea28/f5dff/15314221922744.jpg 2000w&quot;
+          srcset=&quot;/static/d0cd04ceb7942d4e08690b95287aea28/c5f41/15314221922744.jpg 293w,
+/static/d0cd04ceb7942d4e08690b95287aea28/2567e/15314221922744.jpg 585w,
+/static/d0cd04ceb7942d4e08690b95287aea28/4a896/15314221922744.jpg 1170w,
+/static/d0cd04ceb7942d4e08690b95287aea28/caea5/15314221922744.jpg 1755w,
+/static/d0cd04ceb7942d4e08690b95287aea28/9bea7/15314221922744.jpg 2000w&quot;
           sizes=&quot;(max-width: 1170px) 100vw, 1170px&quot;
           type=&quot;image/jpeg&quot;
         /&gt;
         &lt;img
           class=&quot;gatsby-resp-image-image&quot;
-          src=&quot;/static/d0cd04ceb7942d4e08690b95287aea28/740b7/15314221922744.jpg&quot;
+          src=&quot;/static/d0cd04ceb7942d4e08690b95287aea28/4a896/15314221922744.jpg&quot;
           alt=&quot;15314221922744&quot;
           title=&quot;15314221922744&quot;
           loading=&quot;lazy&quot;
@@ -7304,7 +7304,7 @@ $ &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/95f776315ea3c6c759d30368cbb0787a/6a31d/15314222044035.jpg&quot;
+    href=&quot;/static/95f776315ea3c6c759d30368cbb0787a/211cb/15314222044035.jpg&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -7323,16 +7323,16 @@ $ &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&
           type=&quot;image/webp&quot;
         /&gt;
         &lt;source
-          srcset=&quot;/static/95f776315ea3c6c759d30368cbb0787a/ec1cd/15314222044035.jpg 293w,
-/static/95f776315ea3c6c759d30368cbb0787a/f2ede/15314222044035.jpg 585w,
-/static/95f776315ea3c6c759d30368cbb0787a/740b7/15314222044035.jpg 1170w,
-/static/95f776315ea3c6c759d30368cbb0787a/6a31d/15314222044035.jpg 1356w&quot;
+          srcset=&quot;/static/95f776315ea3c6c759d30368cbb0787a/c5f41/15314222044035.jpg 293w,
+/static/95f776315ea3c6c759d30368cbb0787a/2567e/15314222044035.jpg 585w,
+/static/95f776315ea3c6c759d30368cbb0787a/4a896/15314222044035.jpg 1170w,
+/static/95f776315ea3c6c759d30368cbb0787a/211cb/15314222044035.jpg 1356w&quot;
           sizes=&quot;(max-width: 1170px) 100vw, 1170px&quot;
           type=&quot;image/jpeg&quot;
         /&gt;
         &lt;img
           class=&quot;gatsby-resp-image-image&quot;
-          src=&quot;/static/95f776315ea3c6c759d30368cbb0787a/740b7/15314222044035.jpg&quot;
+          src=&quot;/static/95f776315ea3c6c759d30368cbb0787a/4a896/15314222044035.jpg&quot;
           alt=&quot;15314222044035&quot;
           title=&quot;15314222044035&quot;
           loading=&quot;lazy&quot;
@@ -7350,7 +7350,7 @@ $ &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/573442655139a19f772ba811abb1db1a/eee88/flex-direction-row.jpg&quot;
+    href=&quot;/static/573442655139a19f772ba811abb1db1a/26f50/flex-direction-row.jpg&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -7369,16 +7369,16 @@ $ &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&
           type=&quot;image/webp&quot;
         /&gt;
         &lt;source
-          srcset=&quot;/static/573442655139a19f772ba811abb1db1a/ec1cd/flex-direction-row.jpg 293w,
-/static/573442655139a19f772ba811abb1db1a/f2ede/flex-direction-row.jpg 585w,
-/static/573442655139a19f772ba811abb1db1a/740b7/flex-direction-row.jpg 1170w,
-/static/573442655139a19f772ba811abb1db1a/eee88/flex-direction-row.jpg 1362w&quot;
+          srcset=&quot;/static/573442655139a19f772ba811abb1db1a/c5f41/flex-direction-row.jpg 293w,
+/static/573442655139a19f772ba811abb1db1a/2567e/flex-direction-row.jpg 585w,
+/static/573442655139a19f772ba811abb1db1a/4a896/flex-direction-row.jpg 1170w,
+/static/573442655139a19f772ba811abb1db1a/26f50/flex-direction-row.jpg 1362w&quot;
           sizes=&quot;(max-width: 1170px) 100vw, 1170px&quot;
           type=&quot;image/jpeg&quot;
         /&gt;
         &lt;img
           class=&quot;gatsby-resp-image-image&quot;
-          src=&quot;/static/573442655139a19f772ba811abb1db1a/740b7/flex-direction-row.jpg&quot;
+          src=&quot;/static/573442655139a19f772ba811abb1db1a/4a896/flex-direction-row.jpg&quot;
           alt=&quot;flex direction row&quot;
           title=&quot;flex direction row&quot;
           loading=&quot;lazy&quot;
@@ -7393,7 +7393,7 @@ $ &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/37e8739029f6c1ac8bcfcfe517daa5a6/eee88/15314222323110.jpg&quot;
+    href=&quot;/static/37e8739029f6c1ac8bcfcfe517daa5a6/26f50/15314222323110.jpg&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -7412,16 +7412,16 @@ $ &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&
           type=&quot;image/webp&quot;
         /&gt;
         &lt;source
-          srcset=&quot;/static/37e8739029f6c1ac8bcfcfe517daa5a6/ec1cd/15314222323110.jpg 293w,
-/static/37e8739029f6c1ac8bcfcfe517daa5a6/f2ede/15314222323110.jpg 585w,
-/static/37e8739029f6c1ac8bcfcfe517daa5a6/740b7/15314222323110.jpg 1170w,
-/static/37e8739029f6c1ac8bcfcfe517daa5a6/eee88/15314222323110.jpg 1362w&quot;
+          srcset=&quot;/static/37e8739029f6c1ac8bcfcfe517daa5a6/c5f41/15314222323110.jpg 293w,
+/static/37e8739029f6c1ac8bcfcfe517daa5a6/2567e/15314222323110.jpg 585w,
+/static/37e8739029f6c1ac8bcfcfe517daa5a6/4a896/15314222323110.jpg 1170w,
+/static/37e8739029f6c1ac8bcfcfe517daa5a6/26f50/15314222323110.jpg 1362w&quot;
           sizes=&quot;(max-width: 1170px) 100vw, 1170px&quot;
           type=&quot;image/jpeg&quot;
         /&gt;
         &lt;img
           class=&quot;gatsby-resp-image-image&quot;
-          src=&quot;/static/37e8739029f6c1ac8bcfcfe517daa5a6/740b7/15314222323110.jpg&quot;
+          src=&quot;/static/37e8739029f6c1ac8bcfcfe517daa5a6/4a896/15314222323110.jpg&quot;
           alt=&quot;15314222323110&quot;
           title=&quot;15314222323110&quot;
           loading=&quot;lazy&quot;
@@ -7441,7 +7441,7 @@ $ &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/b1b4709fd9c7dd1f12ff8114e524d2f2/6f008/15314222381066.jpg&quot;
+    href=&quot;/static/b1b4709fd9c7dd1f12ff8114e524d2f2/c60e9/15314222381066.jpg&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -7459,15 +7459,15 @@ $ &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&
           type=&quot;image/webp&quot;
         /&gt;
         &lt;source
-          srcset=&quot;/static/b1b4709fd9c7dd1f12ff8114e524d2f2/ec1cd/15314222381066.jpg 293w,
-/static/b1b4709fd9c7dd1f12ff8114e524d2f2/f2ede/15314222381066.jpg 585w,
-/static/b1b4709fd9c7dd1f12ff8114e524d2f2/6f008/15314222381066.jpg 800w&quot;
+          srcset=&quot;/static/b1b4709fd9c7dd1f12ff8114e524d2f2/c5f41/15314222381066.jpg 293w,
+/static/b1b4709fd9c7dd1f12ff8114e524d2f2/2567e/15314222381066.jpg 585w,
+/static/b1b4709fd9c7dd1f12ff8114e524d2f2/c60e9/15314222381066.jpg 800w&quot;
           sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
           type=&quot;image/jpeg&quot;
         /&gt;
         &lt;img
           class=&quot;gatsby-resp-image-image&quot;
-          src=&quot;/static/b1b4709fd9c7dd1f12ff8114e524d2f2/6f008/15314222381066.jpg&quot;
+          src=&quot;/static/b1b4709fd9c7dd1f12ff8114e524d2f2/c60e9/15314222381066.jpg&quot;
           alt=&quot;15314222381066&quot;
           title=&quot;15314222381066&quot;
           loading=&quot;lazy&quot;
@@ -7487,7 +7487,7 @@ $ &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/c66adfaa2b82cc1e86879a64fc70a6fc/6f008/15314222496092.jpg&quot;
+    href=&quot;/static/c66adfaa2b82cc1e86879a64fc70a6fc/c60e9/15314222496092.jpg&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -7505,15 +7505,15 @@ $ &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&
           type=&quot;image/webp&quot;
         /&gt;
         &lt;source
-          srcset=&quot;/static/c66adfaa2b82cc1e86879a64fc70a6fc/ec1cd/15314222496092.jpg 293w,
-/static/c66adfaa2b82cc1e86879a64fc70a6fc/f2ede/15314222496092.jpg 585w,
-/static/c66adfaa2b82cc1e86879a64fc70a6fc/6f008/15314222496092.jpg 800w&quot;
+          srcset=&quot;/static/c66adfaa2b82cc1e86879a64fc70a6fc/c5f41/15314222496092.jpg 293w,
+/static/c66adfaa2b82cc1e86879a64fc70a6fc/2567e/15314222496092.jpg 585w,
+/static/c66adfaa2b82cc1e86879a64fc70a6fc/c60e9/15314222496092.jpg 800w&quot;
           sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
           type=&quot;image/jpeg&quot;
         /&gt;
         &lt;img
           class=&quot;gatsby-resp-image-image&quot;
-          src=&quot;/static/c66adfaa2b82cc1e86879a64fc70a6fc/6f008/15314222496092.jpg&quot;
+          src=&quot;/static/c66adfaa2b82cc1e86879a64fc70a6fc/c60e9/15314222496092.jpg&quot;
           alt=&quot;15314222496092&quot;
           title=&quot;15314222496092&quot;
           loading=&quot;lazy&quot;
@@ -7530,7 +7530,7 @@ $ &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/c7152a293cded3f8ae9dd6451202403a/6f008/15314222567787.jpg&quot;
+    href=&quot;/static/c7152a293cded3f8ae9dd6451202403a/c60e9/15314222567787.jpg&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -7548,15 +7548,15 @@ $ &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&
           type=&quot;image/webp&quot;
         /&gt;
         &lt;source
-          srcset=&quot;/static/c7152a293cded3f8ae9dd6451202403a/ec1cd/15314222567787.jpg 293w,
-/static/c7152a293cded3f8ae9dd6451202403a/f2ede/15314222567787.jpg 585w,
-/static/c7152a293cded3f8ae9dd6451202403a/6f008/15314222567787.jpg 800w&quot;
+          srcset=&quot;/static/c7152a293cded3f8ae9dd6451202403a/c5f41/15314222567787.jpg 293w,
+/static/c7152a293cded3f8ae9dd6451202403a/2567e/15314222567787.jpg 585w,
+/static/c7152a293cded3f8ae9dd6451202403a/c60e9/15314222567787.jpg 800w&quot;
           sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
           type=&quot;image/jpeg&quot;
         /&gt;
         &lt;img
           class=&quot;gatsby-resp-image-image&quot;
-          src=&quot;/static/c7152a293cded3f8ae9dd6451202403a/6f008/15314222567787.jpg&quot;
+          src=&quot;/static/c7152a293cded3f8ae9dd6451202403a/c60e9/15314222567787.jpg&quot;
           alt=&quot;15314222567787&quot;
           title=&quot;15314222567787&quot;
           loading=&quot;lazy&quot;
@@ -7575,7 +7575,7 @@ $ &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/d708e38aa106423663f9765cea278611/6f008/15314222854358.jpg&quot;
+    href=&quot;/static/d708e38aa106423663f9765cea278611/c60e9/15314222854358.jpg&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -7593,15 +7593,15 @@ $ &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&
           type=&quot;image/webp&quot;
         /&gt;
         &lt;source
-          srcset=&quot;/static/d708e38aa106423663f9765cea278611/ec1cd/15314222854358.jpg 293w,
-/static/d708e38aa106423663f9765cea278611/f2ede/15314222854358.jpg 585w,
-/static/d708e38aa106423663f9765cea278611/6f008/15314222854358.jpg 800w&quot;
+          srcset=&quot;/static/d708e38aa106423663f9765cea278611/c5f41/15314222854358.jpg 293w,
+/static/d708e38aa106423663f9765cea278611/2567e/15314222854358.jpg 585w,
+/static/d708e38aa106423663f9765cea278611/c60e9/15314222854358.jpg 800w&quot;
           sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
           type=&quot;image/jpeg&quot;
         /&gt;
         &lt;img
           class=&quot;gatsby-resp-image-image&quot;
-          src=&quot;/static/d708e38aa106423663f9765cea278611/6f008/15314222854358.jpg&quot;
+          src=&quot;/static/d708e38aa106423663f9765cea278611/c60e9/15314222854358.jpg&quot;
           alt=&quot;15314222854358&quot;
           title=&quot;15314222854358&quot;
           loading=&quot;lazy&quot;
@@ -7619,7 +7619,7 @@ $ &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/63fef6976539d1807bb0cb448f0c1548/6f008/15314222935771.jpg&quot;
+    href=&quot;/static/63fef6976539d1807bb0cb448f0c1548/c60e9/15314222935771.jpg&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -7637,15 +7637,15 @@ $ &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&
           type=&quot;image/webp&quot;
         /&gt;
         &lt;source
-          srcset=&quot;/static/63fef6976539d1807bb0cb448f0c1548/ec1cd/15314222935771.jpg 293w,
-/static/63fef6976539d1807bb0cb448f0c1548/f2ede/15314222935771.jpg 585w,
-/static/63fef6976539d1807bb0cb448f0c1548/6f008/15314222935771.jpg 800w&quot;
+          srcset=&quot;/static/63fef6976539d1807bb0cb448f0c1548/c5f41/15314222935771.jpg 293w,
+/static/63fef6976539d1807bb0cb448f0c1548/2567e/15314222935771.jpg 585w,
+/static/63fef6976539d1807bb0cb448f0c1548/c60e9/15314222935771.jpg 800w&quot;
           sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
           type=&quot;image/jpeg&quot;
         /&gt;
         &lt;img
           class=&quot;gatsby-resp-image-image&quot;
-          src=&quot;/static/63fef6976539d1807bb0cb448f0c1548/6f008/15314222935771.jpg&quot;
+          src=&quot;/static/63fef6976539d1807bb0cb448f0c1548/c60e9/15314222935771.jpg&quot;
           alt=&quot;15314222935771&quot;
           title=&quot;15314222935771&quot;
           loading=&quot;lazy&quot;
@@ -7664,7 +7664,7 @@ $ &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/ad520689bd871a162d266c8dd99477ad/6f008/15314222996390.jpg&quot;
+    href=&quot;/static/ad520689bd871a162d266c8dd99477ad/c60e9/15314222996390.jpg&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -7682,15 +7682,15 @@ $ &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&
           type=&quot;image/webp&quot;
         /&gt;
         &lt;source
-          srcset=&quot;/static/ad520689bd871a162d266c8dd99477ad/ec1cd/15314222996390.jpg 293w,
-/static/ad520689bd871a162d266c8dd99477ad/f2ede/15314222996390.jpg 585w,
-/static/ad520689bd871a162d266c8dd99477ad/6f008/15314222996390.jpg 800w&quot;
+          srcset=&quot;/static/ad520689bd871a162d266c8dd99477ad/c5f41/15314222996390.jpg 293w,
+/static/ad520689bd871a162d266c8dd99477ad/2567e/15314222996390.jpg 585w,
+/static/ad520689bd871a162d266c8dd99477ad/c60e9/15314222996390.jpg 800w&quot;
           sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
           type=&quot;image/jpeg&quot;
         /&gt;
         &lt;img
           class=&quot;gatsby-resp-image-image&quot;
-          src=&quot;/static/ad520689bd871a162d266c8dd99477ad/6f008/15314222996390.jpg&quot;
+          src=&quot;/static/ad520689bd871a162d266c8dd99477ad/c60e9/15314222996390.jpg&quot;
           alt=&quot;15314222996390&quot;
           title=&quot;15314222996390&quot;
           loading=&quot;lazy&quot;
@@ -7708,7 +7708,7 @@ $ &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/0c3ec2a57bcdfb822b761d50bdba1468/25c02/15314223071439.jpg&quot;
+    href=&quot;/static/0c3ec2a57bcdfb822b761d50bdba1468/6c738/15314223071439.jpg&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -7727,16 +7727,16 @@ $ &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&
           type=&quot;image/webp&quot;
         /&gt;
         &lt;source
-          srcset=&quot;/static/0c3ec2a57bcdfb822b761d50bdba1468/ec1cd/15314223071439.jpg 293w,
-/static/0c3ec2a57bcdfb822b761d50bdba1468/f2ede/15314223071439.jpg 585w,
-/static/0c3ec2a57bcdfb822b761d50bdba1468/740b7/15314223071439.jpg 1170w,
-/static/0c3ec2a57bcdfb822b761d50bdba1468/25c02/15314223071439.jpg 1200w&quot;
+          srcset=&quot;/static/0c3ec2a57bcdfb822b761d50bdba1468/c5f41/15314223071439.jpg 293w,
+/static/0c3ec2a57bcdfb822b761d50bdba1468/2567e/15314223071439.jpg 585w,
+/static/0c3ec2a57bcdfb822b761d50bdba1468/4a896/15314223071439.jpg 1170w,
+/static/0c3ec2a57bcdfb822b761d50bdba1468/6c738/15314223071439.jpg 1200w&quot;
           sizes=&quot;(max-width: 1170px) 100vw, 1170px&quot;
           type=&quot;image/jpeg&quot;
         /&gt;
         &lt;img
           class=&quot;gatsby-resp-image-image&quot;
-          src=&quot;/static/0c3ec2a57bcdfb822b761d50bdba1468/740b7/15314223071439.jpg&quot;
+          src=&quot;/static/0c3ec2a57bcdfb822b761d50bdba1468/4a896/15314223071439.jpg&quot;
           alt=&quot;15314223071439&quot;
           title=&quot;15314223071439&quot;
           loading=&quot;lazy&quot;
@@ -7754,7 +7754,7 @@ $ &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/b3300747e092aa4f9dca04ff13881090/6f008/15314223197263.jpg&quot;
+    href=&quot;/static/b3300747e092aa4f9dca04ff13881090/c60e9/15314223197263.jpg&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -7772,15 +7772,15 @@ $ &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&
           type=&quot;image/webp&quot;
         /&gt;
         &lt;source
-          srcset=&quot;/static/b3300747e092aa4f9dca04ff13881090/ec1cd/15314223197263.jpg 293w,
-/static/b3300747e092aa4f9dca04ff13881090/f2ede/15314223197263.jpg 585w,
-/static/b3300747e092aa4f9dca04ff13881090/6f008/15314223197263.jpg 800w&quot;
+          srcset=&quot;/static/b3300747e092aa4f9dca04ff13881090/c5f41/15314223197263.jpg 293w,
+/static/b3300747e092aa4f9dca04ff13881090/2567e/15314223197263.jpg 585w,
+/static/b3300747e092aa4f9dca04ff13881090/c60e9/15314223197263.jpg 800w&quot;
           sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
           type=&quot;image/jpeg&quot;
         /&gt;
         &lt;img
           class=&quot;gatsby-resp-image-image&quot;
-          src=&quot;/static/b3300747e092aa4f9dca04ff13881090/6f008/15314223197263.jpg&quot;
+          src=&quot;/static/b3300747e092aa4f9dca04ff13881090/c60e9/15314223197263.jpg&quot;
           alt=&quot;15314223197263&quot;
           title=&quot;15314223197263&quot;
           loading=&quot;lazy&quot;
@@ -7799,7 +7799,7 @@ $ &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/caf974c0df29c381fc0a6a59c9cf21cb/b7efe/15314815802685.jpg&quot;
+    href=&quot;/static/caf974c0df29c381fc0a6a59c9cf21cb/56dca/15314815802685.jpg&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -7818,16 +7818,16 @@ $ &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&
           type=&quot;image/webp&quot;
         /&gt;
         &lt;source
-          srcset=&quot;/static/caf974c0df29c381fc0a6a59c9cf21cb/ec1cd/15314815802685.jpg 293w,
-/static/caf974c0df29c381fc0a6a59c9cf21cb/f2ede/15314815802685.jpg 585w,
-/static/caf974c0df29c381fc0a6a59c9cf21cb/740b7/15314815802685.jpg 1170w,
-/static/caf974c0df29c381fc0a6a59c9cf21cb/b7efe/15314815802685.jpg 1600w&quot;
+          srcset=&quot;/static/caf974c0df29c381fc0a6a59c9cf21cb/c5f41/15314815802685.jpg 293w,
+/static/caf974c0df29c381fc0a6a59c9cf21cb/2567e/15314815802685.jpg 585w,
+/static/caf974c0df29c381fc0a6a59c9cf21cb/4a896/15314815802685.jpg 1170w,
+/static/caf974c0df29c381fc0a6a59c9cf21cb/56dca/15314815802685.jpg 1600w&quot;
           sizes=&quot;(max-width: 1170px) 100vw, 1170px&quot;
           type=&quot;image/jpeg&quot;
         /&gt;
         &lt;img
           class=&quot;gatsby-resp-image-image&quot;
-          src=&quot;/static/caf974c0df29c381fc0a6a59c9cf21cb/740b7/15314815802685.jpg&quot;
+          src=&quot;/static/caf974c0df29c381fc0a6a59c9cf21cb/4a896/15314815802685.jpg&quot;
           alt=&quot;15314815802685&quot;
           title=&quot;15314815802685&quot;
           loading=&quot;lazy&quot;
@@ -7849,7 +7849,7 @@ $ &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/b42368a719fa2e5da2f4406e739d4295/25c02/15314223335135.jpg&quot;
+    href=&quot;/static/b42368a719fa2e5da2f4406e739d4295/6c738/15314223335135.jpg&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -7868,16 +7868,16 @@ $ &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&
           type=&quot;image/webp&quot;
         /&gt;
         &lt;source
-          srcset=&quot;/static/b42368a719fa2e5da2f4406e739d4295/ec1cd/15314223335135.jpg 293w,
-/static/b42368a719fa2e5da2f4406e739d4295/f2ede/15314223335135.jpg 585w,
-/static/b42368a719fa2e5da2f4406e739d4295/740b7/15314223335135.jpg 1170w,
-/static/b42368a719fa2e5da2f4406e739d4295/25c02/15314223335135.jpg 1200w&quot;
+          srcset=&quot;/static/b42368a719fa2e5da2f4406e739d4295/c5f41/15314223335135.jpg 293w,
+/static/b42368a719fa2e5da2f4406e739d4295/2567e/15314223335135.jpg 585w,
+/static/b42368a719fa2e5da2f4406e739d4295/4a896/15314223335135.jpg 1170w,
+/static/b42368a719fa2e5da2f4406e739d4295/6c738/15314223335135.jpg 1200w&quot;
           sizes=&quot;(max-width: 1170px) 100vw, 1170px&quot;
           type=&quot;image/jpeg&quot;
         /&gt;
         &lt;img
           class=&quot;gatsby-resp-image-image&quot;
-          src=&quot;/static/b42368a719fa2e5da2f4406e739d4295/740b7/15314223335135.jpg&quot;
+          src=&quot;/static/b42368a719fa2e5da2f4406e739d4295/4a896/15314223335135.jpg&quot;
           alt=&quot;15314223335135&quot;
           title=&quot;15314223335135&quot;
           loading=&quot;lazy&quot;
@@ -7896,7 +7896,7 @@ $ &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/91dac269a61c455e2310fc7d8a840a07/6f008/15314223514996.jpg&quot;
+    href=&quot;/static/91dac269a61c455e2310fc7d8a840a07/c60e9/15314223514996.jpg&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -7914,15 +7914,15 @@ $ &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&
           type=&quot;image/webp&quot;
         /&gt;
         &lt;source
-          srcset=&quot;/static/91dac269a61c455e2310fc7d8a840a07/ec1cd/15314223514996.jpg 293w,
-/static/91dac269a61c455e2310fc7d8a840a07/f2ede/15314223514996.jpg 585w,
-/static/91dac269a61c455e2310fc7d8a840a07/6f008/15314223514996.jpg 800w&quot;
+          srcset=&quot;/static/91dac269a61c455e2310fc7d8a840a07/c5f41/15314223514996.jpg 293w,
+/static/91dac269a61c455e2310fc7d8a840a07/2567e/15314223514996.jpg 585w,
+/static/91dac269a61c455e2310fc7d8a840a07/c60e9/15314223514996.jpg 800w&quot;
           sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
           type=&quot;image/jpeg&quot;
         /&gt;
         &lt;img
           class=&quot;gatsby-resp-image-image&quot;
-          src=&quot;/static/91dac269a61c455e2310fc7d8a840a07/6f008/15314223514996.jpg&quot;
+          src=&quot;/static/91dac269a61c455e2310fc7d8a840a07/c60e9/15314223514996.jpg&quot;
           alt=&quot;15314223514996&quot;
           title=&quot;15314223514996&quot;
           loading=&quot;lazy&quot;
@@ -7942,7 +7942,7 @@ $ &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/0b38edf9a16a4b7a92d8d37f29dfa83d/6f008/15314223629978.jpg&quot;
+    href=&quot;/static/0b38edf9a16a4b7a92d8d37f29dfa83d/c60e9/15314223629978.jpg&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -7960,15 +7960,15 @@ $ &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&
           type=&quot;image/webp&quot;
         /&gt;
         &lt;source
-          srcset=&quot;/static/0b38edf9a16a4b7a92d8d37f29dfa83d/ec1cd/15314223629978.jpg 293w,
-/static/0b38edf9a16a4b7a92d8d37f29dfa83d/f2ede/15314223629978.jpg 585w,
-/static/0b38edf9a16a4b7a92d8d37f29dfa83d/6f008/15314223629978.jpg 800w&quot;
+          srcset=&quot;/static/0b38edf9a16a4b7a92d8d37f29dfa83d/c5f41/15314223629978.jpg 293w,
+/static/0b38edf9a16a4b7a92d8d37f29dfa83d/2567e/15314223629978.jpg 585w,
+/static/0b38edf9a16a4b7a92d8d37f29dfa83d/c60e9/15314223629978.jpg 800w&quot;
           sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
           type=&quot;image/jpeg&quot;
         /&gt;
         &lt;img
           class=&quot;gatsby-resp-image-image&quot;
-          src=&quot;/static/0b38edf9a16a4b7a92d8d37f29dfa83d/6f008/15314223629978.jpg&quot;
+          src=&quot;/static/0b38edf9a16a4b7a92d8d37f29dfa83d/c60e9/15314223629978.jpg&quot;
           alt=&quot;15314223629978&quot;
           title=&quot;15314223629978&quot;
           loading=&quot;lazy&quot;
@@ -7989,7 +7989,7 @@ $ &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/07e3bc026d912fed15180086928ffceb/b7efe/15314236292664.jpg&quot;
+    href=&quot;/static/07e3bc026d912fed15180086928ffceb/56dca/15314236292664.jpg&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -8008,16 +8008,16 @@ $ &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&
           type=&quot;image/webp&quot;
         /&gt;
         &lt;source
-          srcset=&quot;/static/07e3bc026d912fed15180086928ffceb/ec1cd/15314236292664.jpg 293w,
-/static/07e3bc026d912fed15180086928ffceb/f2ede/15314236292664.jpg 585w,
-/static/07e3bc026d912fed15180086928ffceb/740b7/15314236292664.jpg 1170w,
-/static/07e3bc026d912fed15180086928ffceb/b7efe/15314236292664.jpg 1600w&quot;
+          srcset=&quot;/static/07e3bc026d912fed15180086928ffceb/c5f41/15314236292664.jpg 293w,
+/static/07e3bc026d912fed15180086928ffceb/2567e/15314236292664.jpg 585w,
+/static/07e3bc026d912fed15180086928ffceb/4a896/15314236292664.jpg 1170w,
+/static/07e3bc026d912fed15180086928ffceb/56dca/15314236292664.jpg 1600w&quot;
           sizes=&quot;(max-width: 1170px) 100vw, 1170px&quot;
           type=&quot;image/jpeg&quot;
         /&gt;
         &lt;img
           class=&quot;gatsby-resp-image-image&quot;
-          src=&quot;/static/07e3bc026d912fed15180086928ffceb/740b7/15314236292664.jpg&quot;
+          src=&quot;/static/07e3bc026d912fed15180086928ffceb/4a896/15314236292664.jpg&quot;
           alt=&quot;15314236292664&quot;
           title=&quot;15314236292664&quot;
           loading=&quot;lazy&quot;
@@ -8037,7 +8037,7 @@ $ &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/982add1c5d9ecef3a8a1d57b0742ca49/b7efe/15314236681469.jpg&quot;
+    href=&quot;/static/982add1c5d9ecef3a8a1d57b0742ca49/56dca/15314236681469.jpg&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -8056,16 +8056,16 @@ $ &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&
           type=&quot;image/webp&quot;
         /&gt;
         &lt;source
-          srcset=&quot;/static/982add1c5d9ecef3a8a1d57b0742ca49/ec1cd/15314236681469.jpg 293w,
-/static/982add1c5d9ecef3a8a1d57b0742ca49/f2ede/15314236681469.jpg 585w,
-/static/982add1c5d9ecef3a8a1d57b0742ca49/740b7/15314236681469.jpg 1170w,
-/static/982add1c5d9ecef3a8a1d57b0742ca49/b7efe/15314236681469.jpg 1600w&quot;
+          srcset=&quot;/static/982add1c5d9ecef3a8a1d57b0742ca49/c5f41/15314236681469.jpg 293w,
+/static/982add1c5d9ecef3a8a1d57b0742ca49/2567e/15314236681469.jpg 585w,
+/static/982add1c5d9ecef3a8a1d57b0742ca49/4a896/15314236681469.jpg 1170w,
+/static/982add1c5d9ecef3a8a1d57b0742ca49/56dca/15314236681469.jpg 1600w&quot;
           sizes=&quot;(max-width: 1170px) 100vw, 1170px&quot;
           type=&quot;image/jpeg&quot;
         /&gt;
         &lt;img
           class=&quot;gatsby-resp-image-image&quot;
-          src=&quot;/static/982add1c5d9ecef3a8a1d57b0742ca49/740b7/15314236681469.jpg&quot;
+          src=&quot;/static/982add1c5d9ecef3a8a1d57b0742ca49/4a896/15314236681469.jpg&quot;
           alt=&quot;15314236681469&quot;
           title=&quot;15314236681469&quot;
           loading=&quot;lazy&quot;
@@ -8088,7 +8088,7 @@ $ &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/f1f164a73d67c8557249c5edb416e0e1/b7efe/15314237212173.jpg&quot;
+    href=&quot;/static/f1f164a73d67c8557249c5edb416e0e1/56dca/15314237212173.jpg&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -8107,16 +8107,16 @@ $ &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&
           type=&quot;image/webp&quot;
         /&gt;
         &lt;source
-          srcset=&quot;/static/f1f164a73d67c8557249c5edb416e0e1/ec1cd/15314237212173.jpg 293w,
-/static/f1f164a73d67c8557249c5edb416e0e1/f2ede/15314237212173.jpg 585w,
-/static/f1f164a73d67c8557249c5edb416e0e1/740b7/15314237212173.jpg 1170w,
-/static/f1f164a73d67c8557249c5edb416e0e1/b7efe/15314237212173.jpg 1600w&quot;
+          srcset=&quot;/static/f1f164a73d67c8557249c5edb416e0e1/c5f41/15314237212173.jpg 293w,
+/static/f1f164a73d67c8557249c5edb416e0e1/2567e/15314237212173.jpg 585w,
+/static/f1f164a73d67c8557249c5edb416e0e1/4a896/15314237212173.jpg 1170w,
+/static/f1f164a73d67c8557249c5edb416e0e1/56dca/15314237212173.jpg 1600w&quot;
           sizes=&quot;(max-width: 1170px) 100vw, 1170px&quot;
           type=&quot;image/jpeg&quot;
         /&gt;
         &lt;img
           class=&quot;gatsby-resp-image-image&quot;
-          src=&quot;/static/f1f164a73d67c8557249c5edb416e0e1/740b7/15314237212173.jpg&quot;
+          src=&quot;/static/f1f164a73d67c8557249c5edb416e0e1/4a896/15314237212173.jpg&quot;
           alt=&quot;15314237212173&quot;
           title=&quot;15314237212173&quot;
           loading=&quot;lazy&quot;
@@ -8136,7 +8136,7 @@ $ &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/445f37e19ff507683b9213055f9de07b/b7efe/15314224014856.jpg&quot;
+    href=&quot;/static/445f37e19ff507683b9213055f9de07b/56dca/15314224014856.jpg&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -8155,16 +8155,16 @@ $ &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&
           type=&quot;image/webp&quot;
         /&gt;
         &lt;source
-          srcset=&quot;/static/445f37e19ff507683b9213055f9de07b/ec1cd/15314224014856.jpg 293w,
-/static/445f37e19ff507683b9213055f9de07b/f2ede/15314224014856.jpg 585w,
-/static/445f37e19ff507683b9213055f9de07b/740b7/15314224014856.jpg 1170w,
-/static/445f37e19ff507683b9213055f9de07b/b7efe/15314224014856.jpg 1600w&quot;
+          srcset=&quot;/static/445f37e19ff507683b9213055f9de07b/c5f41/15314224014856.jpg 293w,
+/static/445f37e19ff507683b9213055f9de07b/2567e/15314224014856.jpg 585w,
+/static/445f37e19ff507683b9213055f9de07b/4a896/15314224014856.jpg 1170w,
+/static/445f37e19ff507683b9213055f9de07b/56dca/15314224014856.jpg 1600w&quot;
           sizes=&quot;(max-width: 1170px) 100vw, 1170px&quot;
           type=&quot;image/jpeg&quot;
         /&gt;
         &lt;img
           class=&quot;gatsby-resp-image-image&quot;
-          src=&quot;/static/445f37e19ff507683b9213055f9de07b/740b7/15314224014856.jpg&quot;
+          src=&quot;/static/445f37e19ff507683b9213055f9de07b/4a896/15314224014856.jpg&quot;
           alt=&quot;15314224014856&quot;
           title=&quot;15314224014856&quot;
           loading=&quot;lazy&quot;
@@ -8184,7 +8184,7 @@ $ &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/7ae5235ba63ec3ae8e79b26298d0f3ba/6f008/15314224076177.jpg&quot;
+    href=&quot;/static/7ae5235ba63ec3ae8e79b26298d0f3ba/c60e9/15314224076177.jpg&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -8202,15 +8202,15 @@ $ &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&
           type=&quot;image/webp&quot;
         /&gt;
         &lt;source
-          srcset=&quot;/static/7ae5235ba63ec3ae8e79b26298d0f3ba/ec1cd/15314224076177.jpg 293w,
-/static/7ae5235ba63ec3ae8e79b26298d0f3ba/f2ede/15314224076177.jpg 585w,
-/static/7ae5235ba63ec3ae8e79b26298d0f3ba/6f008/15314224076177.jpg 800w&quot;
+          srcset=&quot;/static/7ae5235ba63ec3ae8e79b26298d0f3ba/c5f41/15314224076177.jpg 293w,
+/static/7ae5235ba63ec3ae8e79b26298d0f3ba/2567e/15314224076177.jpg 585w,
+/static/7ae5235ba63ec3ae8e79b26298d0f3ba/c60e9/15314224076177.jpg 800w&quot;
           sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
           type=&quot;image/jpeg&quot;
         /&gt;
         &lt;img
           class=&quot;gatsby-resp-image-image&quot;
-          src=&quot;/static/7ae5235ba63ec3ae8e79b26298d0f3ba/6f008/15314224076177.jpg&quot;
+          src=&quot;/static/7ae5235ba63ec3ae8e79b26298d0f3ba/c60e9/15314224076177.jpg&quot;
           alt=&quot;15314224076177&quot;
           title=&quot;15314224076177&quot;
           loading=&quot;lazy&quot;
@@ -8230,7 +8230,7 @@ $ &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/26ad07529d3ea3e098238399b5d57e31/f39ea/15314223926451.jpg&quot;
+    href=&quot;/static/26ad07529d3ea3e098238399b5d57e31/155f2/15314223926451.jpg&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -8250,17 +8250,17 @@ $ &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&
           type=&quot;image/webp&quot;
         /&gt;
         &lt;source
-          srcset=&quot;/static/26ad07529d3ea3e098238399b5d57e31/ec1cd/15314223926451.jpg 293w,
-/static/26ad07529d3ea3e098238399b5d57e31/f2ede/15314223926451.jpg 585w,
-/static/26ad07529d3ea3e098238399b5d57e31/740b7/15314223926451.jpg 1170w,
-/static/26ad07529d3ea3e098238399b5d57e31/31d97/15314223926451.jpg 1755w,
-/static/26ad07529d3ea3e098238399b5d57e31/f39ea/15314223926451.jpg 1773w&quot;
+          srcset=&quot;/static/26ad07529d3ea3e098238399b5d57e31/c5f41/15314223926451.jpg 293w,
+/static/26ad07529d3ea3e098238399b5d57e31/2567e/15314223926451.jpg 585w,
+/static/26ad07529d3ea3e098238399b5d57e31/4a896/15314223926451.jpg 1170w,
+/static/26ad07529d3ea3e098238399b5d57e31/caea5/15314223926451.jpg 1755w,
+/static/26ad07529d3ea3e098238399b5d57e31/155f2/15314223926451.jpg 1773w&quot;
           sizes=&quot;(max-width: 1170px) 100vw, 1170px&quot;
           type=&quot;image/jpeg&quot;
         /&gt;
         &lt;img
           class=&quot;gatsby-resp-image-image&quot;
-          src=&quot;/static/26ad07529d3ea3e098238399b5d57e31/740b7/15314223926451.jpg&quot;
+          src=&quot;/static/26ad07529d3ea3e098238399b5d57e31/4a896/15314223926451.jpg&quot;
           alt=&quot;15314223926451&quot;
           title=&quot;15314223926451&quot;
           loading=&quot;lazy&quot;
@@ -8279,7 +8279,7 @@ $ &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/47c3acb7a1f9204cb6634279b23065c8/2f0b0/15314239254436.jpg&quot;
+    href=&quot;/static/47c3acb7a1f9204cb6634279b23065c8/dab55/15314239254436.jpg&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -8299,17 +8299,17 @@ $ &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&
           type=&quot;image/webp&quot;
         /&gt;
         &lt;source
-          srcset=&quot;/static/47c3acb7a1f9204cb6634279b23065c8/ec1cd/15314239254436.jpg 293w,
-/static/47c3acb7a1f9204cb6634279b23065c8/f2ede/15314239254436.jpg 585w,
-/static/47c3acb7a1f9204cb6634279b23065c8/740b7/15314239254436.jpg 1170w,
-/static/47c3acb7a1f9204cb6634279b23065c8/31d97/15314239254436.jpg 1755w,
-/static/47c3acb7a1f9204cb6634279b23065c8/2f0b0/15314239254436.jpg 1785w&quot;
+          srcset=&quot;/static/47c3acb7a1f9204cb6634279b23065c8/c5f41/15314239254436.jpg 293w,
+/static/47c3acb7a1f9204cb6634279b23065c8/2567e/15314239254436.jpg 585w,
+/static/47c3acb7a1f9204cb6634279b23065c8/4a896/15314239254436.jpg 1170w,
+/static/47c3acb7a1f9204cb6634279b23065c8/caea5/15314239254436.jpg 1755w,
+/static/47c3acb7a1f9204cb6634279b23065c8/dab55/15314239254436.jpg 1785w&quot;
           sizes=&quot;(max-width: 1170px) 100vw, 1170px&quot;
           type=&quot;image/jpeg&quot;
         /&gt;
         &lt;img
           class=&quot;gatsby-resp-image-image&quot;
-          src=&quot;/static/47c3acb7a1f9204cb6634279b23065c8/740b7/15314239254436.jpg&quot;
+          src=&quot;/static/47c3acb7a1f9204cb6634279b23065c8/4a896/15314239254436.jpg&quot;
           alt=&quot;15314239254436&quot;
           title=&quot;15314239254436&quot;
           loading=&quot;lazy&quot;
@@ -8327,7 +8327,7 @@ $ &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/b8d23ff6b558a36b500a7d2512827e38/6f008/15314224155902.jpg&quot;
+    href=&quot;/static/b8d23ff6b558a36b500a7d2512827e38/c60e9/15314224155902.jpg&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -8345,15 +8345,15 @@ $ &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&
           type=&quot;image/webp&quot;
         /&gt;
         &lt;source
-          srcset=&quot;/static/b8d23ff6b558a36b500a7d2512827e38/ec1cd/15314224155902.jpg 293w,
-/static/b8d23ff6b558a36b500a7d2512827e38/f2ede/15314224155902.jpg 585w,
-/static/b8d23ff6b558a36b500a7d2512827e38/6f008/15314224155902.jpg 800w&quot;
+          srcset=&quot;/static/b8d23ff6b558a36b500a7d2512827e38/c5f41/15314224155902.jpg 293w,
+/static/b8d23ff6b558a36b500a7d2512827e38/2567e/15314224155902.jpg 585w,
+/static/b8d23ff6b558a36b500a7d2512827e38/c60e9/15314224155902.jpg 800w&quot;
           sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
           type=&quot;image/jpeg&quot;
         /&gt;
         &lt;img
           class=&quot;gatsby-resp-image-image&quot;
-          src=&quot;/static/b8d23ff6b558a36b500a7d2512827e38/6f008/15314224155902.jpg&quot;
+          src=&quot;/static/b8d23ff6b558a36b500a7d2512827e38/c60e9/15314224155902.jpg&quot;
           alt=&quot;15314224155902&quot;
           title=&quot;15314224155902&quot;
           loading=&quot;lazy&quot;
@@ -8372,7 +8372,7 @@ $ &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/9c7f3e8c6fba55b25f59e45632d9ba52/b7efe/15314224258603.jpg&quot;
+    href=&quot;/static/9c7f3e8c6fba55b25f59e45632d9ba52/56dca/15314224258603.jpg&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -8391,16 +8391,16 @@ $ &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&
           type=&quot;image/webp&quot;
         /&gt;
         &lt;source
-          srcset=&quot;/static/9c7f3e8c6fba55b25f59e45632d9ba52/ec1cd/15314224258603.jpg 293w,
-/static/9c7f3e8c6fba55b25f59e45632d9ba52/f2ede/15314224258603.jpg 585w,
-/static/9c7f3e8c6fba55b25f59e45632d9ba52/740b7/15314224258603.jpg 1170w,
-/static/9c7f3e8c6fba55b25f59e45632d9ba52/b7efe/15314224258603.jpg 1600w&quot;
+          srcset=&quot;/static/9c7f3e8c6fba55b25f59e45632d9ba52/c5f41/15314224258603.jpg 293w,
+/static/9c7f3e8c6fba55b25f59e45632d9ba52/2567e/15314224258603.jpg 585w,
+/static/9c7f3e8c6fba55b25f59e45632d9ba52/4a896/15314224258603.jpg 1170w,
+/static/9c7f3e8c6fba55b25f59e45632d9ba52/56dca/15314224258603.jpg 1600w&quot;
           sizes=&quot;(max-width: 1170px) 100vw, 1170px&quot;
           type=&quot;image/jpeg&quot;
         /&gt;
         &lt;img
           class=&quot;gatsby-resp-image-image&quot;
-          src=&quot;/static/9c7f3e8c6fba55b25f59e45632d9ba52/740b7/15314224258603.jpg&quot;
+          src=&quot;/static/9c7f3e8c6fba55b25f59e45632d9ba52/4a896/15314224258603.jpg&quot;
           alt=&quot;15314224258603&quot;
           title=&quot;15314224258603&quot;
           loading=&quot;lazy&quot;
@@ -8422,7 +8422,7 @@ $ &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/eeb2dd2a094646b08033d318d1f85001/a04ab/vm-vs-containers.png&quot;
+    href=&quot;/static/eeb2dd2a094646b08033d318d1f85001/843f9/vm-vs-containers.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -8441,16 +8441,16 @@ $ &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&
           type=&quot;image/webp&quot;
         /&gt;
         &lt;source
-          srcset=&quot;/static/eeb2dd2a094646b08033d318d1f85001/b6dd9/vm-vs-containers.png 293w,
-/static/eeb2dd2a094646b08033d318d1f85001/037e5/vm-vs-containers.png 585w,
-/static/eeb2dd2a094646b08033d318d1f85001/0f291/vm-vs-containers.png 1170w,
-/static/eeb2dd2a094646b08033d318d1f85001/a04ab/vm-vs-containers.png 1440w&quot;
+          srcset=&quot;/static/eeb2dd2a094646b08033d318d1f85001/0ecc1/vm-vs-containers.png 293w,
+/static/eeb2dd2a094646b08033d318d1f85001/1bd4c/vm-vs-containers.png 585w,
+/static/eeb2dd2a094646b08033d318d1f85001/0776b/vm-vs-containers.png 1170w,
+/static/eeb2dd2a094646b08033d318d1f85001/843f9/vm-vs-containers.png 1440w&quot;
           sizes=&quot;(max-width: 1170px) 100vw, 1170px&quot;
           type=&quot;image/png&quot;
         /&gt;
         &lt;img
           class=&quot;gatsby-resp-image-image&quot;
-          src=&quot;/static/eeb2dd2a094646b08033d318d1f85001/0f291/vm-vs-containers.png&quot;
+          src=&quot;/static/eeb2dd2a094646b08033d318d1f85001/0776b/vm-vs-containers.png&quot;
           alt=&quot;Virtual Machines vs Containers&quot;
           title=&quot;Virtual Machines vs Containers&quot;
           loading=&quot;lazy&quot;
