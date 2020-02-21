@@ -31,7 +31,7 @@
     "gatsby-remark-abbr": "^2.0.0",
     "gatsby-remark-copy-linked-files": "^2.1.37",
     "gatsby-remark-embed-gist": "^1.1.9",
-    "gatsby-remark-embed-snippet": "^4.1.18",
+    "gatsby-remark-embed-snippet": "^4.1.22",
     "gatsby-remark-external-links": "0.0.4",
     "gatsby-remark-images": "^3.1.44",
     "gatsby-remark-prismjs": "^3.3.30",
