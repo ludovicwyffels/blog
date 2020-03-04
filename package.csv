@@ -1,0 +1,68 @@
+@emotion/core;10.0.16;MIT;[object Object];> Simple styling in React.
+@emotion/styled;10.0.15;MIT;[object Object];styled API for emotion
+@emotion/styled-base;10.0.15;MIT;[object Object];base styled API for emotion
+@types/classnames;2.2.9;MIT;[object Object];TypeScript definitions for classnames
+@types/lodash;4.14.137;MIT;[object Object];TypeScript definitions for Lo-Dash
+@types/node;11.13.19;MIT;[object Object];TypeScript definitions for Node.js
+@types/react;16.9.2;MIT;[object Object];TypeScript definitions for React
+@types/react-dom;16.8.5;MIT;[object Object];TypeScript definitions for React (react-dom)
+@types/react-helmet;5.0.9;MIT;[object Object];TypeScript definitions for react-helmet
+@types/react-share;2.1.1;MIT;[object Object];TypeScript definitions for react-share
+babel-plugin-styled-components;1.10.6;MIT;[object Object];Improve the debugging experience and add server-side rendering support to styled-components
+classnames;2.2.6;MIT;[object Object];A simple utility for conditionally joining classNames together
+cssnano;4.1.10;MIT;cssnano/cssnano;A modular minifier, built on top of the PostCSS ecosystem.
+emotion;10.0.14;MIT;[object Object];The Next Generation of CSS-in-JS.
+emotion-server;10.0.14;MIT;[object Object];Extract and inline critical css with emotion for server side rendering.
+gatsby;2.13.67;MIT;[object Object];Blazing fast modern site generator for React
+gatsby-image;2.2.8;MIT;[object Object];Lazy-loading React image component with optional support for the blur-up effect.
+gatsby-plugin-canonical-urls;2.1.3;MIT;[object Object];Add canonical links to HTML pages Gatsby generates.
+gatsby-plugin-catch-links;2.1.3;MIT;[object Object];Intercepts local links from markdown and other non-react pages and does a client-side pushState to avoid the browser having to refresh the page.
+gatsby-plugin-emotion;4.1.2;MIT;[object Object];Gatsby plugin to add support for Emotion
+gatsby-plugin-feed;2.3.6;MIT;[object Object];Creates an RSS feed for your Gatsby site.
+gatsby-plugin-google-analytics;2.1.7;MIT;[object Object];Gatsby plugin to add google analytics onto a site
+gatsby-plugin-manifest;2.2.5;MIT;[object Object];Gatsby plugin which adds a manifest.webmanifest to make sites progressive web apps
+gatsby-plugin-netlify;2.1.5;MIT;[object Object];A Gatsby plugin which generates a _headers file for netlify
+gatsby-plugin-offline;2.2.6;MIT;[object Object];Gatsby plugin which sets up a site to be able to run offline
+gatsby-plugin-postcss;2.1.3;MIT;[object Object];Gatsby plugin to handle PostCSS
+gatsby-plugin-react-helmet;3.1.3;MIT;[object Object];Manage document head data with react-helmet. Provides drop-in server rendering support for Gatsby.
+gatsby-plugin-sharp;2.2.12;MIT;[object Object];Wrapper of the Sharp image manipulation library for Gatsby plugins
+gatsby-plugin-sitemap;2.2.6;MIT;[object Object];Gatsby plugin that automatically creates a sitemap for your site
+gatsby-plugin-typescript;2.1.2;MIT;[object Object];Adds TypeScript support to Gatsby
+gatsby-remark-abbr;1.0.0;MIT;https://github.com/Calyhre/gatsby-remark-abbr.git;Use remark-abbr to add abbreviations support to gatsby-remark
+gatsby-remark-copy-linked-files;2.1.6;MIT;[object Object];Find files which are linked to from markdown and copy them to the public directory
+gatsby-remark-embed-gist;1.1.9;MIT;[object Object];Gatsby remark gists preprocessor
+gatsby-remark-embed-snippet;3.2.4;MIT;https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-remark-embed-snippet;Gatsby plugin to embed formatted code snippets within markdown
+gatsby-remark-external-links;0.0.4;MIT;[object Object];Automatically adds the target and rel attributes to external links in markdown.
+gatsby-remark-images;3.1.12;MIT;[object Object];Processes images in markdown so they can be used in the production build.
+gatsby-remark-prismjs;3.3.5;MIT;[object Object];Adds syntax highlighting to code blocks at build time using PrismJS
+gatsby-remark-responsive-iframe;2.2.4;MIT;[object Object];Make iframes in Markdown processed by Remark responsive
+gatsby-remark-smartypants;2.1.2;MIT;[object Object];Use retext-smartypants to auto-enhance typography of markdown
+gatsby-source-filesystem;2.1.9;MIT;[object Object];Gatsby plugin which parses files within a directory for further parsing by other plugins
+gatsby-transformer-json;2.2.2;MIT;[object Object];Gatsby transformer plugin for JSON files
+gatsby-transformer-remark;2.6.14;MIT;[object Object];Gatsby transformer plugin for Markdown using the Remark library and ecosystem
+gatsby-transformer-sharp;2.2.6;MIT;[object Object];Gatsby transformer plugin for images using Sharp
+gatsby-transformer-yaml;2.2.4;MIT;[object Object];Gatsby transformer plugin for yaml
+gh-pages;2.1.1;MIT;[object Object];Publish to a gh-pages branch on GitHub (or any other branch on any other remote)
+lodash;4.17.15;MIT;[object Object];Lodash modular utilities.
+modern-normalize;0.5.0;MIT;sindresorhus/modern-normalize;Normalize browsers' default style
+normalize.css;8.0.1;MIT;necolas/normalize.css;A modern alternative to CSS resets
+polished;3.4.1;MIT;[object Object];A lightweight toolset for writing styles in Javascript.
+postcss-color-function;4.1.0;MIT;https://github.com/postcss/postcss-color-function.git;PostCSS plugin to transform W3C CSS color function to more compatible CSS.
+prettier;1.18.2;MIT;[object Object];Prettier is an opinionated code formatter
+prism-themes;1.1.0;MIT;[object Object];Addtional themes for the Prism syntax highlighting library.
+prismjs;1.17.1;MIT;[object Object];Lightweight, robust, elegant syntax highlighting. A spin-off project from Dabblet.
+prop-types;15.7.2;MIT;facebook/prop-types;Runtime type checking for React props and similar objects.
+react;16.9.0;MIT;[object Object];React is a JavaScript library for building user interfaces.
+react-dom;16.9.0;MIT;[object Object];React package for working with the DOM.
+react-emotion;10.0.0;MIT;https://github.com/emotion-js/react-emotion-redirect;This package is not relevant in Emotion 10, please use @emotion/styled
+react-helmet;5.2.1;MIT;[object Object];A document head manager for React
+react-icons;3.7.0;MIT;[object Object];SVG React icons of popular icon packs using ES6 imports
+react-share;2.4.0;MIT;[object Object];Social media share buttons and share counts for React.
+rehype-react;3.1.0;MIT;https://github.com/rhysd/rehype-react;Compile Hast tree to React with remark
+rimraf;2.7.1;ISC;[object Object];A deep deletion module for node (like `rm -rf`)
+tslint;5.18.0;Apache-2.0;[object Object];An extensible static analysis linter for the TypeScript language
+tslint-config-blvd;1.2.1;Apache-2.0;[object Object];A TSLint config that conforms to the blvd TypeScript styleguide.
+tslint-config-prettier;1.18.0;MIT;[object Object];Do you wanna use tslint and prettier without conflicts? tslint-config-prettier disables all conflicting rules that may cause such problems. Prettier takes care of formatting and tslint the rest.
+tslint-plugin-prettier;2.0.1;MIT;https://github.com/ikatyang/tslint-plugin-prettier;Runs Prettier as a TSLint rule and reports differences as individual TSLint issues.
+tslint-xo;0.16.0;MIT;xojs/tslint-xo;TSLint shareable config for XO
+typescript;3.5.3;Apache-2.0;[object Object];TypeScript is a language for application scale JavaScript development
