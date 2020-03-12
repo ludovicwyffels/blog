@@ -1,4 +1,327 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Software on the road]]></title><description><![CDATA[Software on the road]]></description><link>https://ludovicwyffels.dev</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 09 Mar 2020 20:18:51 GMT</lastBuildDate><item><title><![CDATA[Gestion des environnements Angular en livraison continue]]></title><description><![CDATA[Dans les applications métiers, nous rencontrons souvent une configuration de livraison continue comportant plusieurs stages. Chaque étape a…]]></description><link>https://ludovicwyffels.dev/angular-dynamic-environment/</link><guid isPermaLink="false">https://ludovicwyffels.dev/angular-dynamic-environment/</guid><pubDate>Sun, 08 Sep 2019 17:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Dans les applications métiers, nous rencontrons souvent une configuration de livraison continue comportant plusieurs stages. Chaque étape a sa configuration pour accéder aux systèmes périphériques spécifiques à l’environnement. Pour ce faire, nous devons gérer les configurations basées sur les stages.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Software on the road]]></title><description><![CDATA[Software on the road]]></description><link>https://ludovicwyffels.dev</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 12 Mar 2020 18:31:29 GMT</lastBuildDate><item><title><![CDATA[GitFlow]]></title><description><![CDATA[Pourquoi avoir une stratégie d’utilisation de Git ? Git est puissant mais il est généralement mal utilisé. Et un outil mal utilisé peut vite…]]></description><link>https://ludovicwyffels.dev/git-flow/</link><guid isPermaLink="false">https://ludovicwyffels.dev/git-flow/</guid><pubDate>Thu, 12 Mar 2020 19:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;Pourquoi avoir une stratégie d’utilisation de Git ?&lt;/h2&gt;
+&lt;p&gt;Git est puissant mais il est généralement mal utilisé. Et un outil mal utilisé peut vite devenir contre-productif.&lt;/p&gt;
+&lt;p&gt;Dans le cas de Git, cela peut se traduire par des conflits à chaque commit/merge ou presque, des pertes de données (même s’il faut vraiment en vouloir), etc…&lt;/p&gt;
+&lt;h2&gt;Comment fonctionne GitFlow ?&lt;/h2&gt;
+&lt;p&gt;GitFlow est un ensemble de règles simples qui se basent sur le fonctionnement par branche de Git.&lt;/p&gt;
+&lt;p&gt;Voici le principe de base :
+Notre projet sera basé sur deux branches : &lt;code&gt;master&lt;/code&gt; et &lt;code&gt;develop&lt;/code&gt;. Ces deux branches &lt;strong&gt;sont strictement interdites&lt;/strong&gt; en écriture aux développeurs.&lt;/p&gt;
+&lt;p&gt;La branche &lt;code&gt;master&lt;/code&gt; est le miroir de notre production. Il est donc logique que l’on ne puisse y pousser nos modifications directement.&lt;/p&gt;
+&lt;p&gt;La branche &lt;code&gt;develop&lt;/code&gt; centralise toutes les nouvelles fonctionnalités qui seront livrées dans la prochaine version. Ici il va falloir se forcer à ne pas y faire de modifications directement.&lt;/p&gt;
+&lt;p&gt;Trois autres types de branches vont ensuite nous permettre de travailler :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;feature&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;release&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;hot fix&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Je développe des fonctionnalités&lt;/h3&gt;
+&lt;p&gt;Je vais donc développer sur une branche de type &lt;code&gt;feature&lt;/code&gt;.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-bash line-numbers&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; checkout -b feature/&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;name&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; develop&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Si je développe une nouvelle fonctionnalité, elle sera logiquement appliquée à la prochaine version : je crée donc ma branche à partir de la branche &lt;code&gt;develop&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Je commence donc à travailler à partir du code mis à jour pour la nouvelle version.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-bash line-numbers&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; checkout dev
+&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; merge feature/&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;name&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; --no-ff
+&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; branch -d feature/&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;name&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Lorsque j’ai fini mon travail, je rapatrie celui-ci sur la branche de développement et je supprime la branche &lt;code&gt;feature&lt;/code&gt; qui est devenue obsolète.&lt;/p&gt;
+&lt;h3&gt;Je prépare une nouvelle version pour la mise en production&lt;/h3&gt;
+&lt;p&gt;Je vais donc travailler sur une branche de type release.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-bash line-numbers&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; checkout -b release/&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;version&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; develop&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Je crée la branche à partir de la branche &lt;code&gt;develop&lt;/code&gt;, ainsi je pourrai lancer mes tests et appliquer mes corrections pendant que mes collègues commencent déjà le développement de nouvelles fonctionnalités pour la version suivante.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-bash line-numbers&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; checkout dev
+&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; merge release/&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;version&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; --no-ff
+
+&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; checkout master
+&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; merge release/&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;version&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; --no-ff
+&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; tag &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;version&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;
+
+&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; branch -d release/&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;version&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Lorsque tous mes tests sont passés avec succès et que ma nouvelle version est prête à être mise en production, je pousse tout sur la branche &lt;code&gt;master&lt;/code&gt; et je n’oublie pas d’appliquer mes corrections à la branche de développement.&lt;/p&gt;
+&lt;p&gt;Je crée aussi un tag sur le dernier commit de la branche de production avec mon numéro de version afin de m’y retrouver plus tard.&lt;/p&gt;
+&lt;p&gt;Et enfin je supprime la branche &lt;code&gt;release&lt;/code&gt; car maintenant elle ne sert plus à grand chose.&lt;/p&gt;
+&lt;h3&gt;Je corrige un bug en production&lt;/h3&gt;
+&lt;p&gt;Je vais donc travailler sur une branche de type &lt;code&gt;hotfix&lt;/code&gt;.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-bash line-numbers&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; checkout -b hotfix/&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;name&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; master&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Pour ce cas particulier je crée ma branche à partir du miroir de production car je ne veux pas que toutes les fonctionnalités de ma branche de développement se retrouvent en production lors d’une simple correction de bug.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-bash line-numbers&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; checkout dev
+&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; merge hotfix/&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;name&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; --no-ff
+
+&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; checkout master
+&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; merge hotfix/&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;name&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; --no-ff
+&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; tag &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;version&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;
+
+&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; branch -d hotfix/&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;name&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Mon bug étant corrigé, je dois l’appliquer sur le dev et la prod. Une fois encore je versionne avec un tag sur la branche &lt;code&gt;master&lt;/code&gt; et je supprime la branche &lt;code&gt;hotfix&lt;/code&gt;.&lt;/p&gt;
+&lt;h3&gt;GitFlow, la surcouche&lt;/h3&gt;
+&lt;p&gt;Le concepteur de GitFlow a pensé à vous en codant une surcouche pour Git qui simplifie tout ça. &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/nvie/gitflow&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;Github&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/nvie/gitflow/wiki/Installation&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;Installation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://danielkummer.github.io/git-flow-cheatsheet/index.html&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;Cheatsheet&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Elle vous fournit de nouvelles commandes haut niveau comme:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;git flow init&lt;/code&gt;: pour initialiser Git et GitFlow dans un projet.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git flow feature start &amp;#x3C;name&gt;&lt;/code&gt; : pour démarrer le développement d’une nouvelle fonctionnalité.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git flow feature finish &amp;#x3C;name&gt;&lt;/code&gt; : pour terminer le développement d’une nouvelle fonctionnalité.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git flow release start &amp;#x3C;version&gt;&lt;/code&gt; : pour démarrer le développement d’une nouvelle release.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git flow release finish &amp;#x3C;name&gt;&lt;/code&gt; : pour terminer le développement d’une nouvelle release.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git flow hotfix start &amp;#x3C;version&gt;&lt;/code&gt; : pour démarrer le développement d’un nouveau hotfix.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git flow hotfix finish &amp;#x3C;name&gt;&lt;/code&gt; : pour terminer le développement d’un nouveau hotfix.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;GitFlow s’occupera pour vous de choisir les branches de départ, les branches de fin, de créer les tags et de supprimer les bonnes branches.&lt;/p&gt;
+&lt;p&gt;Bien-sûr, beaucoup d’autres commandes existent mais celles-ci sont à mes yeux les plus importantes.&lt;/p&gt;
+&lt;p&gt;Pour le reste, vous utiliserez les commandes Git habituelles.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;Je développe et maintiens un framework&lt;/h2&gt;
+&lt;p&gt;Le fonctionnement basique de GitFlow convient, comme nous l’avons vu, dans la plupart des cas. Mais prenons le cas d’une équipe de développement qui s’occupe d’un des derniers frameworks à la mode.&lt;/p&gt;
+&lt;p&gt;Cette équipe utilise GitFlow et trouve ça génial. Les versions se succèdent et on arrive à la troisième version.&lt;/p&gt;
+&lt;p&gt;Tous les nouveaux projets de développeurs tiers sont fait dans la dernière version mais il existe encore des projets dans les versions précédentes du framework.&lt;/p&gt;
+&lt;p&gt;Si une faille de sécurité est découverte, les développeurs tiers s’attendent à ce que l’équipe applique des corrections dans la version 3 mais aussi la version 2.7 du framework. Et c’est normal.&lt;/p&gt;
+&lt;p&gt;Cette équipe doit donc maintenir deux versions de leur projet en simultané. Notre problème vient du système de branche strict de GitFlow :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;feature&lt;/code&gt; : de &lt;code&gt;develop&lt;/code&gt; vers &lt;code&gt;develop&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;release&lt;/code&gt; : de &lt;code&gt;develop&lt;/code&gt; vers &lt;code&gt;develop&lt;/code&gt; et &lt;code&gt;master&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;hotfix&lt;/code&gt; : de &lt;code&gt;master&lt;/code&gt; vers &lt;code&gt;develop&lt;/code&gt; et &lt;code&gt;master&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Si les développeurs doivent faire un &lt;code&gt;hotfix&lt;/code&gt; sur la version 2.7 du framework (correction de sécurité), ils ne peuvent pas créer la branche concernée à partir du master puisqu’ils sont déjà en version 3 à cet endroit.&lt;/p&gt;
+&lt;p&gt;Ils ne peuvent pas non plus réappliquer les corrections sur &lt;code&gt;master&lt;/code&gt; et &lt;code&gt;develop&lt;/code&gt; puisqu’en version 3 le code à pu changer du tout au tout et ne serait pas forcément compatible.&lt;/p&gt;
+&lt;p&gt;Et puis comment représenter ces deux versions simultanées dans l’index de notre projet ?&lt;/p&gt;
+&lt;h3&gt;La branche support&lt;/h3&gt;
+&lt;p&gt;Il y a une règle moins connue de ce workflow qui peut résoudre notre problème.&lt;/p&gt;
+&lt;p&gt;Il existe un quatrième type de branche dérivée de &lt;code&gt;master&lt;/code&gt;et &lt;code&gt;develop&lt;/code&gt;: la branche &lt;code&gt;support&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;C’est tout simple :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;La branche &lt;code&gt;support&lt;/code&gt; se crée à partir de la branche &lt;code&gt;master&lt;/code&gt; sous le format suivant &lt;code&gt;support/2.7.x&lt;/code&gt;. Le point de départ doit être le dernier commit de la version 2.7 du projet et non le commit le plus récent de la branche &lt;code&gt;master&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Lorsque vous avez une mise à jour de sécurité à faire sur la version 2.7 vous créez la branche &lt;code&gt;hotfix/2.7.1&lt;/code&gt; depuis la branche &lt;code&gt;support/2.7.x&lt;/code&gt; comme s’il s’agissait du master. C’est en fait le master de la version 2.7 maintenue.&lt;/li&gt;
+&lt;li&gt;Lorsque la correction est terminée vous faites un merge de votre &lt;code&gt;hotfix&lt;/code&gt; sur la branche &lt;code&gt;support&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Vous supprimez la branche de &lt;code&gt;hotfix&lt;/code&gt; et vous taggez &lt;code&gt;v2.7.1&lt;/code&gt; sur la branche &lt;code&gt;support/2.7.x&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Dans le projet on a donc :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;master&lt;/code&gt; =&gt; en version 3.0&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;develop&lt;/code&gt; =&gt; en cours de développement de la version 3.1&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;support/2.7.x&lt;/code&gt; =&gt; en version 2.7&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;feature/...&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;release/...&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;hotfix/...&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2&gt;Git rebase, qu’est-ce que c’est ?&lt;/h2&gt;
+&lt;p&gt;Imaginez un arbre. Un arbre a des branches (normal). Imaginez que vous teniez un sécateur entre vos mains. D’un geste plein de prestance, vous coupez une branche juste à l’endroit ou elle se sépare du tronc. Aussitôt, vous la re-greffez sur ce même tronc, mais à un emplacement différent. Vous obtenez donc le même arbre, avec la même quantité totale de bois, mais vous avez simplement déplacé une branche.&lt;/p&gt;
+&lt;p&gt;Voilà, c’est tout simplement ça, git rebase. Sauf qu’au lieu de déplacer du bois, on déplace des listes de commits.&lt;/p&gt;
+&lt;h2&gt;Git rebase avec un dessin&lt;/h2&gt;
+&lt;p&gt;Ok, pour que ça soit plus clair, je vais vous faire un dessin. Je vais partir du cas classique ou, depuis ma branche de développement principale (&lt;code&gt;master&lt;/code&gt;), j’ai créé une branche &lt;code&gt;discussion&lt;/code&gt;, parce que je dois implémenter un système de discussion quelconque.&lt;/p&gt;
+&lt;p&gt;Voici à quoi peut ressembler l’historique en question, d’un point de vue schématique.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-text line-numbers&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;A---B---C---D ← master
+     \
+      E---F---G ← discussion&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Si je réalise une fusion classique au moyen de la commande &lt;code&gt;git merge&lt;/code&gt;, j’obtiendrai le nouvel historique suivant :&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-text line-numbers&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;A---B---C---D---H ← master
+     \         /
+      E---F---G ← discussion&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Une autre solution est de transplanter ma branche &lt;code&gt;discussion&lt;/code&gt; sur la pointe de &lt;code&gt;master&lt;/code&gt;. Je prends la branche et je la recolle plus loin. On obtient alors :&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-text line-numbers&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;A---B---C---D ← master
+             \
+              E---F---G ← discussion&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Notez que rebaser &lt;code&gt;discussion&lt;/code&gt; n’a strictement aucun effet sur &lt;code&gt;master&lt;/code&gt;. En revanche, la fusion de &lt;code&gt;discussion&lt;/code&gt; dans &lt;code&gt;master&lt;/code&gt; est maintenant triviale (fast forward). On obtient enfin :&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-text line-numbers&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;A---B---C---D---E---F---G ← master
+                         \
+                          discussion&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Avant de se demander à quoi ça sert, soyez certain de bien comprendre ce que ça fait. On prend une branche, et on la met autre part. Pas très compliqué, finalement, n’est-ce pas ?&lt;/p&gt;
+&lt;h2&gt;Bon, ok, mais à quoi ça sert ?&lt;/h2&gt;
+&lt;p&gt;C’est là ou le &lt;code&gt;rebase&lt;/code&gt; est sous employé. Nous venons de voir un exemple d’utilisation trivial. Étudions quelques cas pratiques.&lt;/p&gt;
+&lt;h3&gt;Éviter les commits de fusion pour les branches triviales&lt;/h3&gt;
+&lt;p&gt;Quand on travaille avec Git, on a tendance à créer beaucoup de petites branches, ce qui est une bonne chose. Par contre, fusionner des branches créé des commits de fusion, comme dans notre exemple précédent.&lt;/p&gt;
+&lt;p&gt;Si vous créez &lt;em&gt;beaucoup&lt;/em&gt; de petites branches, vous allez obtenir &lt;em&gt;beaucoup&lt;/em&gt; de commits de fusion. Dans la mesure où ces commits n’apportent pas d’information utile, ils polluent votre historique.&lt;/p&gt;
+&lt;p&gt;En &lt;em&gt;rebasant&lt;/em&gt; vos branches avant de les fusionner, vous obtiendrez un historique tout plat et bien plus agréable à parcourir. Prenons un exemple.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-text line-numbers&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;          F---G ← bug2
+         /
+A---B---E---H---I ← master
+     \
+      C---D ← bug1&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;En utilisant un &lt;code&gt;rebase&lt;/code&gt; avant chaque fusion, on obtient l’historique suivant :&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-text line-numbers&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;A---B---E---H---I---C---D---F---G ← master&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Les commandes pour parvenir à ce résultat sont les suivantes, explications juste après.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;git rebase master bug1&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git checkout master&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git merge bug1&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git branch -d bug1&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git rebase master bug2&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git checkout master&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git merge bug2&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git branch -d bug2&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Et le détail des commandes.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Transplante &lt;code&gt;bug1&lt;/code&gt; sur l’actuelle branche &lt;code&gt;master&lt;/code&gt;. Si on est déjà en train de bosser sur bug1 on peut se contenter de taper &lt;code&gt;git rebase master&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Switche sur &lt;code&gt;master&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Fusionne &lt;code&gt;bug1&lt;/code&gt; dans &lt;code&gt;master&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Supprime la branche &lt;code&gt;bug1&lt;/code&gt; devenue inutile&lt;/li&gt;
+&lt;li&gt;Transplante &lt;code&gt;bug2&lt;/code&gt; sur la branche &lt;code&gt;master&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Switche sur &lt;code&gt;master&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Fusionne &lt;code&gt;bug2&lt;/code&gt; dans &lt;code&gt;master&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Supprime &lt;code&gt;bug2&lt;/code&gt; devenue inutile.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Et voilà un bel historique bien propre, exempt de commits de fusion inutiles.&lt;/p&gt;
+&lt;p&gt;Ça paraît laborieux mais avec l’habitude, ça se fait tout seul et c’est même plutôt amusant (je sais, un rien m’amuse).&lt;/p&gt;
+&lt;h3&gt;Fusionner les branches en série&lt;/h3&gt;
+&lt;p&gt;Prenons exactement le même exemple que précédemment, sauf que cette fois, nous ne fusionnons pas des petites branches triviales mais de vraies fonctionnalités.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-text line-numbers&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;          F---G ← newsletter
+         /
+A---B---E---H---I ← master
+     \
+      C---D ← password_reset&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Un historique plat, c’est bien, mais on perd de l’information. Plus moyen de savoir en un coup d’œil que telle liste de commits a été réalisée sur une branche spécifique.&lt;/p&gt;
+&lt;p&gt;Pour pallier à ce problème, on va utiliser une option de merge : &lt;code&gt;--no-ff&lt;/code&gt; (pour « no fast forward »).&lt;/p&gt;
+&lt;p&gt;D’abord, les commandes.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-bash line-numbers&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; rebase master password_reset
+&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; checkout master
+&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; merge password_reset --no-ff
+&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; branch -d password_reset
+&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; rebase master newsletter
+&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; checkout master
+&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; merge newsletter --no-ff
+&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; branch -d newsletter&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;On obtient alors l’historique suivant, bien plus clair. De plus, les commits “J” et “K” afficheront un message “branch machin was merged into master”, ce qui fait que, même si les branches ont effectivement été supprimées, l’historique conserve une trace de leur existence.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-text line-numbers&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;A---B---E---H---I-------J-------K ← master
+                 \     / \     /
+                  C---D   F---G&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;Éviter les commits de fusion de &lt;code&gt;git pull&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;Lorsque vous tapez git pull pour mettre à jour votre dépôt avec les derniers commits présents sur le serveur, Git va réaliser un merge pour fusionner vos modifications et celles que vous venez de récupérer.&lt;/p&gt;
+&lt;p&gt;Sur le serveur.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-text line-numbers&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;A---B---C---D---E ← master&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Sur votre machine.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-text line-numbers&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;          origin/master
+         /
+A---B---C---F ← master&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Après un &lt;code&gt;git pull&lt;/code&gt;.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-text line-numbers&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;          D---E ← origin/mastel
+         /     \
+A---B---C---F---G ← master&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Vous pourrez alors envoyer votre travail sur le serveur avec un &lt;code&gt;git push&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Imaginez maintenant dix personnes qui travaillent sur la même branche (c’est très mal) et qui pushent et pullent toutes les cinq minutes. Vous imaginez la tronche de l’historique ?&lt;/p&gt;
+&lt;p&gt;Pour éviter ce problème, on va utiliser l’option &lt;code&gt;git pull --rebase&lt;/code&gt;, qui produira le résultat suivant.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-text line-numbers&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;                  origin/master
+                 /
+A---B---C---D---E---F ← master&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Et hop ! Encore une fois, un bel historique nickel. Merci Git !&lt;/p&gt;
+&lt;h3&gt;Réparer un mauvais historique&lt;/h3&gt;
+&lt;p&gt;Scénario : j’ai créé une branche &lt;code&gt;newsletter&lt;/code&gt; pour travailler sur la fonctionnalité correspondante. J’ai également créé une branche &lt;code&gt;bug_urgent&lt;/code&gt; pour corriger un bug qui doit être fixé urgemment, comme son nom l’indique.&lt;/p&gt;
+&lt;p&gt;Sauf que, au moment de fusionner ma branche &lt;code&gt;bug_urgent&lt;/code&gt;, horreur ! malheur ! je m’aperçois que je n’ai pas créé ma branche au bon endroit. Mon historique ressemble à ça.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-text line-numbers&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;A---B---H---I---J ← master
+     \
+      C---D---G ← newsletter
+           \
+            E---F ← bug_urgent&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Catastrophe ! Ma branche &lt;code&gt;newsletter&lt;/code&gt; est un travail en cours, mais &lt;code&gt;bug_urgent&lt;/code&gt; doit absolument être fusionnée dans master, le commercial a une démo dans 5 minutes. Comment faire ?!&lt;/p&gt;
+&lt;p&gt;Git rebase à la rescousse ! Nous allons simplement transplanter &lt;code&gt;bug_urgent&lt;/code&gt; sur &lt;code&gt;master&lt;/code&gt;, et le tour est joué.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-bash line-numbers&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; rebase newsletter bug_urgent --onto master
+&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; checkout master
+&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; merge bug_urgent&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-text line-numbers&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;A---B---H---I---J---E---F ← master
+     \
+      C---D---G ← newsletter&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Vous noterez que l’appel de la commande &lt;code&gt;rebase&lt;/code&gt; est ici un poil plus compliqué. Si nous nous étions contenté de la syntaxe habituelle &lt;code&gt;git rebase master&lt;/code&gt;, nous aurions transplanté tous les commits de la branche &lt;code&gt;bug_urgent&lt;/code&gt; en remontant jusqu’à &lt;code&gt;master&lt;/code&gt;, c’est à dire les commits E et F, mais aussi C et D, ce qui n’est clairement pas le but.&lt;/p&gt;
+&lt;p&gt;La commande &lt;code&gt;git rebase newsletter bug_urgent --onto master&lt;/code&gt; signifie “arrache la branche qui part de &lt;code&gt;newsletter&lt;/code&gt; jusqu’à &lt;code&gt;bug_urgent&lt;/code&gt;, et mets la sur &lt;code&gt;master&lt;/code&gt;”, ou encore “transplante sur &lt;code&gt;master&lt;/code&gt; tous les commits qui sont sur &lt;code&gt;bug_urgent:postlink:&lt;/code&gt; mais pas sur &lt;code&gt;newsletter&lt;/code&gt;“.&lt;/p&gt;
+&lt;h3&gt;Réparer un mauvais historique, bis&lt;/h3&gt;
+&lt;p&gt;Autre exemple d’historique généré un soir de bourre.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-text line-numbers&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;A---B---H---I ← master
+     \
+      C---D---G ← bug1
+       \
+        E---F ← bug2&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Or, il se trouve que les branches bug1 et bug2 sont totalement indépendantes. L’une sera peut-être fusionnée avant l’autre, ou abandonnée, on ne sait pas. Nous allons donc réparer cette bévue prestement.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-bash line-numbers&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; rebase bug1 bug2 --onto B&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-text line-numbers&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;      E---F ← bug2
+     /
+A---B---H---I ← production
+     \
+      C---D---G ← bug1&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Et voilà ! Notez qu’on peut transplanter à n’importe quel endroit, pas forcément sur une branche (ce qui est normal, puisqu’une branche n’est rien d’autre qu’une étiquette pointant sur un commit).&lt;/p&gt;
+&lt;h3&gt;Faciliter l’intégration de branches&lt;/h3&gt;
+&lt;p&gt;Scénario : je travaille sur une fonctionnalité qui nécessite plusieurs semaines de dev. J’ai donc une branche qui va évoluer pendant un long moment avant d’être fusionnée.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-text line-numbers&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;A---B---H---I--- … ---J---E---F ← master
+      \
+       C---D---G--- … ---H---I ← newsletter&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Si les branches divergent suffisamment, il est probable que le moment de la fusion va être assez pénible, avec des conflits à résoudre en pagaille. Une mauvaise journée en perspective.&lt;/p&gt;
+&lt;p&gt;Sauf si, j’ai rebasé ma branche tous les matins en buvant mon café. Je corrige ainsi les conflits au fil de l’eau. Au bout de trois mois, voici mon historique :&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-text line-numbers&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;A---B---H---I--- … ---J---E---F ← master
+                               \
+                                C---D---G--- … ---H---I ← newsletter&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;J’ai beau avoir trois mois de dev dans les pattes, la fusion est triviale et ne prend pas plus d’un quart de seconde. Merci git rebase.&lt;/p&gt;
+&lt;h2&gt;Rebase interactif&lt;/h2&gt;
+&lt;p&gt;Allez, on va arrêter de rigoler et sortir la grosse artillerie. Parce que git rebase dispose d’une petite option sympathique : l’option interactive. Quand je lui passe cette option, l’éditeur s’ouvre et je peux éditer un fichier en précisant ce que je veux faire de chaque commit en moment de son application. Exemple.&lt;/p&gt;
+&lt;p&gt;Voici un exemple d’historique standard (les commits les plus récents en haut).&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-text line-numbers&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;* 4baf2db - Write tests for discussion
+* 0fadd04 - Implement discussion
+* 8be3c7e - Write tests for newsletter
+* bce2851 - Implement newsletter
+* 6477e21 - …&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Tout va bien dans le meilleur des mondes. Quand tout à coup ! on m’annonce qu’un audit va être réalisé pour vérifier si les employé(e)s respectent bien la politique qualité de l’entreprise. Cette politique stipule que je suis censé commiter les tests d’une feature avant de commiter le code correspondant.&lt;/p&gt;
+&lt;p&gt;Et mince ! adieu ma prime ! Git rebase interactif à la rescousse.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-bash line-numbers&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; rebase -i HEAD~4&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Cette commande signifie “arrache les quatre derniers commits et transplante les au même endroit”. En théorie, c’est une opération nulle SAUF qu’on va le faire de manière interactive.&lt;/p&gt;
+&lt;p&gt;Immédiatement après avoir tapé la commande, l’éditeur s’ouvre et affiche quelque chose comme ça :&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-text line-numbers&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;pick 4baf2db Write tests for discussion
+pick 0fadd04 Implement discussion
+pick 8be3c7e Write tests for newsletter
+pick bce2851 Implement newsletter&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Les modifications que je vais réaliser dans ce fichier vont influer sur la manière dont mon rebase va se passer. En l’occurence, je vais effectuer cette simple modification.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-text line-numbers&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;pick 0fadd04 Implement discussion
+pick 4baf2db Write tests for discussion
+pick bce2851 Implement newsletter
+pick 8be3c7e Write tests for newsletter&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;J’ai simplement modifié l’ordre des lignes. J’enregistre et quitte l’éditeur. Et magie ! Mes commits ont été réappliqués dans l’ordre indiqué. À moi la prime ! Notez que de nombreuses possibilités s’offrent à moi. J’aurais pu découper un commit en plusieurs ou au contraire en rassembler plusieurs en un seul ; ignorer des commits ; récupérer des commits tels quels mais modifier le message ; etc.&lt;/p&gt;
+&lt;h2&gt;Pièges à éviter&lt;/h2&gt;
+&lt;h3&gt;WARNING ATTENTION ACHTUNG&lt;/h3&gt;
+&lt;p&gt;Si vous voulez vous essayer au git rebase, lisez bien attentivement les paragraphes qui suivent. À peu près aucune commande de l’environnement Git n’a un plus grand pouvoir de nuisance que &lt;code&gt;git rebase&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Parce qu’un rebase réécrit votre historique, et que ce n’est pas toujours une opération triviale. Si vous foirez votre coup, vous avez les moyens de franchement flinguer votre historique — rien d’irrécupérable, mais quand même de quoi passer un mauvais moment.&lt;/p&gt;
+&lt;h3&gt;Git rebase ne déplace pas vraiment des commits&lt;/h3&gt;
+&lt;p&gt;Quand je vous ai dit que rebase déplaçait des commits, j’ai menti (c’était pour votre bien). Il est strictement impossible de modifier un commit existant, pour la pure et simple raison qu’un commit est indexé par le hash de son contenu.&lt;/p&gt;
+&lt;p&gt;Reprenons la métaphore de l’arbre, toujours avec ses branches. Scannez une branche et utilisez une imprimante 3d pour en effectuer une copie la plus fidèle possible. Collez cette copie quelque part sur le tronc. Utilisez une cape d’invisibilité pour masquer la branche d’origine. Voilà, en vrai, c’est ça git rebase.&lt;/p&gt;
+&lt;p&gt;Ce que fait &lt;code&gt;git rebase&lt;/code&gt;, c’est qu’il copie tous les commits transplantés et les réapplique un par un à l’endroit indiqués. Mais il s’agit bel et bien de nouveaux commits, avec des identifiants différents, même si le contenu est le même.&lt;/p&gt;
+&lt;p&gt;Reprenons notre exemple de tout à l’heure.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-text line-numbers&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;A---B---C---D ← master
+     \
+      E---F---G ← discussion&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Si je rebase &lt;code&gt;discussion&lt;/code&gt; sur &lt;code&gt;master&lt;/code&gt;, ce qu’il se passe réellement ressemble plutôt à ça :&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-text line-numbers&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;              E&amp;#39;---F&amp;#39;---G&amp;#39; ← discussion
+             /
+A---B---C---D ← master
+     \
+      E---F---G&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Ainsi, les commits de l’ancienne branche &lt;code&gt;discussion&lt;/code&gt; existent toujours, même s’ils sont invisibles car pointés par aucune branche. Les commits de la nouvelle branche &lt;code&gt;discussion&lt;/code&gt; sont bels et biens différents.&lt;/p&gt;
+&lt;h3&gt;L’historique partagé jamais tu ne repasseras&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/1600/1*MOJPqQhY-JokxSXhExq5dw.jpeg&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Tant que vous rebasez vos petites branches en local, tout va bien. Mais &lt;span style=&quot;color:red&quot;&gt;attention&lt;/span&gt;, si vous rebasez une branche qui se trouve déjà sur le serveur, c’est la catastrophe. Vous allez pourrir l’historique de tous vos coworkeurs, qui s’empresseront de vous couvrir de goudron et de plume avant d’essayer de vous vendre &lt;span style=&quot;color:red&quot;&gt;aux abattoirs d’un KFC&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;Sur le serveur.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-text line-numbers&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;A---B---C---D---E ← master
+         \
+          F---G---H ← feature&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Sur votre machine.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-text line-numbers&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;A---B---C---D---E ← master&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Vous rebasez les 4 derniers commits de master (comble de l’horreur).&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-text line-numbers&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;A---B&amp;#39;---C&amp;#39;---D&amp;#39;---E&amp;#39; ← master&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Vous poushez. Git affiche un message d’erreur, mais vous utilisez l’option “force” pour pousSer quand même. Ni Dieu Ni Maître !&lt;/p&gt;
+&lt;p&gt;Sur le serveur.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre style=&quot;counter-reset: linenumber NaN&quot; class=&quot;language-text line-numbers&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;  B&amp;#39;---C&amp;#39;---D&amp;#39;---E&amp;#39; ← master
+ /
+A---B---C---D---E
+         \
+          F---G---H ← feature&lt;/code&gt;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot; style=&quot;white-space: normal; width: auto; left: 0;&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Wat ?! Imaginez le résultat quand vos collègues essayeront de récupérer les données du serveur. Ça ne va pas être joli et très franchement, je vous souhaite bon courage.&lt;/p&gt;
+&lt;p&gt;Notez donc bien soigneusement cette règle d’or de l’utilisation de rebase :&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;L’historique partagé jamais tu ne modifieras, sinon l’ire de ton équipe tu subiras.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2&gt;Merge ou Rebase ?&lt;/h2&gt;
+&lt;p&gt;Le choix entre ces deux méthodes dépend du nombre de branches à synchroniser et du nombre de corrections traitant sur un même périmètre technique. En effet, suite à un merge de plusieurs branches, le graphe historique serait difficile à comprendre. Dans la mesure où les commits de fusion n’apportent pas d’information utile, ils polluent l’historique. Et si, par exemple, plusieurs corrections sont réalisées sur une même fonction, c’est pénible de rejouer tous les commits de rebase.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Exemple 1 : Quand un &lt;strong&gt;travail local&lt;/strong&gt; est considéré comme &lt;strong&gt;partant d’une base obsolète&lt;/strong&gt;. Cela peut arriver plusieurs fois par jour, quand on essaie d’envoyer au remote nos commits locaux, pour découvrir que notre version de la branche distante trackée (par exemple origin/master) date : depuis notre dernière synchro avec le remote, quelqu’un a déjà envoyé des évolutions de notre branche au serveur, du coup notre propre travail part d’une base plus ancienne, et l’envoyer tel quel au serveur reviendrait à écraser le travail récent des copains. C’est pourquoi push nous enverrait promener. &lt;strong&gt;Un merge (git pull) n’est pas idéale, car elle ajoute du bruit&lt;/strong&gt;, des remous, dans le graphe de l’historique, alors qu’en fait c’est juste un coup de pas de bol dans la séquence de travail sur cette branche. Dans un monde idéal, j’aurais fait mon boulot après les autres, sur une base à jour, et la branche serait restée bien linéaire. Dans ce cas, il est préférable d’utiliser une rebase (git pull –rebase).&lt;/li&gt;
+&lt;li&gt;Exemple 2 : La branche ref_branche représente un sprint ou une story en méthodologie agile, ou encore un ticket d’incident (issue ou bug) précis, identifié dans la gestion de tâches. Il est alors préférable d’utiliser la méthode merge.&lt;/li&gt;
+&lt;li&gt;Exemple 3 : La branche ref_branche est dédiée pour la correction des anomalies sur la production. Il faut alors utiliser la méthode merge car il est difficile de faire un rebase si plusieurs corrections sont réalisées sur un même périmètre.&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Gestion des environnements Angular en livraison continue]]></title><description><![CDATA[Dans les applications métiers, nous rencontrons souvent une configuration de livraison continue comportant plusieurs stages. Chaque étape a…]]></description><link>https://ludovicwyffels.dev/angular-dynamic-environment/</link><guid isPermaLink="false">https://ludovicwyffels.dev/angular-dynamic-environment/</guid><pubDate>Sun, 08 Sep 2019 17:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Dans les applications métiers, nous rencontrons souvent une configuration de livraison continue comportant plusieurs stages. Chaque étape a sa configuration pour accéder aux systèmes périphériques spécifiques à l’environnement. Pour ce faire, nous devons gérer les configurations basées sur les stages.&lt;/p&gt;
 &lt;p&gt;Angular CLI est livré avec certains concepts intégrés permettant de gérer différents environnements.&lt;/p&gt;
 &lt;p&gt;Mais quelle est leur fiabilité dans un environnement de livraison continu ? 🤔&lt;/p&gt;
 &lt;h2&gt;Livraison continue - une courte introduction&lt;/h2&gt;
@@ -305,7 +628,7 @@ Cette approche garantit que le même artefact qui a été testé entre égalemen
 
   &lt;div itemprop=&quot;text&quot; class=&quot;Box-body p-0 blob-wrapper data type-typescript &quot;&gt;
       
-&lt;table class=&quot;highlight tab-size js-file-line-container&quot; data-tab-size=&quot;8&quot;&gt;
+&lt;table class=&quot;highlight tab-size js-file-line-container&quot; data-tab-size=&quot;8&quot; data-paste-markdown-skip&gt;
       &lt;tr&gt;
         &lt;td id=&quot;file-log-entry-function-ts-L1&quot; class=&quot;blob-num js-line-number&quot; data-line-number=&quot;1&quot;&gt;&lt;/td&gt;
         &lt;td id=&quot;file-log-entry-function-ts-LC1&quot; class=&quot;blob-code blob-code-inner js-file-line&quot;&gt;&lt;span class=pl-k&gt;import&lt;/span&gt; &lt;span class=pl-s1&gt;logger&lt;/span&gt; &lt;span class=pl-k&gt;from&lt;/span&gt; &lt;span class=pl-s&gt;&amp;#39;../logSetup&amp;#39;&lt;/span&gt;&lt;span class=pl-kos&gt;;&lt;/span&gt;&lt;/td&gt;
@@ -385,7 +708,7 @@ Cette approche garantit que le même artefact qui a été testé entre égalemen
 
   &lt;div itemprop=&quot;text&quot; class=&quot;Box-body p-0 blob-wrapper data type-typescript &quot;&gt;
       
-&lt;table class=&quot;highlight tab-size js-file-line-container&quot; data-tab-size=&quot;8&quot;&gt;
+&lt;table class=&quot;highlight tab-size js-file-line-container&quot; data-tab-size=&quot;8&quot; data-paste-markdown-skip&gt;
       &lt;tr&gt;
         &lt;td id=&quot;file-log-exception-function-ts-L1&quot; class=&quot;blob-num js-line-number&quot; data-line-number=&quot;1&quot;&gt;&lt;/td&gt;
         &lt;td id=&quot;file-log-exception-function-ts-LC1&quot; class=&quot;blob-code blob-code-inner js-file-line&quot;&gt;&lt;span class=pl-k&gt;import&lt;/span&gt; &lt;span class=pl-s1&gt;logger&lt;/span&gt; &lt;span class=pl-k&gt;from&lt;/span&gt; &lt;span class=pl-s&gt;&amp;#39;../logSetup&amp;#39;&lt;/span&gt;&lt;span class=pl-kos&gt;;&lt;/span&gt;&lt;/td&gt;
@@ -472,7 +795,7 @@ Cette approche garantit que le même artefact qui a été testé entre égalemen
 
   &lt;div itemprop=&quot;text&quot; class=&quot;Box-body p-0 blob-wrapper data type-typescript &quot;&gt;
       
-&lt;table class=&quot;highlight tab-size js-file-line-container&quot; data-tab-size=&quot;8&quot;&gt;
+&lt;table class=&quot;highlight tab-size js-file-line-container&quot; data-tab-size=&quot;8&quot; data-paste-markdown-skip&gt;
       &lt;tr&gt;
         &lt;td id=&quot;file-log-stateless-function-ts-L1&quot; class=&quot;blob-num js-line-number&quot; data-line-number=&quot;1&quot;&gt;&lt;/td&gt;
         &lt;td id=&quot;file-log-stateless-function-ts-LC1&quot; class=&quot;blob-code blob-code-inner js-file-line&quot;&gt;&lt;span class=pl-k&gt;import&lt;/span&gt; &lt;span class=pl-s1&gt;logger&lt;/span&gt; &lt;span class=pl-k&gt;from&lt;/span&gt; &lt;span class=pl-s&gt;&amp;#39;../logSetup&amp;#39;&lt;/span&gt;&lt;span class=pl-kos&gt;;&lt;/span&gt;&lt;/td&gt;
@@ -553,7 +876,7 @@ Cette approche garantit que le même artefact qui a été testé entre égalemen
 
   &lt;div itemprop=&quot;text&quot; class=&quot;Box-body p-0 blob-wrapper data type-typescript &quot;&gt;
       
-&lt;table class=&quot;highlight tab-size js-file-line-container&quot; data-tab-size=&quot;8&quot;&gt;
+&lt;table class=&quot;highlight tab-size js-file-line-container&quot; data-tab-size=&quot;8&quot; data-paste-markdown-skip&gt;
       &lt;tr&gt;
         &lt;td id=&quot;file-log-error-function-ts-L1&quot; class=&quot;blob-num js-line-number&quot; data-line-number=&quot;1&quot;&gt;&lt;/td&gt;
         &lt;td id=&quot;file-log-error-function-ts-LC1&quot; class=&quot;blob-code blob-code-inner js-file-line&quot;&gt;&lt;span class=pl-k&gt;import&lt;/span&gt; &lt;span class=pl-s1&gt;logger&lt;/span&gt; &lt;span class=pl-k&gt;from&lt;/span&gt; &lt;span class=pl-s&gt;&amp;#39;../logSetup&amp;#39;&lt;/span&gt;&lt;span class=pl-kos&gt;;&lt;/span&gt;&lt;/td&gt;
@@ -629,7 +952,7 @@ Cette approche garantit que le même artefact qui a été testé entre égalemen
 
   &lt;div itemprop=&quot;text&quot; class=&quot;Box-body p-0 blob-wrapper data type-typescript &quot;&gt;
       
-&lt;table class=&quot;highlight tab-size js-file-line-container&quot; data-tab-size=&quot;8&quot;&gt;
+&lt;table class=&quot;highlight tab-size js-file-line-container&quot; data-tab-size=&quot;8&quot; data-paste-markdown-skip&gt;
       &lt;tr&gt;
         &lt;td id=&quot;file-log-exception-trow-function-ts-L1&quot; class=&quot;blob-num js-line-number&quot; data-line-number=&quot;1&quot;&gt;&lt;/td&gt;
         &lt;td id=&quot;file-log-exception-trow-function-ts-LC1&quot; class=&quot;blob-code blob-code-inner js-file-line&quot;&gt;&lt;span class=pl-k&gt;import&lt;/span&gt; &lt;span class=pl-s1&gt;logger&lt;/span&gt; &lt;span class=pl-k&gt;from&lt;/span&gt; &lt;span class=pl-s&gt;&amp;#39;../logSetup&amp;#39;&lt;/span&gt;&lt;span class=pl-kos&gt;;&lt;/span&gt;&lt;/td&gt;
@@ -745,7 +1068,7 @@ La bascule des différents niveaux est difficile pour l’application de product
 
   &lt;div itemprop=&quot;text&quot; class=&quot;Box-body p-0 blob-wrapper data type-typescript &quot;&gt;
       
-&lt;table class=&quot;highlight tab-size js-file-line-container&quot; data-tab-size=&quot;8&quot;&gt;
+&lt;table class=&quot;highlight tab-size js-file-line-container&quot; data-tab-size=&quot;8&quot; data-paste-markdown-skip&gt;
       &lt;tr&gt;
         &lt;td id=&quot;file-log-change-level-dynamically-ts-L1&quot; class=&quot;blob-num js-line-number&quot; data-line-number=&quot;1&quot;&gt;&lt;/td&gt;
         &lt;td id=&quot;file-log-change-level-dynamically-ts-LC1&quot; class=&quot;blob-code blob-code-inner js-file-line&quot;&gt;&lt;span class=pl-c&gt;// log setup&lt;/span&gt;&lt;/td&gt;
@@ -853,7 +1176,7 @@ La bascule des différents niveaux est difficile pour l’application de product
 
   &lt;div itemprop=&quot;text&quot; class=&quot;Box-body p-0 blob-wrapper data type-typescript &quot;&gt;
       
-&lt;table class=&quot;highlight tab-size js-file-line-container&quot; data-tab-size=&quot;8&quot;&gt;
+&lt;table class=&quot;highlight tab-size js-file-line-container&quot; data-tab-size=&quot;8&quot; data-paste-markdown-skip&gt;
       &lt;tr&gt;
         &lt;td id=&quot;file-log-transport-file-ts-L1&quot; class=&quot;blob-num js-line-number&quot; data-line-number=&quot;1&quot;&gt;&lt;/td&gt;
         &lt;td id=&quot;file-log-transport-file-ts-LC1&quot; class=&quot;blob-code blob-code-inner js-file-line&quot;&gt;&lt;span class=pl-k&gt;import&lt;/span&gt; &lt;span class=pl-s1&gt;winston&lt;/span&gt; &lt;span class=pl-k&gt;from&lt;/span&gt; &lt;span class=pl-s&gt;&amp;#39;winston&amp;#39;&lt;/span&gt;&lt;span class=pl-kos&gt;;&lt;/span&gt;&lt;/td&gt;
@@ -7022,7 +7345,7 @@ $ &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&
 
   &lt;div itemprop=&quot;text&quot; class=&quot;Box-body p-0 blob-wrapper data type-javascript &quot;&gt;
       
-&lt;table class=&quot;highlight tab-size js-file-line-container&quot; data-tab-size=&quot;8&quot;&gt;
+&lt;table class=&quot;highlight tab-size js-file-line-container&quot; data-tab-size=&quot;8&quot; data-paste-markdown-skip&gt;
       &lt;tr&gt;
         &lt;td id=&quot;file-aws-sdk-node-best-practices-non-optimized-js-L1&quot; class=&quot;blob-num js-line-number&quot; data-line-number=&quot;1&quot;&gt;&lt;/td&gt;
         &lt;td id=&quot;file-aws-sdk-node-best-practices-non-optimized-js-LC1&quot; class=&quot;blob-code blob-code-inner js-file-line&quot;&gt;&lt;span class=pl-c&gt;// imports the entire AWS SDK&lt;/span&gt;&lt;/td&gt;
@@ -7087,7 +7410,7 @@ $ &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&
 
   &lt;div itemprop=&quot;text&quot; class=&quot;Box-body p-0 blob-wrapper data type-javascript &quot;&gt;
       
-&lt;table class=&quot;highlight tab-size js-file-line-container&quot; data-tab-size=&quot;8&quot;&gt;
+&lt;table class=&quot;highlight tab-size js-file-line-container&quot; data-tab-size=&quot;8&quot; data-paste-markdown-skip&gt;
       &lt;tr&gt;
         &lt;td id=&quot;file-aws-sdk-node-best-practices-optimized-js-L1&quot; class=&quot;blob-num js-line-number&quot; data-line-number=&quot;1&quot;&gt;&lt;/td&gt;
         &lt;td id=&quot;file-aws-sdk-node-best-practices-optimized-js-LC1&quot; class=&quot;blob-code blob-code-inner js-file-line&quot;&gt;&lt;span class=pl-c&gt;// only imports the AWS DynamoDB service client&lt;/span&gt;&lt;/td&gt;
@@ -8499,7 +8822,7 @@ $ &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&
 
   &lt;div itemprop=&quot;text&quot; class=&quot;Box-body p-0 blob-wrapper data type-text &quot;&gt;
       
-&lt;table class=&quot;highlight tab-size js-file-line-container&quot; data-tab-size=&quot;8&quot;&gt;
+&lt;table class=&quot;highlight tab-size js-file-line-container&quot; data-tab-size=&quot;8&quot; data-paste-markdown-skip&gt;
       &lt;tr&gt;
         &lt;td id=&quot;file-docker-nodeapp-basic-L1&quot; class=&quot;blob-num js-line-number&quot; data-line-number=&quot;1&quot;&gt;&lt;/td&gt;
         &lt;td id=&quot;file-docker-nodeapp-basic-LC1&quot; class=&quot;blob-code blob-code-inner js-file-line&quot;&gt;FROM node:8&lt;/td&gt;
@@ -8568,7 +8891,7 @@ $ &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&
 
   &lt;div itemprop=&quot;text&quot; class=&quot;Box-body p-0 blob-wrapper data type-text &quot;&gt;
       
-&lt;table class=&quot;highlight tab-size js-file-line-container&quot; data-tab-size=&quot;8&quot;&gt;
+&lt;table class=&quot;highlight tab-size js-file-line-container&quot; data-tab-size=&quot;8&quot; data-paste-markdown-skip&gt;
       &lt;tr&gt;
         &lt;td id=&quot;file-docker-nodeapp-secure-part1-L1&quot; class=&quot;blob-num js-line-number&quot; data-line-number=&quot;1&quot;&gt;&lt;/td&gt;
         &lt;td id=&quot;file-docker-nodeapp-secure-part1-LC1&quot; class=&quot;blob-code blob-code-inner js-file-line&quot;&gt;FROM node:8 &lt;/td&gt;
@@ -8628,7 +8951,7 @@ $ &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&
 
   &lt;div itemprop=&quot;text&quot; class=&quot;Box-body p-0 blob-wrapper data type-text &quot;&gt;
       
-&lt;table class=&quot;highlight tab-size js-file-line-container&quot; data-tab-size=&quot;8&quot;&gt;
+&lt;table class=&quot;highlight tab-size js-file-line-container&quot; data-tab-size=&quot;8&quot; data-paste-markdown-skip&gt;
       &lt;tr&gt;
         &lt;td id=&quot;file-docker-nodeapp-secure-part2-L1&quot; class=&quot;blob-num js-line-number&quot; data-line-number=&quot;1&quot;&gt;&lt;/td&gt;
         &lt;td id=&quot;file-docker-nodeapp-secure-part2-LC1&quot; class=&quot;blob-code blob-code-inner js-file-line&quot;&gt;FROM node:8 &lt;/td&gt;
@@ -8715,7 +9038,7 @@ $ &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&
 
   &lt;div itemprop=&quot;text&quot; class=&quot;Box-body p-0 blob-wrapper data type-text &quot;&gt;
       
-&lt;table class=&quot;highlight tab-size js-file-line-container&quot; data-tab-size=&quot;8&quot;&gt;
+&lt;table class=&quot;highlight tab-size js-file-line-container&quot; data-tab-size=&quot;8&quot; data-paste-markdown-skip&gt;
       &lt;tr&gt;
         &lt;td id=&quot;file-docker-nodeapp-secure-L1&quot; class=&quot;blob-num js-line-number&quot; data-line-number=&quot;1&quot;&gt;&lt;/td&gt;
         &lt;td id=&quot;file-docker-nodeapp-secure-LC1&quot; class=&quot;blob-code blob-code-inner js-file-line&quot;&gt;FROM node:8 &lt;/td&gt;
@@ -8821,7 +9144,7 @@ Pour associer la CLI Docker à votre compte DockerHub, utilisez la &lt;code&gt;d
 
   &lt;div itemprop=&quot;text&quot; class=&quot;Box-body p-0 blob-wrapper data type-text &quot;&gt;
       
-&lt;table class=&quot;highlight tab-size js-file-line-container&quot; data-tab-size=&quot;8&quot;&gt;
+&lt;table class=&quot;highlight tab-size js-file-line-container&quot; data-tab-size=&quot;8&quot; data-paste-markdown-skip&gt;
       &lt;tr&gt;
         &lt;td id=&quot;file-docker-tag-L1&quot; class=&quot;blob-num js-line-number&quot; data-line-number=&quot;1&quot;&gt;&lt;/td&gt;
         &lt;td id=&quot;file-docker-tag-LC1&quot; class=&quot;blob-code blob-code-inner js-file-line&quot;&gt;# !/bin/sh &lt;/td&gt;
