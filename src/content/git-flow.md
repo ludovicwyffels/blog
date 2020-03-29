@@ -515,9 +515,9 @@ Ainsi, les commits de l'ancienne branche `discussion` existent toujours, même s
 
 ### L'historique partagé jamais tu ne repasseras
 
-![](https://cdn-images-1.medium.com/max/1600/1*MOJPqQhY-JokxSXhExq5dw.jpeg)
+![git push --force](https://cdn-images-1.medium.com/max/1600/1*MOJPqQhY-JokxSXhExq5dw.jpeg)
 
-Tant que vous rebasez vos petites branches en local, tout va bien. Mais <span style="color:red">attention</span>, si vous rebasez une branche qui se trouve déjà sur le serveur, c'est la catastrophe. Vous allez pourrir l'historique de tous vos coworkeurs, qui s'empresseront de vous couvrir de goudron et de plume avant d'essayer de vous vendre <span style="color:red">aux abattoirs d'un KFC</span>.
+Tant que vous rebasez vos petites branches en local, tout va bien. Mais <span style="color:#AE121A">attention</span>, si vous rebasez une branche qui se trouve déjà sur le serveur, c'est la catastrophe. Vous allez pourrir l'historique de tous vos coworkeurs, qui s'empresseront de vous couvrir de goudron et de plume avant d'essayer de vous vendre <span style="color:#AE121A">aux abattoirs d'un KFC</span>.
 
 Sur le serveur.
 
