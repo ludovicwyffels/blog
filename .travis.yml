@@ -1,22 +1,20 @@
 language: node_js
-node_js:
-  - "lts/*"
-dist: trusty
-sudo: required
-branches:
-  only:
-  - develop
+node_js: node
 cache:
   directories:
-  - node_modules
+    - node_modules
 script:
-- npm run build
-- cp CNAME public/CNAME
+  - npm test
+env:
+  - CI=true
+
+before_deploy:
+  - npm install netlify-cli -g
+  - npm run build
+
 deploy:
-  provider: pages
+  provider: script
+  script: netlify deploy -s $NETLIFY_SITE_ID -a $NETLIFY_ACCESS_TOKEN -d ./public --prod
   skip_cleanup: true
-  github_token: $GITHUB_TOKEN
-  local_dir: public
-  keep-history: true
   on:
     branch: develop
