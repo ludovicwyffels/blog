@@ -73,7 +73,7 @@
     "gh-pages": "^2.2.0",
     "husky": "^4.2.5",
     "node-sass": "^4.13.1",
-    "prettier": "^1.19.1",
+    "prettier": "^2.0.5",
     "rimraf": "^3.0.2",
     "tslint": "^5.20.1",
     "tslint-config-blvd": "^1.2.1",
